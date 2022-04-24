@@ -1,0 +1,14 @@
+---
+import Tooltip from '@components/Tooltip.astro';
+export interface Props {
+  text: string;
+  href: string;
+}
+const { text, href } = Astro.props as Props;
+---
+<a class="relative group h-16 w-16 dark:bg-zinc-700 dark:hover:bg-zinc-700 rounded-xl flex justify-center items-center text-zinc-400 hover:text-zinc-500 focus:text-zinc-300 dark:hover:text-gray-300 transition-all duration-100 hover:ring-2 hover:ring-blue-500 dark:hover:ring-indigo-500 dark:focus:ring-indigo-500 hover:ring-offset-2 bg-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:ring-offset-slate-800" href={href} aria-label={`Go to ${text}`}>
+	<svg xmlns="http://www.w3.org/2000/svg" class="h-auto w-10 group-hover:w-12 group-focus-within:w-12 transition-all fill-current" viewBox="0 0 20 20">
+    <slot />
+	</svg>
+	<Tooltip text={text} />
+</a>
