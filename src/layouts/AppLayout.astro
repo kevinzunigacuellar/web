@@ -1,0 +1,37 @@
+---
+import Navlink from '@components/Navlink.astro';
+export interface Props {
+  title?: string;
+}
+const { title = 'Kevin Zuniga Cuellar' } = Astro.props as Props;
+---
+<html lang='en' class="dark">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>{title}</title>
+	</head>
+	<body class="bg-zinc-100 dark:bg-zinc-900 antialiased selection:bg-teal-300 selection:text-gray-900 dark:selection:bg-fuchsia-600 dark:selection:text-white">
+		<main class="px-6 sm:px-8 mt-20 mx-auto max-w-3xl">
+			<slot />
+		</main>
+		<header class="fixed bottom-6 left-1/2 z-10 w-5/6 max-w-min sm:max-w-none -translate-x-1/2 rounded-3xl border
+		border-zinc-300 bg-white/60 shadow backdrop-blur-md dark:border-zinc-700 dark:bg-zinc-800/60 
+		dark:shadow-black/60 sm:w-auto">
+			<nav class="flex items-center justify-start sm:gap-2.5 gap-2.5 overflow-x-auto sm:overflow-x-visible p-3">
+				<Navlink href="/" text="Home">
+  				<path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+				</Navlink>
+				<Navlink href="/blog" text="Blog">
+  				<path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z" />
+				</Navlink>
+				<Navlink href="/guestbook" text="Guestbook">
+  				<path fill-rule="evenodd" d="M18 13V5a2 2 0 00-2-2H4a2 2 0 00-2 2v8a2 2 0 002 2h3l3 3 3-3h3a2 2 0 002-2zM5 7a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1zm1 3a1 1 0 100 2h3a1 1 0 100-2H6z" clip-rule="evenodd" />
+				</Navlink>
+				<Navlink href="/bookshelf" text="Bookshelf">		
+  				<path d="M2 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1H3a1 1 0 01-1-1V4zM8 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1H9a1 1 0 01-1-1V4zM15 3a1 1 0 00-1 1v12a1 1 0 001 1h2a1 1 0 001-1V4a1 1 0 00-1-1h-2z" />
+				</Navlink>
+			</nav>
+		</header>
+	</body>
+</html>
