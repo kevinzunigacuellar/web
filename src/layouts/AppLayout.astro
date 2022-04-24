@@ -1,24 +1,40 @@
 ---
 import Navlink from '@components/Navlink.astro';
+import ThemeButton from '@components/ThemeButton.tsx';
 export interface Props {
   title?: string;
 }
 const { title = 'Kevin Zuniga Cuellar' } = Astro.props as Props;
 ---
-<html lang='en' class="">
+<html lang='en'>
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<title>{title}</title>
+		<script is:inline>
+			const theme = (() => {
+				if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+					return localStorage.getItem('theme');
+				}
+				if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+					return 'dark';
+				}
+				return 'light';
+			})();
+			if (theme === 'light') {
+				document.documentElement.classList.remove('dark');
+			} else {
+				document.documentElement.classList.add('dark');
+			}
+		</script>
 	</head>
-	<body class="bg-zinc-100 dark:bg-zinc-900 antialiased selection:bg-teal-300 selection:text-gray-900 dark:selection:bg-fuchsia-600 dark:selection:text-white">
+	<body class="bg-zinc-100 dark:bg-zinc-900 antialiased selection:bg-teal-300 selection:text-gray-900 dark:selection:bg-fuchsia-600 dark:selection:text-white transition-colors">
 		<main class="px-6 sm:px-8 mt-20 mx-auto max-w-3xl">
 			<slot />
 		</main>
-		<header class="fixed bottom-6 left-1/2 z-10 w-5/6 max-w-min sm:max-w-none -translate-x-1/2 rounded-3xl border
-		border-zinc-300 bg-white/60 shadow backdrop-blur-md dark:border-zinc-700 dark:bg-zinc-800/60 
-		dark:shadow-black/60 sm:w-auto">
-			<nav class="flex items-center justify-start space-x-3 overflow-x-auto sm:overflow-x-visible p-3">
+		<header class="fixed bottom-6 left-1/2 z-10 w-5/6 max-w-min sm:max-w-none -translate-x-1/2 rounded-3xl border border-zinc-300 bg-white/60 shadow backdrop-blur-md dark:border-zinc-700 dark:bg-zinc-800/60 dark:shadow-black/60 sm:w-auto transition-colors">
+			<nav class="flex items-center justify-start gap-3 overflow-x-auto sm:overflow-x-visible p-3">
 				<Navlink href="/" text="Home">
   				<path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
 				</Navlink>
@@ -31,6 +47,7 @@ const { title = 'Kevin Zuniga Cuellar' } = Astro.props as Props;
 				<Navlink href="/bookshelf" text="Bookshelf">		
   				<path d="M2 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1H3a1 1 0 01-1-1V4zM8 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1H9a1 1 0 01-1-1V4zM15 3a1 1 0 00-1 1v12a1 1 0 001 1h2a1 1 0 001-1V4a1 1 0 00-1-1h-2z" />
 				</Navlink>
+				<ThemeButton client:visible />
 			</nav>
 		</header>
 	</body>
