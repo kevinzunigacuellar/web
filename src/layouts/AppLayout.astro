@@ -10,6 +10,15 @@ const { title = 'Kevin Zuniga Cuellar' } = Astro.props as Props;
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<script is:inline>
+  		const root = document.documentElement;
+  		const theme = localStorage.getItem('theme');
+  		if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    		root.classList.add('dark');
+  		} else {
+    		root.classList.remove('dark');
+  		}
+		</script>
 		<title>{title}</title>
 	</head>
 	<body class="bg-zinc-100 dark:bg-zinc-900 antialiased selection:bg-teal-300 selection:text-gray-900 dark:selection:bg-fuchsia-600 dark:selection:text-white transition-colors">
