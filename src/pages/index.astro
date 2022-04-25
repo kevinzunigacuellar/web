@@ -1,5 +1,6 @@
 ---
 import AppLayout from '@layouts/AppLayout.astro';
+import ThemeSelect from '@components/ThemeSelect.tsx';
 ---
 <AppLayout>
   <section class="mb-10 sm:flex sm:items-center sm:justify-between">
@@ -17,4 +18,5 @@ import AppLayout from '@layouts/AppLayout.astro';
     </p>
   </header>
 </section>
+<ThemeSelect client:load />
 </AppLayout>
