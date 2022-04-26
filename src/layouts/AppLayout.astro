@@ -12,7 +12,7 @@ const defaultMeta = {
 
 const { title, description } = Astro.props as Props;
 ---
-<html lang='en'>
+<html lang='en' class="scroll-smooth">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -30,7 +30,7 @@ const { title, description } = Astro.props as Props;
 		</script>
 		<title>{title ?? defaultMeta.title}</title>
 	</head>
-	<body class="bg-zinc-100 dark:bg-zinc-900 antialiased selection:bg-teal-300 selection:text-gray-900 dark:selection:bg-fuchsia-600 dark:selection:text-white transition-colors">
+	<body class="bg-zinc-100 dark:bg-zinc-900 antialiased selection:bg-teal-300 selection:text-zinc-900 dark:selection:bg-fuchsia-600 dark:selection:text-white transition-colors">
 		<main class="px-6 sm:px-8 mt-20 mx-auto max-w-3xl">
 			<slot />
 		</main>
