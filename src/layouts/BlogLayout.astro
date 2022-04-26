@@ -1,14 +1,24 @@
 ---
 import AppLayout from '@layouts/AppLayout.astro';
 const { content } = Astro.props;
-const { title, description, author } = content;
+const { title, description, heroImage } = content;
 const publishDate = new Date(content.publishDate).toLocaleDateString('en', {dateStyle: 'full',});
 ---
 
 <AppLayout {title} {description}>
-  <h1 class="text-4xl sm:leading-tight sm:text-5xl font-sans font-semibold py-8 text-center text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-pink-500">{title}</h1>
-  <p class="text-center text-zinc-600">{author} &middot; {publishDate}</p>
-  <article class="prose max-w-none prose-a:text-blue-600 prose-a:no-underline dark:prose-invert dark:prose-a:text-indigo-400 prose-headings:text-zinc-700 dark:prose-headings:text-zinc-200">
+<header class="flex flex-col justify-center items-center mb-10">
+  <p class="text-center text-zinc-600 dark:text-zinc-400 mb-1 text-sm">{publishDate}</p>
+  <h1 class="text-4xl mb-6 sm:leading-tight sm:text-5xl font-sans font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-pink-500">{title}</h1>
+  <div class="inline-flex gap-2 justify-center items-center mb-10">
+    <img src="/assets/me.jpeg" class="w-auto h-10 rounded-full aspect-square shrink-0" />
+    <p class="text-zinc-600 dark:text-zinc-400 text-sm">
+      <span class="block font-bold">Kevin Zuniga Cuellar</span>
+      <a class="text-blue-500 dark:text-blue-400 hover:underline block" href="https://twitter.com/kevinzunigacuel" target="_blank" rel="noopener noreferrer">@kevinzunigacuel</a>
+    </p>
+  </div>
+  <img src={heroImage} alt={title} class="w-full h-auto rounded-xl" />
+  </header>
+  <article class="prose max-w-none hover:prose-a:underline prose-a:text-blue-600 prose-a:no-underline dark:prose-invert dark:prose-a:text-indigo-400 prose-headings:text-zinc-700 dark:prose-headings:text-zinc-200">
     <slot/>
   </article>
 </AppLayout>

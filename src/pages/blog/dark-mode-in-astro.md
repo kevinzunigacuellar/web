@@ -1,12 +1,12 @@
 ---
 layout: '../../layouts/BlogLayout.astro'
 title: Implementing dark mode in Astro
+heroImage: /assets/social.png
 publishDate: 2021-04-25
-author: Kevin
 description: Add perfect dark mode support to your Astro 🚀 website
 ---
-
-Some of the most popular websites use dark mode, and it's a great way to make your website more accessible.
+## Why do we need dark mode?
+Some of the most popular websites use dark mode, and it's a great way to make your website more accessible. Some of the most popular websites use dark mode, and it's a great way to make your website more accessible. Some of the most popular websites use dark mode, and it's a great way to make your website more accessible. Some of the most popular websites use dark mode, and it's a great way to make your website more accessible.
 
 ```html
 <script is:inline>
