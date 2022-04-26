@@ -1,0 +1,12 @@
+---
+import AppLayout from '@layouts/AppLayout.astro';
+const { content } = Astro.props;
+const { title, description, author } = content;
+const publishDate = new Date(content.publishDate).toLocaleDateString('en', {dateStyle: 'full',});
+---
+
+<AppLayout {title} {description}>
+  <h1 class="text-4xl sm:leading-tight sm:text-5xl font-sans font-semibold py-8 text-center text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-pink-500">{title}</h1>
+  <p class="text-center text-gray-600">{author} &middot; {publishDate}</p>
+  <slot />
+</AppLayout>
