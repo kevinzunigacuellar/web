@@ -8,6 +8,6 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 ---
 <AppLayout {title}>
   <section class="grid grid-cols-1 gap-8">
-    {allPosts.map(post => <BlogCard title={post.frontmatter.title} publishDate={post.frontmatter.publishDate} description={post.frontmatter.description} />)}
+    {allPosts.map(post => <BlogCard title={post.frontmatter.title} publishDate={post.frontmatter.publishDate} description={post.frontmatter.description} url={post.url} />)}
   </section>
 </AppLayout>
