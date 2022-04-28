@@ -57,6 +57,6 @@ some more text
 
 
 <Image
-  src="/public/assets/lake.jpeg"
+  src={frontmatter.heroImage}
   alt="bob"
 />
