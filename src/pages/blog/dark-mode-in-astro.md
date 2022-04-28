@@ -2,6 +2,7 @@
 layout: '../../layouts/BlogLayout.astro'
 title: Implementing dark mode in Astro
 heroImage: /public/assets/social.png
+setup: import Image from '../../components/Image.astro'
 publishDate: 2021-04-25
 description: Add perfect dark mode support to your Astro 🚀 website
 ---
@@ -33,7 +34,29 @@ some more text
 - Todo 1
 - Todo 2
 - Todo 3
+- Some other text
+- Todo 1
+- Todo 2
+- Todo 3- Some other text
+- Todo 1
+- Todo 2
+- Todo 3- Some other text
+- Todo 1
+- Todo 2
+- Todo 3- Some other text
+- Todo 1
+- Todo 2
+- Todo 3- Some other text
+- Todo 1
+- Todo 2
+- Todo 3
 
 1. Todo 1
 2. Todo 2
 3. Todo 3
+
+
+<Image
+  src="/public/assets/lake.jpeg"
+  alt="bob"
+/>

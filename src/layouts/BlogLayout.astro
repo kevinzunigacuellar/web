@@ -1,31 +1,29 @@
 ---
 import AppLayout from '@layouts/AppLayout.astro';
-import { Img } from "astro-imagetools/components";
+import { Picture } from "astro-imagetools/components";
 const { content } = Astro.props;
 const { title, description, heroImage } = content;
 const publishDate = new Date(content.publishDate).toLocaleDateString('en', {dateStyle: 'full'});
 ---
 
 <AppLayout {title} {description}>
-<header class="flex flex-col justify-center items-center mb-10">
+<header class="flex flex-col justify-center items-center">
   <p class="text-center text-zinc-600 dark:text-zinc-400 mb-1 text-sm">{publishDate}</p>
   <h1 class="text-4xl mb-6 sm:leading-tight sm:text-5xl font-sans font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-pink-500">{title}</h1>
-  <div class="inline-flex gap-2 justify-center items-center mb-10">
+  <div class="inline-flex gap-2 justify-center items-center">
     <div class="aspect-square rounded-full overflow-hidden w-10 h-10">
-      <Img src="/public/assets/me.jpeg" height={80} width={80} alt="Picture of the author" placeholder="blurred" format="webp" loading="eager" decoding="async" layout="fixed" formatOptions={{webp: {quality: 100}}} />
+      <Picture src="/public/assets/me.jpeg" height={80} width={80} alt="Picture of the author" layout="fixed" />
     </div>
       <p class="text-zinc-600 dark:text-zinc-400 text-sm">
       <span class="block font-bold">Kevin Zuniga Cuellar</span>
       <a class="text-blue-500 dark:text-blue-400 hover:underline block" href="https://twitter.com/kevinzunigacuel" target="_blank" rel="noopener noreferrer">@kevinzunigacuel</a>
     </p>
   </div>
-  <div class="rounded-xl w-full overflow-hidden">
-    <Img src={heroImage} alt={title} placeholder="blurred" format="webp" loading="eager" decoding="async" formatOptions={{webp: {
-      quality: 75,
-    },}} />
+  <div class="rounded-xl w-full overflow-hidden mt-8 mb-12">
+    <Picture src={heroImage} alt={title} />
   </div>
   </header>
-  <article class="prose max-w-none hover:prose-a:underline prose-a:text-blue-600 prose-a:no-underline dark:prose-invert dark:prose-a:text-indigo-400 prose-headings:text-zinc-700 dark:prose-headings:text-zinc-200">
+    <article class="prose max-w-none hover:prose-a:underline prose-a:text-blue-600 prose-a:no-underline dark:prose-invert dark:prose-a:text-indigo-400 prose-headings:text-zinc-700 dark:prose-headings:text-zinc-200 prose-img:m-0">
     <slot/>
   </article>
 </AppLayout>
