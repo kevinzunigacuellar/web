@@ -3,7 +3,8 @@ import { useState, useEffect } from "preact/hooks";
 const themes = ["light", "dark", "system"];
 
 export default function ThemeSelect() {
-  const [theme, setTheme] = useState(localStorage.getItem("theme") || "system");
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "system")
+  const [hasMounted, setHasMounted] = useState(false);
 
   const handleChange = (e) => {
       if (e.target.value === "system") {
@@ -13,6 +14,10 @@ export default function ThemeSelect() {
       }
       setTheme(e.target.value);
     }
+
+    useEffect(() => {
+      setHasMounted(true);
+    },[]);
   
     useEffect(() => {
       if (theme === 'dark' || (theme === "system" && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -21,6 +26,10 @@ export default function ThemeSelect() {
         document.documentElement.classList.remove("dark");
       }
     }, [theme]);
+
+    if (!hasMounted) {
+      return null;
+    }
 
   return (
     <select onChange={handleChange} value={theme}>
