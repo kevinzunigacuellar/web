@@ -1,13 +1,15 @@
 ---
 layout: '../../layouts/BlogLayout.astro'
 title: Implementing dark mode in Astro
+heroImage: /public/assets/social.png
+setup: import Image from '../../components/Image.astro'
 publishDate: 2021-04-25
-author: Kevin
 description: Add perfect dark mode support to your Astro 🚀 website
 ---
+## Why do we need dark mode?
+Some of the most popular websites use dark mode, and it's a great way to make your website more accessible. Some of the most popular websites use dark mode, and it's a great way to make your website more accessible. Some of the most popular websites use dark mode, and it's a great way to make your website more accessible. Some of the most popular websites use dark mode, and it's a great way to make your website more accessible.
 
-Some of the most popular websites use dark mode, and it's a great way to make your website more accessible.
-
+IMPORTANT: TEST IMAGES ON MARKDOWN
 ```html
 <script is:inline>
   const root = document.documentElement;
@@ -32,7 +34,29 @@ some more text
 - Todo 1
 - Todo 2
 - Todo 3
+- Some other text
+- Todo 1
+- Todo 2
+- Todo 3- Some other text
+- Todo 1
+- Todo 2
+- Todo 3- Some other text
+- Todo 1
+- Todo 2
+- Todo 3- Some other text
+- Todo 1
+- Todo 2
+- Todo 3- Some other text
+- Todo 1
+- Todo 2
+- Todo 3
 
 1. Todo 1
 2. Todo 2
 3. Todo 3
+
+
+<Image
+  src={frontmatter.heroImage}
+  alt="bob"
+/>
