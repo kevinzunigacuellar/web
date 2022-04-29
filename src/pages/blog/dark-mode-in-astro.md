@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/BlogLayout.astro"
+layout: '../../layouts/BlogLayout.astro'
 title: Implementing dark mode in Astro
 heroImage: /public/assets/social.png
 setup: import Image from '../../components/Image.astro'
@@ -15,15 +15,12 @@ IMPORTANT: TEST IMAGES ON MARKDOWN
 
 ```html
 <script is:inline>
-  const root = document.documentElement;
-  const theme = localStorage.getItem("theme");
-  if (
-    theme === "dark" ||
-    (!theme && window.matchMedia("(prefers-color-scheme: dark)").matches)
-  ) {
-    root.classList.add("theme-dark");
+  const root = document.documentElement
+  const theme = localStorage.getItem('theme')
+  if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    root.classList.add('theme-dark')
   } else {
-    root.classList.remove("theme-dark");
+    root.classList.remove('theme-dark')
   }
 </script>
 ```
