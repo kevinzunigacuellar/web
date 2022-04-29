@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'preact/hooks'
+import type { FunctionalComponent } from 'preact'
 
-export default function ThemeToggle() {
+export default function ThemeToggle(): FunctionalComponent {
   const [theme, setTheme] = useState(localStorage.getItem('theme') || undefined)
 
-  const handleClick = (e: MouseEvent) => {
+  const handleClick = () => {
     setTheme(theme === 'light' ? 'dark' : 'light')
   }
 
