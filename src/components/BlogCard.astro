@@ -12,7 +12,7 @@ publishDate = new Date(publishDate).toLocaleDateString('en', {
 ---
 
 <a
-  class="group block leading-relaxed space-y-1 rounded-xl bg-white p-6 text-zinc-600 shadow hover:shadow-md dark:border-t dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-indigo-500 dark:shadow-black/40 transition-shadow duration-300"
+  class="group block leading-relaxed space-y-1 rounded-xl bg-white p-6 text-zinc-600 shadow hover:shadow-md dark:border-t dark:border-zinc-700 transition-all dark:bg-zinc-800 dark:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-indigo-500 dark:shadow-black/40"
   href={url}
 >
   <time datetime={publishDate} class="block text-sm text-zinc-600 dark:text-zinc-400"
@@ -23,5 +23,5 @@ publishDate = new Date(publishDate).toLocaleDateString('en', {
   >
     {title}
   </h2>
-  <p class="">{description}</p>
+  <p>{description}</p>
 </a>
