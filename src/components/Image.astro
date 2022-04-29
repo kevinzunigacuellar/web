@@ -1,7 +1,8 @@
 ---
-import { Picture } from "astro-imagetools/components";
-const { src, alt, ...props } = Astro.props;
+import { Picture } from 'astro-imagetools/components'
+const { src, alt, ...props } = Astro.props
 ---
+
 <div class="rounded-xl overflow-hidden block w-full h-auto my-8">
   <Picture {src} {alt} {...props} />
 </div>
