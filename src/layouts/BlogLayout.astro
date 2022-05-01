@@ -10,12 +10,12 @@ const publishDate = new Date(content.publishDate).toLocaleDateString('en', {
 
 <AppLayout {title} {description} {heroImage}>
   <a
-    class="text-zinc-600 mb-4 focus:outline-none focus:text-zinc-900 focus:underline dark:focus:text-white hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white inline-flex items-center py-0.5 rounded-full text-sm"
+    class="group text-zinc-600 mb-4 focus:outline-none focus:text-zinc-900 focus:underline dark:focus:text-white hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white inline-flex items-center py-0.5 rounded-full text-sm"
     href="/blog"
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      class="h-auto w-4 mr-1"
+      class="h-auto w-4 mr-1 group-hover:-translate-x-1 group-focus:-translate-x-1 transition-all"
       fill="none"
       viewBox="0 0 24 24"
       stroke="currentColor"
