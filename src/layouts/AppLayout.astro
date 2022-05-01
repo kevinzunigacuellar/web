@@ -5,14 +5,17 @@ import ThemeToggle from '@components/ThemeToggle.tsx'
 export interface Props {
   title?: string
   description?: string
+  heroImage?: string
 }
 
 const defaultMeta = {
   title: 'Kevin Zuniga Cuellar',
   description: 'Software engineer, TypeScript enthusiast, and a passionate learner.',
+  image: 'https://kevinzunigacuellar.com/assets/banner.png'
 }
 
-const { title, description } = Astro.props as Props
+const { title, description, heroImage } = Astro.props as Props
+const image = heroImage ? `https://kevinzunigacuellar.com/assets${heroImage}` : defaultMeta.image
 ---
 
 <html lang="en" class="scroll-smooth">
@@ -22,6 +25,17 @@ const { title, description } = Astro.props as Props
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="title" content={title ?? defaultMeta.title} />
     <meta name="description" content={description ?? defaultMeta.description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.canonicalURL} />
+    <meta property="og:title" content={title ?? defaultMeta.title} />
+    <meta property="og:description" content={description ?? defaultMeta.description} />
+    <meta property="og:image" content={image} />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={Astro.canonicalURL} />
+    <meta property="twitter:title" content={title ?? defaultMeta.title} />
+    <meta property="twitter:description" content={description ?? defaultMeta.description} />
+    <meta property="twitter:image" content={image} />
+
     <script is:inline>
       const theme = localStorage.getItem('theme')
       if (

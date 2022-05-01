@@ -2,11 +2,15 @@
 import AppLayout from '@layouts/AppLayout.astro'
 import BlogCard from '@components/BlogCard.astro'
 import Header from '@components/Header.astro'
+
 let allPosts = await Astro.glob('./blog/*.md');
 allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf());
+
+const title = 'Blog - Kevin Zuniga Cuellar'
+const description = 'Code snippeds, journal, and other stuff I\'ve written.'
 ---
 
-<AppLayout title="Blog - Kevin Zuniga Cuellar">
+<AppLayout {title} {description}>
   <Header title="Blog" />
   <section class="grid grid-cols-1 gap-8">
     {allPosts.map(post => <BlogCard title={post.frontmatter.title} publishDate={post.frontmatter.publishDate} description={post.frontmatter.description} url={post.url} />)}
