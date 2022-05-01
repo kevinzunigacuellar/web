@@ -10,7 +10,8 @@ export default defineConfig({
   },
   markdown:{
     shikiConfig:{
-      theme: 'css-variables',
+      theme: 'one-dark-pro',
+      wrap: true,
     }
   }
 })
