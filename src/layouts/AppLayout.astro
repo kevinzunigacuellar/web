@@ -35,6 +35,7 @@ const image = heroImage ? `https://kevinzunigacuellar.com/assets${heroImage}` : 
     <meta property="twitter:title" content={title ?? defaultMeta.title} />
     <meta property="twitter:description" content={description ?? defaultMeta.description} />
     <meta property="twitter:image" content={image} />
+    <meta name="robots" content="follow, index" />
 
     <script is:inline>
       const theme = localStorage.getItem('theme')
