@@ -8,4 +8,9 @@ export default defineConfig({
   vite: {
     plugins: [astroImagePlugin],
   },
+  markdown:{
+    shikiConfig:{
+      theme: 'css-variables',
+    }
+  }
 })
