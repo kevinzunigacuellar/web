@@ -13,5 +13,6 @@ export default defineConfig({
       theme: 'one-dark-pro',
       wrap: true,
     }
-  }
+  },
+  site: 'https://kevinzunigacuellar.com',
 })
