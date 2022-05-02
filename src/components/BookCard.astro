@@ -9,8 +9,10 @@ export interface Props {
   year: number
   comment: string
   reading?: boolean
+  eager?: boolean
 }
-const { title, img, author, year, comment, reading } = Astro.props as Props
+const { title, img, author, year, comment, reading, eager } = Astro.props as Props
+const loadingType = eager ? 'eager' : 'lazy' // indentify eager or lazy
 ---
 
 <li
@@ -19,7 +21,7 @@ const { title, img, author, year, comment, reading } = Astro.props as Props
 >
   <article class="px-6 pt-6 sm:flex sm:pb-6">
     <div class="relative aspect-[3/4] shrink-0 overflow-hidden rounded-xl shadow-sm sm:w-44">
-      <Picture src={img} alt={title} objectFit="cover" layout="fill" />
+      <Picture src={img} alt={title} objectFit="cover" layout="fill" loading={loadingType} />
     </div>
     <div class="w-full py-6 sm:py-0 sm:px-6">
       <h2 class="mb-1.5 space-x-2 text-xl font-semibold text-zinc-900 dark:text-white">

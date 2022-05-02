@@ -4,6 +4,7 @@
     "author": "Wladston Ferreira Filho",
     "comment": "So far loving this book, It illustrates the concepts of data structure and algorithms in a fun and easy way.",
     "img": "/public/assets/books/cs-distilled.jpg",
+    "eager": true,
     "year": 2017,
     "reading": true
   },
