@@ -4,7 +4,7 @@ title: Implement dark mode with tailwindcss in Astro
 heroImage: /public/assets/darkmode.jpeg
 setup: import Image from '../../components/Image.astro'
 publishDate: 2021-04-25
-description: Perfect dark mode implementation to your Astro 🚀 website with tailwindcss
+description: Perfect dark mode implementation for your Astro 🚀 website with tailwindcss
 ---
 
 Some of the most popular websites use dark mode. It's a great way to make your
