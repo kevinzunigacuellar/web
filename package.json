@@ -10,6 +10,7 @@
     "preview": "astro preview --experimental-integrations"
   },
   "devDependencies": {
+    "@astrojs/partytown": "^0.1.2",
     "@astrojs/preact": "^0.1.2",
     "@astrojs/sitemap": "^0.1.0",
     "@astrojs/tailwind": "^0.2.1",
