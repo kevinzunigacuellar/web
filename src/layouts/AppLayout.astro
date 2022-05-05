@@ -21,11 +21,11 @@ const image = heroImage ? `https://kevinzunigacuellar.com/assets${heroImage}` : 
 
 <html lang="en" class="scroll-smooth">
   <head>
-  <script is:inline>
-    partytown = {
-      forward: ["dataLayer.push"]
-    }
-  </script>
+    <script is:inline>
+      partytown = {
+        forward: ['dataLayer.push'],
+      }
+    </script>
     <script type="text/partytown" src="https://www.googletagmanager.com/gtag/js?id=G-4NT91Q9TEC"
     ></script>
     <script type="text/partytown">
@@ -46,8 +46,15 @@ const image = heroImage ? `https://kevinzunigacuellar.com/assets${heroImage}` : 
     <meta property="og:title" content={title ?? defaultMeta.title} />
     <meta property="og:description" content={description ?? defaultMeta.description} />
     <meta property="og:image" content={image} />
+    <meta property="og:image:width" content="900" />
+    <meta property="og:image:height" content="600" />
+    <meta property="og:site_name" content="Kevin Zuniga Cuellar" />
+    <meta property="og:image:alt" content="Photo of Kevin smiling" />
+    <meta property="og:locale" content="en_US" />
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content={Astro.canonicalURL} />
+    <meta name="twitter:site" content="@kevinzunigacuel" />
+    <meta name="twitter:creator" content="@kevinzunigacuel" />
     <meta property="twitter:title" content={title ?? defaultMeta.title} />
     <meta property="twitter:description" content={description ?? defaultMeta.description} />
     <meta property="twitter:image" content={image} />
@@ -87,12 +94,6 @@ const image = heroImage ? `https://kevinzunigacuellar.com/assets${heroImage}` : 
             d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"
           ></path>
         </Navlink>
-        <!-- <Navlink href="/guestbook" text="Guestbook">
-          <path
-            fill-rule="evenodd"
-            d="M18 13V5a2 2 0 00-2-2H4a2 2 0 00-2 2v8a2 2 0 002 2h3l3 3 3-3h3a2 2 0 002-2zM5 7a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1zm1 3a1 1 0 100 2h3a1 1 0 100-2H6z"
-            clip-rule="evenodd"></path>
-        </Navlink> -->
         <Navlink href="/bookshelf" text="Bookshelf">
           <path
             d="M2 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1H3a1 1 0 01-1-1V4zM8 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1H9a1 1 0 01-1-1V4zM15 3a1 1 0 00-1 1v12a1 1 0 001 1h2a1 1 0 001-1V4a1 1 0 00-1-1h-2z"
