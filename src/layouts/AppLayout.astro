@@ -16,7 +16,7 @@ const defaultMeta = {
 }
 
 const { title, description, heroImage } = Astro.props as Props
-const image = heroImage ? `https://kevinzunigacuellar.com/assets${heroImage}` : defaultMeta.image
+const image = heroImage ? `https://kevinzunigacuellar.com/assets/${heroImage.split('/').pop()}` : defaultMeta.image
 ---
 
 <html lang="en" class="scroll-smooth">
@@ -46,8 +46,6 @@ const image = heroImage ? `https://kevinzunigacuellar.com/assets${heroImage}` : 
     <meta property="og:title" content={title ?? defaultMeta.title} />
     <meta property="og:description" content={description ?? defaultMeta.description} />
     <meta property="og:image" content={image} />
-    <meta property="og:image:width" content="900" />
-    <meta property="og:image:height" content="600" />
     <meta property="og:site_name" content="Kevin Zuniga Cuellar" />
     <meta property="og:image:alt" content="Photo of Kevin smiling" />
     <meta property="og:locale" content="en_US" />
