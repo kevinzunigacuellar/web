@@ -2,13 +2,13 @@
 import AppLayout from '@layouts/AppLayout.astro'
 import { Picture } from 'astro-imagetools/components'
 const { content } = Astro.props
-const { title, description, heroImage } = content
+const { title, description, heroImage, imageAlt } = content
 const pubDate = new Date(content.pubDate).toLocaleDateString('en', {
   dateStyle: 'full',
 })
 ---
 
-<AppLayout {title} {description} {heroImage}>
+<AppLayout {title} {description} {heroImage} {imageAlt}>
   <a
     class="group text-zinc-600 mb-4 focus:outline-none focus:text-zinc-900 focus:underline dark:focus:text-white hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white inline-flex items-center py-0.5 rounded-full text-sm"
     href="/blog"
