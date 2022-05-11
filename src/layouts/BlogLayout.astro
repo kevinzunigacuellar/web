@@ -9,28 +9,13 @@ const pubDate = new Date(content.pubDate).toLocaleDateString('en', {
 ---
 
 <AppLayout {title} {description} {heroImage} {imageAlt}>
-  <a
-    class="group text-zinc-600 mb-4 focus:outline-none focus:text-zinc-900 focus:underline dark:focus:text-white hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white inline-flex items-center py-0.5 rounded-full text-sm"
-    href="/blog"
-  >
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      class="h-auto w-4 mr-1 group-hover:-translate-x-1 group-focus:-translate-x-1 transition-all"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke="currentColor"
-      stroke-width="2"
-    >
-      <path stroke-linecap="round" stroke-linejoin="round" d="M7 16l-4-4m0 0l4-4m-4 4h18"></path>
-    </svg>
-    back to blog
-  </a>
+  
   <header class="flex flex-col justify-center items-center">
-    <p class="text-center text-zinc-600 dark:text-zinc-400 mb-1 text-sm">
+    <p class="text-center text-zinc-600 dark:text-zinc-400 mb-3 text-sm">
       {pubDate}
     </p>
     <h1
-      class="text-4xl mb-6 sm:leading-tight sm:text-5xl font-sans font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-pink-500"
+      class="text-2xl sm:text-4xl mb-6 sm:leading-tight font-sans font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-pink-500"
     >
       {title}
     </h1>
@@ -55,7 +40,7 @@ const pubDate = new Date(content.pubDate).toLocaleDateString('en', {
         >
       </p>
     </div>
-    <div class="rounded-xl w-full overflow-hidden mt-8 mb-12">
+    <div class="rounded-xl w-full overflow-hidden my-10 shadow">
       <Picture src={heroImage} alt={title} loading="eager" />
     </div>
   </header>
