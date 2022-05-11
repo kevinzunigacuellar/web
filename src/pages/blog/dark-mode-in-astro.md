@@ -1,21 +1,21 @@
 ---
 layout: '../../layouts/BlogLayout.astro'
-title: Implement dark mode with tailwindcss in Astro
+title: Add dark mode with tailwindcss in Astro
 heroImage: /public/assets/darkmode.jpeg
 imageAlt: 'A rocket in space'
 setup: import Image from '../../components/Image.astro'
 pubDate: 2022-05-04
-description: Perfect dark mode implementation for your Astro 🚀 website with tailwindcss
+description: In this guide, you will learn how to add a perfect dark mode to your Astro project 🚀 using TailwindCSS.
 ---
 
 Some of the most popular websites use dark mode. It's a great way to make your
-website more accessible. In this post, I will explain how you can implement a
-perfect dark mode with TailwindCSS in your next Astro project.
+website more accessible. In this guide, we will learn how to implement a perfect
+dark mode with TailwindCSS in your Astro project.
 
-In this example we will use preact to create the button toggler UI but feel free
+In this guide, we will use preact to create the button toggler UI but feel free
 to use any other framework of your preference.
 
-## 🧑‍💻 Set up your project
+## 🧑‍💻 Getting started
 
 Start a new Astro project and install your dependecies:
 
@@ -120,8 +120,8 @@ export default function ThemeToggle(): FunctionalComponent {
 }
 ```
 
-The above code will render a button with the text 🌙 if the theme is `dark` and 🌞
-if the theme is `light`. When the user clicks the button, the theme state will
+The above code will render a button with the text 🌙 if the theme is `light` and
+🌞 if the theme is `dark`. When the user clicks the button, the theme state will
 update and store the current theme in the local storage.
 
 ## 🚫 Static Site Generation Problems
@@ -138,9 +138,10 @@ solve this problem:
 Adding a fallback initial state is the most common way to solve problem.
 However, it creates a new problem called the UI flick. Essentially, the UI will
 flick every time the server render doesn't match your client render. You may
-have seen it before with login buttons, when the user is authenticated but when
-the page loads it renders the login button but it rapidly switches to the user
-name.
+have seen it before with login buttons and user names. When an authenticated
+user revisits or refreshes the page, the page first renders in an not
+authenticated state but changes as soon as the page finish loading to
+authenticated.
 
 To implement the fallback initial state, we can use the nullish coalescing
 operator `??` to set the initial state.
@@ -153,10 +154,10 @@ const [theme, setTheme] = useState(localStorage.getItem("theme") ?? "light");
 
 Another way to solve the SSG problem is to add a mounted state. This state will
 make your button render wait until the component is mounted. This way the local
-storage theme will be available in the first render.
+storage theme will be available at the first render.
 
-To implement method we use `useState` and `useEffect` hooks to create a mounted
-state. This render a fallback UI until the component is mounted.
+To implement we use `useState` and `useEffect` hooks to create a mounted state.
+This will render a fallback UI or null until the component is mounted.
 
 ```tsx
 const [isMounted, setIsMounted] = useState(false);
