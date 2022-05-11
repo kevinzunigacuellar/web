@@ -34,13 +34,13 @@ npm install preact
 Add the preact and tailwindcss integration to your `astro.config.mjs`
 
 ```js
-import { defineConfig } from "astro/config";
-import tailwind from "@astrojs/tailwind";
-import preact from "@astrojs/preact";
+import { defineConfig } from 'astro/config'
+import tailwind from '@astrojs/tailwind'
+import preact from '@astrojs/preact'
 
 export default defineConfig({
   integrations: [preact(), tailwind()],
-});
+})
 ```
 
 Create a `tailwind.config.cjs` file in your project root and update your content
@@ -48,11 +48,11 @@ paths and set `darkMode` to `class`.
 
 ```js
 module.exports = {
-  content: ["./src/**/*.{js,ts,jsx,tsx,astro}"],
-  darkMode: "class",
+  content: ['./src/**/*.{js,ts,jsx,tsx,astro}'],
+  darkMode: 'class',
   theme: {},
   plugins: [],
-};
+}
 ```
 
 Finally, start your dev server
@@ -97,26 +97,26 @@ In this example we will use preact to create a button to toggle between dark and
 light mode with preact.
 
 ```tsx
-import { useEffect, useState } from "preact/hooks";
-import type { FunctionalComponent } from "preact";
+import { useEffect, useState } from 'preact/hooks'
+import type { FunctionalComponent } from 'preact'
 
 export default function ThemeToggle(): FunctionalComponent {
-  const [theme, setTheme] = useState(localStorage.getItem("theme") ?? "light");
+  const [theme, setTheme] = useState(localStorage.getItem('theme') ?? 'light')
 
   const handleClick = () => {
-    setTheme(theme === "light" ? "dark" : "light");
-  };
+    setTheme(theme === 'light' ? 'dark' : 'light')
+  }
 
   useEffect(() => {
-    if (theme === "dark") {
-      document.documentElement.classList.add("dark");
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark')
     } else {
-      document.documentElement.classList.remove("dark");
+      document.documentElement.classList.remove('dark')
     }
-    localStorage.setItem("theme", theme);
-  }, [theme]);
+    localStorage.setItem('theme', theme)
+  }, [theme])
 
-  return <button onClick={handleClick}>{theme === "light" ? "🌙" : "🌞"}</button>;
+  return <button onClick={handleClick}>{theme === 'light' ? '🌙' : '🌞'}</button>
 }
 ```
 
@@ -147,7 +147,7 @@ To implement the fallback initial state, we can use the nullish coalescing
 operator `??` to set the initial state.
 
 ```tsx
-const [theme, setTheme] = useState(localStorage.getItem("theme") ?? "light");
+const [theme, setTheme] = useState(localStorage.getItem('theme') ?? 'light')
 ```
 
 ### Mounted state
@@ -160,15 +160,15 @@ To implement we use `useState` and `useEffect` hooks to create a mounted state.
 This will render a fallback UI or null until the component is mounted.
 
 ```tsx
-const [isMounted, setIsMounted] = useState(false);
+const [isMounted, setIsMounted] = useState(false)
 
 useEffect(() => {
-  setIsMounted(true);
-}, []);
+  setIsMounted(true)
+}, [])
 
 if (!isMounted) {
-  return <FallbackUI />; // or null;
+  return <FallbackUI /> // or null;
 }
 
-return <button>{theme === "light" ? "🌙" : "🌞"}</button>;
+return <button>{theme === 'light' ? '🌙' : '🌞'}</button>
 ```
