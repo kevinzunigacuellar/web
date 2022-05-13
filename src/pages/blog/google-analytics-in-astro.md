@@ -106,11 +106,15 @@ Our new script will look like this after all the modifications:
 > Important: The config script should be placed before both google analytics
 > scripts.
 
-Place this code snippet in your html head section. Congratulations, you have
+Finally, place this code snippet in the head of your html. If you are coping the code above do not forget to update your **google tracking id**.
+
+Congratulations, you have
 successfully added google analytics to your Astro project 🚀!
 
-To test it out, after deploying your project you go to your google analytics
-real time dashboard. After visiting your website you should see some recent
-activity.
+## Testing 👩‍🔬
+
+After deploying your project, go to your google analytics
+real time dashboard. You should see some recent
+activity after visiting your website.
 
 <Image src="/public/assets/ga-astro-partytown/real-time-dashboard.png" alt="Google analytics real time dashboard with one visitor in the last 30 minutes" />
