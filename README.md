@@ -2,15 +2,11 @@
 
 - **Framework**: [Astro](https://astro.build/)
 
-## Tasks ✅
+## Tasks 📝
 - [ ] Add projects page
 - [ ] Add favorite technologies
-- [ ] Add guestbook page?
+- [ ] Add guestbook page
 
-## Improvements
+## Improvements 🚀
 
-- Reduced the amount of JavaScript shipped to the browser
-    
-    Previous amount of JavaScript with **Next.js** `137kB`
-    
-    Current amount of JavaScript with **Astro** `7kB`
+✅ Reduced the amount of JS shipped to the browser (from `137kB` with **Next.js** to `7kB` with **Astro**). 
