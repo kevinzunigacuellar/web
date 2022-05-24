@@ -7,7 +7,17 @@ import partytown from '@astrojs/partytown'
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [astroImageTools, tailwind(), preact(), sitemap(), partytown()],
+  integrations: [
+    astroImageTools,
+    tailwind(),
+    preact(),
+    sitemap(),
+    partytown({
+      config: {
+        forward: ['dataLayer.push'],
+      },
+    }),
+  ],
   site: 'https://kevinzunigacuellar.com',
   markdown: {
     shikiConfig: {
