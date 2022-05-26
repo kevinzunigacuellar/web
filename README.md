@@ -1,6 +1,7 @@
 # kevinzunigacuellar.com
 
-- **Framework**: [Astro](https://astro.build/)
+- **Platform**: [Astro](https://astro.build/)
+- **UI Library**: [Solid](https://www.solidjs.com/)
 
 ## Tasks 📝
 
