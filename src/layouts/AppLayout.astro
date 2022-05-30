@@ -1,6 +1,6 @@
 ---
 import Navlink from '@components/Navlink.astro'
-import ThemeToggle from '@components/ThemeToggle.tsx'
+import ThemeToggle from '@components/ThemeToggle'
 import SocialLink from '@components/SocialLink.astro'
 
 export interface Props {
@@ -101,7 +101,7 @@ const image = heroImage
         <hr
           class="h-16 rounded-lg border-2 border-r ml-1 sm:ml-0 border-zinc-200 dark:border-zinc-700 transition-colors"
         />
-        <ThemeToggle client:load />
+        <ThemeToggle client:only="solid-js" />
         <SocialLink href="https://github.com/kevinzunigacuellar" text="GitHub">
           <svg
             class="h-auto w-8 group-hover:w-12 group-focus:w-12 transition-all fill-current"
