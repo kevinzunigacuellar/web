@@ -1,10 +1,12 @@
 ---
 import AppLayout from '@layouts/AppLayout.astro'
+import { Icon } from 'astro-icon'
+import Skill from '@components/Skill.astro'
 import { Picture } from 'astro-imagetools/components'
 ---
 
 <AppLayout>
-  <section class="mb-8 sm:flex sm:items-center sm:justify-between">
+  <section class="mb-12 sm:flex sm:items-center sm:justify-between">
     <div class="w-40 h-40 rounded-full overflow-hidden">
       <Picture
         src="/public/assets/me.jpeg"
@@ -30,33 +32,23 @@ import { Picture } from 'astro-imagetools/components'
       </p>
     </header>
   </section>
-  <section class="space-y-4 sm:space-y-6 mb-8">
-    <h2 class="dark:text-zinc-300 text-zinc-900 text-2xl font-bold tracking-tight">
+  <section class="mb-8">
+    <h2 class="dark:text-zinc-300 mb-4 text-zinc-900 text-2xl font-bold tracking-tight">
       Favorite technologies
     </h2>
-    <p class="w-full font-normal leading-7 text-zinc-600 dark:text-zinc-400">
-      I love exploring new libraries and frameworks. Here is a list of technologies that I have been
-      working with at school, side projects and open source.
+    <p class="w-full mb-6 font-normal leading-7 text-zinc-600 dark:text-zinc-400">
+      I love exploring with new libraries, programing languages and frameworks. Here is a list of
+      technologies that I have been working with at school, side projects and open source.
     </p>
-    <h3 class="dark:text-zinc-300 text-zinc-800 font-semibold text-lg">Programing languages</h3>
     <ul
-      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 font-normal leading-7 text-zinc-600 dark:text-zinc-400"
+      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-zinc-600 dark:text-zinc-400"
     >
-      <li>JavaScript</li>
-      <li>TypeScript</li>
-      <li>Java</li>
-      <li>Python</li>
-      <li>Rust</li>
-    </ul>
-    <h3 class="dark:text-zinc-300 text-zinc-800 font-semibold text-lg">Libraries and frameworks</h3>
-    <ul
-      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 font-normal leading-7 text-zinc-600 dark:text-zinc-400"
-    >
-      <li>React</li>
-      <li>Vue</li>
-      <li>Solid</li>
-      <li>Astro</li>
-      <li>Nextjs</li>
+      <Skill icon="logos:typescript-icon" text="TypeScript" />
+      <Skill icon="mdi:language-rust" text="Rust" />
+      <Skill icon="logos:java" text="Java" />
+      <Skill icon="logos:react" text="React" />
+      <Skill icon="logos:vue" text="Vue" />
+      <Skill icon="logos:solidjs-icon" text="Solid" />
     </ul>
   </section>
   <section>
