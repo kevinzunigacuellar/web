@@ -6,7 +6,7 @@ import { Picture } from 'astro-imagetools/components'
 ---
 
 <AppLayout>
-  <section class="mb-12 sm:flex sm:items-center sm:justify-between">
+  <section class="mb-8 sm:mb-12 sm:flex sm:items-center sm:justify-between">
     <div class="w-40 h-40 rounded-full overflow-hidden">
       <Picture
         src="/public/assets/me.jpeg"
@@ -32,11 +32,11 @@ import { Picture } from 'astro-imagetools/components'
       </p>
     </header>
   </section>
-  <section class="mb-8">
+  <section class="mb-8 sm:mb-12">
     <h2 class="dark:text-zinc-300 mb-4 text-zinc-900 text-2xl font-bold tracking-tight">
       Favorite technologies
     </h2>
-    <p class="w-full mb-6 font-normal leading-7 text-zinc-600 dark:text-zinc-400">
+    <p class="w-full mb-8 font-normal leading-7 text-zinc-600 dark:text-zinc-400">
       I love exploring with new libraries, programing languages and frameworks. Here is a list of
       technologies that I have been working with at school, side projects and open source.
     </p>
@@ -51,7 +51,7 @@ import { Picture } from 'astro-imagetools/components'
       <Skill icon="logos:solidjs-icon" text="Solid" />
     </ul>
   </section>
-  <section>
+  <section class="mb-8 sm:mb-12">
     <h2 class="dark:text-zinc-300 text-zinc-900 text-2xl font-bold tracking-tight">Projects</h2>
   </section>
 </AppLayout>
