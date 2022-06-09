@@ -1,4 +1,4 @@
-import { createSignal, createEffect, Show, Switch } from 'solid-js'
+import { createSignal, createEffect, Switch } from 'solid-js'
 
 export default function ThemeToggle() {
   const [theme, setTheme] = createSignal(localStorage.getItem('theme') || undefined)
