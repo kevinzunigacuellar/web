@@ -6,6 +6,11 @@
       "@components/*": ["src/components/*"],
       "@layouts/*": ["src/layouts/*"],
       "@content/*": ["src/content/*"]
-    }
+    },
+    "target": "ESNext",
+    "module": "ESNext",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "types": ["vite/client"]
   }
 }
