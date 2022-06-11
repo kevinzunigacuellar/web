@@ -90,9 +90,10 @@ Our new script will look like this after all the modifications:
     forward: ['dataLayer.push'],
   }
 </script>
-<script type="text/partytown" src="https://www.googletagmanager.com/gtag/js?id=G-5BF82W8RSV"
-></script>
-<script type="text/partytown">
+<script type='text/partytown' src='https://www.googletagmanager.com/gtag/js?id=G-5BF82W8RSV'>
+
+</script>
+<script type='text/partytown'>
   window.dataLayer = window.dataLayer || []
   function gtag() {
     dataLayer.push(arguments)

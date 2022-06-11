@@ -3,14 +3,11 @@ import AppLayout from '@layouts/AppLayout.astro'
 import Header from '@components/Header.astro'
 import BookCard from '@components/BookCard.astro'
 import books from '@content/books.json'
-
 ---
 
-<AppLayout title="Bookshelf - Kevin Zuniga Cuellar">
-  <Header title="Bookshelf" />
-  <ul class="grid grid-cols-1 justify-items-center gap-8 md:justify-items-start">
-      {books.map(props => (
-        <BookCard {...props}/>
-      ))}
+<AppLayout title='Bookshelf - Kevin Zuniga Cuellar'>
+  <Header title='Bookshelf' />
+  <ul class='grid grid-cols-1 justify-items-center gap-8 md:justify-items-start'>
+    {books.map((props) => <BookCard {...props} />)}
   </ul>
 </AppLayout>

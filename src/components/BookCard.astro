@@ -16,26 +16,26 @@ const loadingType = eager ? 'eager' : 'lazy' // indentify eager or lazy
 ---
 
 <li
-  class="font-body list-none overflow-hidden rounded-xl bg-white shadow dark:border-zinc-700
-    dark:bg-zinc-800/90 dark:border-t dark:shadow-black/40 w-full sm:max-w-4xl transition-all"
+  class='font-body list-none overflow-hidden rounded-xl bg-white shadow dark:border-zinc-700
+    dark:bg-zinc-800/90 dark:border-t dark:shadow-black/40 w-full sm:max-w-4xl transition-all'
 >
-  <article class="px-6 pt-6 sm:flex sm:pb-6">
-    <div class="relative aspect-[3/4] shrink-0 overflow-hidden rounded-xl shadow-sm sm:w-44">
-      <Picture src={img} alt={title} objectFit="cover" layout="fill" loading={loadingType} />
+  <article class='px-6 pt-6 sm:flex sm:pb-6'>
+    <div class='relative aspect-[3/4] shrink-0 overflow-hidden rounded-xl shadow-sm sm:w-44'>
+      <Picture src={img} alt={title} objectFit='cover' layout='fill' loading={loadingType} />
     </div>
-    <div class="w-full py-6 sm:py-0 sm:px-6">
-      <h2 class="mb-1.5 space-x-2 text-xl font-semibold text-zinc-900 dark:text-white">
+    <div class='w-full py-6 sm:py-0 sm:px-6'>
+      <h2 class='mb-1.5 space-x-2 text-xl font-semibold text-zinc-900 dark:text-white'>
         {title}
       </h2>
-      <div class="mb-2 sm:flex sm:items-baseline">
-        <p class="space-x-0.5 text-sm text-zinc-600 dark:text-zinc-400">
-          <span class="text-zinc-800 dark:text-zinc-300">{author}</span>{' '}
+      <div class='mb-2 sm:flex sm:items-baseline'>
+        <p class='space-x-0.5 text-sm text-zinc-600 dark:text-zinc-400'>
+          <span class='text-zinc-800 dark:text-zinc-300'>{author}</span>{' '}
           <span>&middot;</span>
-          <span class="pr-0 sm:pr-2">{year}</span>
+          <span class='pr-0 sm:pr-2'>{year}</span>
         </p>
         {reading && <Badge text="reading" color="indigo" />}
       </div>
-      <p class="py-1 leading-relaxed text-zinc-600 dark:text-zinc-400">{`"${comment}"`}</p>
+      <p class='py-1 leading-relaxed text-zinc-600 dark:text-zinc-400'>{`"${comment}"`}</p>
     </div>
   </article>
 </li>
