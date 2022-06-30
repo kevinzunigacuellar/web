@@ -10,17 +10,17 @@
     "preview": "astro preview --experimental-integrations"
   },
   "devDependencies": {
-    "@astrojs/sitemap": "^0.1.1",
-    "@astrojs/solid-js": "^0.1.4",
-    "@astrojs/tailwind": "^0.2.1",
+    "@astrojs/sitemap": "^0.2.3",
+    "@astrojs/solid-js": "^0.2.0",
+    "@astrojs/tailwind": "^0.2.2",
     "@tailwindcss/forms": "^0.5.2",
     "@tailwindcss/typography": "^0.5.2",
-    "astro": "1.0.0-beta.43",
+    "astro": "1.0.0-beta.59",
     "astro-imagetools": "0.6.10",
-    "prettier-plugin-astro": "next"
+    "prettier-plugin-astro": "0.1.1"
   },
   "dependencies": {
     "astro-icon": "^0.7.1",
-    "solid-js": "^1.4.4"
+    "solid-js": "^1.4.5"
   }
 }
