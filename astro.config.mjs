@@ -19,4 +19,7 @@ export default defineConfig({
       external: ['svgo'],
     },
   },
+  experimental: {
+    integrations: true,
+  },
 })
