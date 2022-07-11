@@ -1,20 +1,12 @@
 ---
 import AppLayout from '@layouts/AppLayout.astro'
-import { Picture } from 'astro-imagetools/components'
+import { Image } from '@astrojs/image'
+import authorImage from '../images/me.jpeg'
 ---
 
 <AppLayout>
   <section class='mb-8 sm:mb-12 sm:flex sm:items-center sm:justify-between'>
-    <div class='w-40 h-40 rounded-full overflow-hidden'>
-      <Picture
-        src='/public/assets/me.jpeg'
-        alt='image of the author'
-        loading='eager'
-        layout='fixed'
-        width={320}
-        height={320}
-      />
-    </div>
+      <Image src={authorImage} alt='Image of the author' format='avif' width={320} height={320} loading="eager" class='rounded-full w-40 overflow-hidden' />
     <header class='mt-8 max-w-lg sm:my-0 sm:order-first'>
       <h1 class='mb-2 text-3xl font-bold tracking-tight text-white sm:text-4xl'>
         Kevin Zuniga Cuellar

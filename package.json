@@ -10,16 +10,15 @@
     "preview": "astro preview"
   },
   "devDependencies": {
-    "@astrojs/sitemap": "^0.2.4",
-    "@astrojs/solid-js": "^0.2.0",
-    "@astrojs/tailwind": "^0.2.2",
-    "@tailwindcss/typography": "^0.5.2",
-    "astro": "1.0.0-beta.63",
-    "astro-imagetools": "0.6.10",
-    "prettier-plugin-astro": "0.1.1"
+    "@astrojs/sitemap": "^0.2.5",
+    "@astrojs/solid-js": "^0.3.0",
+    "@astrojs/tailwind": "^0.2.3",
+    "@tailwindcss/typography": "^0.5.3",
+    "astro": "1.0.0-beta.66",
+    "prettier-plugin-astro": "0.1.1",
+    "@astrojs/image": "^0.1.1"
   },
   "dependencies": {
-    "astro-icon": "^0.7.1",
-    "solid-js": "^1.4.6"
+    "solid-js": "^1.4.7"
   }
 }

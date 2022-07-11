@@ -1,6 +1,6 @@
 ---
-import { Picture } from 'astro-imagetools/components'
 import Badge from '@components/Badge.astro'
+import { Image } from '@astrojs/image'
 
 export interface Props {
   title: string
@@ -12,16 +12,13 @@ export interface Props {
   eager?: boolean
 }
 const { title, img, author, year, comment, reading, eager } = Astro.props as Props
-const loadingType = eager ? 'eager' : 'lazy' // indentify eager or lazy
 ---
 
 <li
   class='list-none overflow-hidden rounded-xl shadow border-zinc-700 bg-zinc-800/90 border-t shadow-black/40 w-full sm:max-w-4xl transition-all'
 >
   <article class='px-6 pt-6 sm:flex sm:pb-6'>
-    <div class='relative aspect-[3/4] shrink-0 overflow-hidden rounded-xl shadow-sm sm:w-44'>
-      <Picture src={img} alt={title} objectFit='cover' layout='fill' loading={loadingType} />
-    </div>
+      <Image src={import(img)} alt={title} width={400} aspectRatio="3:4" format="avif" class='rounded-xl w-full sm:w-48 overflow-hidden' />
     <div class='w-full py-6 sm:py-0 sm:px-6'>
       <h2 class='mb-1.5 space-x-2 text-xl font-semibold text-white'>
         {title}
