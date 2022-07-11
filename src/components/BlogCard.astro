@@ -3,7 +3,7 @@ export interface Props {
   title: string
   description: string
   pubDate: string
-  url: string
+  url: string | undefined
 }
 let { title, description, pubDate, url } = Astro.props as Props
 url = `${url}/`
