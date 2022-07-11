@@ -10,10 +10,7 @@ const fullDate = new Date(content.pubDate).toLocaleDateString('en', {
 
 <AppLayout {title} {description} {heroImage} {imageAlt} {pubDate}>
   <header class='flex flex-col justify-center items-center'>
-    <time
-      datetime={pubDate}
-      class='block text-center text-zinc-600 dark:text-zinc-400 mb-3 text-sm'
-    >
+    <time datetime={pubDate} class='block text-center text-zinc-400 mb-3 text-sm'>
       {fullDate}
     </time>
     <h1
@@ -32,10 +29,10 @@ const fullDate = new Date(content.pubDate).toLocaleDateString('en', {
           layout='fixed'
         />
       </div>
-      <p class='text-zinc-600 dark:text-zinc-400 text-sm'>
+      <p class='text-zinc-400 text-sm'>
         <span class='block font-semibold'>Kevin Zuniga Cuellar</span>
         <a
-          class='text-blue-600 dark:text-blue-400 focus:outline-none focus:underline hover:underline focus:font-medium hover:font-medium block'
+          class='text-blue-400 focus:outline-none focus:underline hover:underline focus:font-medium hover:font-medium block'
           href='https://twitter.com/kevinzunigacuel'
           target='_blank'
           rel='noopener noreferrer'
@@ -48,7 +45,7 @@ const fullDate = new Date(content.pubDate).toLocaleDateString('en', {
     </div>
   </header>
   <article
-    class='prose prose-zinc focus:prose-a:outline-none dark:prose-code:text-pink-400 prose-code:text-pink-600 prose-a:text-pink-600 dark:prose-a:text-pink-400 max-w-none hover:prose-a:underline focus:prose-a:underline prose-a:no-underline dark:prose-invert prose-img:m-0 prose-headings:text-indigo-600 dark:prose-headings:text-indigo-400'
+    class='prose prose-invert focus:prose-a:outline-none prose-code:text-pink-400 prose-a:text-pink-400 max-w-none hover:prose-a:underline focus:prose-a:underline prose-a:no-underline prose-img:m-0 prose-headings:text-indigo-500'
   >
     <slot></slot>
   </article>
