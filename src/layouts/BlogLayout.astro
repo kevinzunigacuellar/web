@@ -26,6 +26,7 @@ const fullDate = new Date(content.pubDate).toLocaleDateString('en', {
           height={80}
           width={80}
           loading='eager'
+          format='avif'
           alt='Picture of the author'
         />
       </div>
@@ -41,11 +42,11 @@ const fullDate = new Date(content.pubDate).toLocaleDateString('en', {
       </p>
     </div>
     <div class='rounded-xl w-full overflow-hidden my-10 shadow'>
-      <Image src={heroImage} alt={title} loading='eager' />
+      <Image src={import(`${heroImage}`)} alt={title} aspectRatio="16/9" width={1600} format="avif"/>
     </div>
   </header>
   <article
-    class='prose prose-invert focus:prose-a:outline-none prose-code:text-pink-400 prose-a:text-pink-400 max-w-none hover:prose-a:underline focus:prose-a:underline prose-a:no-underline prose-img:m-0 prose-headings:text-indigo-500'
+    class='prose prose-invert prose-img:rounded-xl focus:prose-a:outline-none prose-code:text-pink-400 prose-a:text-pink-400 max-w-none hover:prose-a:underline focus:prose-a:underline prose-a:no-underline prose-img:m-0 prose-headings:text-indigo-500'
   >
     <slot></slot>
   </article>

@@ -1,9 +1,12 @@
 ---
 layout: '../../layouts/BlogLayout.astro'
 title: Add google analytics to your Astro project with Partytown
-heroImage: /public/assets/astro_ga.png
+heroImage: ../images/blog/google-analytics-in-astro/astro_ga.png
 imageAlt: 'Logo of Astro, partytown and google analytics together'
-setup: import Image from '../../components/Image.astro'
+setup: |
+  import { Image } from '@astrojs/image'
+  import trackingSetup from '../../images/blog/google-analytics-in-astro/tracking-setup.png'
+  import realtimeDashboard from '../../images/blog/google-analytics-in-astro/realtime-dashboard.png'
 pubDate: 2022-05-12
 description: In this guide, you will learn how to add google analytics to your Astro project 🚀 using a web worker with Partytown.
 ---
@@ -47,7 +50,7 @@ export default defineConfig({
 Create a google analytics account and get the tracking ID. You can find the
 tracking ID in the analytics console of your google account.
 
-<Image src="/public/assets/ga-astro-partytown/tracking-setup.png" alt="Example of google analytics admin settings with a tracking ID" />
+<Image src={trackingSetup} alt="Example of google analytics admin settings with a tracking ID" width={1600} aspectRatio="16/9" format="avif" />
 
 ## 🚀 Hands-on time!
 
@@ -118,4 +121,5 @@ After deploying your project, go to your google analytics
 real time dashboard. You should see some recent
 activity after visiting your website.
 
-<Image src="/public/assets/ga-astro-partytown/real-time-dashboard.png" alt="Google analytics real time dashboard with one visitor in the last 30 minutes" />
+<!-- <Image src="/public/assets/ga-astro-partytown/real-time-dashboard.png" alt="Google analytics real time dashboard with one visitor in the last 30 minutes" /> -->
+<Image src={realtimeDashboard} alt="Google analytics real time dashboard with one visitor in the last 30 minutes" width={1600} aspectRatio="16/9" format="avif" />
