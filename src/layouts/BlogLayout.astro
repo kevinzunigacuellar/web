@@ -7,7 +7,6 @@ const { title, description, heroImage, imageAlt, pubDate } = content;
 const fullDate = new Date(content.pubDate).toLocaleDateString("en", {
   dateStyle: "full",
 });
-
 ---
 
 <AppLayout {title} {description} {heroImage} {imageAlt} {pubDate}>

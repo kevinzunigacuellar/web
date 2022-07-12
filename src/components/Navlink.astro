@@ -9,6 +9,7 @@ const { text, href } = Astro.props as Props;
 
 <a
   class="relative shrink-0 group h-16 w-16 bg-zinc-700 rounded-2xl flex justify-center items-center text-zinc-400 focus:text-zinc-300 hover:text-zinc-300 transition-all hover:ring-2 hover:ring-indigo-500 focus:ring-indigo-500 hover:ring-offset-2 focus:outline-none focus:ring-2 focus:ring-offset-2 ring-offset-slate-700"
+  rel="prefetch"
   {href}
   aria-label={`Go to ${text}`}
 >
