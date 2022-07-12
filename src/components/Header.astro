@@ -1,8 +1,10 @@
 ---
 export interface Props {
-  title: string
+  title: string;
 }
-const { title } = Astro.props as Props
+const { title } = Astro.props as Props;
 ---
 
-<h1 class='mb-6 dark:text-zinc-200 text-3xl font-bold tracking-tight sm:text-4xl'>{title}</h1>
+<h1 class="mb-6 text-zinc-200 text-3xl font-bold tracking-tight sm:text-4xl">
+  {title}
+</h1>

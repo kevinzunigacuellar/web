@@ -1,4 +1,4 @@
 User-Agent: *
 Allow: /
 
-Sitemap: https://kevinzunigacuellar.com/sitemap.xml
+Sitemap: https://kevinzunigacuellar.com/sitemap-index.xml

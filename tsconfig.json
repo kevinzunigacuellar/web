@@ -11,6 +11,7 @@
     "module": "ESNext",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "types": ["vite/client"]
+    "types": ["vite/client"],
+    "strict": true
   }
 }

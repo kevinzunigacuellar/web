@@ -1,6 +1,5 @@
 module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx,astro}'],
-  darkMode: 'class',
   theme: {
     extend: {
       keyframes: {
@@ -15,5 +14,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require('@tailwindcss/typography'), require('@tailwindcss/forms')],
+  plugins: [require('@tailwindcss/typography')],
 }

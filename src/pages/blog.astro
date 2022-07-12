@@ -1,20 +1,23 @@
 ---
-import AppLayout from '@layouts/AppLayout.astro'
-import BlogCard from '@components/BlogCard.astro'
-import Header from '@components/Header.astro'
+import AppLayout from "@layouts/AppLayout.astro";
+import BlogCard from "@components/BlogCard.astro";
+import Header from "@components/Header.astro";
 
-let allPosts = await Astro.glob('./blog/*.md')
+let allPosts = await Astro.glob("./blog/*.md");
 allPosts = allPosts.sort(
-  (a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
-)
+  (a, b) =>
+    new Date(b.frontmatter.pubDate).valueOf() -
+    new Date(a.frontmatter.pubDate).valueOf()
+);
 
-const title = 'Blog - Kevin Zuniga Cuellar'
-const description = "Code snippeds, journal, and other stuff I've written."
+const title = "Blog - Kevin Zuniga Cuellar";
+const description =
+  "Code snippeds,developer journal, and other stuff I've written.";
 ---
 
 <AppLayout {title} {description}>
-  <Header title='Blog' />
-  <section class='grid grid-cols-1 gap-8'>
+  <Header title="Blog" />
+  <section class="grid grid-cols-1 gap-8">
     {allPosts.map((post) => (
       <BlogCard
         title={post.frontmatter.title}
