@@ -1,12 +1,12 @@
 ---
 layout: '../../layouts/BlogLayout.astro'
 title: Add google analytics to your Astro project with Partytown
-heroImage: ../images/blog/google-analytics-in-astro/astro_ga.png
+heroImage: '../images/blog/google-analytics-in-astro/astro_ga.png' 
 imageAlt: 'Logo of Astro, partytown and google analytics together'
 setup: |
   import { Image } from '@astrojs/image'
-  import trackingSetup from '../../images/blog/google-analytics-in-astro/tracking-setup.png'
-  import realtimeDashboard from '../../images/blog/google-analytics-in-astro/realtime-dashboard.png'
+  import trackingSetup from '../../images/tracking-setup.png'
+  import realtimeDashboard from '../../images/realtime-dashboard.png'
 pubDate: 2022-05-12
 description: In this guide, you will learn how to add google analytics to your Astro project 🚀 using a web worker with Partytown.
 ---

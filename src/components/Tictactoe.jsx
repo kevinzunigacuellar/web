@@ -1,60 +1,92 @@
-import { createSignal, createEffect, Switch, Show, Match } from 'solid-js'
+import { createSignal, createEffect, Switch, Show, Match } from "solid-js";
 
 export default function Tictactoe() {
-  const [turn, setTurn] = createSignal('X')
-  const [board, setBoard] = createSignal(['', '', '', '', '', '', '', '', ''])
-  const [winner, setWinner] = createSignal('')
+  const [turn, setTurn] = createSignal("X");
+  const [board, setBoard] = createSignal(["", "", "", "", "", "", "", "", ""]);
+  const [winner, setWinner] = createSignal("");
 
   const handleClick = (id) => {
-    if (board()[id()] !== '' || winner()) {
-      return
+    if (board()[id()] !== "" || winner()) {
+      return;
     }
-    setBoard(board().map((_, i) => (i === id() ? turn() : _)))
-    setTurn(turn() === 'X' ? 'O' : 'X')
-  }
+    setBoard(board().map((_, i) => (i === id() ? turn() : _)));
+    setTurn(turn() === "X" ? "O" : "X");
+  };
 
   createEffect(() => {
-    if (!board().includes('')) {
-      setWinner('Draw')
+    if (!board().includes("")) {
+      setWinner("Draw");
     }
-    checkForWinner()
-  })
+    checkForWinner();
+  });
 
   const handleReset = () => {
-    setBoard(['', '', '', '', '', '', '', '', ''])
-    setTurn('X')
-    setWinner('')
-  }
+    setBoard(["", "", "", "", "", "", "", "", ""]);
+    setTurn("X");
+    setWinner("");
+  };
 
   const checkForWinner = () => {
     // check rows
-    if (board()[0] !== '' && board()[0] === board()[1] && board()[0] === board()[2]) {
-      setWinner(board()[0])
+    if (
+      board()[0] !== "" &&
+      board()[0] === board()[1] &&
+      board()[0] === board()[2]
+    ) {
+      setWinner(board()[0]);
     }
-    if (board()[3] !== '' && board()[3] === board()[4] && board()[3] === board()[5]) {
-      setWinner(board()[3])
+    if (
+      board()[3] !== "" &&
+      board()[3] === board()[4] &&
+      board()[3] === board()[5]
+    ) {
+      setWinner(board()[3]);
     }
-    if (board()[6] !== '' && board()[6] === board()[7] && board()[6] === board()[8]) {
-      setWinner(board()[6])
+    if (
+      board()[6] !== "" &&
+      board()[6] === board()[7] &&
+      board()[6] === board()[8]
+    ) {
+      setWinner(board()[6]);
     }
     // check columns
-    if (board()[0] !== '' && board()[0] === board()[3] && board()[0] === board()[6]) {
-      setWinner(board()[0])
+    if (
+      board()[0] !== "" &&
+      board()[0] === board()[3] &&
+      board()[0] === board()[6]
+    ) {
+      setWinner(board()[0]);
     }
-    if (board()[1] !== '' && board()[1] === board()[4] && board()[1] === board()[7]) {
-      setWinner(board()[1])
+    if (
+      board()[1] !== "" &&
+      board()[1] === board()[4] &&
+      board()[1] === board()[7]
+    ) {
+      setWinner(board()[1]);
     }
-    if (board()[2] !== '' && board()[2] === board()[5] && board()[2] === board()[8]) {
-      setWinner(board()[2])
+    if (
+      board()[2] !== "" &&
+      board()[2] === board()[5] &&
+      board()[2] === board()[8]
+    ) {
+      setWinner(board()[2]);
     }
     // check diagonals
-    if (board()[0] !== '' && board()[0] === board()[4] && board()[0] === board()[8]) {
-      setWinner(board()[0])
+    if (
+      board()[0] !== "" &&
+      board()[0] === board()[4] &&
+      board()[0] === board()[8]
+    ) {
+      setWinner(board()[0]);
     }
-    if (board()[2] !== '' && board()[2] === board()[4] && board()[2] === board()[6]) {
-      setWinner(board()[2])
+    if (
+      board()[2] !== "" &&
+      board()[2] === board()[4] &&
+      board()[2] === board()[6]
+    ) {
+      setWinner(board()[2]);
     }
-  }
+  };
 
   return (
     <div>
@@ -71,10 +103,14 @@ export default function Tictactoe() {
                 viewBox="0 0 24 24"
               >
                 <Switch fallback={null}>
-                  <Match when={square === 'X'}>
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  <Match when={square === "X"}>
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6 18L18 6M6 6l12 12"
+                    />
                   </Match>
-                  <Match when={square === 'O'}>
+                  <Match when={square === "O"}>
                     <path
                       stroke-linecap="round"
                       stroke-linejoin="round"
@@ -87,9 +123,11 @@ export default function Tictactoe() {
           )}
         </For>
         <Switch fallback={null}>
-          <Match when={winner() === 'X'}>
+          <Match when={winner() === "X"}>
             <div class="absolute flex flex-col justify-center items-center bg-gray-100/30 dark:bg-zinc-900/30 backdrop-blur w-full h-full rounded-lg transition-all">
-              <p class="pb-4 text-zinc-600 dark:text-zinc-400">Congratulations X</p>
+              <p class="pb-4 text-zinc-600 dark:text-zinc-400">
+                Congratulations X
+              </p>
               <button
                 class="inline-block rounded-md px-5 py-2 font-semibold bg-blue-200 text-blue-700 dark:bg-indigo-700 dark:text-indigo-200 transition-colors"
                 onClick={handleReset}
@@ -98,9 +136,11 @@ export default function Tictactoe() {
               </button>
             </div>
           </Match>
-          <Match when={winner() === 'O'}>
+          <Match when={winner() === "O"}>
             <div class="absolute flex flex-col justify-center items-center bg-gray-100/30 dark:bg-zinc-900/30 backdrop-blur w-full h-full rounded-lg transition-all">
-              <p class="pb-4 text-zinc-600 dark:text-zinc-400">Congratulations O</p>
+              <p class="pb-4 text-zinc-600 dark:text-zinc-400">
+                Congratulations O
+              </p>
               <button
                 class="inline-block rounded-md px-5 py-2 font-semibold bg-blue-200 text-blue-700 dark:bg-indigo-700 dark:text-indigo-200 transition-colors"
                 onClick={handleReset}
@@ -109,7 +149,7 @@ export default function Tictactoe() {
               </button>
             </div>
           </Match>
-          <Match when={winner() === 'Draw'}>
+          <Match when={winner() === "Draw"}>
             <div class="absolute flex flex-col justify-center items-center bg-gray-100/30 dark:bg-zinc-900/30 backdrop-blur w-full h-full rounded-lg transition-all">
               <p class="pb-4 text-zinc-600 dark:text-zinc-400">It's a draw</p>
               <button
@@ -129,5 +169,5 @@ export default function Tictactoe() {
         </Switch>
       </ul>
     </div>
-  )
+  );
 }

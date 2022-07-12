@@ -1,37 +1,45 @@
 ---
-import Badge from '@components/Badge.astro'
-import { Image } from '@astrojs/image'
+import Badge from "@components/Badge.astro";
+import { Image } from "@astrojs/image";
 
 export interface Props {
-  title: string
-  img: string
-  author: string
-  year: number
-  comment: string
-  reading?: boolean
-  eager?: boolean
+  title: string;
+  img: string;
+  author: string;
+  year: number;
+  comment: string;
+  reading?: boolean;
+  eager?: boolean;
 }
-const { title, img, author, year, comment, reading, eager } = Astro.props as Props
+const { title, img, author, year, comment, reading, eager } =
+  Astro.props as Props;
 ---
 
 <li
-  class='list-none overflow-hidden rounded-xl shadow border-zinc-700 bg-zinc-800/90 border-t shadow-black/40 w-full sm:max-w-4xl transition-all'
+  class="list-none overflow-hidden rounded-xl shadow border-zinc-700 bg-zinc-800/90 border-t shadow-black/40 w-full sm:max-w-4xl transition-all"
 >
-  <article class='px-6 pt-6 sm:flex sm:pb-6'>
-      <Image src={import(img)} alt={title} width={400} aspectRatio="3:4" format="avif" class='rounded-xl w-full sm:w-48 overflow-hidden' />
-    <div class='w-full py-6 sm:py-0 sm:px-6'>
-      <h2 class='mb-1.5 space-x-2 text-xl font-semibold text-white'>
+  <article class="px-6 pt-6 sm:flex sm:pb-6">
+    <Image
+      src={img}
+      alt={title}
+      width={400}
+      aspectRatio="3:4"
+      format="avif"
+      class="rounded-xl w-full sm:w-48 overflow-hidden"
+    />
+    <div class="w-full py-6 sm:py-0 sm:px-6">
+      <h2 class="mb-1.5 space-x-2 text-xl font-semibold text-white">
         {title}
       </h2>
-      <div class='mb-2 sm:flex sm:items-baseline'>
-        <p class='space-x-0.5 text-sm text-zinc-400'>
-          <span class='text-zinc-300'>{author}</span>{' '}
+      <div class="mb-2 sm:flex sm:items-baseline">
+        <p class="space-x-0.5 text-sm text-zinc-400">
+          <span class="text-zinc-300">{author}</span>{" "}
           <span>&middot;</span>
-          <span class='pr-0 sm:pr-2'>{year}</span>
+          <span class="pr-0 sm:pr-2">{year}</span>
         </p>
         {reading && <Badge text="reading" color="indigo" />}
       </div>
-      <p class='py-1 leading-relaxed text-zinc-400'>{`"${comment}"`}</p>
+      <p class="py-1 leading-relaxed text-zinc-400">{`"${comment}"`}</p>
     </div>
   </article>
 </li>

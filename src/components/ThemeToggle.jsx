@@ -1,19 +1,21 @@
-import { createSignal, createEffect, Switch } from 'solid-js'
+import { createSignal, createEffect, Switch } from "solid-js";
 
 export default function ThemeToggle() {
-  const [theme, setTheme] = createSignal(localStorage.getItem('theme') || undefined)
+  const [theme, setTheme] = createSignal(
+    localStorage.getItem("theme") || undefined
+  );
   const toggleTheme = () => {
-    setTheme(theme() === 'light' ? 'dark' : 'light')
-  }
+    setTheme(theme() === "light" ? "dark" : "light");
+  };
 
   createEffect(() => {
-    if (theme() === 'dark') {
-      document.documentElement.classList.add('dark')
+    if (theme() === "dark") {
+      document.documentElement.classList.add("dark");
     } else {
-      document.documentElement.classList.remove('dark')
+      document.documentElement.classList.remove("dark");
     }
-    window.localStorage.setItem('theme', theme())
-  })
+    window.localStorage.setItem("theme", theme());
+  });
 
   return (
     <button
@@ -26,10 +28,10 @@ export default function ThemeToggle() {
         viewBox="0 0 20 20"
       >
         <Switch fallback={null}>
-          <Match when={theme() === 'light'}>
+          <Match when={theme() === "light"}>
             <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
           </Match>
-          <Match when={theme() === 'dark'}>
+          <Match when={theme() === "dark"}>
             <path
               fill-rule="evenodd"
               d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
@@ -39,17 +41,17 @@ export default function ThemeToggle() {
         </Switch>
       </svg>
       <Switch fallback={null}>
-        <Match when={theme() === 'light'}>
+        <Match when={theme() === "light"}>
           <span class="absolute py-1 delay-100 dark:border-zinc-600 duration-300 dark:shadow-black/60 bg-white dark:bg-zinc-700 shadow font-medium -top-[3.25rem] text-sm pointer-events-none w-auto min-w-max px-2 dark:border-t rounded-md opacity-0 sm:group-focus:opacity-100 transition-opacity sm:group-hover:opacity-100 dark:text-zinc-300 text-zinc-600">
             Dark mode
           </span>
         </Match>
-        <Match when={theme() === 'dark'}>
+        <Match when={theme() === "dark"}>
           <span class="absolute py-1 delay-100 dark:border-zinc-600 duration-300 dark:shadow-black/60 bg-white dark:bg-zinc-700 shadow font-medium -top-[3.25rem] text-sm pointer-events-none w-auto min-w-max px-2 dark:border-t rounded-md opacity-0 sm:group-focus:opacity-100 transition-opacity sm:group-hover:opacity-100 dark:text-zinc-300 text-zinc-600">
             Light mode
           </span>
         </Match>
       </Switch>
     </button>
-  )
+  );
 }

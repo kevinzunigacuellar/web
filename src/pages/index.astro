@@ -1,28 +1,44 @@
 ---
-import AppLayout from '@layouts/AppLayout.astro'
-import { Image } from '@astrojs/image'
-import authorImage from '../images/me.jpeg'
+import AppLayout from "@layouts/AppLayout.astro";
+import { Image } from "@astrojs/image";
+import authorImage from "../images/me.jpeg";
 ---
 
 <AppLayout>
-  <section class='mb-8 sm:mb-12 sm:flex sm:items-center sm:justify-between'>
-      <Image src={authorImage} alt='Image of the author' format='avif' width={320} height={320} loading="eager" class='rounded-full w-40 overflow-hidden' />
-    <header class='mt-8 max-w-lg sm:my-0 sm:order-first'>
-      <h1 class='mb-2 text-3xl font-bold tracking-tight text-white sm:text-4xl'>
+  <section class="mb-8 sm:mb-12 sm:flex sm:items-center sm:justify-between">
+    <Image
+      src={authorImage}
+      alt="Image of the author"
+      format="avif"
+      width={320}
+      height={320}
+      loading="eager"
+      class="rounded-full w-40 overflow-hidden"
+    />
+    <header class="mt-8 max-w-lg sm:my-0 sm:order-first">
+      <h1 class="mb-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
         Kevin Zuniga Cuellar
       </h1>
-      <h2 class='mb-4 text-zinc-300'>Graduate Research Assistant at the University of Vermont</h2>
-      <p class='w-full font-normal leading-7 text-zinc-400 sm:max-w-sm md:max-w-xl'>
-        Welcome to my slice of the internet! I am a graduate student in mechanical engineering. In
-        my free time I enjoy making websites and experimenting with web app technologies.
+      <h2 class="mb-4 text-zinc-300">
+        Graduate Research Assistant at the University of Vermont
+      </h2>
+      <p
+        class="w-full font-normal leading-7 text-zinc-400 sm:max-w-sm md:max-w-xl"
+      >
+        Welcome to my slice of the internet! I am a graduate student in
+        mechanical engineering. In my free time I enjoy making websites and
+        experimenting with web app technologies.
       </p>
     </header>
   </section>
-  <section class='mb-8 sm:mb-12'>
-    <h2 class='text-zinc-300 mb-4 text-2xl font-bold tracking-tight'>Favorite technologies</h2>
-    <p class='w-full mb-8 font-normal leading-7 text-zinc-400'>
-      I love exploring with new libraries, programing languages and frameworks. Here is a list of
-      technologies that I have been working with at school, side projects and open source.
+  <section class="mb-8 sm:mb-12">
+    <h2 class="text-zinc-300 mb-4 text-2xl font-bold tracking-tight">
+      Favorite technologies
+    </h2>
+    <p class="w-full mb-8 font-normal leading-7 text-zinc-400">
+      I love exploring with new libraries, programing languages and frameworks.
+      Here is a list of technologies that I have been working with at school,
+      side projects and open source.
     </p>
   </section>
 </AppLayout>

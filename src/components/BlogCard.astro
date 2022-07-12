@@ -1,26 +1,28 @@
 ---
 export interface Props {
-  title: string
-  description: string
-  pubDate: string
-  url: string | undefined
+  title: string;
+  description: string;
+  pubDate: string;
+  url: string | undefined;
 }
-let { title, description, pubDate, url } = Astro.props as Props
-url = `${url}/`
-const fullDate = new Date(pubDate).toLocaleDateString('en', {
-  dateStyle: 'full',
-})
+let { title, description, pubDate, url } = Astro.props as Props;
+url = `${url}/`;
+const fullDate = new Date(pubDate).toLocaleDateString("en", {
+  dateStyle: "full",
+});
 ---
 
 <a
-  class='group block leading-relaxed space-y-1 rounded-xl p-6 shadow hover:shadow-md border-t border-zinc-700 transition-all bg-zinc-800 text-zinc-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 shadow-black/40'
+  class="group block leading-relaxed space-y-1 rounded-xl p-6 shadow hover:shadow-md border-t border-zinc-700 transition-all bg-zinc-800 text-zinc-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 shadow-black/40"
   href={url}
 >
-  <time datetime={pubDate} class='block text-sm uppercase tracking-wide text-zinc-400'
+  <time
+    datetime={pubDate}
+    class="block text-sm uppercase tracking-wide text-zinc-400"
     >{fullDate}
   </time>
   <h2
-    class='text-lg font-semibold group-hover:text-transparent group-hover:bg-clip-text group-hover:animate-move-bg group-hover:bg-gradient-to-r group-hover:bg-[length:400%] group-hover:from-indigo-500 group-hover:via-pink-500 group-hover:to-indigo-500 text-zinc-300 group-focus:text-transparent group-focus:bg-clip-text group-focus:animate-move-bg group-focus:bg-gradient-to-r group-focus:bg-[length:400%] group-focus:from-indigo-500 group-focus:via-pink-500 group-focus:to-indigo-500'
+    class="text-lg font-semibold group-hover:text-transparent group-hover:bg-clip-text group-hover:animate-move-bg group-hover:bg-gradient-to-r group-hover:bg-[length:400%] group-hover:from-indigo-500 group-hover:via-pink-500 group-hover:to-indigo-500 text-zinc-300 group-focus:text-transparent group-focus:bg-clip-text group-focus:animate-move-bg group-focus:bg-gradient-to-r group-focus:bg-[length:400%] group-focus:from-indigo-500 group-focus:via-pink-500 group-focus:to-indigo-500"
   >
     {title}
   </h2>
