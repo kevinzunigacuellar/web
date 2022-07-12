@@ -21,7 +21,6 @@ const { title, description, heroImage, imageAlt } = Astro.props as Props;
 const image = heroImage
   ? `${Astro.site}images/${heroImage.split("/").pop()}`
   : defaultMeta.image;
-console.log(image)
 ---
 
 <html lang="en" class="scroll-smooth">
