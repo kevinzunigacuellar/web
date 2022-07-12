@@ -1,7 +1,7 @@
 ---
 layout: '../../layouts/BlogLayout.astro'
 title: Add google analytics to your Astro project with Partytown
-heroImage: '../images/blog/google-analytics-in-astro/astro_ga.png' 
+heroImage: 'astro_ga.png' 
 imageAlt: 'Logo of Astro, partytown and google analytics together'
 setup: |
   import { Image } from '@astrojs/image'

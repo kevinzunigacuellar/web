@@ -11,7 +11,8 @@
     "module": "ESNext",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "types": ["vite/client"],
-    "strict": true
+    "types": ["astro/client"],
+    "strict": true,
+    "outDir": "./dist",
   }
 }

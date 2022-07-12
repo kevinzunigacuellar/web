@@ -1,7 +1,7 @@
 ---
 layout: '../../layouts/BlogLayout.astro'
 title: Add dark mode with tailwindcss in Astro
-heroImage: '../images/blog/dark-mode-in-astro/darkmode.jpeg'
+heroImage: 'darkmode.jpeg'
 imageAlt: 'A rocket in space'
 pubDate: 2022-05-04
 description: In this guide, you will learn how to add a perfect dark mode to your Astro project 🚀 using TailwindCSS.
