@@ -3,11 +3,10 @@ import tailwind from '@astrojs/tailwind'
 import image from '@astrojs/image'
 import sitemap from '@astrojs/sitemap'
 import prefetch from '@astrojs/prefetch';
-import solid from '@astrojs/solid-js'
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), solid(), sitemap(), image(), prefetch()],
+  integrations: [tailwind(), sitemap(), image(), prefetch()],
   site: 'https://kevinzunigacuellar.com',
   markdown: {
     shikiConfig: {
