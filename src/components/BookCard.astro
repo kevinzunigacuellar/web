@@ -11,12 +11,12 @@ export interface Props {
   reading?: boolean;
   eager?: boolean;
 }
-const { title, img, author, year, comment, reading, eager } =
+const { title, img, author, year, comment, reading } =
   Astro.props as Props;
 ---
 
 <li
-  class="list-none overflow-hidden rounded-xl shadow border-zinc-700 bg-zinc-800/90 border-t shadow-black/40 w-full sm:max-w-4xl transition-all"
+  class="list-none overflow-hidden rounded-xl shadow border-zinc-700 bg-zinc-800/90 border-t shadow-black/40 w-full sm:max-w-4xl"
 >
   <article class="px-6 pt-6 sm:flex sm:pb-6">
     <Image
