@@ -1,6 +1,6 @@
 ---
 import Badge from "@components/Badge.astro";
-import { Image } from "@astrojs/image";
+import { Image } from '@astrojs/image/components';
 
 export interface Props {
   title: string;
@@ -22,9 +22,10 @@ const { title, img, author, year, comment, reading } =
     <Image
       src={img}
       alt={title}
-      width={400}
+      width={450}
+      height={620}
       format="webp"
-      class="rounded-xl w-full overflow-hidden sm:w-48"
+      class="rounded-xl w-full overflow-hidden sm:w-52"
     />
     <div class="w-full py-6 sm:py-0 sm:px-6">
       <h2 class="mb-1.5 space-x-2 text-xl font-semibold text-white">
