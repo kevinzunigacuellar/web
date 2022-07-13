@@ -50,7 +50,7 @@ export default defineConfig({
 Create a google analytics account and get the tracking ID. You can find the
 tracking ID in the analytics console of your google account.
 
-<Image src={trackingSetup} alt="Example of google analytics admin settings with a tracking ID" width={1600} aspectRatio="16/9" format="avif" />
+<Image src={trackingSetup} alt="Example of google analytics admin settings with a tracking ID" width={1600} aspectRatio="16/9" format="webp" />
 
 ## 🚀 Hands-on time!
 
@@ -122,4 +122,4 @@ real time dashboard. You should see some recent
 activity after visiting your website.
 
 <!-- <Image src="/public/assets/ga-astro-partytown/real-time-dashboard.png" alt="Google analytics real time dashboard with one visitor in the last 30 minutes" /> -->
-<Image src={realtimeDashboard} alt="Google analytics real time dashboard with one visitor in the last 30 minutes" width={1600} aspectRatio="16/9" format="avif" />
+<Image src={realtimeDashboard} alt="Google analytics real time dashboard with one visitor in the last 30 minutes" width={1600} aspectRatio="16/9" format="webp" />
