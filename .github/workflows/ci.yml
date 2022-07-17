@@ -2,9 +2,11 @@ name: Run CI
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
   pull_request:
-    branches: [main]
+    branches:
+      - main
 
 jobs:
   eslint:
@@ -16,4 +18,4 @@ jobs:
       - name: Install modules
         uses: npm ci
       - name: Run Check
-        run: pnpm run lint:eslint
+        run: npm run lint:eslint
