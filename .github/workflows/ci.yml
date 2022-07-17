@@ -10,6 +10,7 @@ on:
 
 jobs:
   eslint:
+    name: Check for code issues with ESLint
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
