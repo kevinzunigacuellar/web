@@ -1,11 +1,16 @@
 ---
 layout: '../../layouts/BlogLayout.astro'
 title: Add dark mode with tailwindcss in Astro
-heroImage: 'darkmode.jpeg'
+setup: |
+  import heroSrc from "../../images/hero_images/darkmode.jpeg"
+  import BlogImage from "../../components/BlogImage.astro"
 imageAlt: 'A rocket in space'
+heroImage: 'darkmode.jpeg'
 pubDate: 2022-05-04
 description: In this guide, you will learn how to add a perfect dark mode to your Astro project 🚀 using TailwindCSS.
 ---
+
+<BlogImage src={heroSrc} alt={frontmatter.imageAlt} slot="heroImg" loading="eager" />
 
 Some of the most popular websites use dark mode. It's a great way to make your
 website more accessible. In this guide, we will learn how to implement a perfect
@@ -60,7 +65,7 @@ Finally, start your dev server
 npm run dev
 ```
 
-## 🚀 Hands-on time!
+## 👩‍🚀 Hands-on time!
 
 Astro has a nice option to add inline scripts to your html. This script will run
 as soon as the html is loaded. This is perfect to prevent the dark flash which
@@ -70,14 +75,22 @@ read more about inline scripts in the
 
 ```html
 <script is:inline>
-  const theme = localStorage.getItem('theme')
-  if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-    document.documentElement.classList.add('dark')
-    window.localStorage.setItem('theme', 'dark')
+  const theme = (() => {
+    if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+      return localStorage.getItem('theme');
+    }
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      return 'dark';
+    }
+    return 'light';
+  })();
+      
+  if (theme === 'light') {
+    document.documentElement.classList.remove('dark');
   } else {
-    document.documentElement.classList.remove('dark')
-    window.localStorage.setItem('theme', 'light')
+    document.documentElement.classList.add('dark');
   }
+  window.localStorage.setItem('theme', theme);
 </script>
 ```
 
@@ -123,7 +136,7 @@ The above code will render a button with the text 🌙 if the theme is `light` a
 🌞 if the theme is `dark`. When the user clicks the button, the theme state will
 update and store the current theme in the local storage.
 
-## 🚫 Static Site Generation Problems
+## ⚙️ Static Site Generation Problems
 
 When using static site generation the initial state will be undefined at compile
 time because `localStorage` is not available. There is a few things we can do to

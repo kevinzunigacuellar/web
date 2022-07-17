@@ -4,12 +4,15 @@ title: Add google analytics to your Astro project with Partytown
 heroImage: 'astro_ga.png' 
 imageAlt: 'Logo of Astro, partytown and google analytics together'
 setup: |
-  import { Image } from '@astrojs/image'
+  import BlogImage from "../../components/BlogImage.astro"
   import trackingSetup from '../../images/tracking-setup.png'
+  import heroSrc from "../../images/hero_images/astro_ga.png"
   import realtimeDashboard from '../../images/realtime-dashboard.png'
 pubDate: 2022-05-12
 description: In this guide, you will learn how to add google analytics to your Astro project 🚀 using a web worker with Partytown.
 ---
+
+<BlogImage src={heroSrc} alt={frontmatter.imageAlt} slot="heroImg" loading="eager" />
 
 With more visitors coming into your website, you will need to add different
 third party scripts to your project that will provide functionality beyond the
@@ -43,16 +46,21 @@ import { defineConfig } from 'astro/config'
 import partytown from '@astrojs/partytown'
 
 export default defineConfig({
-  integrations: [partytown()],
+  integrations: [partytown({
+    // Adds dataLayer.push as a forwarding-event.
+    config: { 
+      forward: ["dataLayer.push"] 
+    },
+  })],
 })
 ```
 
 Create a google analytics account and get the tracking ID. You can find the
 tracking ID in the analytics console of your google account.
 
-<Image src={trackingSetup} alt="Example of google analytics admin settings with a tracking ID" width={1600} aspectRatio="16/9" format="webp" />
+<BlogImage src={trackingSetup} alt="Example of google analytics admin settings with a tracking ID" />
 
-## 🚀 Hands-on time!
+## 👩‍🚀 Hands-on time!
 
 Now that we have the partytown integration installed and our google analytics
 tracking ID, we can start setting up our third party analytics.
@@ -88,14 +96,7 @@ Our new script will look like this after all the modifications:
 
 ```astro
 <!-- head -->
-<script is:inline>
-  partytown = {
-    forward: ['dataLayer.push'],
-  }
-</script>
-<script type='text/partytown' src='https://www.googletagmanager.com/gtag/js?id=G-5BF82W8RSV'>
-
-</script>
+<script type='text/partytown' src='https://www.googletagmanager.com/gtag/js?id=G-5BF82W8RSV'></script>
 <script type='text/partytown'>
   window.dataLayer = window.dataLayer || []
   function gtag() {
@@ -106,9 +107,6 @@ Our new script will look like this after all the modifications:
 </script>
 <!-- more head -->
 ```
-
-> Important: The config script should be placed before both google analytics
-> scripts.
 
 Finally, place this code snippet in the head of your html. If you are coping the code above do not forget to update your **google tracking id**.
 
@@ -121,5 +119,4 @@ After deploying your project, go to your google analytics
 real time dashboard. You should see some recent
 activity after visiting your website.
 
-<!-- <Image src="/public/assets/ga-astro-partytown/real-time-dashboard.png" alt="Google analytics real time dashboard with one visitor in the last 30 minutes" /> -->
-<Image src={realtimeDashboard} alt="Google analytics real time dashboard with one visitor in the last 30 minutes" width={1600} aspectRatio="16/9" format="webp" />
+<BlogImage src={realtimeDashboard} alt="Google analytics real time dashboard with one visitor in the last 30 minutes" />
