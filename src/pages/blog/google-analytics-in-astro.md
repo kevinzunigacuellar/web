@@ -1,8 +1,8 @@
 ---
-layout: '../../layouts/BlogLayout.astro'
+layout: "../../layouts/BlogLayout.astro"
 title: Add google analytics to your Astro project with Partytown
-heroImage: 'astro_ga.png' 
-imageAlt: 'Logo of Astro, partytown and google analytics together'
+heroImage: "astro_ga.png"
+imageAlt: "Logo of Astro, partytown and google analytics together"
 setup: |
   import BlogImage from "../../components/BlogImage.astro"
   import trackingSetup from '../../images/tracking-setup.png'
@@ -42,17 +42,19 @@ npm install -D @astrojs/partytown
 Add the partytown integration to your `astro.config.mjs`
 
 ```js
-import { defineConfig } from 'astro/config'
-import partytown from '@astrojs/partytown'
+import { defineConfig } from "astro/config";
+import partytown from "@astrojs/partytown";
 
 export default defineConfig({
-  integrations: [partytown({
-    // Adds dataLayer.push as a forwarding-event.
-    config: { 
-      forward: ["dataLayer.push"] 
-    },
-  })],
-})
+  integrations: [
+    partytown({
+      // Adds dataLayer.push as a forwarding-event.
+      config: {
+        forward: ["dataLayer.push"],
+      },
+    }),
+  ],
+});
 ```
 
 Create a google analytics account and get the tracking ID. You can find the
@@ -70,15 +72,18 @@ similar to the following one:
 
 ```html
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+<script
+  async
+  src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"
+></script>
 <script>
-  window.dataLayer = window.dataLayer || []
+  window.dataLayer = window.dataLayer || [];
   function gtag() {
-    window.dataLayer.push(arguments)
+    window.dataLayer.push(arguments);
   }
-  gtag('js', new Date())
+  gtag("js", new Date());
 
-  gtag('config', 'GA_MEASUREMENT_ID')
+  gtag("config", "GA_MEASUREMENT_ID");
 </script>
 ```
 
@@ -96,14 +101,19 @@ Our new script will look like this after all the modifications:
 
 ```astro
 <!-- head -->
-<script type='text/partytown' src='https://www.googletagmanager.com/gtag/js?id=G-5BF82W8RSV'></script>
-<script type='text/partytown'>
-  window.dataLayer = window.dataLayer || []
+<script
+  type="text/partytown"
+  src="https://www.googletagmanager.com/gtag/js?id=G-5BF82W8RSV"
+>
+
+</script>
+<script type="text/partytown">
+  window.dataLayer = window.dataLayer || [];
   function gtag() {
-    dataLayer.push(arguments)
+    dataLayer.push(arguments);
   }
-  gtag('js', new Date())
-  gtag('config', 'G-5BF82W8RSV')
+  gtag("js", new Date());
+  gtag("config", "G-5BF82W8RSV");
 </script>
 <!-- more head -->
 ```

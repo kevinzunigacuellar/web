@@ -7,6 +7,7 @@
     "start": "astro dev",
     "build": "astro build",
     "format": "prettier -w 'src/**/*.{js,jsx,ts,tsx,astro}'",
+    "lint:eslint": "eslint . --ext .js,.ts,.astro",
     "preview": "astro preview"
   },
   "devDependencies": {
@@ -20,6 +21,9 @@
   },
   "dependencies": {
     "@astrojs/prefetch": "^0.0.5",
+    "@typescript-eslint/parser": "^5.30.6",
+    "eslint": "^8.20.0",
+    "eslint-plugin-astro": "^0.15.0",
     "solid-js": "^1.4.7"
   }
 }

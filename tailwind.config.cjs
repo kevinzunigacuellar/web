@@ -1,18 +1,18 @@
 module.exports = {
-  content: ['./src/**/*.{js,ts,jsx,tsx,astro}'],
+  content: ["./src/**/*.{js,ts,jsx,tsx,astro}"],
   theme: {
     extend: {
       keyframes: {
-        'move-bg': {
+        "move-bg": {
           to: {
-            backgroundPosition: '400% 0',
+            backgroundPosition: "400% 0",
           },
         },
       },
       animation: {
-        'move-bg': 'move-bg 8s infinite linear',
+        "move-bg": "move-bg 8s infinite linear",
       },
     },
   },
-  plugins: [require('@tailwindcss/typography')],
-}
+  plugins: [require("@tailwindcss/typography")],
+};

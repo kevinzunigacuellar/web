@@ -1,6 +1,6 @@
 ---
 import Badge from "@components/Badge.astro";
-import { Image } from '@astrojs/image/components';
+import { Image } from "@astrojs/image/components";
 
 export interface Props {
   title: string;
@@ -11,8 +11,7 @@ export interface Props {
   reading?: boolean;
   eager?: boolean;
 }
-const { title, img, author, year, comment, reading } =
-  Astro.props as Props;
+const { title, img, author, year, comment, reading } = Astro.props as Props;
 ---
 
 <li

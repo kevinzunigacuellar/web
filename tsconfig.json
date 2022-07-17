@@ -13,6 +13,6 @@
     "isolatedModules": true,
     "types": ["astro/client"],
     "strict": true,
-    "outDir": "./dist",
+    "outDir": "./dist"
   }
 }
