@@ -1,5 +1,5 @@
 ---
-import { Image } from "@astrojs/image/components";
+import { Picture } from "@astrojs/image/components";
 
 export interface Props {
   src: string;
@@ -11,14 +11,13 @@ export interface Props {
 const { src, alt, loading, slot } = Astro.props as Props;
 ---
 
-<Image
-  width={1440}
-  height={810}
+<Picture
+  widths={[400, 600, 800, 1200]}
+  sizes="(max-width: 800px) 100vw, 1200px"
   aspectRatio={16 / 9}
   src={src}
   alt={alt}
   {slot}
   {loading}
-  class="rounded-xl"
-  format="webp"
+  class="rounded-md overflow-hidden"
 />
