@@ -9,9 +9,9 @@ export interface Props {
   year: number;
   comment: string;
   reading?: boolean;
-  eager?: boolean;
+  loading?: "lazy" | "eager"
 }
-const { title, img, author, year, comment, reading } = Astro.props as Props;
+const { title, img, author, year, comment, reading, loading } = Astro.props as Props;
 ---
 
 <li
@@ -25,6 +25,7 @@ const { title, img, author, year, comment, reading } = Astro.props as Props;
       height={620}
       format="webp"
       class="rounded-xl w-full overflow-hidden sm:w-52"
+      {loading}
     />
     <div class="w-full py-6 sm:py-0 sm:px-6">
       <h2 class="mb-1.5 space-x-2 text-xl font-semibold text-white">
