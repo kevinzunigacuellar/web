@@ -13,14 +13,19 @@ const defaultMeta = {
   title: "Kevin Zuniga Cuellar",
   description:
     "Software engineer, TypeScript enthusiast, and a passionate learner.",
-  image: "https://kevinzunigacuellar.com/static/banner.png",
+  image: "banner.png",
   imageAlt: "Photo of the author smiling",
 };
 
-const { title, description, heroImage, imageAlt } = Astro.props as Props;
-const image = heroImage
-  ? `${Astro.site}static/${heroImage}`
-  : defaultMeta.image;
+const {
+  title = defaultMeta.title,
+  description = defaultMeta.description,
+  heroImage = defaultMeta.image,
+  imageAlt = defaultMeta.imageAlt,
+} = Astro.props as Props;
+
+const socialImageURL = new URL(`/static/${heroImage}`, Astro.site);
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <html lang="en" class="scroll-smooth">
@@ -29,30 +34,24 @@ const image = heroImage
     <meta name="viewport" content="width=device-width" />
     <title>{title ?? defaultMeta.title}</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="canonical" href={Astro.canonicalURL} />
-    <meta name="title" content={title ?? defaultMeta.title} />
-    <meta name="description" content={description ?? defaultMeta.description} />
+    <link rel="canonical" href={canonicalURL} />
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content={Astro.canonicalURL} />
-    <meta property="og:title" content={title ?? defaultMeta.title} />
-    <meta
-      property="og:description"
-      content={description ?? defaultMeta.description}
-    />
-    <meta property="og:image" content={image} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={socialImageURL} />
     <meta property="og:site_name" content="Kevin Zuniga Cuellar" />
-    <meta property="og:image:alt" content={imageAlt ?? defaultMeta.imageAlt} />
+    <meta property="og:image:alt" content={imageAlt} />
     <meta property="og:locale" content="en_US" />
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content={Astro.canonicalURL} />
+    <meta property="twitter:url" content={canonicalURL} />
     <meta name="twitter:site" content="@kevinzunigacuel" />
     <meta name="twitter:creator" content="@kevinzunigacuel" />
-    <meta property="twitter:title" content={title ?? defaultMeta.title} />
-    <meta
-      property="twitter:description"
-      content={description ?? defaultMeta.description}
-    />
-    <meta property="twitter:image" content={image} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={socialImageURL} />
     <meta name="robots" content="follow, index" />
     <meta name="author" content="Kevin Zuniga Cuellar" />
   </head>
