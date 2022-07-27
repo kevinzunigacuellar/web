@@ -9,9 +9,10 @@ export interface Props {
   year: number;
   comment: string;
   reading?: boolean;
-  loading?: "lazy" | "eager"
+  loading?: "lazy" | "eager";
 }
-const { title, img, author, year, comment, reading, loading } = Astro.props as Props;
+const { title, img, author, year, comment, reading, loading } =
+  Astro.props as Props;
 ---
 
 <li
