@@ -3,7 +3,7 @@ import AppLayout from "@layouts/AppLayout.astro";
 import BlogCard from "@components/BlogCard.astro";
 import Header from "@components/Header.astro";
 
-let allPosts = await Astro.glob("./blog/*.md");
+let allPosts = await Astro.glob("./blog/*.mdx");
 allPosts = allPosts.sort(
   (a, b) =>
     new Date(b.frontmatter.pubDate).valueOf() -
