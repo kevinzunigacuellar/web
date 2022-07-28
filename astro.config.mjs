@@ -7,7 +7,7 @@ import mdx from '@astrojs/mdx';
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind(), sitemap(), image(), mdx()],
-  site: "https://www.kevinzunigacuellar.com",
+  site: "https://kevinzunigacuellar.com",
   markdown: {
     shikiConfig: {
       theme: "one-dark-pro",
