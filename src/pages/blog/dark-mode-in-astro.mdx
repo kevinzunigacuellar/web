@@ -1,23 +1,18 @@
 ---
-layout: "../../layouts/BlogLayout.astro"
+# layout: "../../layouts/BlogLayout.astro"
 title: Add dark mode with tailwindcss in Astro
-setup: |
-  import heroSrc from "../../images/hero_images/darkmode.jpeg"
-  import BlogImage from "../../components/BlogImage.astro"
 imageAlt: "A rocket in space"
-heroImage: "darkmode.jpeg"
+heroImage: "darkmode.png"
 pubDate: 2022-05-04
 description: In this guide, you will learn how to add a perfect dark mode to your Astro project 🚀 using TailwindCSS.
 ---
+import BlogLayout from "@layouts/BlogLayout.astro"
+import BlogImage from "@components/BlogImage.astro"
 
-<BlogImage src={heroSrc} alt={frontmatter.imageAlt} slot="heroImg" loading="eager" />
+<BlogLayout {...frontmatter}>
+Some of the most popular websites use dark mode. It's a great way to make your website more accessible. In this guide, we will learn how to implement a perfect dark mode with TailwindCSS in your Astro project.
 
-Some of the most popular websites use dark mode. It's a great way to make your
-website more accessible. In this guide, we will learn how to implement a perfect
-dark mode with TailwindCSS in your Astro project.
-
-In this guide, we will use preact to create the button toggler UI but feel free
-to use any other framework of your preference.
+In this guide, we will use preact to create the button toggler UI but feel free to use any other framework of your preference.
 
 ## 🧑‍💻 Getting started
 
@@ -47,8 +42,7 @@ export default defineConfig({
 });
 ```
 
-Create a `tailwind.config.cjs` file in your project root and update your content
-paths and set `darkMode` to `class`.
+Create a `tailwind.config.cjs` file in your project root and update your content paths and set `darkMode` to `class`.
 
 ```js
 module.exports = {
@@ -67,11 +61,7 @@ npm run dev
 
 ## 👩‍🚀 Hands-on time!
 
-Astro has a nice option to add inline scripts to your html. This script will run
-as soon as the html is loaded. This is perfect to prevent the dark flash which
-is a very common problem when implementing dark mode with hydration. You can
-read more about inline scripts in the
-[Astro documentation](https://docs.astro.build/en/reference/directives-reference/#isinline).
+Astro has a nice option to add inline scripts to your html. This script will run as soon as the html is loaded. This is perfect to prevent the dark flash which is a very common problem when implementing dark mode with hydration. You can read more about inline scripts in the [Astro documentation](https://docs.astro.build/en/reference/directives-reference/#isinline).
 
 ```html
 <script is:inline>
@@ -94,19 +84,16 @@ read more about inline scripts in the
 </script>
 ```
 
-The above script will add the class `dark` to the html element and set the local
-storage theme to `dark` if:
+The above script will add the class `dark` to the html element and set the local storage theme to `dark` if:
 
 1. the user prefers dark mode and doesn't have a local storage theme defined, or
 2. the user have a local storage theme set to `dark`.
 
-If none of the above conditions are met, then the script will remove the class
-`dark` from the html element and set the local storage theme to `light`.
+If none of the above conditions are met, then the script will remove the class `dark` from the html element and set the local storage theme to `light`.
 
 ## ⚛️ Making the UI
 
-In this example we will use preact to create a button to toggle between dark and
-light mode with preact.
+In this example we will use preact to create a button to toggle between dark and light mode with preact.
 
 ```tsx
 import { useEffect, useState } from "preact/hooks";
@@ -134,31 +121,20 @@ export default function ThemeToggle(): FunctionalComponent {
 }
 ```
 
-The above code will render a button with the text 🌙 if the theme is `light` and
-🌞 if the theme is `dark`. When the user clicks the button, the theme state will
-update and store the current theme in the local storage.
+The above code will render a button with the text 🌙 if the theme is `light` and 🌞 if the theme is `dark`. When the user clicks the button, the theme state will update and store the current theme in the local storage.
 
 ## ⚙️ Static Site Generation Problems
 
-When using static site generation the initial state will be undefined at compile
-time because `localStorage` is not available. There is a few things we can do to
-solve this problem:
+When using static site generation the initial state will be undefined at compile time because `localStorage` is not available. There is a few things we can do to solve this problem:
 
 1. Add a fallback initial state, or
 2. Add a mounted state that will wait until the component is mounted.
 
 ### Fallback initial state
 
-Adding a fallback initial state is the most common way to solve problem.
-However, it creates a new problem called the UI flick. Essentially, the UI will
-flick every time the server render doesn't match your client render. You may
-have seen it before with login buttons and user names. When an authenticated
-user revisits or refreshes the page, the page first renders in an not
-authenticated state but changes as soon as the page finish loading to
-authenticated.
+Adding a fallback initial state is the most common way to solve problem. However, it creates a new problem called the UI flick. Essentially, the UI will flick every time the server render doesn't match your client render. You may have seen it before with login buttons and user names. When an authenticated user revisits or refreshes the page, the page first renders in an not authenticated state but changes as soon as the page finish loading to authenticated.
 
-To implement the fallback initial state, we can use the nullish coalescing
-operator `??` to set the initial state.
+To implement the fallback initial state, we can use the nullish coalescing operator `??` to set the initial state.
 
 ```tsx
 const [theme, setTheme] = useState(localStorage.getItem("theme") ?? "light");
@@ -166,12 +142,9 @@ const [theme, setTheme] = useState(localStorage.getItem("theme") ?? "light");
 
 ### Mounted state
 
-Another way to solve the SSG problem is to add a mounted state. This state will
-make your button render wait until the component is mounted. This way the local
-storage theme will be available at the first render.
+Another way to solve the SSG problem is to add a mounted state. This state will make your button render wait until the component is mounted. This way the local storage theme will be available at the first render.
 
-To implement we use `useState` and `useEffect` hooks to create a mounted state.
-This will render a fallback UI or null until the component is mounted.
+To implement we use `useState` and `useEffect` hooks to create a mounted state. This will render a fallback UI or null until the component is mounted.
 
 ```tsx
 const [isMounted, setIsMounted] = useState(false);
@@ -186,3 +159,4 @@ if (!isMounted) {
 
 return <button>{theme === "light" ? "🌙" : "🌞"}</button>;
 ```
+</BlogLayout>
