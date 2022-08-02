@@ -11,16 +11,16 @@
     "preview": "astro preview"
   },
   "devDependencies": {
-    "@astrojs/image": "^0.2.0",
-    "@astrojs/mdx": "^0.3.0",
+    "@astrojs/image": "^0.3.0",
+    "@astrojs/mdx": "^0.4.0",
     "@astrojs/sitemap": "^0.3.0",
     "@astrojs/tailwind": "^0.2.5",
     "@tailwindcss/typography": "^0.5.4",
-    "astro": "1.0.0-rc.1",
-    "prettier-plugin-astro": "^0.1.2",
-    "eslint": "^8.20.0",
-    "eslint-plugin-astro": "^0.15.0",
-    "@typescript-eslint/parser": "^5.31.0"
+    "astro": "1.0.0-rc.3",
+    "prettier-plugin-astro": "^0.2.0",
+    "eslint": "^8.21.0",
+    "eslint-plugin-astro": "^0.16.0",
+    "@typescript-eslint/parser": "^5.32.0"
   },
   "dependencies": {}
 }
