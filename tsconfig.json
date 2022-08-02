@@ -11,7 +11,7 @@
     "module": "ESNext",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "types": ["astro/client"],
+    "types": ["@astrojs/image/client"],
     "strict": true,
     "outDir": "./dist"
   }
