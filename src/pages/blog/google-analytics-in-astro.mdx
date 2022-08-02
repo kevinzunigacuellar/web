@@ -1,4 +1,5 @@
 ---
+layout: "../../layouts/BlogLayout.astro"
 title: Add google analytics to your Astro project with Partytown
 heroImage: "astro_ga.png"
 imageAlt: "Logo of Astro, partytown and google analytics together"
@@ -6,21 +7,12 @@ pubDate: 2022-05-12
 description: In this guide, you will learn how to add google analytics to your Astro project 🚀 using a web worker with Partytown.
 ---
 import BlogImage from "../../components/BlogImage.astro"
-import trackingSetup from '../../images/tracking-setup.png'
-import realtimeDashboard from '../../images/realtime-dashboard.png'
-import BlogLayout from "@layouts/BlogLayout.astro"
 
-<BlogLayout {...frontmatter}>
-With more visitors coming into your website, you will need to add different
-third party scripts to your project that will provide functionality beyond the
-core functionality of your website.
+With more visitors coming into your website, you will need to add different third party scripts to your project that will provide functionality beyond the core functionality of your website.
 
-The most common third party scripts are Google Analytics and Facebook Pixel
-which are web analytics services that will help you assess and improve the
-effectiveness of your website.
+The most common third party scripts are Google Analytics and Facebook Pixel which are web analytics services that will help you assess and improve the effectiveness of your website.
 
-In this guide, we will learn how to add google analytics to your Astro project
-using a web worker with Partytown.
+In this guide, we will learn how to add google analytics to your Astro project using a web worker with Partytown.
 
 ## 🧑‍💻 Getting started
 
@@ -54,18 +46,15 @@ export default defineConfig({
 });
 ```
 
-Create a google analytics account and get the tracking ID. You can find the
-tracking ID in the analytics console of your google account.
+Create a google analytics account and get the tracking ID. You can find the tracking ID in the analytics console of your google account.
 
-<BlogImage src={trackingSetup} alt="Example of google analytics admin settings with a tracking ID" />
+<BlogImage src={import("../../images/tracking-setup.png")} alt="Example of google analytics admin settings with a tracking ID" />
 
 ## 👩‍🚀 Hands-on time!
 
-Now that we have the partytown integration installed and our google analytics
-tracking ID, we can start setting up our third party analytics.
+Now that we have the partytown integration installed and our google analytics tracking ID, we can start setting up our third party analytics.
 
-Google Analytics will provide your with an inline script that will be very
-similar to the following one:
+Google Analytics will provide your with an inline script that will be very similar to the following one:
 
 ```html
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -84,15 +73,11 @@ similar to the following one:
 </script>
 ```
 
-Modify the script above to allow partytown to run google analytics in a web
-worker.
+Modify the script above to allow partytown to run google analytics in a web worker.
 
 1. Replace the `GA_MEASUREMENT_ID` with your own tracking ID.
-2. Add a `type` attribute set to `text/partytown` to both scripts. This tells
-   partytown which script to handle.
-3. Add a new inline script before both google analytics scripts to configure
-   your partytown options. The following configuration allows partytown to
-   forward calls to `window.dataLayer` which google uses to send events.
+2. Add a `type` attribute set to `text/partytown` to both scripts. This tells partytown which script to handle.
+3. Add a new inline script before both google analytics scripts to configure your partytown options. The following configuration allows partytown to forward calls to `window.dataLayer` which google uses to send events.
 
 Our new script will look like this after all the modifications:
 
@@ -117,15 +102,11 @@ Our new script will look like this after all the modifications:
 
 Finally, place this code snippet in the head of your html. If you are coping the code above do not forget to update your **google tracking id**.
 
-Congratulations, you have
-successfully added google analytics to your Astro project 🚀!
+Congratulations, you have successfully added google analytics to your Astro project 🚀!
 
 ## Testing 👩‍🔬
 
-After deploying your project, go to your google analytics
-real time dashboard. You should see some recent
-activity after visiting your website.
+After deploying your project, go to your google analytics real time dashboard. You should see some recent activity after visiting your website.
 
-<BlogImage src={realtimeDashboard} alt="Google analytics real time dashboard with one visitor in the last 30 minutes" />
+<BlogImage src={import("../../images/realtime-dashboard.png")} alt="Google analytics real time dashboard with one visitor in the last 30 minutes" />
 
-</BlogLayout>

@@ -1,15 +1,13 @@
 ---
-# layout: "../../layouts/BlogLayout.astro"
+layout: "../../layouts/BlogLayout.astro"
 title: Add dark mode with tailwindcss in Astro
 imageAlt: "A rocket in space"
 heroImage: "darkmode.png"
 pubDate: 2022-05-04
 description: In this guide, you will learn how to add a perfect dark mode to your Astro project 🚀 using TailwindCSS.
 ---
-import BlogLayout from "@layouts/BlogLayout.astro"
 import BlogImage from "@components/BlogImage.astro"
 
-<BlogLayout {...frontmatter}>
 Some of the most popular websites use dark mode. It's a great way to make your website more accessible. In this guide, we will learn how to implement a perfect dark mode with TailwindCSS in your Astro project.
 
 In this guide, we will use preact to create the button toggler UI but feel free to use any other framework of your preference.
@@ -159,4 +157,3 @@ if (!isMounted) {
 
 return <button>{theme === "light" ? "🌙" : "🌞"}</button>;
 ```
-</BlogLayout>
