@@ -25,7 +25,8 @@ const {
 } = Astro.props as Props;
 
 const socialImageURL = new URL(`/static/${heroImage}`, Astro.site);
-const canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
+let canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
+canonicalURL = canonicalURL.endsWith("/") ? canonicalURL : `${canonicalURL}/`;
 ---
 
 <html lang="en" class="scroll-smooth">
