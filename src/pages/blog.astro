@@ -18,13 +18,15 @@ const description =
 <AppLayout {title} {description}>
   <Header title="Blog" />
   <section class="grid grid-cols-1 gap-8">
-    {allPosts.map((post) => (
-      <BlogCard
-        title={post.frontmatter.title}
-        pubDate={post.frontmatter.pubDate}
-        description={post.frontmatter.description}
-        url={post.url}
-      />
-    ))}
+    {
+      allPosts.map((post) => (
+        <BlogCard
+          title={post.frontmatter.title}
+          pubDate={post.frontmatter.pubDate}
+          description={post.frontmatter.description}
+          url={post.url}
+        />
+      ))
+    }
   </section>
 </AppLayout>
