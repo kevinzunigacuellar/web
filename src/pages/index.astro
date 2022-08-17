@@ -2,6 +2,7 @@
 import AppLayout from "@layouts/AppLayout.astro";
 import { Image } from "@astrojs/image/components";
 import authorImage from "../images/me.jpeg";
+import Skill from "@components/Skill.astro";
 ---
 
 <AppLayout>
@@ -41,5 +42,21 @@ import authorImage from "../images/me.jpeg";
       Here is a list of technologies that I have worked with at school, side
       projects and open source.
     </p>
+    <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3">
+    <Skill logo="vscode-icons:file-type-astro" text="Astro" />
+    <Skill logo="logos:javascript" text="JavaScript" />
+    <Skill logo="logos:typescript-icon" text="TypeScript" />
+    <Skill logo="logos:python" text="Python" />
+    <Skill logo="logos:react" text="React" />
+    <Skill logo="logos:solidjs-icon" text="Solidjs" />
+    <Skill logo="logos:vue" text="Vue" />
+    <Skill logo="logos:nodejs-icon" text="Nodejs" />
+    <Skill logo="logos:tailwindcss-icon" text="TailwindCSS" />
+
+
+    
+
+
+  </div>
   </section>
 </AppLayout>
