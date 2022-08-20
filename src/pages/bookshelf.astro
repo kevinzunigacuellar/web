@@ -7,6 +7,7 @@ import eloquentJavascript from "../images/books/eloquent-javascript.jpg";
 import refactoriingUI from "../images/books/refactoring-ui.jpg";
 import aprendiendoGit from "../images/books/aprendiendo-git.png";
 import reactExplained from "../images/books/react-explained.jpg";
+import understandingDisSys from "../images/books/distributed_systems.jpeg";
 ---
 
 <AppLayout title="Bookshelf - Kevin Zuniga Cuellar">
@@ -15,13 +16,21 @@ import reactExplained from "../images/books/react-explained.jpg";
     class="grid grid-cols-1 justify-items-center gap-8 md:justify-items-start"
   >
     <BookCard
+      title="Understanding Distributed Systems"
+      author="Roberto Vitillo"
+      comment="Must read for anyone interested in cloud scale systems design. It is well written and well organized."
+      img={understandingDisSys}
+      year={2022}
+      reading={true}
+      loading="eager"
+    />
+    <BookCard
       title="Computer Science Distilled"
       author="Wladston Ferreira Filho"
       comment="So far loving this book, It illustrates the concepts of data structures and algorithms in a fun and easy way."
       img={csDestilled}
       year={2017}
       reading={true}
-      loading="eager"
     />
     <BookCard
       title="Eloquent JavaScript"
