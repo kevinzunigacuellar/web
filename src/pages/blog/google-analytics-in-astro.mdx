@@ -28,7 +28,7 @@ Install the Astro integration for Partytown:
 npm install -D @astrojs/partytown
 ```
 
-Add the partytown integration to your `astro.config.mjs`
+Add the partytown integration to your `astro.config.mjs` with the following config options.
 
 ```js
 import { defineConfig } from "astro/config";
@@ -46,13 +46,15 @@ export default defineConfig({
 });
 ```
 
-Create a google analytics account and get the tracking ID. You can find the tracking ID in the analytics console of your google account.
+This configuration allows Partytown to forward all events to Google Analytics using `window.dataLayer`. You can find more information about configuration options in the [Partytown documentation](https://partytown.builder.io/google-tag-manager#forward-events).
+
+Create a google analytics account and get the tracking ID. After creating a new property for your domain, you can find the tracking ID in the **Property Settings**.
 
 <BlogImage src={import("../../images/tracking-setup.png")} alt="Example of google analytics admin settings with a tracking ID" />
 
 ## 👩‍🚀 Hands-on time!
 
-Now that we have the partytown integration installed and our google analytics tracking ID, we can start setting up our third party analytics.
+Now that we have the partytown integration installed and our google analytics tracking ID, we can start setting up our google analytics script.
 
 Google Analytics will provide your with an inline script that will be very similar to the following one:
 
@@ -76,8 +78,7 @@ Google Analytics will provide your with an inline script that will be very simil
 Modify the script above to allow partytown to run google analytics in a web worker.
 
 1. Replace the `GA_MEASUREMENT_ID` with your own tracking ID.
-2. Add a `type` attribute set to `text/partytown` to both scripts. This tells partytown which script to handle.
-3. Add a new inline script before both google analytics scripts to configure your partytown options. The following configuration allows partytown to forward calls to `window.dataLayer` which google uses to send events.
+2. Add a `type` attribute and set it to `text/partytown` to both scripts. This tells partytown which script tags to handle.
 
 Our new script will look like this after all the modifications:
 
@@ -85,7 +86,7 @@ Our new script will look like this after all the modifications:
 <!-- head -->
 <script
   type="text/partytown"
-  src="https://www.googletagmanager.com/gtag/js?id=G-5BF82W8RSV"
+  src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"
 >
 
 </script>
@@ -95,14 +96,14 @@ Our new script will look like this after all the modifications:
     dataLayer.push(arguments);
   }
   gtag("js", new Date());
-  gtag("config", "G-5BF82W8RSV");
+  gtag("config", "GA_MEASUREMENT_ID");
 </script>
 <!-- more head -->
 ```
 
-Finally, place this code snippet in the head of your html. If you are coping the code above do not forget to update your **google tracking id**.
+Finally, place this code snippet in the head of your html. If you are coping the code above do not forget to update your `GA_MEASUREMENT_ID`.
 
-Congratulations, you have successfully added google analytics to your Astro project 🚀!
+Congratulations, you have successfully added google analytics to your Astro project 🎉!
 
 ## Testing 👩‍🔬
 
