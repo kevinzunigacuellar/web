@@ -19,6 +19,14 @@ module.exports = {
                 borderRadius: '0.250rem',
                 fontWeight: '400',
               }
+            },
+            li: {
+              code:{
+                backgroundColor: '#282c34',
+                padding: '0.250rem',
+                borderRadius: '0.250rem',
+                fontWeight: '400',
+              }
             }
           }
         }
