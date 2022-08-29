@@ -14,16 +14,16 @@ module.exports = {
             },
             p: {
               code:{
-                backgroundColor: '#282c34',
-                padding: '0.250rem',
+                backgroundColor: '#282A36',
+                padding: '0.250rem 0.4rem',
                 borderRadius: '0.250rem',
                 fontWeight: '400',
               }
             },
             li: {
               code:{
-                backgroundColor: '#282c34',
-                padding: '0.250rem',
+                backgroundColor: '#282A36',
+                padding: '0.250rem 0.4rem',
                 borderRadius: '0.250rem',
                 fontWeight: '400',
               }

@@ -21,7 +21,7 @@ export default defineConfig({
   site: "https://kevinzunigacuellar.com",
   markdown: {
     shikiConfig: {
-      theme: "one-dark-pro",
+      theme: "dracula-soft",
       wrap: true,
     },
   },

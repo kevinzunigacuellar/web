@@ -38,7 +38,7 @@ export default defineConfig({
 });
 ```
 
-Finally, create a minimal config file `tailwind.config.cjs` in the root of your project, update your content `paths` and set `darkMode` to `class`.
+Finally, create a minimal config file `tailwind.config.cjs` in the root of your project, update your `content` and set `darkMode` to `class`.
 
 ```js
 module.exports = {
@@ -56,7 +56,7 @@ Astro has the option to add inline scripts directly to your html. These scripts 
 The following code retrieves the user's prefered theme and adds it to the html element. Feel free to copy/paste or modify this code snippet into your astro project. We will go over every line of code in the next paragraph.
 
 
-```astro
+```astro title="testing"
 <script is:inline>
   const theme = (() => {
     if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
