@@ -6,10 +6,10 @@ export interface Props {
   url: string | undefined;
 }
 let { title, description, pubDate, url } = Astro.props as Props;
-url = `${url}/`;
 const fullDate = new Date(pubDate).toLocaleDateString("en", {
   dateStyle: "full",
 });
+url = url+ "/"
 ---
 
 <a
