@@ -13,11 +13,10 @@ export default defineConfig({
     sitemap(),
     image(),
     mdx({
-      remarkPlugins: {
-        extends: [setFallbackLayout, remarkReadingTime],
-      },
-    }),
-  ],
+      remarkPlugins: [setFallbackLayout, remarkReadingTime],
+      extendPlugins: 'astroDefaults',
+      }
+    )],
   site: "https://kevinzunigacuellar.com",
   markdown: {
     shikiConfig: {
