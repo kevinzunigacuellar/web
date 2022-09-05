@@ -2,7 +2,7 @@
 import AppLayout from "@layouts/AppLayout.astro";
 import { Image } from "@astrojs/image/components";
 import authorImage from "../images/me.jpeg";
-import Projects from "../content/projects.json"
+import Projects from "../content/projects.json";
 import ProjectCard from "@components/ProjectCard.astro";
 import Skill from "@components/Skill.astro";
 ---
@@ -61,12 +61,12 @@ import Skill from "@components/Skill.astro";
       Projects
     </h2>
     <p class="w-full mb-8 font-normal leading-7 text-zinc-400">
-      Most of them done over the weekend, between classes or at lunch. Authored by me or in collaboration with other developers, colleagues and friends I found on the internet. 
+      Most of them done over the weekend, between classes or at lunch. Authored
+      by me or in collaboration with other developers, colleagues and friends I
+      found on the internet.
     </p>
     <div class="grid grid-cols-1 gap-4">
-      {Projects.map((project) => (
-        <ProjectCard {...project} />
-      ))}
-  </div>
+      {Projects.map((project) => <ProjectCard {...project} />)}
+    </div>
   </section>
 </AppLayout>
