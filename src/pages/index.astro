@@ -2,11 +2,13 @@
 import AppLayout from "@layouts/AppLayout.astro";
 import { Image } from "@astrojs/image/components";
 import authorImage from "../images/me.jpeg";
+import Projects from "../content/projects.json"
+import ProjectCard from "@components/ProjectCard.astro";
 import Skill from "@components/Skill.astro";
 ---
 
 <AppLayout>
-  <section class="mb-8 sm:mb-12 sm:flex sm:items-center sm:justify-between">
+  <section class="mb-8 sm:mb-14 sm:flex sm:items-center sm:justify-between">
     <Image
       src={authorImage}
       alt="Image of the author"
@@ -33,7 +35,7 @@ import Skill from "@components/Skill.astro";
       </p>
     </header>
   </section>
-  <section class="mb-8 sm:mb-12">
+  <section class="mb-8 sm:mb-14">
     <h2 class="text-zinc-300 mb-4 text-2xl font-bold tracking-tight">
       Favorite technologies
     </h2>
@@ -53,5 +55,18 @@ import Skill from "@components/Skill.astro";
       <Skill logo="logos:nodejs-icon" text="Nodejs" />
       <Skill logo="logos:tailwindcss-icon" text="TailwindCSS" />
     </div>
+  </section>
+  <section>
+    <h2 class="text-zinc-300 mb-4 text-2xl font-bold tracking-tight">
+      Projects
+    </h2>
+    <p class="w-full mb-8 font-normal leading-7 text-zinc-400">
+      Most of them done over the weekend, between classes or at lunch. Authored by me or in collaboration with other developers, colleagues and friends I found on the internet. 
+    </p>
+    <div class="grid grid-cols-1 gap-4">
+      {Projects.map((project) => (
+        <ProjectCard {...project} />
+      ))}
+  </div>
   </section>
 </AppLayout>
