@@ -6,7 +6,7 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "format": "prettier -w 'src/**/*.{js,jsx,ts,tsx,astro}'",
+    "format": "prettier -w --plugin-search-dir=. 'src/**/*.{js,jsx,ts,tsx,astro}'",
     "lint:eslint": "eslint . --ext .js,.ts,.astro",
     "preview": "astro preview"
   },
