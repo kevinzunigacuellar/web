@@ -17,7 +17,7 @@ export default defineConfig({
       extendPlugins: 'astroDefaults',
       }
     )],
-  site: "https://kevinzunigacuellar.com",
+  site: "https://www.kevinzunigacuellar.com",
   markdown: {
     shikiConfig: {
       theme: "dracula-soft",
