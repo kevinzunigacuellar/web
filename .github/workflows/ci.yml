@@ -31,7 +31,5 @@ jobs:
         run: pnpm install
         shell: bash
 
-      - name: Install modules
-        run: npm ci
       - name: Run eslint
         run: pnpm run lint:eslint
