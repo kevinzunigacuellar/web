@@ -15,6 +15,7 @@ const { src, alt, loading = "lazy" } = Astro.props as Props;
   sizes="(max-width: 800px) 100vw, 1200px"
   aspectRatio={16 / 9}
   src={src}
+  loading={loading}
   quality={80}
   alt={alt}
   class="rounded-md overflow-hidden"
