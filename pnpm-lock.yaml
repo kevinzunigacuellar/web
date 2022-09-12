@@ -1,31 +1,31 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@astrojs/image': ^0.5.1
+  '@astrojs/image': ^0.7.0
   '@astrojs/mdx': ^0.11.1
   '@astrojs/sitemap': ^1.0.0
   '@astrojs/tailwind': ^1.0.0
   '@tailwindcss/typography': ^0.5.7
   '@typescript-eslint/parser': ^5.36.2
-  astro: 1.1.6
+  astro: 1.2.1
   astro-icon: ^0.7.3
   eslint: ^8.23.0
-  eslint-plugin-astro: ^0.18.0
+  eslint-plugin-astro: ^0.19.0
   mdast-util-to-string: ^3.1.0
   prettier-plugin-astro: ^0.5.4
   reading-time: ^1.5.0
 
 devDependencies:
-  '@astrojs/image': 0.5.1
+  '@astrojs/image': 0.7.0
   '@astrojs/mdx': 0.11.1
   '@astrojs/sitemap': 1.0.0
   '@astrojs/tailwind': 1.0.0
   '@tailwindcss/typography': 0.5.7
   '@typescript-eslint/parser': 5.36.2_eslint@8.23.0
-  astro: 1.1.6
+  astro: 1.2.1
   astro-icon: 0.7.3
   eslint: 8.23.0
-  eslint-plugin-astro: 0.18.0_eslint@8.23.0
+  eslint-plugin-astro: 0.19.0_eslint@8.23.0
   mdast-util-to-string: 3.1.0
   prettier-plugin-astro: 0.5.4
   reading-time: 1.5.0
@@ -48,8 +48,12 @@ packages:
     resolution: {integrity: sha512-vBMPy9ok4iLapSyCCT1qsZ9dK7LkVFl9mObtLEmWiec9myGHS9h2kQY2xzPeFNJiWXUf9O6tSyQpQTy5As/p3g==}
     dev: true
 
-  /@astrojs/image/0.5.1:
-    resolution: {integrity: sha512-xYslpD5l7B61ZcleY8lw55YsuWS1/Sq+sVjsfKbygh+INdDkUIe9JxU0qpr4io5m2WHvavnQDa4EtVC+TFpbdg==}
+  /@astrojs/compiler/0.24.0:
+    resolution: {integrity: sha512-xZ81C/oMfExdF18I1Tyd2BKKzBqO+qYYctSy4iCwH4UWSo/4Y8A8MAzV1hG67uuE7hFRourSl6H5KUbhyChv/A==}
+    dev: true
+
+  /@astrojs/image/0.7.0:
+    resolution: {integrity: sha512-0P2Q0NbU1Y8iBDsJWes9qME2PHaiLOz8G7iFDJtWB+a42Ur/Awf9kxrBFX19siotR5kCX+9kTqZmhAp73SYRwQ==}
     dependencies:
       '@altano/tiny-async-pool': 1.0.2
       image-size: 1.0.2
@@ -646,6 +650,35 @@ packages:
       '@types/estree': 1.0.0
     dev: true
 
+  /@types/babel__core/7.1.19:
+    resolution: {integrity: sha512-WEOTgRsbYkvA/KCsDwVEGkd7WAr1e3g31VHQ8zy5gul/V1qKullU/BU5I68X5v7V3GnB9eotmom4v5a5gjxorw==}
+    dependencies:
+      '@babel/parser': 7.19.0
+      '@babel/types': 7.19.0
+      '@types/babel__generator': 7.6.4
+      '@types/babel__template': 7.4.1
+      '@types/babel__traverse': 7.18.1
+    dev: true
+
+  /@types/babel__generator/7.6.4:
+    resolution: {integrity: sha512-tFkciB9j2K755yrTALxD44McOrk+gfpIpvC3sxHjRawj6PfnQxrse4Clq5y/Rq+G3mrBurMax/lG8Qn2t9mSsg==}
+    dependencies:
+      '@babel/types': 7.19.0
+    dev: true
+
+  /@types/babel__template/7.4.1:
+    resolution: {integrity: sha512-azBFKemX6kMg5Io+/rdGT0dkGreboUVR0Cdm3fz9QJWpaQGJRQXl7C+6hOTCZcMll7KFyEQpgbYI2lHdsS4U7g==}
+    dependencies:
+      '@babel/parser': 7.19.0
+      '@babel/types': 7.19.0
+    dev: true
+
+  /@types/babel__traverse/7.18.1:
+    resolution: {integrity: sha512-FSdLaZh2UxaMuLp9lixWaHq/golWTRWOnRsAXzDTDSDOQLuZb1nsdCt6pJSPWSEQt2eFZ2YVk3oYhn+1kLMeMA==}
+    dependencies:
+      '@babel/types': 7.19.0
+    dev: true
+
   /@types/debug/4.1.7:
     resolution: {integrity: sha512-9AonUzyTjXXhEOa0DnqpzZi6VHlqKMswga9EXjpXnnqxwLtdvPPtlO8evrI5D9S6asFRCQ6v+wpiUKbw+vKqyg==}
     dependencies:
@@ -672,6 +705,10 @@ packages:
     resolution: {integrity: sha512-wLEm0QvaoawEDoTRwzTXp4b4jpwiJDvR5KMnFnVodm3scufTlBOWRD6N1OBf9TZMhjlNsSfcO5V+7AF4+Vy+9g==}
     dependencies:
       '@types/unist': 2.0.6
+    dev: true
+
+  /@types/html-escaper/3.0.0:
+    resolution: {integrity: sha512-OcJcvP3Yk8mjYwf/IdXZtTE1tb/u0WF0qa29ER07ZHCYUBZXSN29Z1mBS+/96+kNMGTFUAbSz9X+pHmHpZrTCw==}
     dev: true
 
   /@types/json5/0.0.30:
@@ -722,6 +759,10 @@ packages:
 
   /@types/unist/2.0.6:
     resolution: {integrity: sha512-PBjIUxZHOuj0R15/xuwJYjFi+KZdNFrehocChv4g5hu6aFroHue8m0lBP0POdK2nKzbw0cgV1mws8+V/JAcEkQ==}
+    dev: true
+
+  /@types/yargs-parser/21.0.0:
+    resolution: {integrity: sha512-iO9ZQHkZxHn4mSakYV0vFHAVDyEOIJQrV2uZ06HxEPcx+mt8swXoZHIbaaJ2crJYFfErySgktuTZ3BeLz+XmFA==}
     dev: true
 
   /@typescript-eslint/parser/5.36.2_eslint@8.23.0:
@@ -937,12 +978,12 @@ packages:
       svgo: 2.8.0
     dev: true
 
-  /astro/1.1.6:
-    resolution: {integrity: sha512-rNV1VjO5tlqu5nSrvOJdAIxwUVaFOYtG/siopederG6xK2EjCvmFjFUGOBW+xVkQCeA7j3OfE+5CZ8Wa+ZrcOw==}
+  /astro/1.2.1:
+    resolution: {integrity: sha512-bNWrYALx2o15QPfF0QKUI6UXZa6FQgprH4hQI742VHl4FGSizCPb1CVejyrIt4pKDvGcM2LUW/J2A5yZ8eIU1A==}
     engines: {node: ^14.18.0 || >=16.12.0, npm: '>=6.14.0'}
     hasBin: true
     dependencies:
-      '@astrojs/compiler': 0.23.5
+      '@astrojs/compiler': 0.24.0
       '@astrojs/language-server': 0.23.3
       '@astrojs/markdown-remark': 1.1.1
       '@astrojs/telemetry': 1.0.0
@@ -955,6 +996,9 @@ packages:
       '@babel/types': 7.19.0
       '@proload/core': 0.3.3
       '@proload/plugin-tsm': 0.2.1_@proload+core@0.3.3
+      '@types/babel__core': 7.1.19
+      '@types/html-escaper': 3.0.0
+      '@types/yargs-parser': 21.0.0
       boxen: 6.2.1
       ci-info: 3.3.2
       common-ancestor-path: 1.0.1
@@ -1739,8 +1783,8 @@ packages:
     engines: {node: '>=12'}
     dev: true
 
-  /eslint-plugin-astro/0.18.0_eslint@8.23.0:
-    resolution: {integrity: sha512-TNh5KKyDP9xqavDbJs2dQa15lazeXlhHD06yhhEVGKcnkpO5wHIvNuz+DVp5gZsT4spnJH09MCuXitqsy0DqvQ==}
+  /eslint-plugin-astro/0.19.0_eslint@8.23.0:
+    resolution: {integrity: sha512-XOvTgFlSThgUQwDMjbj9gTu75Sig5IWpseN1hsGputC9tiZ857CrMLK3UimWCwIS6n3hTYYPWIkpcucEU/o0Uw==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
       eslint: '>=7.0.0'
