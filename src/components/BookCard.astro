@@ -4,21 +4,28 @@ import { Image } from "@astrojs/image/components";
 
 export interface Props {
   title: string;
-  img: string;
+  img: string | ImageMetadata;
   author: string;
   year: number;
   comment: string;
   reading?: boolean;
   loading?: "lazy" | "eager";
 }
-const { title, img, author, year, comment, reading, loading } =
-  Astro.props as Props;
+const {
+  title,
+  img,
+  author,
+  year,
+  comment,
+  reading,
+  loading = "lazy",
+} = Astro.props as Props;
 ---
 
 <li
-  class="list-none overflow-hidden rounded-xl shadow border-zinc-700 bg-zinc-800/90 border-t shadow-black/40 w-full sm:max-w-4xl"
+  class="list-none overflow-hidden rounded-xl shadow-black/40 w-full sm:max-w-4xl"
 >
-  <article class="px-6 pt-6 sm:flex sm:pb-6">
+  <article class="pt-6 sm:flex sm:gap-8 sm:pb-6">
     <Image
       src={img}
       alt={title}
@@ -26,9 +33,9 @@ const { title, img, author, year, comment, reading, loading } =
       height={620}
       format="webp"
       class="rounded-xl w-full overflow-hidden sm:w-52"
-      {loading}
+      loading={loading}
     />
-    <div class="w-full py-6 sm:py-0 sm:px-6">
+    <div class="w-full pt-6 sm:py-0 sm:px-6">
       <h2 class="mb-1.5 space-x-2 text-xl font-semibold text-white">
         {title}
       </h2>

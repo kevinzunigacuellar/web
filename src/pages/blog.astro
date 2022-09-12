@@ -12,12 +12,15 @@ allPosts = allPosts.sort(
 
 const title = "Blog | Kevin Zuniga Cuellar";
 const description =
-  "Code snippets,developer journal, and other stuff I've written.";
+  "My personal collection of code snippets, starter guides, tutorials and interesting things I found online.";
 ---
 
-<AppLayout {title} {description}>
+<AppLayout title={title} description={description}>
   <Header title="Blog" />
-  <section class="grid grid-cols-1 gap-8">
+  <p class="w-full mb-10 font-normal leading-7 text-zinc-400">
+    {description}
+  </p>
+  <section class="flex flex-col gap-12">
     {
       allPosts.map((post) => (
         <BlogCard

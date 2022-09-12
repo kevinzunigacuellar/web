@@ -1,22 +1,30 @@
 ---
-import Tooltip from "@components/Tooltip.astro";
-export interface Props {
+export interface Props extends astroHTML.JSX.AnchorHTMLAttributes {
   text: string;
   href: string;
 }
-const { text, href } = Astro.props as Props;
+const { text, href, ...props } = Astro.props as Props;
+let isActive;
+if (href === "/") {
+  isActive = href === Astro.url.pathname;
+} else {isActive = Astro.url.pathname.includes(href);}
 ---
 
 <a
-  class="relative shrink-0 group h-16 w-16 bg-zinc-700 rounded-2xl flex justify-center items-center text-zinc-400 focus:text-zinc-300 hover:text-zinc-300 transition-all hover:ring-2 hover:ring-indigo-500 focus:ring-indigo-500 hover:ring-offset-2 focus:outline-none focus:ring-2 focus:ring-offset-2 ring-offset-slate-700"
-  {href}
+  class:list={["relative text-zinc-200 font-semibold text-sm py-2.5 px-3",{ active: isActive }]}
+  href={href}
+  {...props}
   aria-label={`Go to ${text}`}
 >
-  <svg
-    class="h-auto w-8 group-hover:w-12 group-focus:w-12 transition-all fill-current"
-    viewBox="0 0 20 20"
-  >
-    <slot />
-  </svg>
-  <Tooltip text={text} />
+<span class:list={[{"active-underline": isActive}]}></span>
+{text}
 </a>
+
+<style>
+  .active {
+    @apply text-blue-500;
+  }
+  .active-underline {
+    @apply absolute inset-x-1 -bottom-px h-px bg-blue-500
+  }
+</style>
