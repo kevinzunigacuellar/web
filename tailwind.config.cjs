@@ -13,7 +13,7 @@ module.exports = {
               content: '""'
             },
             p: {
-              code:{
+              code: {
                 backgroundColor: '#282A36',
                 padding: '0.250rem 0.4rem',
                 borderRadius: '0.250rem',
@@ -21,7 +21,7 @@ module.exports = {
               }
             },
             li: {
-              code:{
+              code: {
                 backgroundColor: '#282A36',
                 padding: '0.250rem 0.4rem',
                 borderRadius: '0.250rem',
@@ -43,5 +43,8 @@ module.exports = {
       },
     },
   },
-  plugins: [require("@tailwindcss/typography")],
+  plugins: [
+    require("@tailwindcss/typography"),
+    require('tailwind-scrollbar')
+  ],
 };
