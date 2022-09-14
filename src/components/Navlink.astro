@@ -8,17 +8,23 @@ const { text, href, ...props } = Astro.props as Props;
 let isActive;
 if (href === "/") {
   isActive = href === Astro.url.pathname;
-} else {isActive = Astro.url.pathname.includes(href);}
+} else {
+  isActive = Astro.url.pathname.includes(href);
+}
 ---
 
 <a
-  class:list={["relative font-semibold text-sm py-2.5 px-3",{ "active-text": isActive }, {"inactive": !isActive}]}
+  class:list={[
+    "relative font-semibold text-sm py-2.5 px-3",
+    { "active-text": isActive },
+    { inactive: !isActive },
+  ]}
   href={href}
   {...props}
   aria-label={`Go to ${text}`}
 >
-<span class:list={[{"active-underline": isActive}]}></span>
-{text}
+  <span class:list={[{ "active-underline": isActive }]}></span>
+  {text}
 </a>
 
 <style>
@@ -29,6 +35,6 @@ if (href === "/") {
     @apply absolute inset-x-1 -bottom-px h-px bg-blue-500;
   }
   .inactive {
-    @apply text-zinc-200
+    @apply text-zinc-200;
   }
 </style>
