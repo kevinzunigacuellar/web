@@ -4,7 +4,7 @@ export interface Props extends astroHTML.JSX.AnchorHTMLAttributes {
   text: string;
   href: string;
 }
-const { text, href, ...props } = Astro.props as Props;
+const { text, href, ...props } = Astro.props;
 let isActive;
 if (href === "/") {
   isActive = href === Astro.url.pathname;

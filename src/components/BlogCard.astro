@@ -5,7 +5,7 @@ export interface Props {
   pubDate: string;
   url: string | undefined;
 }
-let { title, description, pubDate, url } = Astro.props as Props;
+let { title, description, pubDate, url } = Astro.props;
 const fullDate = new Date(pubDate).toLocaleDateString("en", {
   dateStyle: "full",
 });

@@ -7,7 +7,7 @@ export interface Props {
   loading?: "lazy" | "eager";
 }
 
-const { src, alt, loading = "lazy" } = Astro.props as Props;
+const { src, alt, loading = "lazy" } = Astro.props;
 ---
 
 <Picture

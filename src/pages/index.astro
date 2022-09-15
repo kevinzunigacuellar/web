@@ -4,6 +4,7 @@ import { Image } from "@astrojs/image/components";
 import authorImage from "@images/me.jpeg";
 import Projects from "@content/projects.json";
 import ProjectCard from "@components/ProjectCard.astro";
+import technologies from "@content/technologies.json";
 import Skill from "@components/Skill.astro";
 ---
 
@@ -15,7 +16,7 @@ import Skill from "@components/Skill.astro";
       format="webp"
       width={320}
       height={320}
-      quality={90}
+      quality={80}
       loading="eager"
       class="rounded-full w-40 overflow-hidden"
     />
@@ -24,14 +25,20 @@ import Skill from "@components/Skill.astro";
         Kevin Zuniga Cuellar
       </h1>
       <h2 class="mb-4 text-zinc-300">
-        Graduate Research Assistant at the University of Vermont
+        Graduate Research Assistant and <a
+          href="https://twitter.com/astrodotbuild"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-blue-400 focus:outline-none focus:underline hover:underline"
+          >@astrodotbuild</a
+        > Maintainer
       </h2>
       <p
         class="w-full font-normal leading-7 text-zinc-400 sm:max-w-sm md:max-w-xl"
       >
         Welcome to my slice of the internet! I am a graduate student in
-        mechanical engineering. In my free time I enjoy making websites and
-        experimenting with web app technologies.
+        mechanical engineering at the University of Vermont. In my free time I
+        enjoy making websites and experimenting with web app technologies.
       </p>
     </header>
   </section>
@@ -45,15 +52,7 @@ import Skill from "@components/Skill.astro";
       and open source.
     </p>
     <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3">
-      <Skill logo="vscode-icons:file-type-astro" text="Astro" />
-      <Skill logo="logos:javascript" text="JavaScript" />
-      <Skill logo="logos:typescript-icon" text="TypeScript" />
-      <Skill logo="logos:python" text="Python" />
-      <Skill logo="logos:react" text="React" />
-      <Skill logo="logos:solidjs-icon" text="Solidjs" />
-      <Skill logo="logos:vue" text="Vue" />
-      <Skill logo="logos:nodejs-icon" text="Nodejs" />
-      <Skill logo="logos:tailwindcss-icon" text="TailwindCSS" />
+      {technologies.map((tech) => <Skill {...tech} />)}
     </div>
   </section>
   <section>
