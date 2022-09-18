@@ -15,8 +15,10 @@ specifiers:
   prettier-plugin-astro: ^0.5.4
   reading-time: ^1.5.0
   tailwind-scrollbar: ^2.0.1
+  tailwindcss: ^3.1.8
 
 dependencies:
+  tailwind-scrollbar: 2.0.1_tailwindcss@3.1.8
   tailwindcss: 3.1.8
 
 devDependencies:
@@ -33,7 +35,6 @@ devDependencies:
   mdast-util-to-string: 3.1.0
   prettier-plugin-astro: 0.5.4
   reading-time: 1.5.0
-  tailwind-scrollbar: 2.0.1
 
 packages:
 
@@ -4438,12 +4439,14 @@ packages:
       tslib: 2.4.0
     dev: true
 
-  /tailwind-scrollbar/2.0.1:
+  /tailwind-scrollbar/2.0.1_tailwindcss@3.1.8:
     resolution: {integrity: sha512-OcR7qHBbux4k+k6bWqnEQFYFooLK/F4dhkBz6nvswIoaA9ancZ5h20e0tyV7ifSWLDCUBtpG+1NHRA8HMRH/wg==}
     engines: {node: '>=12.13.0'}
     peerDependencies:
       tailwindcss: 3.x
-    dev: true
+    dependencies:
+      tailwindcss: 3.1.8
+    dev: false
 
   /tailwindcss/3.1.8:
     resolution: {integrity: sha512-YSneUCZSFDYMwk+TGq8qYFdCA3yfBRdBlS7txSq0LUmzyeqRe3a8fBQzbz9M3WS/iFT4BNf/nmw9mEzrnSaC0g==}
