@@ -51,40 +51,32 @@ const canonicalURL = new URL(Astro.url).href;
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={socialImageURL} />
+    <meta name="generator" content={Astro.generator} />
     <meta name="robots" content="follow, index" />
     <meta name="author" content="Kevin Zuniga Cuellar" />
   </head>
   <body
     class="scrollbar-thin scrollbar-thumb-zinc-500 scrollbar-track-zinc-800 hover:scrollbar-thumb-zinc-400 bg-zinc-900 antialiased selection:bg-fuchsia-600 selection:text-white py-8"
   >
-      <nav
-        class="mb-16 mx-auto flex items-center justify-start overflow-x-auto sm:overflow-x-visible px-3 w-5/6 max-w-min rounded-full ring-1 ring-zinc-700/80 bg-zinc-800/60 sm:w-auto"
-      >
-        <Navlink
-          href="/"
-          text="Home"
-        />
-        <Navlink
-          href="/blog/"
-          text="Blog"
-        />
-        <Navlink
-          href="/bookshelf/"
-          text="Bookshelf"
-        />
-        <Navlink
-          href="https://www.linkedin.com/in/kevinzunigacuellar"
-          rel="noopener noreferrer"
-          target="_blank"
-          text="LinkedIn"
-        />
-        <Navlink
-          href="https://github.com/kevinzunigacuellar"
-          target="_blank"
-          rel="noopener noreferrer"
-          text="GitHub"
-        />
-      </nav>
+    <nav
+      class="mb-16 mx-auto flex items-center justify-start overflow-x-auto sm:overflow-x-visible px-3 w-5/6 max-w-min rounded-full ring-1 ring-zinc-700/80 bg-zinc-800/60 sm:w-auto"
+    >
+      <Navlink href="/" text="Home" />
+      <Navlink href="/blog/" text="Blog" />
+      <Navlink href="/bookshelf/" text="Bookshelf" />
+      <Navlink
+        href="https://www.linkedin.com/in/kevinzunigacuellar"
+        rel="noopener noreferrer"
+        target="_blank"
+        text="LinkedIn"
+      />
+      <Navlink
+        href="https://github.com/kevinzunigacuellar"
+        target="_blank"
+        rel="noopener noreferrer"
+        text="GitHub"
+      />
+    </nav>
     <main class="px-6 lg:px-0 mx-auto max-w-3xl">
       <slot />
     </main>

@@ -3,7 +3,7 @@ export interface Props {
   text: string;
   color: keyof typeof colors;
 }
-const { text, color } = Astro.props as Props;
+const { text, color } = Astro.props;
 const colors = {
   blue: "bg-blue-700 text-blue-200",
   red: "bg-red-700 text-red-200",
