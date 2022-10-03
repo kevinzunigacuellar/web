@@ -18,14 +18,14 @@ const { title, technologies, description, githubUrl, projectUrl } = Astro.props;
 >
   <header class="flex justify-between items-center">
     <h2 class="text-xl font-semibold text-white">
-      {title}<a href={projectUrl} target="_blank" rel="noopener noreferrer"
+      {title}<a href={projectUrl} target="_blank" rel="noopener noreferrer" aria-label="Open project in a new tab"
         ><Icon
           name="fa:external-link-square"
           class="w-4 inline-block ml-2 text-zinc-500 hover:text-zinc-300 transition-colors"
         />
       </a>
     </h2>
-    <a href={githubUrl} target="_blank" rel="noopener noreferrer"
+    <a href={githubUrl} target="_blank" rel="noopener noreferrer" aria-label="Open Github repository in a new tab"
       ><Icon
         name="akar-icons:github-fill"
         class="w-6 hover:text-zinc-300 hover:scale-110 transition-all"
@@ -36,7 +36,7 @@ const { title, technologies, description, githubUrl, projectUrl } = Astro.props;
     technologies && (
       <ul class="flex gap-2 flex-wrap">
         {technologies.map((tech) => (
-          <li class="bg-zinc-700 py-0.5 px-2 text-sm rounded-md">{tech}</li>
+          <li class="bg-zinc-700 text-zinc-300 py-0.5 px-2 text-sm rounded-md">{tech}</li>
         ))}
       </ul>
     )
