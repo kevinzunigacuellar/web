@@ -6,30 +6,30 @@ module.exports = {
       typography: {
         DEFAULT: {
           css: {
-            'code::before': {
-              content: '""'
+            "code::before": {
+              content: '""',
             },
-            'code::after': {
-              content: '""'
+            "code::after": {
+              content: '""',
             },
             p: {
               code: {
-                backgroundColor: '#282A36',
-                padding: '0.250rem 0.4rem',
-                borderRadius: '0.250rem',
-                fontWeight: '400',
-              }
+                backgroundColor: "#282A36",
+                padding: "0.250rem 0.4rem",
+                borderRadius: "0.250rem",
+                fontWeight: "400",
+              },
             },
             li: {
               code: {
-                backgroundColor: '#282A36',
-                padding: '0.250rem 0.4rem',
-                borderRadius: '0.250rem',
-                fontWeight: '400',
-              }
-            }
-          }
-        }
+                backgroundColor: "#282A36",
+                padding: "0.250rem 0.4rem",
+                borderRadius: "0.250rem",
+                fontWeight: "400",
+              },
+            },
+          },
+        },
       },
       keyframes: {
         "move-bg": {
@@ -43,8 +43,5 @@ module.exports = {
       },
     },
   },
-  plugins: [
-    require("@tailwindcss/typography"),
-    require('tailwind-scrollbar')
-  ],
+  plugins: [require("@tailwindcss/typography")],
 };

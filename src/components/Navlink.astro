@@ -15,7 +15,7 @@ if (href === "/") {
 
 <a
   class:list={[
-    "relative font-semibold text-sm py-2.5 px-3",
+    "font-semibold text-sm py-2.5 px-3",
     { "active-text": isActive },
     { inactive: !isActive },
   ]}
@@ -23,16 +23,12 @@ if (href === "/") {
   {...props}
   aria-label={`Go to ${text}`}
 >
-  <span class:list={[{ "active-underline": isActive }]}></span>
   {text}
 </a>
 
 <style>
   .active-text {
-    @apply text-blue-500;
-  }
-  .active-underline {
-    @apply absolute inset-x-1 -bottom-px h-px bg-blue-500;
+    @apply text-teal-400;
   }
   .inactive {
     @apply text-zinc-200;
