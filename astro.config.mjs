@@ -21,13 +21,8 @@ export default defineConfig({
   site: "https://www.kevinzunigacuellar.com",
   markdown: {
     shikiConfig: {
-      theme: "dracula-soft",
+      theme: "dark-plus",
       wrap: true,
-    },
-  },
-  vite: {
-    ssr: {
-      external: ["svgo"],
     },
   },
 });
