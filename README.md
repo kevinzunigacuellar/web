@@ -6,6 +6,4 @@
 - **Platform**: [Astro](https://github.com/withastro/astro)
 - **UI Library**: [Solid](https://github.com/solidjs/solid)
 - **Deployment**: [Netlify](https://www.netlify.com/)
-
-> **Warning**
-> This website is under development
+- **CI**: [GitHub Actions](https://github.com/features/actions)
