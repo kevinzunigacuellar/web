@@ -1,6 +1,6 @@
 # kevinzunigacuellar.com
 
-[![Run CI](https://github.com/kevinzunigacuellar/kevinzunigacuellar.com/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/kevinzunigacuellar/kevinzunigacuellar.com/actions/workflows/ci.yml)
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/kevinzunigacuellar/kevinzunigacuellar.com)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/e403f348-e139-4644-b8bc-9600daa92931/deploy-status)](https://app.netlify.com/sites/venerable-alpaca-a9fcee/deploys)
 
 A minimal, responsive, and accessible personal website built with [Astro](https://astro.build/) and [Tailwind CSS](https://tailwindcss.com/).
