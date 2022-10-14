@@ -52,7 +52,7 @@ import Skill from "@components/Skill.astro";
       and open source.
     </p>
     <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3">
-      {technologies.map((tech) => <Skill {...tech} />)}
+      {technologies.map((tech) => <Skill logo={tech.logo} text={tech.text} />)}
     </div>
   </section>
   <section>
@@ -65,7 +65,17 @@ import Skill from "@components/Skill.astro";
       found on the internet.
     </p>
     <div class="grid grid-cols-1 gap-4">
-      {Projects.map((project) => <ProjectCard {...project} />)}
+      {
+        Projects.map((project) => (
+          <ProjectCard
+            title={project.title}
+            description={project.description}
+            projectUrl={project.projectUrl}
+            githubUrl={project.githubUrl}
+            technologies={project.technologies}
+          />
+        ))
+      }
     </div>
   </section>
 </AppLayout>

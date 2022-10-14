@@ -1,11 +1,12 @@
 ---
 import Navlink from "@components/Navlink.astro";
 
-export interface Props {
+interface Props {
   title?: string;
   description?: string;
   heroImage?: string;
   imageAlt?: string;
+  pubDate?: string;
 }
 
 const defaultMeta = {
@@ -21,7 +22,8 @@ const {
   description = defaultMeta.description,
   heroImage = defaultMeta.image,
   imageAlt = defaultMeta.imageAlt,
-} = Astro.props as Props;
+  pubDate,
+} = Astro.props;
 
 const socialImageURL = new URL(`/static/${heroImage}`, Astro.site);
 const canonicalURL = new URL(Astro.url).href;
@@ -54,6 +56,7 @@ const canonicalURL = new URL(Astro.url).href;
     <meta name="generator" content={Astro.generator} />
     <meta name="robots" content="follow, index" />
     <meta name="author" content="Kevin Zuniga Cuellar" />
+    {pubDate && <meta property="article:published_time" content={pubDate} />}
   </head>
   <body
     class="bg-zinc-900 antialiased selection:bg-fuchsia-600 selection:text-white py-8"
