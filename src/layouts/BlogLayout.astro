@@ -2,6 +2,8 @@
 import AppLayout from "@layouts/AppLayout.astro";
 import { Image } from "@astrojs/image/components";
 import authorImage from "@images/me.jpeg";
+import BlogImage from "@components/BlogImage.astro";
+
 const { content } = Astro.props;
 let { title, description, heroImage, imageAlt, pubDate } = content;
 const fullDate = new Date(pubDate).toLocaleDateString("en", {
@@ -51,6 +53,11 @@ pubDate = pubDate.split("T")[0];
         </a>
       </p>
     </div>
+    <BlogImage
+      src={`/static/${heroImage}`}
+      alt={imageAlt}
+      loading="eager"
+    />
   </header>
   <article
     class="prose prose-invert prose-code:text-zinc-300 prose-a:text-blue-400 max-w-none hover:prose-a:underline focus:prose-a:underline prose-a:no-underline prose-headings:text-teal-500 prose-img:rounded-md"
