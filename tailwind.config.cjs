@@ -14,7 +14,7 @@ module.exports = {
             },
             p: {
               code: {
-                backgroundColor: "#282A36",
+                backgroundColor: "#222222",
                 padding: "0.250rem 0.4rem",
                 borderRadius: "0.250rem",
                 fontWeight: "400",
@@ -22,7 +22,7 @@ module.exports = {
             },
             li: {
               code: {
-                backgroundColor: "#282A36",
+                backgroundColor: "#222222",
                 padding: "0.250rem 0.4rem",
                 borderRadius: "0.250rem",
                 fontWeight: "400",
