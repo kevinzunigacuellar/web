@@ -1,16 +1,16 @@
 ---
-import AppLayout from "@layouts/AppLayout.astro"
-import { Image } from "@astrojs/image/components"
-import authorImage from "@images/me.jpeg"
-import BlogImage from "@components/BlogImage.astro"
-const { content } = Astro.props
-let { title, description, heroImage, imageAlt, pubDate } = content
+import AppLayout from "@layouts/AppLayout.astro";
+import { Image } from "@astrojs/image/components";
+import authorImage from "@images/me.jpeg";
+import BlogImage from "@components/BlogImage.astro";
+const { content } = Astro.props;
+let { title, description, heroImage, imageAlt, pubDate } = content;
 const fullDate = new Date(pubDate).toLocaleDateString("en", {
   dateStyle: "full",
-})
+});
 // remove extension from filename
-let heroImg = heroImage.replace(/\.[^/.]+$/, "")
-pubDate = pubDate.split("T")[0]
+let heroImg = heroImage.replace(/\.[^/.]+$/, "");
+pubDate = pubDate.split("T")[0];
 ---
 
 <AppLayout

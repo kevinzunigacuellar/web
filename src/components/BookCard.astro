@@ -3,9 +3,9 @@ import Badge from "@components/Badge.astro";
 import { Image } from "@astrojs/image/components";
 import type { ImageMetadata } from "@astrojs/image/dist/vite-plugin-astro-image";
 
-export interface Props {
+interface Props {
   title: string;
-  img: ImageMetadata;
+  img: ImageMetadata | string;
   author: string;
   year: number;
   comment: string;
