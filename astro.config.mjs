@@ -10,9 +10,7 @@ export default defineConfig({
   integrations: [
     tailwind(),
     sitemap(),
-    image({
-      serviceEntryPoint: "@astrojs/image/sharp",
-    }),
+    image(),
     mdx({
       remarkPlugins: [setFallbackLayout],
       extendPlugins: "astroDefaults",
