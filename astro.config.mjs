@@ -21,7 +21,6 @@ export default defineConfig({
     shikiConfig: {
       wrap: true,
       theme: "slack-dark",
-      // vitesse-dark
     },
   },
 });
