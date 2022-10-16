@@ -1,6 +1,6 @@
 ---
 import Badge from "@components/Badge.astro";
-import { Image } from "@astrojs/image/components";
+import { Picture } from "@astrojs/image/components";
 import type { ImageMetadata } from "@astrojs/image/dist/vite-plugin-astro-image";
 
 interface Props {
@@ -27,15 +27,16 @@ const {
   class="list-none overflow-hidden rounded-xl shadow-black/40 w-full sm:max-w-4xl"
 >
   <article class="pt-6 sm:flex sm:gap-8 sm:pb-6">
-    <Image
+    <div class="rounded-md overflow-hidden">
+    <Picture
       src={img}
       alt={title}
-      width={450}
-      height={620}
-      format="webp"
-      class="rounded-xl w-full overflow-hidden sm:w-52"
+      widths={[400, 600, 800, 1200]}
+      aspectRatio={5/7}
+      sizes="(max-width: 640px) 90vw, 200px"
       loading={loading}
-    />
+      />
+    </div>
     <div class="w-full pt-6 sm:py-0 sm:px-6">
       <h2 class="mb-1.5 space-x-2 text-xl font-semibold text-white">
         {title}

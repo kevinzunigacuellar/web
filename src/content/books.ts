@@ -24,7 +24,6 @@ export const books = [
     img: csDestilled,
     year: 2017,
     reading: true,
-    loading: "eager",
   },
   {
     title: "Eloquent JavaScript",
