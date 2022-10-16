@@ -23,21 +23,19 @@ const {
 } = Astro.props;
 ---
 
-<li
-  class="list-none overflow-hidden rounded-xl shadow-black/40 w-full sm:max-w-4xl"
->
+<li class="list-none w-full">
   <article class="sm:flex sm:gap-10">
-    <div class="rounded-md overflow-hidden">
-    <Picture
-      src={img}
-      alt={title}
-      widths={[400, 600, 800, 1200]}
-      aspectRatio={5/7}
-      sizes="(max-width: 640px) 90vw, 200px"
-      loading={loading}
+    <div class="overflow-hidden rounded-md">
+      <Picture
+        src={img}
+        alt={title}
+        widths={[400, 600, 800, 1200]}
+        aspectRatio={5 / 7}
+        sizes="(max-width: 640px) 90vw, 200px"
+        loading={loading}
       />
     </div>
-    <div class="w-full pt-6 sm:py-0 sm:px-6">
+    <div class="w-full pt-6 sm:py-0">
       <h2 class="mb-1.5 space-x-2 text-xl font-semibold text-white">
         {title}
       </h2>
