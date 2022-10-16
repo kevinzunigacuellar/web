@@ -1,6 +1,6 @@
 ---
 import AppLayout from "@layouts/AppLayout.astro";
-import { Image } from "@astrojs/image/components";
+import { Picture } from "@astrojs/image/components";
 import authorImage from "@images/me.jpeg";
 import BlogImage from "@components/BlogImage.astro";
 
@@ -32,14 +32,14 @@ pubDate = pubDate.split("T")[0];
       {title}
     </h1>
     <div class="inline-flex gap-2 justify-center items-center mb-6">
-      <div class="aspect-square rounded-full overflow-hidden w-10 h-10">
-        <Image
+      <div class="aspect-square rounded-full overflow-hidden">
+        <Picture
           src={authorImage}
-          height={80}
-          width={80}
+          alt="Image of the author"
+          aspectRatio="1:1"
+          widths={[40,80,120]}
           loading="eager"
-          format="webp"
-          alt="Picture of the author"
+          sizes="40px"
         />
       </div>
       <p class="text-zinc-400 text-sm">
