@@ -11,12 +11,11 @@ const { src, alt, loading = "lazy" } = Astro.props;
 ---
 
 <Picture
-  widths={[400, 600, 800, 1200]}
-  sizes="(max-width: 800px) 100vw, 1200px"
+  widths={[600, 800, 1200, 1600]}
+  sizes="(max-width: 800px) 90vw, 768px"
   aspectRatio={16 / 9}
   src={src}
   loading={loading}
-  quality={80}
   alt={alt}
   class="rounded-md overflow-hidden"
 />

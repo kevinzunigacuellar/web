@@ -1,6 +1,6 @@
 ---
 import AppLayout from "@layouts/AppLayout.astro";
-import { Image } from "@astrojs/image/components";
+import { Picture } from "@astrojs/image/components";
 import authorImage from "@images/me.jpeg";
 import Projects from "@content/projects.json";
 import ProjectCard from "@components/ProjectCard.astro";
@@ -10,16 +10,16 @@ import Skill from "@components/Skill.astro";
 
 <AppLayout>
   <section class="mb-8 sm:mb-14 sm:flex sm:items-center sm:justify-between">
-    <Image
-      src={authorImage}
-      alt="Image of the author"
-      format="webp"
-      width={320}
-      height={320}
-      quality={80}
-      loading="eager"
-      class="rounded-full w-40 overflow-hidden"
-    />
+    <div class="rounded-full overflow-hidden inline-flex">
+      <Picture
+        src={authorImage}
+        alt="Image of the author"
+        aspectRatio="1:1"
+        widths={[160, 320, 480]}
+        loading="eager"
+        sizes="160px"
+      />
+    </div>
     <header class="mt-8 max-w-lg sm:my-0 sm:order-first">
       <h1 class="mb-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
         Kevin Zuniga Cuellar

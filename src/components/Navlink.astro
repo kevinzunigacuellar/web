@@ -1,5 +1,4 @@
 ---
-// eslint-disable-next-line
 interface Props extends astroHTML.JSX.AnchorHTMLAttributes {
   text: string;
   href: string;
@@ -15,9 +14,9 @@ if (href === "/") {
 
 <a
   class:list={[
-    "font-semibold text-sm py-2.5 px-3",
-    { "active-text": isActive },
-    { inactive: !isActive },
+    "font-semibold text-sm py-2.5 px-3 hover:bg-zinc-700/50",
+    { "text-teal-400": isActive },
+    { "text-zinc-200": !isActive },
   ]}
   href={href}
   {...props}
@@ -25,12 +24,3 @@ if (href === "/") {
 >
   {text}
 </a>
-
-<style>
-  .active-text {
-    @apply text-teal-400;
-  }
-  .inactive {
-    @apply text-zinc-200;
-  }
-</style>
