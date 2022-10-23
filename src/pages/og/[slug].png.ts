@@ -28,7 +28,7 @@ export async function get({ params } : APIContext) {
 
   const svg = await satori(markup, {
     width: 1200,
-    height: 768,
+    height: 627,
     fonts: [
       {
         name: 'Inter',
