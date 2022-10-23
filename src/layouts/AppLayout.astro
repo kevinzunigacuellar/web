@@ -14,7 +14,7 @@ const defaultMeta = {
   title: "Kevin Zuniga Cuellar",
   description:
     "Software engineer, TypeScript enthusiast, and a passionate learner.",
-  image: "banner.png",
+  image: "/static/banner.png",
   imageAlt: "Photo of the author smiling",
 };
 
@@ -26,7 +26,7 @@ const {
   pubDate,
 } = Astro.props;
 
-const socialImageURL = new URL(`/static/${heroImage}`, Astro.site);
+const socialImageURL = new URL(heroImage, Astro.site)
 const canonicalURL = new URL(Astro.url).href;
 ---
 
