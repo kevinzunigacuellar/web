@@ -14,7 +14,7 @@ export async function get({ params } : APIContext) {
   const { title, description, pubDate } = pages[q].frontmatter;
   const date = new Date(pubDate).toLocaleDateString('en', { dateStyle: 'full'});
   const markup = html`
-    <div style="color: #111827; width: 1200px; height: 768px; display: flex; flex-direction: column;">
+    <div style="color: #111827; width: 1200px; height: 627px; display: flex; flex-direction: column;">
       <div style="width: 100%; background-color: white; height: 80%; display:flex; justify-content: center; padding: 0px 50px; flex-direction: column;">
         <div style="color: #6b7280; font-size: 24px; line-height: 24px; padding-bottom: 20px;">${date}</div>
         <div style="font-size: 52px; font-weight: 600; color: #111827; padding-bottom: 30px;">${title}</div>
