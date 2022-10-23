@@ -21,7 +21,6 @@ export async function get({ params } : APIContext) {
         <div style="color: #6b7280; font-size: 30px; line-height: 42px;">${description}</div>
       </div>
       <div style="background-color: #dbeafe; width: 100%; height: 20%; display: flex; align-items: center; justify-content: flex-end; padding: 0px 50px; border-top: 2px solid #bfdbfe;">
-        <img src="https://avatars.githubusercontent.com/u/46791833?v=4" style="width: 60px; height: 60px; border-radius: 50%; margin-right: 20px; border: 2px solid #60a5fa;" />
         <div style="font-size: 30px; color: #1e3a8a; font-weight: 600;">kevinzunigacuellar</div>
       </div>
     </div>`;
