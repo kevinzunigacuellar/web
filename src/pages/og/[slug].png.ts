@@ -4,8 +4,8 @@ import satori from 'satori'
 import { html } from 'satori-html';
 import { Resvg } from '@resvg/resvg-js';
 
-const InterReg = await fs.readFile(new URL('../../styles/fonts/Inter-Regular.ttf', import.meta.url));
-const InterSemi = await fs.readFile(new URL('../../styles/fonts/Inter-SemiBold.ttf', import.meta.url));
+const InterReg = await fs.readFile(new URL('./fonts/Inter-Regular.ttf', import.meta.url));
+const InterSemi = await fs.readFile(new URL('./fonts/Inter-SemiBold.ttf', import.meta.url));
 const pages = import.meta.glob('../blog/*.mdx', { eager: true });
 
 export async function get({ params } : APIContext) {
