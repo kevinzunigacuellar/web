@@ -4,19 +4,22 @@ import { Picture } from "@astrojs/image/components";
 import authorImage from "@images/me.jpeg";
 import BlogImage from "@components/BlogImage.astro";
 
-const { content, url } = Astro.props;
-const ogImage = url.replace("blog", "og") + ".png";
+const { content } = Astro.props;
 let { title, description, heroImage, imageAlt, pubDate } = content;
 const fullDate = new Date(pubDate).toLocaleDateString("en", {
   dateStyle: "full",
 });
 pubDate = pubDate.split("T")[0];
+const ogImageParams = new URLSearchParams({
+  title,
+  pubDate,
+}).toString();
 ---
 
 <AppLayout
   title={title}
   description={description}
-  heroImage={ogImage}
+  heroImage={`/og?${ogImageParams}`}
   pubDate={pubDate}
   imageAlt={imageAlt}
 >
