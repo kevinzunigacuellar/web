@@ -5,7 +5,7 @@ import authorImage from "@images/me.jpeg";
 import BlogImage from "@components/BlogImage.astro";
 
 const { content, url } = Astro.props;
-const ogImage = url.replace("blog", "og")+ ".png";
+const ogImage = url.replace("blog", "og") + ".png";
 let { title, description, heroImage, imageAlt, pubDate } = content;
 const fullDate = new Date(pubDate).toLocaleDateString("en", {
   dateStyle: "full",
@@ -41,6 +41,8 @@ pubDate = pubDate.split("T")[0];
           widths={[40, 80, 120]}
           loading="eager"
           sizes="40px"
+          width={40}
+          height={40}
         />
       </div>
       <p class="text-zinc-400 text-sm">
@@ -54,7 +56,12 @@ pubDate = pubDate.split("T")[0];
         </a>
       </p>
     </div>
-    <BlogImage src={`/static/${heroImage}`} alt={imageAlt} loading="eager" aspectRatio={1.91} />
+    <BlogImage
+      src={`/static/${heroImage}`}
+      alt={imageAlt}
+      loading="eager"
+      aspectRatio={1.91}
+    />
   </header>
   <article
     class="prose prose-invert prose-code:text-zinc-300 prose-a:text-blue-400 max-w-none hover:prose-a:underline focus:prose-a:underline prose-a:no-underline prose-headings:text-teal-500 prose-img:rounded-md"

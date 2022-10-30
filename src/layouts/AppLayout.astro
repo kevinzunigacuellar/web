@@ -25,7 +25,7 @@ const {
   pubDate,
 } = Astro.props;
 
-const socialImageURL = new URL(heroImage, Astro.site)
+const socialImageURL = new URL(heroImage, Astro.site);
 const canonicalURL = new URL(Astro.url).href;
 ---
 
@@ -85,3 +85,12 @@ const canonicalURL = new URL(Astro.url).href;
     </main>
   </body>
 </html>
+<style>
+  nav {
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none; /* Firefox */
+  }
+  nav::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+  }
+</style>
