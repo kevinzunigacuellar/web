@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@astrojs/image': ^0.10.0
+  '@astrojs/image': ^0.11.0
   '@astrojs/mdx': ^0.11.4
   '@astrojs/sitemap': ^1.0.0
   '@astrojs/tailwind': ^2.1.1
@@ -9,10 +9,10 @@ specifiers:
   '@tailwindcss/typography': ^0.5.7
   astro: 1.5.1
   astro-icon: ^0.7.3
-  prettier-plugin-astro: ^0.6.0
+  prettier-plugin-astro: ^0.7.0
   satori: ^0.0.43
   satori-html: ^0.3.0
-  tailwindcss: ^3.1.8
+  tailwindcss: ^3.2.1
 
 dependencies:
   '@resvg/resvg-js': 2.1.0
@@ -21,14 +21,14 @@ dependencies:
   tailwindcss: 3.2.1
 
 devDependencies:
-  '@astrojs/image': 0.10.0
+  '@astrojs/image': 0.11.0
   '@astrojs/mdx': 0.11.4
   '@astrojs/sitemap': 1.0.0
   '@astrojs/tailwind': 2.1.1_tailwindcss@3.2.1
   '@tailwindcss/typography': 0.5.7_tailwindcss@3.2.1
   astro: 1.5.1
   astro-icon: 0.7.3
-  prettier-plugin-astro: 0.6.0
+  prettier-plugin-astro: 0.7.0
 
 packages:
 
@@ -52,8 +52,12 @@ packages:
     resolution: {integrity: sha512-VG4X87cUkcmT40HqEwShQzUgl0VSnVTszobbmnhAOkHzdoWMxhwAm61A2o5fEsv6eEK8M0lW/fGwkSofYM5GcQ==}
     dev: true
 
-  /@astrojs/image/0.10.0:
-    resolution: {integrity: sha512-/lkQ8YbqwHEA3bU6W7igEHqqQs6V6sx4rMbhkur4qWQP61kAOnvacSSKN7GJ+YswZOiUhPGY9DTtyLRqLFLv5g==}
+  /@astrojs/compiler/0.29.5:
+    resolution: {integrity: sha512-XpSJyBO6ha5mGqsD71ie83SOcv3p7zKq6qzngyeLKhccCXtf9Zn/4tGbi/Iq4YmkRBNCjLEkF0wZMYWY+eJYAA==}
+    dev: true
+
+  /@astrojs/image/0.11.0:
+    resolution: {integrity: sha512-cWmqig0t4ndb+4v4YwuKJObpU9zWOVsNdEmvoEPPJUgtrrJzaxJYSRBe+pbvjP0xe+cQIk6fOKAq5lchK8VBzQ==}
     peerDependencies:
       sharp: '>=0.31.0'
     peerDependenciesMeta:
@@ -3524,11 +3528,11 @@ packages:
       synckit: 0.7.3
     dev: true
 
-  /prettier-plugin-astro/0.6.0:
-    resolution: {integrity: sha512-xU67TzyGi1u/pwVbEh55AwoOfcOpsh9BtD2MpUAEVrViAcdrBDcmA9VN0edLgla7f2NYu8ntGakxTSrSNFv1mQ==}
+  /prettier-plugin-astro/0.7.0:
+    resolution: {integrity: sha512-ehCUx7MqHWvkHwUmxxAWLsL35pFaCTM5YXQ8xjG/1W6dY2yBhvEks+2aCfjeI5zmMrZNCXkiMQtpznSlLSLrxw==}
     engines: {node: ^14.15.0 || >=16.0.0, npm: '>=6.14.0'}
     dependencies:
-      '@astrojs/compiler': 0.27.2
+      '@astrojs/compiler': 0.29.5
       prettier: 2.7.1
       sass-formatter: 0.7.5
       synckit: 0.8.4
