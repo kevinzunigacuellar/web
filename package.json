@@ -11,12 +11,12 @@
   },
   "devDependencies": {
     "@astrojs/image": "^0.11.0",
-    "@astrojs/mdx": "^0.11.4",
+    "@astrojs/mdx": "^0.11.5",
     "@astrojs/sitemap": "^1.0.0",
     "@astrojs/tailwind": "^2.1.1",
     "@tailwindcss/typography": "^0.5.7",
-    "astro": "1.5.1",
-    "astro-icon": "^0.7.3",
+    "astro": "1.6.1",
+    "astro-icon": "^0.8.0",
     "prettier-plugin-astro": "^0.7.0"
   },
   "dependencies": {
