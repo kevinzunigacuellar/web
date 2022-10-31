@@ -28,7 +28,7 @@ export default async function handler(req: Request) {
               backgroundClip: "text",
               "-webkit-background-clip": "text",
             }}
-            tw="flex text-5xl w-full font-bold text-transparent"
+            tw="flex text-5xl w-full font-bold text-transparent leading-snug tracking-tight"
           >
             {title}
           </div>
