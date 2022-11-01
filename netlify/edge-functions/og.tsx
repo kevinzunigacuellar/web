@@ -20,7 +20,7 @@ export default async function handler(req: Request) {
     (
       <div tw="bg-zinc-900 flex flex-col w-full h-full">
         <div tw="flex flex-col w-full h-4/5 p-10 justify-center">
-          <div tw="text-zinc-500 text-xl mb-6">{date}</div>
+          <div tw="text-zinc-400 text-2xl mb-6">{date}</div>
           <div
             style={{
               backgroundImage:
@@ -28,12 +28,12 @@ export default async function handler(req: Request) {
               backgroundClip: "text",
               "-webkit-background-clip": "text",
             }}
-            tw="flex text-5xl w-full font-bold text-transparent leading-snug tracking-tight"
+            tw="flex text-6xl w-full font-bold text-transparent leading-snug tracking-tight"
           >
             {title}
           </div>
         </div>
-        <div tw="w-full h-1/5 border-t border-zinc-700/50 flex p-10 items-center justify-between text-xl">
+        <div tw="w-full h-1/5 border-t border-zinc-700/50 flex p-10 items-center justify-between text-2xl">
           <div tw="flex items-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -53,12 +53,15 @@ export default async function handler(req: Request) {
             </svg>
             <span tw="ml-3 text-zinc-400">kevinzunigacuellar.com</span>
           </div>
-          <div tw="flex font-bold items-center">
+          <div tw="flex items-center">
             <img
               src="https://avatars.githubusercontent.com/u/46791833?s=80"
-              tw="w-12 h-12 rounded-full"
+              tw="w-15 h-15 rounded-full"
             />
-            <span tw="ml-3 text-zinc-400">kevinzunigacuellar</span>
+            <div tw="flex flex-col ml-3">
+            <span tw="text-zinc-400">Kevin Zuniga Cuellar</span>
+            <span tw="text-blue-400 font-base">@kevinzunigacuel</span>
+            </div>
           </div>
         </div>
       </div>
