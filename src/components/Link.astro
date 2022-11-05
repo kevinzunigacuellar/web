@@ -5,7 +5,7 @@ interface Props extends HTMLAttributes<'a'> {
   text: string;
 }
 const { text, href, ...props } = Astro.props;
-let isActive;
+let isActive : boolean;
 if (href === "/") {
   isActive = href === Astro.url.pathname;
 } else {
