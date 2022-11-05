@@ -1,9 +1,9 @@
-import csDestilled from "../images/books/cs-distilled.jpg";
-import eloquentJavascript from "../images/books/eloquent-javascript.jpg";
-import refactoringUI from "../images/books/refactoring-ui.jpg";
-import aprendiendoGit from "../images/books/aprendiendo-git.png";
-import reactExplained from "../images/books/react-explained.jpg";
-import understandingDisSys from "../images/books/distributed_systems.jpeg";
+import csDestilled from "@images/books/cs-distilled.jpg";
+import eloquentJavascript from "@images/books/eloquent-javascript.jpg";
+import refactoringUI from "@images/books/refactoring-ui.jpg";
+import aprendiendoGit from "@images/books/aprendiendo-git.png";
+import reactExplained from "@images/books/react-explained.jpg";
+import understandingDisSys from "@images/books/distributed_systems.jpeg";
 
 export const books = [
   {

@@ -26,6 +26,7 @@ export default async function handler(req: Request) {
               backgroundImage:
                 "linear-gradient(90deg, #4ade80, #3b82f6, #a855f7)",
               backgroundClip: "text",
+              // @ts-ignore: necessary for clipping
               "-webkit-background-clip": "text",
             }}
             tw="flex text-6xl w-full font-bold text-transparent leading-snug tracking-tight"
