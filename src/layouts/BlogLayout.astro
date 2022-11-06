@@ -4,11 +4,12 @@ import { Picture } from "@astrojs/image/components";
 import authorImage from "@images/me.jpeg";
 import BlogImage from "@components/BlogImage.astro";
 
-const { content } = Astro.props;
-let { title, description, heroImage, imageAlt, pubDate } = content;
+let { title, description, heroImage, imageAlt, pubDate } = Astro.props.content;
+
 const fullDate = new Date(pubDate).toLocaleDateString("en", {
   dateStyle: "full",
 });
+
 pubDate = pubDate.split("T")[0];
 const ogImageParams = new URLSearchParams({
   title,
