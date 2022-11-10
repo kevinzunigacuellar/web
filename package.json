@@ -10,7 +10,7 @@
     "preview": "astro preview"
   },
   "devDependencies": {
-    "@astrojs/image": "^0.11.3",
+    "@astrojs/image": "0.11.2",
     "@astrojs/mdx": "^0.11.6",
     "@astrojs/sitemap": "^1.0.0",
     "@astrojs/tailwind": "^2.1.2",
