@@ -117,7 +117,7 @@ This will start a local development server on [localhost:8888](http://localhost:
 
 To test the edge function, navigate to [localhost:8888/og-image?title=Hello%20World&pubDate=2022-11-05](http://localhost:8888/og-image?title=Hello%20World&pubDate=2022-11-05) in your browser. You should see the following image.
 
-<BlogImage src={import("../../images/blank-og.png")} alt="Blank example of an og image" />
+<BlogImage src={import("../../images/blank-og.png")} alt="Blank example of an og image" aspectRatio={1.91} />
 
 ## Creativity is the limit
 
@@ -125,4 +125,4 @@ From this point forward, you can customize the image to your liking. Feel free a
 
 If you are in need of inspiration, here is the open graph image I generated for this post.
 
-<BlogImage src={import("../../images/example-og.png")} alt="OG image for this blog post" />
+<BlogImage src={import("../../images/example-og.png")} alt="OG image for this blog post" aspectRatio={1.91} />

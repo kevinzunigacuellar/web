@@ -49,7 +49,7 @@ This configuration allows Partytown to forward all events to Google Analytics us
 
 Create a google analytics account and get the tracking ID. After creating a new property for your domain, you can find the tracking ID in the **Property Settings**.
 
-<BlogImage src={import("../../images/tracking-setup.png")} alt="Example of google analytics admin settings with a tracking ID" />
+<BlogImage src={import("../../images/tracking-setup.png")} alt="Example of google analytics admin settings with a tracking ID" aspectRatio={1.91} />
 
 ## 👩‍🚀 Hands-on time!
 
@@ -69,7 +69,6 @@ Google Analytics will provide your with an inline script that will be very simil
     window.dataLayer.push(arguments);
   }
   gtag("js", new Date());
-
   gtag("config", "GA_MEASUREMENT_ID");
 </script>
 ```
@@ -85,9 +84,7 @@ Our new script will look like this after all the modifications:
 <!-- head -->
 <script
   type="text/partytown"
-  src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"
->
-
+  src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID">
 </script>
 <script type="text/partytown">
   window.dataLayer = window.dataLayer || [];
@@ -108,5 +105,5 @@ Congratulations, you have successfully added google analytics to your Astro proj
 
 After deploying your project, go to your google analytics real time dashboard. You should see some recent activity after visiting your website.
 
-<BlogImage src={import("../../images/realtime-dashboard.png")} alt="Google analytics real time dashboard with one visitor in the last 30 minutes" />
+<BlogImage src={import("../../images/realtime-dashboard.png")} alt="Google analytics real time dashboard with one visitor in the last 30 minutes" aspectRatio={2}/>
 
