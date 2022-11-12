@@ -1,0 +1,138 @@
+[
+  {
+    "name": "rust-lang/rustlings",
+    "stars": 31513,
+    "url": "https://github.com/rust-lang/rustlings",
+    "languages": [
+      "Rust",
+      "Shell",
+      "PowerShell"
+    ]
+  },
+  {
+    "name": "withastro/astro",
+    "stars": 22304,
+    "url": "https://github.com/withastro/astro",
+    "languages": [
+      "TypeScript",
+      "JavaScript",
+      "Astro",
+      "Vue"
+    ]
+  },
+  {
+    "name": "vuejs/vitepress",
+    "stars": 6082,
+    "url": "https://github.com/vuejs/vitepress",
+    "languages": [
+      "TypeScript",
+      "Vue",
+      "CSS",
+      "JavaScript"
+    ]
+  },
+  {
+    "name": "leerob/leerob.io",
+    "stars": 4401,
+    "url": "https://github.com/leerob/leerob.io",
+    "languages": [
+      "TypeScript",
+      "JavaScript",
+      "CSS",
+      "Shell"
+    ]
+  },
+  {
+    "name": "midudev/miduconf-website",
+    "stars": 425,
+    "url": "https://github.com/midudev/miduconf-website",
+    "languages": [
+      "Astro",
+      "TypeScript",
+      "JavaScript",
+      "CSS"
+    ]
+  },
+  {
+    "name": "withastro/docs",
+    "stars": 331,
+    "url": "https://github.com/withastro/docs",
+    "languages": [
+      "Astro",
+      "TypeScript",
+      "JavaScript",
+      "CSS"
+    ]
+  },
+  {
+    "name": "withastro/astro.build",
+    "stars": 119,
+    "url": "https://github.com/withastro/astro.build",
+    "languages": [
+      "Astro",
+      "JavaScript",
+      "TypeScript"
+    ]
+  },
+  {
+    "name": "midudev/vota.dev",
+    "stars": 96,
+    "url": "https://github.com/midudev/vota.dev",
+    "languages": [
+      "TypeScript",
+      "CSS",
+      "JavaScript",
+      "Shell"
+    ]
+  },
+  {
+    "name": "solidjs/solid-docs-next",
+    "stars": 79,
+    "url": "https://github.com/solidjs/solid-docs-next",
+    "languages": [
+      "TypeScript",
+      "CSS",
+      "Shell"
+    ]
+  },
+  {
+    "name": "stackblitz/ilovecodeflow.com",
+    "stars": 26,
+    "url": "https://github.com/stackblitz/ilovecodeflow.com",
+    "languages": [
+      "Astro",
+      "SCSS",
+      "JavaScript"
+    ]
+  },
+  {
+    "name": "goncy/adopcanem",
+    "stars": 19,
+    "url": "https://github.com/goncy/adopcanem",
+    "languages": [
+      "TypeScript",
+      "JavaScript"
+    ]
+  },
+  {
+    "name": "stackblitz/docs",
+    "stars": 9,
+    "url": "https://github.com/stackblitz/docs",
+    "languages": [
+      "Vue",
+      "SCSS",
+      "TypeScript"
+    ]
+  },
+  {
+    "name": "Duke-MatSci/materialsmine",
+    "stars": 4,
+    "url": "https://github.com/Duke-MatSci/materialsmine",
+    "languages": [
+      "JavaScript",
+      "Vue",
+      "HTML",
+      "Python"
+    ]
+  }
+]
