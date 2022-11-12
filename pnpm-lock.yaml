@@ -1,28 +1,28 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@astrojs/image': 0.11.2
+  '@astrojs/image': ^0.11.4
   '@astrojs/mdx': ^0.11.6
   '@astrojs/sitemap': ^1.0.0
   '@astrojs/tailwind': ^2.1.2
   '@tailwindcss/typography': ^0.5.8
-  astro: 1.6.6
+  astro: 1.6.7
   astro-icon: ^0.8.0
   node-fetch: ^3.3.0
   prettier-plugin-astro: ^0.7.0
-  tailwindcss: ^3.2.3
+  tailwindcss: ^3.2.4
   tsm: ^2.2.2
 
 dependencies:
-  tailwindcss: 3.2.3
+  tailwindcss: 3.2.4
 
 devDependencies:
-  '@astrojs/image': 0.11.2
+  '@astrojs/image': 0.11.4
   '@astrojs/mdx': 0.11.6
   '@astrojs/sitemap': 1.0.0
-  '@astrojs/tailwind': 2.1.2_tailwindcss@3.2.3
-  '@tailwindcss/typography': 0.5.8_tailwindcss@3.2.3
-  astro: 1.6.6
+  '@astrojs/tailwind': 2.1.2_tailwindcss@3.2.4
+  '@tailwindcss/typography': 0.5.8_tailwindcss@3.2.4
+  astro: 1.6.7
   astro-icon: 0.8.0
   node-fetch: 3.3.0
   prettier-plugin-astro: 0.7.0
@@ -46,8 +46,8 @@ packages:
     resolution: {integrity: sha512-iNJMknLhALllV69eSsdDK9o+xEPOiOaCKN9Sv5VK33cbOmcRI8ICFaUN8lMIQnVSXWyKFvX1o9w08PivJ24NfQ==}
     dev: true
 
-  /@astrojs/image/0.11.2:
-    resolution: {integrity: sha512-M4V5b3eO+9vFu9gRPFCtzdzyWWmOEGxDhjY73kLUIxJt2LP8c4NzJtR9unETGOKAlfMFeSJdDQ2L0LTCVH/miw==}
+  /@astrojs/image/0.11.4:
+    resolution: {integrity: sha512-5+ryBMs0pzHXOlB0ZbI/KR8LFIpNw/yTelxV/Au7WtgnRbxDBwBDVmUKZr6vhTwqMpSif8YM32t84ayIGJJdMA==}
     peerDependencies:
       sharp: '>=0.31.0'
     peerDependenciesMeta:
@@ -166,7 +166,7 @@ packages:
       zod: 3.19.1
     dev: true
 
-  /@astrojs/tailwind/2.1.2_tailwindcss@3.2.3:
+  /@astrojs/tailwind/2.1.2_tailwindcss@3.2.4:
     resolution: {integrity: sha512-nIrlT+WWp/Wv2VQ29Nvncq608E+j3qB9k1f7yiAjY2ijxizZo4OnQzdRPQcIjIZHL5YxPtzbcoSP2u3v+Domqw==}
     peerDependencies:
       tailwindcss: ^3.0.24
@@ -174,7 +174,7 @@ packages:
       '@proload/core': 0.3.3
       autoprefixer: 10.4.13_postcss@8.4.19
       postcss: 8.4.19
-      tailwindcss: 3.2.3
+      tailwindcss: 3.2.4
     dev: true
 
   /@astrojs/telemetry/1.0.1:
@@ -609,7 +609,7 @@ packages:
       picomatch: 2.3.1
     dev: true
 
-  /@tailwindcss/typography/0.5.8_tailwindcss@3.2.3:
+  /@tailwindcss/typography/0.5.8_tailwindcss@3.2.4:
     resolution: {integrity: sha512-xGQEp8KXN8Sd8m6R4xYmwxghmswrd0cPnNI2Lc6fmrC3OojysTBJJGSIVwPV56q4t6THFUK3HJ0EaWwpglSxWw==}
     peerDependencies:
       tailwindcss: '>=3.0.0 || insiders'
@@ -618,7 +618,7 @@ packages:
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       postcss-selector-parser: 6.0.10
-      tailwindcss: 3.2.3
+      tailwindcss: 3.2.4
     dev: true
 
   /@trysound/sax/0.2.0:
@@ -859,8 +859,8 @@ packages:
       svgo: 2.8.0
     dev: true
 
-  /astro/1.6.6:
-    resolution: {integrity: sha512-Bi1+79B1CPLiYz/VTT2vHI79m5aCQyCCmIJDCZvgYBlB+OFtflx3q1ft6JyWJ4kqIEZHbOatNVrI7xJ5ZngcqQ==}
+  /astro/1.6.7:
+    resolution: {integrity: sha512-xx910blM5qfSMyesmVmuhXqKMIOa2WL/WTSfYv84pB9JocgtAfGKlmS1HZNqWd0h9YLreYbGRzXhbtv2Qfd8vw==}
     engines: {node: ^14.18.0 || >=16.12.0, npm: '>=6.14.0'}
     hasBin: true
     dependencies:
@@ -3858,8 +3858,8 @@ packages:
       tslib: 2.4.1
     dev: true
 
-  /tailwindcss/3.2.3:
-    resolution: {integrity: sha512-Xt9D4PK4zuuQCEB8bwK9JUCKmTgUwyac/6b0/42Vqhgl6YJkep+Wf5wq+5uXYfmrupdAD0YY2NY1hyZp1HjRrg==}
+  /tailwindcss/3.2.4:
+    resolution: {integrity: sha512-AhwtHCKMtR71JgeYDaswmZXhPcW9iuI9Sp2LvZPo9upDZ7231ZJ7eA9RaURbhpXGVlrjX4cFNlB4ieTetEb7hQ==}
     engines: {node: '>=12.13.0'}
     hasBin: true
     dependencies:
