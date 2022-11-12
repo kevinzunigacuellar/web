@@ -31,7 +31,7 @@ jobs:
       - name: Run generate contribution list script
         run: pnpm run github:contributions
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.CONTRIBUTIONS_TOKEN }}
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
