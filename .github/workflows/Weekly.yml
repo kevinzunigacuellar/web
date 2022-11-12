@@ -1,8 +1,8 @@
-name: Nightly
+name: Weekly
 
 on:
   schedule:
-      - cron:  '0 12 * * *'
+      - cron:  '50 7 * * 1'
   workflow_dispatch:
 
 jobs:
