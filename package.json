@@ -7,7 +7,8 @@
     "start": "astro dev",
     "build": "astro build",
     "format": "prettier -w --plugin-search-dir=. 'src/**/*.{js,jsx,ts,tsx,astro}' astro.config.mjs tailwind.config.cjs",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "github:contributions": "tsm scripts/generate-contributions-list.ts"
   },
   "devDependencies": {
     "@astrojs/image": "0.11.2",
@@ -17,7 +18,9 @@
     "@tailwindcss/typography": "^0.5.8",
     "astro": "1.6.6",
     "astro-icon": "^0.8.0",
-    "prettier-plugin-astro": "^0.7.0"
+    "node-fetch": "^3.3.0",
+    "prettier-plugin-astro": "^0.7.0",
+    "tsm": "^2.2.2"
   },
   "dependencies": {
     "tailwindcss": "^3.2.3"

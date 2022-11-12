@@ -1,0 +1,39 @@
+name: Nightly
+
+on:
+  schedule:
+      - cron:  '0 12 * * *'
+  workflow_dispatch:
+
+jobs:
+  integrations:
+    name: Generate Contributions list
+    if: github.repository_owner == 'kevinzunigacuellar'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code using Git
+        uses: actions/checkout@v3
+      - name: Setup PNPM
+      - uses: pnpm/action-setup@v2.2.1
+      - name: Setup Node
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: pnpm
+      - name: Run generate contribution list script
+        run: pnpm run github:contributions
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: Update contributions list
+          title: Update contributions list
+          body: |
+            This PR was created by the GitHub Actions workflow **Nightly**. 
+
+            The commit hash is _${{ github.sha }}_.
+          branch: contributions-list
+          delete-branch: true
