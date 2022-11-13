@@ -12,15 +12,7 @@ module.exports = {
             "code::after": {
               content: '""',
             },
-            p: {
-              code: {
-                backgroundColor: "#222222",
-                padding: "0.250rem 0.4rem",
-                borderRadius: "0.250rem",
-                fontWeight: "400",
-              },
-            },
-            li: {
+            "p, li": {
               code: {
                 backgroundColor: "#222222",
                 padding: "0.250rem 0.4rem",
