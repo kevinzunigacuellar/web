@@ -23,6 +23,7 @@
     "tsm": "^2.2.2"
   },
   "dependencies": {
+    "astro-layouts": "^0.0.1",
     "tailwindcss": "^3.2.4"
   }
 }

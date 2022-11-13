@@ -3,7 +3,7 @@ import tailwind from "@astrojs/tailwind";
 import image from "@astrojs/image";
 import sitemap from "@astrojs/sitemap";
 import mdx from "@astrojs/mdx";
-import setFallbackLayout from "./remark/defaultLayout";
+import astroLayouts from "astro-layouts";
 
 // https://astro.build/config
 export default defineConfig({
@@ -12,7 +12,14 @@ export default defineConfig({
     sitemap(),
     image(),
     mdx({
-      remarkPlugins: [setFallbackLayout],
+      remarkPlugins: [
+        [
+          astroLayouts,
+          {
+            blog: "/src/layouts/BlogLayout.astro",
+          },
+        ],
+      ],
       extendPlugins: "astroDefaults",
     }),
   ],
