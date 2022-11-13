@@ -27,7 +27,7 @@ const description =
   <p class="w-full mb-10 font-normal leading-7 text-zinc-400">
     {description}
   </p>
-  <section class="flex flex-col gap-12">
+  <ul class="flex flex-col gap-8">
     {
       allPosts.map((post) => (
         <BlogCard
@@ -38,5 +38,5 @@ const description =
         />
       ))
     }
-  </section>
+  </ul>
 </AppLayout>

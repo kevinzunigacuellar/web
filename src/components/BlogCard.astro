@@ -12,7 +12,7 @@ const fullDate = new Date(pubDate).toLocaleDateString("en", {
 url = url + "/";
 ---
 
-<div
+<li
   class="grid grid-cols-1 gap-2 sm:grid-cols-4 leading-relaxed rounded-xl border-zinc-700 text-zinc-400 transition-all"
 >
   <time
@@ -21,7 +21,7 @@ url = url + "/";
     >{fullDate}
   </time>
   <a
-    class="col-span-3 flex flex-col gap-2 sm:gap-4 p-5 hover:bg-zinc-800 rounded-lg"
+    class="col-span-3 flex flex-col gap-2 sm:gap-4 sm:p-5 sm:hover:bg-zinc-800 transition-colors rounded-lg"
     href={url}
   >
     <time
@@ -29,11 +29,9 @@ url = url + "/";
       class="block sm:hidden text-sm tracking-wide text-zinc-400"
       >{fullDate}
     </time>
-    <h2
-      class="text-lg font-semibold group-hover:text-transparent group-hover:bg-clip-text group-hover:animate-move-bg group-hover:bg-gradient-to-r group-hover:bg-[length:400%] group-hover:from-indigo-500 group-hover:via-pink-500 group-hover:to-indigo-500 text-zinc-300 group-focus:text-transparent group-focus:bg-clip-text group-focus:animate-move-bg group-focus:bg-gradient-to-r group-focus:bg-[length:400%] group-focus:from-indigo-500 group-focus:via-pink-500 group-focus:to-indigo-500"
-    >
+    <h2 class="text-lg font-semibold text-zinc-100">
       {title}
     </h2>
     <p>{description}</p>
   </a>
-</div>
+</li>

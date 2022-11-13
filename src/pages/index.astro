@@ -9,19 +9,18 @@ import openSourceContributions from "@content/contributions.json";
 ---
 
 <AppLayout>
-  <section class="mb-8 sm:mb-14 sm:flex sm:items-center sm:justify-between">
-    <div class="rounded-full overflow-hidden inline-flex">
-      <Picture
-        src={authorImage}
-        alt="Image of the author"
-        aspectRatio="1:1"
-        widths={[160, 320, 480]}
-        loading="eager"
-        sizes="160px"
-        width={160}
-        height={160}
-      />
-    </div>
+  <section class="sm:flex sm:items-center sm:justify-between">
+    <Picture
+      src={authorImage}
+      class="rounded-full overflow-hidden inline-flex"
+      alt="Image of the author"
+      aspectRatio="1:1"
+      widths={[160, 320, 480]}
+      loading="eager"
+      sizes="160px"
+      width={160}
+      height={160}
+    />
     <header class="mt-8 max-w-lg sm:my-0 sm:order-first">
       <h1 class="mb-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
         Kevin Zuniga Cuellar
@@ -44,7 +43,7 @@ import openSourceContributions from "@content/contributions.json";
       </p>
     </header>
   </section>
-  <section class="">
+  <section class="mt-10 sm:mt-14">
     <h2 class="text-zinc-300 mb-4 text-2xl font-bold tracking-tight">
       Favorite technologies
     </h2>
@@ -53,29 +52,29 @@ import openSourceContributions from "@content/contributions.json";
       is a list of technologies that I have worked with at school, side projects
       and open source.
     </p>
-    <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3">
+    <ul class="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3">
       {technologies.map((tech) => <Skill logo={tech.logo} text={tech.text} />)}
-    </div>
+    </ul>
   </section>
-  <section class="mt-8 sm:mt-14">
+  <section class="mt-10 sm:mt-14">
     <h2 class="text-zinc-300 mb-4 text-2xl font-bold tracking-tight">
       Open Source
     </h2>
     <p class="w-full mb-8 font-normal leading-7 text-zinc-400">
-      I love contributing to open source projects. Here is a list of some of the
-      projects I have contributed to.
+      I love open source and I have been contributing to different projects for
+      the some time. Here is a list of projects that I have contributed to.
     </p>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-6">
       {
         openSourceContributions.map((project) => (
-          <article class="bg-zinc-800 text-zinc-400 p-6 rounded-xl flex flex-col border-t shadow shadow-black/40 border-zinc-700">
+          <li class="bg-zinc-800 text-zinc-400 p-6 rounded-xl flex flex-col border-t shadow shadow-black/40 border-zinc-700">
             <div class="flex justify-between items-center">
               <h3 class="text-lg font-medium text-white">{project.name}</h3>
               <a
                 href={project.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Open Github repository in a new tab"
+                aria-label={`Open ${project.name} repository in a new tab`}
               >
                 <Icon
                   name="akar-icons:github-fill"
@@ -96,9 +95,9 @@ import openSourceContributions from "@content/contributions.json";
                 </li>
               ))}
             </ul>
-          </article>
+          </li>
         ))
       }
-    </div>
+    </ul>
   </section>
 </AppLayout>
