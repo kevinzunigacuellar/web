@@ -16,7 +16,7 @@ export default defineConfig({
         [
           astroLayouts,
           {
-            blog: "/src/layouts/BlogLayout.astro",
+            blog: "@layouts/BlogLayout.astro",
           },
         ],
       ],
