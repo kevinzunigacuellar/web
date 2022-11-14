@@ -34,13 +34,13 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.CONTRIBUTIONS_TOKEN }}
 
       - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v3
+        uses: peter-evans/create-pull-request@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: Update contributions list
           title: Update contributions list
           body: |
-            This PR was created by the GitHub Actions workflow **Nightly**. 
+            This PR was created by the GitHub Actions workflow **Weekly**. 
 
             The commit hash is _${{ github.sha }}_.
           branch: contributions-list
