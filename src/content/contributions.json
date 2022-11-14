@@ -1,17 +1,18 @@
 [
   {
     "name": "rust-lang/rustlings",
-    "stars": 31513,
+    "stars": 31573,
     "url": "https://github.com/rust-lang/rustlings",
     "languages": [
       "Rust",
       "Shell",
-      "PowerShell"
+      "PowerShell",
+      "Nix"
     ]
   },
   {
     "name": "withastro/astro",
-    "stars": 22304,
+    "stars": 22425,
     "url": "https://github.com/withastro/astro",
     "languages": [
       "TypeScript",
@@ -22,7 +23,7 @@
   },
   {
     "name": "vuejs/vitepress",
-    "stars": 6082,
+    "stars": 6105,
     "url": "https://github.com/vuejs/vitepress",
     "languages": [
       "TypeScript",
@@ -33,7 +34,7 @@
   },
   {
     "name": "leerob/leerob.io",
-    "stars": 4401,
+    "stars": 4409,
     "url": "https://github.com/leerob/leerob.io",
     "languages": [
       "TypeScript",
@@ -55,7 +56,7 @@
   },
   {
     "name": "withastro/docs",
-    "stars": 331,
+    "stars": 333,
     "url": "https://github.com/withastro/docs",
     "languages": [
       "Astro",
