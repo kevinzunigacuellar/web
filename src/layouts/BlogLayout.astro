@@ -3,6 +3,7 @@ import AppLayout from "@layouts/AppLayout.astro";
 import { Picture } from "@astrojs/image/components";
 import authorImage from "@images/me.jpeg";
 import BlogImage from "@components/BlogImage.astro";
+import { author, twitter } from "@content/socials";
 
 let { title, description, heroImage, imageAlt, pubDate } = Astro.props.content;
 
@@ -10,7 +11,7 @@ const fullDate = new Date(pubDate).toLocaleDateString("en", {
   dateStyle: "full",
 });
 
-pubDate = pubDate.split("T")[0];
+[pubDate] = pubDate.split("T");
 const ogImageParams = new URLSearchParams({
   title,
   pubDate,
@@ -50,13 +51,13 @@ const ogImageParams = new URLSearchParams({
         />
       </div>
       <p class="text-zinc-400 text-sm">
-        <span class="block font-semibold">Kevin Zuniga Cuellar</span>
+        <span class="block font-semibold">{author}</span>
         <a
           class="text-blue-400 focus:outline-none focus:underline hover:underline focus:font-medium hover:font-medium block"
           href="https://twitter.com/kevinzunigacuel"
           target="_blank"
           rel="noopener noreferrer"
-          >@kevinzunigacuel
+          >{twitter}
         </a>
       </p>
     </div>
