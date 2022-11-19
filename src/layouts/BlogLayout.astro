@@ -88,16 +88,15 @@ const prevPost = posts[index - 1];
   >
     <slot />
   </article>
-  <div>
-    <div class="flex flex-col sm:flex-row mt-10 gap-4 sm:gap-6 w-full">
+    <aside class="flex flex-col sm:flex-row mt-10 gap-4 sm:gap-6 w-full">
       {
         prevPost && (
           <a
             href={prevPost.url + "/"}
-            class="flex flex-col grow text-sm p-4 border rounded-md border-zinc-700 hover:border-teal-500 transition-colors"
+            class="group flex flex-col grow text-sm p-4 rounded-md bg-zinc-800 border border-opacity-0 border-teal-400 hover:border-opacity-100 transition-all hover:bg-teal-600/20"
           >
             <p class="text-zinc-400 mb-1">&larr; Previous post</p>
-            <p class="font-semibold text-zinc-300">
+            <p class="font-semibold text-zinc-300 group-hover:text-teal-400">
               {prevPost.frontmatter.title}
             </p>
           </a>
@@ -107,15 +106,14 @@ const prevPost = posts[index - 1];
         nextPost && (
           <a
             href={nextPost.url + "/"}
-            class="flex flex-col grow text-right text-sm p-4 border rounded-md border-zinc-700 hover:border-teal-500 transition-colors"
+            class="group flex flex-col grow text-right text-sm p-4 rounded-md bg-zinc-800 border border-opacity-0 border-teal-400 hover:border-opacity-100 transition-all hover:bg-teal-600/20"
           >
             <p class="text-zinc-400 mb-1">Next post &rarr;</p>
-            <p class="font-semibold text-zinc-300">
+            <p class="font-semibold text-zinc-300 group-hover:text-teal-400">
               {nextPost.frontmatter.title}
             </p>
           </a>
         )
       }
-    </div>
-  </div>
+    </aside>
 </AppLayout>
