@@ -31,7 +31,7 @@ Inside the `edge_functions` folder, create a new file called `og.tsx`.
 
 Finally, create a new file called `netlify.toml` in the root of your project and add the following:
 
-```toml
+```toml title="netlify.toml"
 [[edge_functions]]
   function = "og"
   path = "/og-image"
@@ -45,7 +45,7 @@ To generate our open graph images, we will take advantage of the `query` paramet
 
 In the next example, we will get the `title` and `pubDate` query parameters from the request.
 
-```tsx
+```tsx title="netlify/edge_functions/og.tsx"
 export default async function handler(req: Request) {
   // Get the query parameters `title` and `pubDate` from the request
   const url = new URL(req.url);
@@ -57,10 +57,9 @@ export default async function handler(req: Request) {
 
 Next, import the `ImageResponse` function from `og-edge` and `React` from `react`. If you are not familiar with imports in Deno, you can read more about them in their [documentation](https://deno.land/manual@v1.27.2/basics/modules#remote-import).
 
-```tsx
+```tsx title="netlify/edge_functions/og.tsx" {1,2}
 import React from "https://esm.sh/react@18.2.0";
 import { ImageResponse } from "https://deno.land/x/og_edge@0.0.2/mod.ts";
-
 export default async function handler(req: Request) {
   // Get the query parameters from the request
   const url = new URL(req.url);
@@ -72,7 +71,7 @@ export default async function handler(req: Request) {
 
 Finally, use the `ImageResponse` function to generate our open graph image and return it as a response.
 
-```tsx
+```tsx title="netlify/edge_functions/og.tsx" {12-28}
 import React from "https://esm.sh/react@18.2.0";
 import { ImageResponse } from "https://deno.land/x/og_edge@0.0.2/mod.ts";
 

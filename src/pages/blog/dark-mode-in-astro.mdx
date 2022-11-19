@@ -12,15 +12,15 @@ To create the UI we will use preact but feel free to use any other framework of 
 
 ## 🧑‍💻 Getting started
 
-Start a new Astro project and install your dependecies:
+Start a new Astro project:
 
-```bash
+```sh
 npm create astro@latest
 ```
 
-Install tailwindcss and preact integrations to Astro:
+Install the tailwindcss and preact integrations:
 
-```bash
+```sh
 npm install -D @astrojs/tailwind @astrojs/preact
 
 npm install preact
@@ -28,7 +28,7 @@ npm install preact
 
 Add both integrations to your `astro.config.mjs`
 
-```js
+```js title="astro.config.mjs"
 import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
 import preact from "@astrojs/preact";
@@ -38,9 +38,13 @@ export default defineConfig({
 });
 ```
 
-Finally, create a minimal config file `tailwind.config.cjs` in the root of your project, update your `content` and set `darkMode` to `class`.
+Create a minimal tailwind config file in the root of your project. 
 
-```js
+- Modify the `content` property to include all the files that contain your styles.
+
+- Modify the `darkMode` property to `class` to enable dark mode.
+
+```js title="tailwind.config.cjs"
 module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx,astro}"],
   darkMode: "class",
@@ -51,12 +55,12 @@ module.exports = {
 
 ## 👩‍🚀 Hands-on time!
 
-Astro has the option to add inline scripts directly to your html. These scripts will run as soon as the html is loaded; therefore, preventing the [_flash of inaccurate color theme_](https://css-tricks.com/flash-of-inaccurate-color-theme-fart/) which is a very common problem when implementing dark mode with hydration. You can read more about inline scripts in the [Astro documentation](https://docs.astro.build/en/reference/directives-reference/#isinline).
+Astro has a feature to add inline scripts directly to your astro files. These scripts will run as soon as the html is loaded; therefore, preventing the [_flash of inaccurate color theme_](https://css-tricks.com/flash-of-inaccurate-color-theme-fart/) which is a very common problem when implementing dark mode with hydration. You can read more about inline scripts in the [Astro documentation](https://docs.astro.build/en/reference/directives-reference/#isinline).
 
 The following code retrieves the user's prefered theme and adds it to the html element. Feel free to copy/paste or modify this code snippet into your astro project. We will go over every line of code in the next paragraph.
 
 
-```astro title="testing"
+```astro title="Layout.astro"
 <script is:inline>
   const theme = (() => {
     if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
@@ -93,7 +97,7 @@ In Astro you can use any UI framework of your choice. For this example, I decide
 
 The following code snippet renders a button to toggle between dark and light mode.
 
-```tsx
+```tsx title="ThemeToggle.tsx"
 import { useEffect, useState } from "preact/hooks";
 import type { FunctionalComponent } from "preact";
 

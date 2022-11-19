@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+
+const colors = require("tailwindcss/colors");
 module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx,astro}"],
   theme: {
@@ -14,7 +16,7 @@ module.exports = {
             },
             "p, li": {
               code: {
-                backgroundColor: "#222222",
+                backgroundColor: colors.neutral[800],
                 padding: "0.250rem 0.4rem",
                 borderRadius: "0.250rem",
                 fontWeight: "400",

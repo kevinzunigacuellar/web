@@ -29,7 +29,7 @@ npm install -D @astrojs/partytown
 
 Add the partytown integration to your `astro.config.mjs` with the following config options.
 
-```js
+```js title="astro.config.mjs"
 import { defineConfig } from "astro/config";
 import partytown from "@astrojs/partytown";
 
@@ -80,7 +80,7 @@ Modify the script above to allow partytown to run google analytics in a web work
 
 Our new script will look like this after all the modifications:
 
-```astro
+```astro title="Layout.astro"
 <!-- head -->
 <script
   type="text/partytown"

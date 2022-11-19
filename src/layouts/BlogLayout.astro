@@ -2,6 +2,7 @@
 import AppLayout from "@layouts/AppLayout.astro";
 import { Picture } from "@astrojs/image/components";
 import authorImage from "@images/me.jpeg";
+import "../styles/syntaxHighlight.css";
 import BlogImage from "@components/BlogImage.astro";
 import { author, twitter } from "@content/socials";
 
@@ -89,24 +90,32 @@ const prevPost = posts[index - 1];
   </article>
   <div>
     <div class="flex flex-col sm:flex-row mt-10 gap-4 sm:gap-6 w-full">
-      {prevPost && (
-        <a
-          href={prevPost.url + "/"}
-          class="flex flex-col grow text-sm p-4 border rounded-md border-zinc-700 hover:border-teal-500 transition-colors"
-        >
-          <p class="text-zinc-400 mb-1">&larr; Previous post</p>
-          <p class="font-semibold text-zinc-300">{prevPost.frontmatter.title}</p>
-        </a>
-      )}
-      {nextPost && (
-        <a
-          href={nextPost.url + "/"}
-          class="flex flex-col grow text-right text-sm p-4 border rounded-md border-zinc-700 hover:border-teal-500 transition-colors"
-        >
-          <p class="text-zinc-400 mb-1">Next post &rarr;</p>
-          <p class="font-semibold text-zinc-300">{nextPost.frontmatter.title}</p>
-        </a>
-      )}
+      {
+        prevPost && (
+          <a
+            href={prevPost.url + "/"}
+            class="flex flex-col grow text-sm p-4 border rounded-md border-zinc-700 hover:border-teal-500 transition-colors"
+          >
+            <p class="text-zinc-400 mb-1">&larr; Previous post</p>
+            <p class="font-semibold text-zinc-300">
+              {prevPost.frontmatter.title}
+            </p>
+          </a>
+        )
+      }
+      {
+        nextPost && (
+          <a
+            href={nextPost.url + "/"}
+            class="flex flex-col grow text-right text-sm p-4 border rounded-md border-zinc-700 hover:border-teal-500 transition-colors"
+          >
+            <p class="text-zinc-400 mb-1">Next post &rarr;</p>
+            <p class="font-semibold text-zinc-300">
+              {nextPost.frontmatter.title}
+            </p>
+          </a>
+        )
+      }
     </div>
   </div>
 </AppLayout>

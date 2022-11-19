@@ -1,9 +1,24 @@
 import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
+import rehypePrettyCode from "rehype-pretty-code";
 import image from "@astrojs/image";
 import sitemap from "@astrojs/sitemap";
 import mdx from "@astrojs/mdx";
 import astroLayouts from "astro-layouts";
+
+const layoutOptions = {
+  blog: "@layouts/BlogLayout.astro",
+};
+
+const prettyCodeOptions = {
+  theme: "one-dark-pro",
+  onVisitHighlightedLine(node) {
+    node.properties.className.push("highlighted");
+  },
+  onVisitHighlightedWord(node) {
+    node.properties.className = ["word"];
+  },
+};
 
 // https://astro.build/config
 export default defineConfig({
@@ -12,14 +27,8 @@ export default defineConfig({
     sitemap(),
     image(),
     mdx({
-      remarkPlugins: [
-        [
-          astroLayouts,
-          {
-            blog: "@layouts/BlogLayout.astro",
-          },
-        ],
-      ],
+      remarkPlugins: [[astroLayouts, layoutOptions]],
+      rehypePlugins: [[rehypePrettyCode, prettyCodeOptions]],
       extendPlugins: "astroDefaults",
     }),
   ],
@@ -29,5 +38,6 @@ export default defineConfig({
       wrap: true,
       theme: "slack-dark",
     },
+    syntaxHighlight: false,
   },
 });
