@@ -1,0 +1,23 @@
+div[data-rehype-pretty-code-fragment] {
+  @apply bg-zinc-800/40 overflow-hidden rounded-md border border-zinc-800 shadow
+}
+
+div[data-rehype-pretty-code-title] {
+  @apply inline-block px-4 bg-zinc-800 text-base m-0 pt-0.5 pb-1 text-blue-400
+}
+
+div[data-rehype-pretty-code-fragment] pre {
+  @apply bg-neutral-900/70 m-0 rounded-none relative px-0
+}
+
+div[data-rehype-pretty-code-fragment] pre code {
+  @apply flex flex-col
+}
+
+div[data-rehype-pretty-code-fragment] pre code .line {
+  @apply px-4
+}
+
+div[data-rehype-pretty-code-fragment] .highlighted {
+  @apply bg-green-600/20
+}
