@@ -10,8 +10,8 @@ interface Frontmatter {
   pubDate: string;
   description: string;
 }
-let allPosts = await Astro.glob<Frontmatter>("./blog/*.mdx");
-allPosts = allPosts.sort(
+let posts = await Astro.glob<Frontmatter>("./blog/*.mdx");
+posts = posts.sort(
   (a, b) =>
     new Date(b.frontmatter.pubDate).valueOf() -
     new Date(a.frontmatter.pubDate).valueOf()
@@ -29,7 +29,7 @@ const description =
   </p>
   <ul class="flex flex-col gap-8">
     {
-      allPosts.map((post) => (
+      posts.map((post) => (
         <BlogCard
           title={post.frontmatter.title}
           pubDate={post.frontmatter.pubDate}
