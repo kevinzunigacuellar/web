@@ -16,6 +16,20 @@ const ogImageParams = new URLSearchParams({
   title,
   pubDate,
 }).toString();
+
+let posts = await Astro.glob("../pages/blog/*.mdx");
+posts = posts.sort(
+  (a, b) =>
+    new Date(b.frontmatter.pubDate).valueOf() -
+    new Date(a.frontmatter.pubDate).valueOf()
+);
+// get the index of the current post
+const index = posts.findIndex((post) => {
+  return Astro.request.url.includes(post.url);
+});
+// get the next and previous posts
+const nextPost = posts[index + 1];
+const prevPost = posts[index - 1];
 ---
 
 <AppLayout
@@ -74,4 +88,26 @@ const ogImageParams = new URLSearchParams({
   >
     <slot />
   </article>
+  <div>
+    <div class="flex flex-col sm:flex-row mt-10 gap-4 sm:gap-6 w-full">
+      {prevPost && (
+        <a
+          href={prevPost.url + "/"}
+          class="flex flex-col grow text-sm p-4 border rounded border-zinc-700 hover:border-teal-500 transition-colors"
+        >
+          <p class="text-zinc-400 mb-1">&larr; Previous post</p>
+          <p class="font-semibold text-zinc-300">{prevPost.frontmatter.title}</p>
+        </a>
+      )}
+      {nextPost && (
+        <a
+          href={nextPost.url + "/"}
+          class="flex flex-col grow text-right text-sm p-4 border rounded border-zinc-700 hover:border-teal-500 transition-colors"
+        >
+          <p class="text-zinc-400 mb-1">Next post &rarr;</p>
+          <p class="font-semibold text-zinc-300">{nextPost.frontmatter.title}</p>
+        </a>
+      )}
+    </div>
+  </div>
 </AppLayout>
