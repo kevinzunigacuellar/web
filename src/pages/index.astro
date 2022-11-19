@@ -6,8 +6,8 @@ import technologies from "@content/technologies.json";
 import Skill from "@components/Skill.astro";
 import { Icon } from "astro-icon";
 import openSourceContributions from "@content/contributions.json";
+import { author } from "@content/socials";
 ---
-
 <AppLayout>
   <section class="sm:flex sm:items-center sm:justify-between">
     <Picture
@@ -23,7 +23,7 @@ import openSourceContributions from "@content/contributions.json";
     />
     <header class="mt-8 max-w-lg sm:my-0 sm:order-first">
       <h1 class="mb-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-        Kevin Zuniga Cuellar
+        {author}
       </h1>
       <h2 class="mb-4 text-zinc-300">
         Graduate Research Assistant and <a

@@ -9,7 +9,6 @@ let { title, description, pubDate, url } = Astro.props;
 const fullDate = new Date(pubDate).toLocaleDateString("en", {
   dateStyle: "full",
 });
-url = url + "/";
 ---
 
 <li
@@ -22,7 +21,7 @@ url = url + "/";
   </time>
   <a
     class="col-span-3 flex flex-col gap-2 sm:gap-4 sm:p-5 sm:hover:bg-zinc-800 transition-colors rounded-lg"
-    href={url}
+    href={`${url}/`}
   >
     <time
       datetime={pubDate}
