@@ -19,5 +19,5 @@ div[data-rehype-pretty-code-fragment] pre code .line {
 }
 
 div[data-rehype-pretty-code-fragment] .highlighted {
-  @apply bg-green-600/20 w-[800px] 
+  @apply sm:bg-green-600/20 
 }
