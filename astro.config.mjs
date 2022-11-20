@@ -34,10 +34,6 @@ export default defineConfig({
   ],
   site: "https://www.kevinzunigacuellar.com",
   markdown: {
-    shikiConfig: {
-      wrap: true,
-      theme: "slack-dark",
-    },
     syntaxHighlight: false,
   },
 });
