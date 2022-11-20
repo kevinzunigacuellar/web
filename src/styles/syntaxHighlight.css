@@ -3,7 +3,7 @@ div[data-rehype-pretty-code-fragment] {
 }
 
 div[data-rehype-pretty-code-title] {
-  @apply inline-block px-4 bg-zinc-800 text-base m-0 pt-0.5 pb-1 text-blue-400
+  @apply inline-block px-4 bg-zinc-800 text-sm m-0 py-1.5 text-blue-400
 }
 
 div[data-rehype-pretty-code-fragment] pre {
@@ -19,5 +19,5 @@ div[data-rehype-pretty-code-fragment] pre code .line {
 }
 
 div[data-rehype-pretty-code-fragment] .highlighted {
-  @apply bg-green-600/20
+  @apply sm:bg-green-600/20 
 }
