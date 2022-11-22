@@ -7,7 +7,7 @@ import mdx from "@astrojs/mdx";
 import astroLayouts from "astro-layouts";
 
 const layoutOptions = {
-  blog: "@layouts/BlogLayout.astro",
+  "pages/blog/**/*": "@layouts/BlogLayout.astro",
 };
 
 const prettyCodeOptions = {
