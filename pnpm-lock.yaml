@@ -1,14 +1,14 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@astrojs/image': ^0.11.4
+  '@astrojs/image': ^0.11.6
   '@astrojs/mdx': ^0.11.6
   '@astrojs/sitemap': ^1.0.0
   '@astrojs/tailwind': ^2.1.2
   '@tailwindcss/typography': ^0.5.8
-  astro: 1.6.7
+  astro: 1.6.10
   astro-icon: ^0.8.0
-  astro-layouts: ^0.0.5
+  astro-layouts: ^0.1.0
   node-fetch: ^3.3.0
   prettier-plugin-astro: ^0.7.0
   rehype-pretty-code: ^0.5.0
@@ -16,17 +16,17 @@ specifiers:
   tsm: ^2.2.2
 
 dependencies:
-  astro-layouts: 0.0.5_astro@1.6.7
+  astro-layouts: 0.1.0_astro@1.6.10
   rehype-pretty-code: 0.5.0
   tailwindcss: 3.2.4
 
 devDependencies:
-  '@astrojs/image': 0.11.4
+  '@astrojs/image': 0.11.6
   '@astrojs/mdx': 0.11.6
   '@astrojs/sitemap': 1.0.0
   '@astrojs/tailwind': 2.1.2_tailwindcss@3.2.4
   '@tailwindcss/typography': 0.5.8_tailwindcss@3.2.4
-  astro: 1.6.7
+  astro: 1.6.10
   astro-icon: 0.8.0
   node-fetch: 3.3.0
   prettier-plugin-astro: 0.7.0
@@ -48,8 +48,11 @@ packages:
   /@astrojs/compiler/0.29.11:
     resolution: {integrity: sha512-iNJMknLhALllV69eSsdDK9o+xEPOiOaCKN9Sv5VK33cbOmcRI8ICFaUN8lMIQnVSXWyKFvX1o9w08PivJ24NfQ==}
 
-  /@astrojs/image/0.11.4:
-    resolution: {integrity: sha512-5+ryBMs0pzHXOlB0ZbI/KR8LFIpNw/yTelxV/Au7WtgnRbxDBwBDVmUKZr6vhTwqMpSif8YM32t84ayIGJJdMA==}
+  /@astrojs/compiler/0.29.17:
+    resolution: {integrity: sha512-6ZbRGVunUMHxROD9Cleqkrfrj/kM9o43nLVwycdxCexCB5G372evy2ZM46LhaG/k5B5yC0PByNHTaGny0ll3iQ==}
+
+  /@astrojs/image/0.11.6:
+    resolution: {integrity: sha512-/awb4CWvOdoBv896XZcXw+oYEYLezWiaX5Oyk2g4PQ6rEHtZVROj56CFdUbS9ldmIqp3ni7rXNf1XK3dlP5d1A==}
     peerDependencies:
       sharp: '>=0.31.0'
     peerDependenciesMeta:
@@ -782,20 +785,21 @@ packages:
       svgo: 2.8.0
     dev: true
 
-  /astro-layouts/0.0.5_astro@1.6.7:
-    resolution: {integrity: sha512-1qSpuUSLx59uAqjI86FeAohvEHhujp5Y37GXEe4B4qces6AHbx2WPpy9UeVd8BMs7qi2K77CdnwuDb3iWLCoyg==}
+  /astro-layouts/0.1.0_astro@1.6.10:
+    resolution: {integrity: sha512-QtOQ71yDFWGZNIFf7z2eFrzoljjWjgLR/7wVxGxkbctzpF+Zjnuns8yUfe24oIxwK0ou6nKlZElnrjOoW2X9MA==}
     peerDependencies:
       astro: ^1.6.7
     dependencies:
-      astro: 1.6.7
+      astro: 1.6.10
+      micromatch: 4.0.5
     dev: false
 
-  /astro/1.6.7:
-    resolution: {integrity: sha512-xx910blM5qfSMyesmVmuhXqKMIOa2WL/WTSfYv84pB9JocgtAfGKlmS1HZNqWd0h9YLreYbGRzXhbtv2Qfd8vw==}
+  /astro/1.6.10:
+    resolution: {integrity: sha512-W/ZGROkCKsDicpiXB82n8EkY6I0/12wdXS80NGaBdIUR1jZZxdN+0YMmdz+C2kYbjlo45KUsXpC/Tej+5KQYSQ==}
     engines: {node: ^14.18.0 || >=16.12.0, npm: '>=6.14.0'}
     hasBin: true
     dependencies:
-      '@astrojs/compiler': 0.29.11
+      '@astrojs/compiler': 0.29.17
       '@astrojs/language-server': 0.28.3
       '@astrojs/markdown-remark': 1.1.3
       '@astrojs/telemetry': 1.0.1
@@ -852,8 +856,8 @@ packages:
       typescript: 4.8.4
       unist-util-visit: 4.1.1
       vfile: 5.3.5
-      vite: 3.2.3
-      vitefu: 0.1.1_vite@3.2.3
+      vite: 3.2.4
+      vitefu: 0.2.1_vite@3.2.4
       yargs-parser: 21.1.1
       zod: 3.19.1
     transitivePeerDependencies:
@@ -3696,8 +3700,8 @@ packages:
       unist-util-stringify-position: 3.0.2
       vfile-message: 3.1.2
 
-  /vite/3.2.3:
-    resolution: {integrity: sha512-h8jl1TZ76eGs3o2dIBSsvXDLb1m/Ec1iej8ZMdz+PsaFUsftZeWe2CZOI3qogEsMNaywc17gu0q6cQDzh/weCQ==}
+  /vite/3.2.4:
+    resolution: {integrity: sha512-Z2X6SRAffOUYTa+sLy3NQ7nlHFU100xwanq1WDwqaiFiCe+25zdxP1TfCS5ojPV2oDDcXudHIoPnI1Z/66B7Yw==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
     peerDependencies:
@@ -3728,15 +3732,15 @@ packages:
     optionalDependencies:
       fsevents: 2.3.2
 
-  /vitefu/0.1.1_vite@3.2.3:
-    resolution: {integrity: sha512-HClD14fjMJ+NQgXBqT3dC3RdO/+Chayil+cCPYZKY3kT+KcJomKzrdgzfCHJkIL2L0OAY+VPvrSW615iPtc7ag==}
+  /vitefu/0.2.1_vite@3.2.4:
+    resolution: {integrity: sha512-clkvXTAeUf+XQKm3bhWUhT4pye+3acm6YCTGaWhxxIvZZ/QjnA3JA8Zud+z/mO5y5XYvJJhevs5Sjkv/FI8nRw==}
     peerDependencies:
       vite: ^3.0.0
     peerDependenciesMeta:
       vite:
         optional: true
     dependencies:
-      vite: 3.2.3
+      vite: 3.2.4
 
   /vscode-css-languageservice/6.1.1:
     resolution: {integrity: sha512-7d2NCq2plT0njAKmGZ11uof95y2fwbgq8QuToE3kX9uYQfVmejHX2/lFGKbK5AV5+Ja0L80UZoU0QspwqMKMHA==}

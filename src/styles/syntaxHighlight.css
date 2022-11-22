@@ -3,11 +3,15 @@ div[data-rehype-pretty-code-fragment] {
 }
 
 div[data-rehype-pretty-code-title] {
-  @apply inline-block px-4 bg-zinc-800 text-sm m-0 py-1.5 text-blue-400
+  @apply inline-block px-4 bg-[#19191b] text-sm m-0 py-1.5 text-blue-400 border-r border-zinc-800
 }
 
 div[data-rehype-pretty-code-fragment] pre {
-  @apply bg-neutral-900/70 m-0 rounded-none relative px-0
+  @apply bg-[#19191b] m-0 rounded-none relative px-0
+}
+
+div[data-rehype-pretty-code-title] ~ pre {
+  @apply border-t border-zinc-800
 }
 
 div[data-rehype-pretty-code-fragment] pre code {
