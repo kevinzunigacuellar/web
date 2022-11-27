@@ -1,27 +1,11 @@
-div[data-rehype-pretty-code-fragment] {
-  @apply bg-zinc-800/40 overflow-hidden rounded-md border border-zinc-800 shadow
+div[data-remark-code-title] {
+  @apply bg-zinc-800 text-sm text-blue-400 px-4 font-mono py-2 rounded-t-md border border-zinc-700/70
 }
 
-div[data-rehype-pretty-code-title] {
-  @apply inline-block px-4 bg-[#19191b] text-sm m-0 py-1.5 text-blue-400 border-r border-zinc-800
+div[data-remark-code-title] + pre {
+  @apply mt-0 rounded-t-none border-t-0
 }
 
-div[data-rehype-pretty-code-fragment] pre {
-  @apply bg-[#19191b] m-0 rounded-none relative px-0
-}
-
-div[data-rehype-pretty-code-title] ~ pre {
-  @apply border-t border-zinc-800
-}
-
-div[data-rehype-pretty-code-fragment] pre code {
-  @apply flex flex-col
-}
-
-div[data-rehype-pretty-code-fragment] pre code .line {
-  @apply px-4
-}
-
-div[data-rehype-pretty-code-fragment] .highlighted {
-  @apply sm:bg-green-600/20 
+pre {
+  @apply border border-zinc-700/70
 }
