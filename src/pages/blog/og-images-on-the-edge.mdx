@@ -60,6 +60,7 @@ Next, import the `ImageResponse` function from `og-edge` and `React` from `react
 ```tsx title="netlify/edge_functions/og.tsx" {1,2}
 import React from "https://esm.sh/react@18.2.0";
 import { ImageResponse } from "https://deno.land/x/og_edge@0.0.2/mod.ts";
+
 export default async function handler(req: Request) {
   // Get the query parameters from the request
   const url = new URL(req.url);
