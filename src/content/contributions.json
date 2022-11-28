@@ -1,7 +1,7 @@
 [
   {
     "name": "rust-lang/rustlings",
-    "stars": 31821,
+    "stars": 32029,
     "url": "https://github.com/rust-lang/rustlings",
     "languages": [
       "Rust",
@@ -12,7 +12,7 @@
   },
   {
     "name": "withastro/astro",
-    "stars": 22693,
+    "stars": 22921,
     "url": "https://github.com/withastro/astro",
     "languages": [
       "TypeScript",
@@ -23,7 +23,7 @@
   },
   {
     "name": "vuejs/vitepress",
-    "stars": 6183,
+    "stars": 6240,
     "url": "https://github.com/vuejs/vitepress",
     "languages": [
       "TypeScript",
@@ -34,7 +34,7 @@
   },
   {
     "name": "leerob/leerob.io",
-    "stars": 4436,
+    "stars": 4461,
     "url": "https://github.com/leerob/leerob.io",
     "languages": [
       "TypeScript",
@@ -56,7 +56,7 @@
   },
   {
     "name": "withastro/docs",
-    "stars": 346,
+    "stars": 351,
     "url": "https://github.com/withastro/docs",
     "languages": [
       "Astro",
@@ -67,7 +67,7 @@
   },
   {
     "name": "withastro/astro.build",
-    "stars": 122,
+    "stars": 125,
     "url": "https://github.com/withastro/astro.build",
     "languages": [
       "Astro",
@@ -88,7 +88,7 @@
   },
   {
     "name": "solidjs/solid-docs-next",
-    "stars": 80,
+    "stars": 81,
     "url": "https://github.com/solidjs/solid-docs-next",
     "languages": [
       "TypeScript",
