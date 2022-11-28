@@ -16,7 +16,7 @@ I wanted to make it easier for them so I decided to create a package that would 
 
 ## How it works
 
-The package uses glob patterns to match the page with the layout. It then injects the layout property into the frontmatter of the page. The glob matcher uses  `picomatch` which is a fast and reliable glob matcher.
+The package uses glob patterns to match the page with the layout. It then injects the layout property into the frontmatter of the page. It uses `picomatch` in the background to match the glob patterns.
 
 ## Installation
 
@@ -45,16 +45,19 @@ export default defineConfig({
 });
 ```
 
-The `layoutOptions` object is where you define the glob pattern and the layout that you want to use. The glob pattern is the path to the page, and the layout is the path to the layout file.
+The `layoutOptions` object is where you define the glob pattern and the layout that you want to use. 
 
-You can get as specific as you want with the glob pattern. For example, you can use:
+- The `key` is the glob pattern to the files you would like to select 
+- The `value` is the absolute path to the layout component.
+
+You can get as specific as you want with glob patterns. For example, you can use:
 
 - `pages/blog/**/*.md` to match all markdown files the pages in the blog folder.
 - `pages/blog/**/*.mdx` to match all MDX files the pages in the blog folder.
 - `pages/projects/*` to match all top level files in the blog folder.
 - `pages/**/*` to match all files in the pages folder.
 
-Even if your content is in a different folder, you can still use the package. For example, if you have your content in the `src/content` folder, you can use:
+You can target any file in the `src` folder. For example, if you have your content in the `src/content` folder, you can use:
 
 ```js
 const layoutOptions = {
@@ -77,7 +80,7 @@ If you have aliases defined in your `tsconfig.json` you can use them to make lay
 
 ```
 
-Then you can use the alias in the `layoutOptions`
+Then you can use aliases in the `layoutOptions`
 
 ```js
 const layoutOptions = {
@@ -87,6 +90,6 @@ const layoutOptions = {
 
 ## Final thoughts
 
-I hope you find this package useful. If you have any questions or suggestions, feel free to raise an issue on [GitHub](https://github.com/kevinzunigacuellar/astro-layouts)
+I hope you find this package useful. If you have any questions or suggestions, feel free to raise an issue on [GitHub](https://github.com/kevinzunigacuellar/astro-layouts). I would apreciate any feedback. Also, if you like the package, please consider giving it a star. 
 
 I had a lot of fun writing this package. I learned a lot about how npm packages work and how to publish them. I'm excited to write more packages in the future. Thank you for reading 🥰!
