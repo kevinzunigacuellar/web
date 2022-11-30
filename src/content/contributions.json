@@ -34,7 +34,7 @@
   },
   {
     "name": "withastro/astro",
-    "stars": 22967,
+    "stars": 22969,
     "url": "https://github.com/withastro/astro",
     "description": "Build faster websites with Astro's next-gen island architecture 🏝✨",
     "languages": [
@@ -47,7 +47,7 @@
   },
   {
     "name": "vuejs/vitepress",
-    "stars": 6260,
+    "stars": 6262,
     "url": "https://github.com/vuejs/vitepress",
     "description": "Vite & Vue powered static site generator.",
     "languages": [
