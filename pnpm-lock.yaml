@@ -10,7 +10,6 @@ specifiers:
   astro: 1.6.10
   astro-icon: ^0.8.0
   astro-layouts: ^0.1.1
-  node-fetch: ^3.3.0
   prettier-plugin-astro: ^0.7.0
   remark-code-title: ^0.2.2
   tailwindcss: ^3.2.4
@@ -29,7 +28,6 @@ devDependencies:
   astro: 1.6.10
   astro-icon: 0.8.0
   astro-layouts: 0.1.1_astro@1.6.10
-  node-fetch: 3.3.0
   prettier-plugin-astro: 0.7.0
   remark-code-title: 0.2.2
   tsm: 2.2.2
