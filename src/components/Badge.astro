@@ -1,7 +1,7 @@
 ---
 interface Props {
   text: string;
-  color: keyof typeof colors;
+  color: keyof typeof colors | string;
 }
 const { text, color } = Astro.props;
 const colors = {
@@ -9,11 +9,14 @@ const colors = {
   red: "bg-red-700 text-red-200",
   green: "bg-green-700 text-green-200",
   indigo: "bg-indigo-700 text-indigo-200",
+  yellow: "bg-yellow-700 text-yellow-200",
+  purple: "bg-purple-700 text-purple-200",
+  pink: "bg-pink-700 text-pink-200",
 };
 ---
 
 <span
-  class={`${colors[color]} inline-block rounded-full px-2 py-0.5 text-xs font-bold uppercase tracking-normal mt-3 sm:mt-0`}
+  class={`${colors[color]} max-w-max inline-block rounded-full px-2 py-0.5 text-xs font-bold uppercase tracking-normal sm:mt-0`}
 >
   {text}
 </span>

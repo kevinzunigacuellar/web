@@ -4,8 +4,6 @@ import { Picture } from "@astrojs/image/components";
 import authorImage from "@images/me.jpeg";
 import technologies from "@content/technologies.json";
 import Skill from "@components/Skill.astro";
-import { Icon } from "astro-icon";
-import openSourceContributions from "@content/contributions.json";
 import { author } from "@content/socials";
 ---
 
@@ -39,8 +37,8 @@ import { author } from "@content/socials";
         class="w-full font-normal leading-7 text-zinc-400 sm:max-w-sm md:max-w-xl"
       >
         Welcome to my slice of the internet! I am a graduate student in
-        mechanical engineering at the University of Vermont. In my free time I
-        enjoy making websites and experimenting with web app technologies.
+        mechanical engineering at the University of Vermont. In my free time, I
+        build frontend tools and experiment with new web app technologies.
       </p>
     </header>
   </section>
@@ -55,50 +53,6 @@ import { author } from "@content/socials";
     </p>
     <ul class="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3">
       {technologies.map((tech) => <Skill logo={tech.logo} text={tech.text} />)}
-    </ul>
-  </section>
-  <section class="mt-10 sm:mt-14">
-    <h2 class="text-zinc-300 mb-4 text-2xl font-bold tracking-tight">
-      Open Source
-    </h2>
-    <p class="w-full mb-8 font-normal leading-7 text-zinc-400">
-      I love open source and I have been contributing to different projects for
-      the some time. Here is a list of projects that I have contributed to.
-    </p>
-    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-      {
-        openSourceContributions.map((project) => (
-          <li class="bg-zinc-800 text-zinc-400 p-6 rounded-xl flex flex-col border-t shadow shadow-black/40 border-zinc-700">
-            <div class="flex justify-between items-center">
-              <h3 class="text-lg font-medium text-white">{project.name}</h3>
-              <a
-                href={project.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={`Open ${project.name} repository in a new tab`}
-              >
-                <Icon
-                  name="akar-icons:github-fill"
-                  class="w-6 hover:text-zinc-300 hover:scale-110 transition-all"
-                />
-              </a>
-            </div>
-            <p class="flex items-center gap-2 mb-2">
-              <span>
-                <Icon name="ant-design:star-filled" class="w-5" />
-              </span>
-              {project.stars}
-            </p>
-            <ul class="flex gap-2 flex-wrap">
-              {project.languages.map((language) => (
-                <li class="bg-zinc-700 text-zinc-300 py-0.5 px-2 text-sm rounded-md">
-                  {language}
-                </li>
-              ))}
-            </ul>
-          </li>
-        ))
-      }
     </ul>
   </section>
 </AppLayout>
