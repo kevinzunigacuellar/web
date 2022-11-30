@@ -86,7 +86,7 @@ const contributions = response.viewer.repositoriesContributedTo.nodes
     };
   });
 
-const all = [...authoredProjects,...contributions,];
+const all = [...authoredProjects, ...contributions];
 
 await fs.writeFile(
   "./src/content/contributions.json",
