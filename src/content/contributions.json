@@ -1,139 +1,185 @@
 [
   {
+    "name": "remark-code-title",
+    "stars": 1,
+    "url": "https://github.com/kevinzunigacuellar/remark-code-title",
+    "description": "🔌 remark plugin to add titles to code blocks",
+    "languages": [
+      "TypeScript"
+    ],
+    "role": "author"
+  },
+  {
+    "name": "astro-layouts",
+    "stars": 11,
+    "url": "https://github.com/kevinzunigacuellar/astro-layouts",
+    "description": "🔌 remark plugin to add folder-based layouts in Astro",
+    "languages": [
+      "TypeScript"
+    ],
+    "role": "author"
+  },
+  {
     "name": "rust-lang/rustlings",
-    "stars": 32029,
+    "stars": 32094,
     "url": "https://github.com/rust-lang/rustlings",
+    "description": ":crab: Small exercises to get you used to reading and writing Rust code!",
     "languages": [
       "Rust",
       "Shell",
       "PowerShell",
       "Nix"
-    ]
+    ],
+    "role": "contributor"
   },
   {
     "name": "withastro/astro",
-    "stars": 22921,
+    "stars": 22967,
     "url": "https://github.com/withastro/astro",
+    "description": "Build faster websites with Astro's next-gen island architecture 🏝✨",
     "languages": [
       "TypeScript",
       "JavaScript",
       "Astro",
       "Vue"
-    ]
+    ],
+    "role": "contributor"
   },
   {
     "name": "vuejs/vitepress",
-    "stars": 6240,
+    "stars": 6260,
     "url": "https://github.com/vuejs/vitepress",
+    "description": "Vite & Vue powered static site generator.",
     "languages": [
       "TypeScript",
       "Vue",
       "CSS",
       "JavaScript"
-    ]
+    ],
+    "role": "contributor"
   },
   {
     "name": "leerob/leerob.io",
-    "stars": 4461,
+    "stars": 4466,
     "url": "https://github.com/leerob/leerob.io",
+    "description": "✨  My portfolio built with Next.js, Tailwind, Prisma, and Vercel.",
     "languages": [
       "TypeScript",
       "JavaScript",
       "CSS",
       "Shell"
-    ]
+    ],
+    "role": "contributor"
   },
   {
     "name": "midudev/miduconf-website",
     "stars": 424,
     "url": "https://github.com/midudev/miduconf-website",
+    "description": "¡La conferencia de desarrollo y programación web!",
     "languages": [
       "Astro",
       "TypeScript",
       "JavaScript",
       "CSS"
-    ]
+    ],
+    "role": "contributor"
   },
   {
     "name": "withastro/docs",
-    "stars": 351,
+    "stars": 355,
     "url": "https://github.com/withastro/docs",
+    "description": "Astro documentation",
     "languages": [
       "Astro",
       "TypeScript",
       "JavaScript",
       "CSS"
-    ]
+    ],
+    "role": "maintainer"
   },
   {
     "name": "withastro/astro.build",
-    "stars": 125,
+    "stars": 126,
     "url": "https://github.com/withastro/astro.build",
+    "description": null,
     "languages": [
       "Astro",
       "JavaScript",
       "TypeScript"
-    ]
+    ],
+    "role": "contributor"
   },
   {
     "name": "midudev/vota.dev",
     "stars": 96,
     "url": "https://github.com/midudev/vota.dev",
+    "description": "vota.dev - Vote the best web development trends of the year",
     "languages": [
       "TypeScript",
       "CSS",
       "JavaScript",
       "Shell"
-    ]
+    ],
+    "role": "contributor"
   },
   {
     "name": "solidjs/solid-docs-next",
-    "stars": 81,
+    "stars": 82,
     "url": "https://github.com/solidjs/solid-docs-next",
+    "description": "Solid Docs, rehauled. Very much in progress",
     "languages": [
       "TypeScript",
       "CSS",
       "Shell"
-    ]
+    ],
+    "role": "contributor"
   },
   {
     "name": "stackblitz/ilovecodeflow.com",
     "stars": 26,
     "url": "https://github.com/stackblitz/ilovecodeflow.com",
+    "description": null,
     "languages": [
       "Astro",
       "SCSS",
       "JavaScript"
-    ]
+    ],
+    "role": "contributor"
   },
   {
     "name": "goncy/adopcanem",
     "stars": 19,
     "url": "https://github.com/goncy/adopcanem",
+    "description": "Proyecto gratis, hecho en comunidad.",
     "languages": [
       "TypeScript",
       "JavaScript"
-    ]
+    ],
+    "role": "contributor"
   },
   {
     "name": "stackblitz/docs",
-    "stars": 9,
+    "stars": 10,
     "url": "https://github.com/stackblitz/docs",
+    "description": "New StackBlitz docs site built with VitePress",
     "languages": [
       "Vue",
       "SCSS",
       "TypeScript"
-    ]
+    ],
+    "role": "contributor"
   },
   {
     "name": "Duke-MatSci/materialsmine",
     "stars": 4,
     "url": "https://github.com/Duke-MatSci/materialsmine",
+    "description": "MaterialsMine App",
     "languages": [
       "JavaScript",
       "Vue",
       "HTML",
       "Python"
-    ]
+    ],
+    "role": "contributor"
   }
 ]
