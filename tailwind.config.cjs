@@ -17,6 +17,8 @@ module.exports = {
             "p, li": {
               code: {
                 backgroundColor: colors.neutral[800],
+                border: "1px solid",
+                borderColor: colors.zinc[700],
                 padding: "0.250rem 0.4rem",
                 borderRadius: "0.250rem",
                 fontWeight: "400",
@@ -24,16 +26,6 @@ module.exports = {
             },
           },
         },
-      },
-      keyframes: {
-        "move-bg": {
-          to: {
-            backgroundPosition: "400% 0",
-          },
-        },
-      },
-      animation: {
-        "move-bg": "move-bg 8s infinite linear",
       },
     },
   },
