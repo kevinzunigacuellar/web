@@ -1,5 +1,5 @@
 div[data-remark-code-title] {
-  @apply bg-zinc-800 text-sm text-blue-400 px-4 font-mono py-2 rounded-t-md border border-zinc-700/70
+  @apply bg-zinc-800 text-sm text-blue-400 px-5 font-mono py-2 rounded-t-md border border-zinc-700/70
 }
 
 div[data-remark-code-title] + pre {

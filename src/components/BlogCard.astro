@@ -12,7 +12,7 @@ const fullDate = new Date(pubDate).toLocaleDateString("en", {
 ---
 
 <li
-  class="grid grid-cols-1 gap-2 sm:grid-cols-4 leading-relaxed rounded-xl text-zinc-400"
+  class="grid grid-cols-1 gap-2 sm:grid-cols-4 rounded-xl text-zinc-400"
 >
   <time
     datetime={pubDate}
@@ -31,6 +31,6 @@ const fullDate = new Date(pubDate).toLocaleDateString("en", {
     <h2 class="text-lg font-semibold text-zinc-100">
       {title}
     </h2>
-    <p>{description}</p>
+    <p class="leading-relaxed">{description}</p>
   </a>
 </li>

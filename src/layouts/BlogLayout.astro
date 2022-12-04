@@ -48,7 +48,7 @@ const prevPost = posts[index - 1];
       {fullDate}
     </time>
     <h1
-      class="text-2xl sm:text-4xl sm:leading-tight font-sans mb-6 font-semibold text-center text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-blue-500 to-purple-500"
+      class="text-2xl sm:text-4xl font-sans mb-6 font-semibold text-center text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-blue-500 to-purple-500"
     >
       {title}
     </h1>
@@ -84,7 +84,7 @@ const prevPost = posts[index - 1];
     />
   </header>
   <article
-    class="prose prose-invert prose-code:text-zinc-300 prose-a:text-blue-400 max-w-none hover:prose-a:underline focus:prose-a:underline prose-a:no-underline prose-headings:text-teal-500 prose-img:rounded-md"
+    class="prose prose-invert lg:prose-lg prose-code:text-zinc-300 prose-a:text-blue-400 max-w-none hover:prose-a:underline focus:prose-a:underline prose-a:no-underline prose-headings:text-teal-500 prose-img:rounded-md"
   >
     <slot />
   </article>
@@ -93,7 +93,7 @@ const prevPost = posts[index - 1];
       prevPost && (
         <a
           href={prevPost.url + "/"}
-          class="group flex flex-col grow text-sm p-4 rounded-md bg-zinc-800 border border-opacity-0 border-teal-400 hover:border-opacity-100 transition-all hover:bg-teal-600/20"
+          class="group flex-1 flex flex-col grow text-sm p-4 rounded-md bg-zinc-800 border border-opacity-0 border-teal-400 hover:border-opacity-100 transition-all hover:bg-teal-600/20"
         >
           <p class="text-zinc-400 mb-1">&larr; Previous post</p>
           <p class="font-semibold text-zinc-300 group-hover:text-teal-400">
@@ -106,7 +106,7 @@ const prevPost = posts[index - 1];
       nextPost && (
         <a
           href={nextPost.url + "/"}
-          class="group flex flex-col grow text-right text-sm p-4 rounded-md bg-zinc-800 border border-opacity-0 border-teal-400 hover:border-opacity-100 transition-all hover:bg-teal-600/20"
+          class="group flex flex-1 flex-col grow text-right text-sm p-4 rounded-md bg-zinc-800 border border-opacity-0 border-teal-400 hover:border-opacity-100 transition-all hover:bg-teal-600/20"
         >
           <p class="text-zinc-400 mb-1">Next post &rarr;</p>
           <p class="font-semibold text-zinc-300 group-hover:text-teal-400">

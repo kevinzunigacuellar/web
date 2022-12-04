@@ -44,7 +44,7 @@ const { name, role, url, description, stars, languages } = Astro.props;
     <Icon name="ant-design:star-filled" class="w-5" />
     <span>{stars}</span>
   </div>
-  {description && <p>{description}</p>}
+  {description && <p class="leading-relaxed">{description}</p>}
   <ul class="flex flex-wrap gap-2 mt-2">
     {
       languages.map((item) => (
