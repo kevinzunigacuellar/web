@@ -1,38 +1,26 @@
 [
   {
-    "logo":"vscode-icons:file-type-astro",
+    "logo":"astro",
     "text":"Astro"
   },
   {
-    "logo":"logos:javascript",
-    "text":"JavaScript"
-  },
-  {
-    "logo":"logos:typescript-icon",
+    "logo":"typescript",
     "text":"TypeScript"
   },
   {
-    "logo":"logos:python",
+    "logo":"python",
     "text":"Python"
   },
   {
-    "logo":"logos:react",
+    "logo":"react",
     "text":"React"
   },
   {
-    "logo":"logos:solidjs-icon",
-    "text":"Solidjs"
-  },
-  {
-    "logo":"logos:vue",
+    "logo":"vue",
     "text":"Vue"
   },
   {
-    "logo":"logos:nodejs-icon",
+    "logo":"node",
     "text":"Node.js"
-  },
-  {
-    "logo":"logos:tailwindcss-icon",
-    "text":"TailwindCSS"
   }
 ]

@@ -35,13 +35,13 @@ const { name, role, url, description, stars, languages } = Astro.props;
       aria-label={`Open ${name} repository in a new tab`}
     >
       <Icon
-        name="akar-icons:github-fill"
-        class="w-6 hover:text-zinc-300 hover:scale-110 transition-all"
+        name="github"
+        class="w-6 fill-current hover:text-zinc-300 hover:scale-110 transition-all"
       />
     </a>
   </div>
   <div class="flex gap-2">
-    <Icon name="ant-design:star-filled" class="w-5" />
+    <Icon name="star" class="w-5" />
     <span>{stars}</span>
   </div>
   {description && <p class="leading-relaxed">{description}</p>}
