@@ -1,7 +1,7 @@
 [
   {
     "name": "remark-code-title",
-    "stars": 1,
+    "stars": 2,
     "url": "https://github.com/kevinzunigacuellar/remark-code-title",
     "description": "🔌 remark plugin to add titles to code blocks",
     "languages": [
@@ -21,7 +21,7 @@
   },
   {
     "name": "rust-lang/rustlings",
-    "stars": 32238,
+    "stars": 32556,
     "url": "https://github.com/rust-lang/rustlings",
     "description": ":crab: Small exercises to get you used to reading and writing Rust code!",
     "languages": [
@@ -34,7 +34,7 @@
   },
   {
     "name": "withastro/astro",
-    "stars": 23106,
+    "stars": 23315,
     "url": "https://github.com/withastro/astro",
     "description": "Build faster websites with Astro's next-gen island architecture 🏝✨",
     "languages": [
@@ -47,7 +47,7 @@
   },
   {
     "name": "vuejs/vitepress",
-    "stars": 6283,
+    "stars": 6314,
     "url": "https://github.com/vuejs/vitepress",
     "description": "Vite & Vue powered static site generator.",
     "languages": [
@@ -60,7 +60,7 @@
   },
   {
     "name": "leerob/leerob.io",
-    "stars": 4487,
+    "stars": 4515,
     "url": "https://github.com/leerob/leerob.io",
     "description": "✨  My portfolio built with Next.js, Tailwind, Prisma, and Vercel.",
     "languages": [
@@ -86,7 +86,7 @@
   },
   {
     "name": "withastro/docs",
-    "stars": 365,
+    "stars": 372,
     "url": "https://github.com/withastro/docs",
     "description": "Astro documentation",
     "languages": [
@@ -104,8 +104,9 @@
     "description": null,
     "languages": [
       "Astro",
+      "TypeScript",
       "JavaScript",
-      "TypeScript"
+      "CSS"
     ],
     "role": "contributor"
   },
@@ -136,7 +137,7 @@
   },
   {
     "name": "stackblitz/ilovecodeflow.com",
-    "stars": 27,
+    "stars": 28,
     "url": "https://github.com/stackblitz/ilovecodeflow.com",
     "description": null,
     "languages": [
@@ -159,7 +160,7 @@
   },
   {
     "name": "stackblitz/docs",
-    "stars": 10,
+    "stars": 11,
     "url": "https://github.com/stackblitz/docs",
     "description": "New StackBlitz docs site built with VitePress",
     "languages": [
