@@ -5,6 +5,7 @@ specifiers:
   '@astrojs/mdx': ^0.11.6
   '@astrojs/sitemap': ^1.0.0
   '@astrojs/tailwind': ^2.1.2
+  '@fontsource/inter': ^4.5.14
   '@octokit/core': ^4.1.0
   '@tailwindcss/typography': ^0.5.8
   astro: 1.6.10
@@ -24,6 +25,7 @@ devDependencies:
   '@astrojs/mdx': 0.11.6
   '@astrojs/sitemap': 1.0.0
   '@astrojs/tailwind': 2.1.2_tailwindcss@3.2.4
+  '@fontsource/inter': 4.5.14
   '@tailwindcss/typography': 0.5.8_tailwindcss@3.2.4
   astro: 1.6.10
   astro-icon: 0.8.0
@@ -479,6 +481,10 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  /@fontsource/inter/4.5.14:
+    resolution: {integrity: sha512-JDC9AocdPLuGsASkvWw9hS5gtHE7K9dOwL98XLrk5yjYqxy4uVnScG58NUvFMJDVJRl/7c8Wnap6PEs+7Zvj1Q==}
+    dev: true
 
   /@jridgewell/gen-mapping/0.1.1:
     resolution: {integrity: sha512-sQXCasFk+U8lWYEe66WxRDOE9PjVz4vSM51fTu3Hw+ClTpUSQb718772vH3pyS5pShp6lvQM7SxgIDXXXmOX7w==}
