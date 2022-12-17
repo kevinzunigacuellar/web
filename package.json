@@ -6,7 +6,7 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "format": "prettier -w --plugin-search-dir=. 'src/**/*.{js,jsx,ts,tsx,astro}' scripts/**/* astro.config.mjs tailwind.config.cjs",
+    "format": "prettier -w --plugin-search-dir=. 'src/**/*.{js,jsx,ts,tsx,astro}' scripts/**/* astro.config.ts tailwind.config.cjs",
     "preview": "astro preview",
     "github:contributions": "tsm scripts/generate-contributions-list.ts"
   },
