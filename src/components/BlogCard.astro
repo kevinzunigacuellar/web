@@ -7,7 +7,9 @@ interface Props {
 }
 let { title, description, pubDate, url } = Astro.props;
 const fullDate = new Date(pubDate).toLocaleDateString("en", {
-  dateStyle: "full",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
 });
 ---
 
@@ -16,7 +18,7 @@ const fullDate = new Date(pubDate).toLocaleDateString("en", {
 >
   <time
     datetime={pubDate}
-    class="hidden sm:block text-sm tracking-wide text-zinc-400 mt-6"
+    class="hidden sm:block text-sm tracking-wide text-zinc-400 mt-6 sm:ml-6"
     >{fullDate}
   </time>
   <a
