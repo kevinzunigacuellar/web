@@ -1,7 +1,7 @@
 [
   {
     "name": "remark-code-title",
-    "stars": 2,
+    "stars": 1,
     "url": "https://github.com/kevinzunigacuellar/remark-code-title",
     "description": "🔌 remark plugin to add titles to code blocks",
     "languages": [
@@ -11,7 +11,7 @@
   },
   {
     "name": "astro-layouts",
-    "stars": 12,
+    "stars": 14,
     "url": "https://github.com/kevinzunigacuellar/astro-layouts",
     "description": "🔌 remark plugin to add folder-based layouts in Astro",
     "languages": [
@@ -21,7 +21,7 @@
   },
   {
     "name": "rust-lang/rustlings",
-    "stars": 32556,
+    "stars": 32729,
     "url": "https://github.com/rust-lang/rustlings",
     "description": ":crab: Small exercises to get you used to reading and writing Rust code!",
     "languages": [
@@ -34,7 +34,7 @@
   },
   {
     "name": "withastro/astro",
-    "stars": 23315,
+    "stars": 23512,
     "url": "https://github.com/withastro/astro",
     "description": "Build faster websites with Astro's next-gen island architecture 🏝✨",
     "languages": [
@@ -47,7 +47,7 @@
   },
   {
     "name": "vuejs/vitepress",
-    "stars": 6314,
+    "stars": 6359,
     "url": "https://github.com/vuejs/vitepress",
     "description": "Vite & Vue powered static site generator.",
     "languages": [
@@ -60,7 +60,7 @@
   },
   {
     "name": "leerob/leerob.io",
-    "stars": 4515,
+    "stars": 4538,
     "url": "https://github.com/leerob/leerob.io",
     "description": "✨  My portfolio built with Next.js, Tailwind, Prisma, and Vercel.",
     "languages": [
@@ -86,7 +86,7 @@
   },
   {
     "name": "withastro/docs",
-    "stars": 372,
+    "stars": 378,
     "url": "https://github.com/withastro/docs",
     "description": "Astro documentation",
     "languages": [
@@ -99,7 +99,7 @@
   },
   {
     "name": "withastro/astro.build",
-    "stars": 127,
+    "stars": 129,
     "url": "https://github.com/withastro/astro.build",
     "description": null,
     "languages": [
@@ -137,7 +137,7 @@
   },
   {
     "name": "stackblitz/ilovecodeflow.com",
-    "stars": 28,
+    "stars": 27,
     "url": "https://github.com/stackblitz/ilovecodeflow.com",
     "description": null,
     "languages": [
@@ -160,7 +160,7 @@
   },
   {
     "name": "stackblitz/docs",
-    "stars": 11,
+    "stars": 10,
     "url": "https://github.com/stackblitz/docs",
     "description": "New StackBlitz docs site built with VitePress",
     "languages": [
