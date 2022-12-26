@@ -11,7 +11,7 @@
   },
   {
     "name": "astro-layouts",
-    "stars": 14,
+    "stars": 18,
     "url": "https://github.com/kevinzunigacuellar/astro-layouts",
     "description": "🔌 remark plugin to add folder-based layouts in Astro",
     "languages": [
@@ -21,7 +21,7 @@
   },
   {
     "name": "rust-lang/rustlings",
-    "stars": 32729,
+    "stars": 32927,
     "url": "https://github.com/rust-lang/rustlings",
     "description": ":crab: Small exercises to get you used to reading and writing Rust code!",
     "languages": [
@@ -34,7 +34,7 @@
   },
   {
     "name": "withastro/astro",
-    "stars": 23512,
+    "stars": 23658,
     "url": "https://github.com/withastro/astro",
     "description": "Build faster websites with Astro's next-gen island architecture 🏝✨",
     "languages": [
@@ -47,7 +47,7 @@
   },
   {
     "name": "vuejs/vitepress",
-    "stars": 6359,
+    "stars": 6390,
     "url": "https://github.com/vuejs/vitepress",
     "description": "Vite & Vue powered static site generator.",
     "languages": [
@@ -60,7 +60,7 @@
   },
   {
     "name": "leerob/leerob.io",
-    "stars": 4538,
+    "stars": 4565,
     "url": "https://github.com/leerob/leerob.io",
     "description": "✨  My portfolio built with Next.js, Tailwind, Prisma, and Vercel.",
     "languages": [
@@ -86,7 +86,7 @@
   },
   {
     "name": "withastro/docs",
-    "stars": 378,
+    "stars": 388,
     "url": "https://github.com/withastro/docs",
     "description": "Astro documentation",
     "languages": [
@@ -99,7 +99,7 @@
   },
   {
     "name": "withastro/astro.build",
-    "stars": 129,
+    "stars": 134,
     "url": "https://github.com/withastro/astro.build",
     "description": null,
     "languages": [
@@ -125,7 +125,7 @@
   },
   {
     "name": "solidjs/solid-docs-next",
-    "stars": 82,
+    "stars": 84,
     "url": "https://github.com/solidjs/solid-docs-next",
     "description": "Solid Docs, rehauled. Very much in progress",
     "languages": [
@@ -137,7 +137,7 @@
   },
   {
     "name": "stackblitz/ilovecodeflow.com",
-    "stars": 27,
+    "stars": 28,
     "url": "https://github.com/stackblitz/ilovecodeflow.com",
     "description": null,
     "languages": [
