@@ -27,7 +27,7 @@ const {
   pubDate,
 } = Astro.props;
 
-const socialImageURL = new URL(heroImage, Astro.site);
+const socialImageURL = new URL(heroImage, Astro.site).href;
 const canonicalURL = new URL(Astro.url).href;
 ---
 
