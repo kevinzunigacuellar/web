@@ -5,6 +5,8 @@ import sitemap from "@astrojs/sitemap";
 import mdx from "@astrojs/mdx";
 import astroLayouts from "astro-layouts";
 import codeTitle from "remark-code-title";
+import fs from "node:fs";
+import type { Plugin } from "vite";
 
 const layoutOptions = {
   "pages/blog/**/*": "@layouts/BlogLayout.astro",
@@ -21,4 +23,25 @@ export default defineConfig({
       theme: "dark-plus",
     },
   },
+  vite: {
+    plugins: [rawFonts([".ttf", ".woff"])],
+    optimizeDeps: {
+      exclude: ["@resvg/resvg-js"],
+    },
+  },
 });
+
+function rawFonts(ext: string[]): Plugin {
+  return {
+    name: "vite-plugin-raw-fonts",
+    transform(_, id) {
+      if (ext.some((e) => id.endsWith(e))) {
+        const buffer = fs.readFileSync(id);
+        return {
+          code: `export default ${JSON.stringify(buffer)}`,
+          map: null,
+        };
+      }
+    },
+  };
+}
