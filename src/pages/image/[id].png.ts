@@ -104,11 +104,8 @@ export async function get({ params }: APIContext) {
   }).render();
 
   return {
-    headers: {
-      "Content-Type": "image/png",
-      "Cache-Control": "public, max-age=31536000, immutable",
-    },
     body: image.asPng(),
+    encoding: "binary",
   };
 }
 
