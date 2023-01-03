@@ -23,9 +23,9 @@ interface Frontmatter {
 const pages = import.meta.glob<Frontmatter>("../blog/*.mdx", { eager: true });
 
 export async function get({ params }: APIContext) {
-  const q = `../blog/${params.id}.mdx`;
+  const path = `../blog/${params.id}.mdx`;
 
-  const { title, description } = pages[q].frontmatter || {
+  const { title, description } = pages[path].frontmatter || {
     title: "",
     description: "",
   };
