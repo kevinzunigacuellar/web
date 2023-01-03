@@ -6,37 +6,37 @@ import "../styles/syntaxHighlight.css";
 import BlogImage from "@components/BlogImage.astro";
 import { author, twitter } from "@content/socials";
 
-let { title, description, heroImage, imageAlt, pubDate } = Astro.props.content;
-
-const fullDate = new Date(pubDate).toLocaleDateString("en", {
-  dateStyle: "full",
-});
-
-[pubDate] = pubDate.split("T");
-const ogImageParams = new URLSearchParams({
-  title,
-  pubDate,
-}).toString();
+let { title, description, heroImage, imageAlt, pubDate, url } = Astro.props.content;
 
 let posts = await Astro.glob("../pages/blog/*.mdx");
+
+// sort the posts by date (most recent first)
 posts = posts.sort(
   (a, b) =>
     new Date(b.frontmatter.pubDate).valueOf() -
     new Date(a.frontmatter.pubDate).valueOf()
 );
+
+// remove the time from the date
+[pubDate] = pubDate.split("T");
+
 // get the index of the current post
 const index = posts.findIndex((post) => {
   return Astro.request.url.includes(post.url);
 });
+
 // get the next and previous posts
 const nextPost = posts[index + 1];
 const prevPost = posts[index - 1];
+
+// generate og image url
+const og = url.replace("blog", "image").concat(".png");
 ---
 
 <AppLayout
   title={title}
   description={description}
-  heroImage={`/og?${ogImageParams}`}
+  heroImage={og}
   pubDate={pubDate}
   imageAlt={imageAlt}
 >
@@ -45,7 +45,9 @@ const prevPost = posts[index - 1];
       datetime={pubDate}
       class="block text-center text-zinc-400 mb-4 text-sm sm:text-base"
     >
-      {fullDate}
+      {new Date(pubDate).toLocaleDateString("en", {
+        dateStyle: "full",
+      })}
     </time>
     <h1
       class="text-2xl sm:text-4xl mb-8 font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-blue-500 to-purple-500"

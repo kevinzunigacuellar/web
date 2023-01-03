@@ -15,7 +15,7 @@ A minimal, responsive, and accessible personal website built with [Astro](https:
 - **Deployment**: [Netlify](https://www.netlify.com/)
 - **CI**: [GitHub Actions](https://github.com/features/actions)
 - **Package manager**: [pnpm](https://pnpm.io/)
-- **OG-images**: [Netlify edge functions](https://docs.netlify.com/edge-functions/overview/)
+- **OG-images**: [Satori](https://github.com/vercel/satori)
 
 ## Getting started
 
