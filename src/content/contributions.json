@@ -21,7 +21,7 @@
   },
   {
     "name": "rust-lang/rustlings",
-    "stars": 33143,
+    "stars": 33306,
     "url": "https://github.com/rust-lang/rustlings",
     "description": ":crab: Small exercises to get you used to reading and writing Rust code!",
     "languages": [
@@ -34,7 +34,7 @@
   },
   {
     "name": "withastro/astro",
-    "stars": 23838,
+    "stars": 24282,
     "url": "https://github.com/withastro/astro",
     "description": "Build faster websites with Astro's next-gen island architecture 🏝✨",
     "languages": [
@@ -47,7 +47,7 @@
   },
   {
     "name": "vuejs/vitepress",
-    "stars": 6430,
+    "stars": 6471,
     "url": "https://github.com/vuejs/vitepress",
     "description": "Vite & Vue powered static site generator.",
     "languages": [
@@ -60,7 +60,7 @@
   },
   {
     "name": "leerob/leerob.io",
-    "stars": 4600,
+    "stars": 4633,
     "url": "https://github.com/leerob/leerob.io",
     "description": "✨  My portfolio built with Next.js, Tailwind, Prisma, and Vercel.",
     "languages": [
@@ -72,8 +72,20 @@
     "role": "contributor"
   },
   {
+    "name": "midudev/kings-league-project",
+    "stars": 1233,
+    "url": "https://github.com/midudev/kings-league-project",
+    "description": "API y website de la Kings League Infojobs por temas didácticos",
+    "languages": [
+      "Astro",
+      "JavaScript",
+      "TypeScript"
+    ],
+    "role": "contributor"
+  },
+  {
     "name": "midudev/miduconf-website",
-    "stars": 423,
+    "stars": 424,
     "url": "https://github.com/midudev/miduconf-website",
     "description": "¡La conferencia de desarrollo y programación web!",
     "languages": [
@@ -86,7 +98,7 @@
   },
   {
     "name": "withastro/docs",
-    "stars": 397,
+    "stars": 405,
     "url": "https://github.com/withastro/docs",
     "description": "Astro documentation",
     "languages": [
@@ -99,7 +111,7 @@
   },
   {
     "name": "withastro/astro.build",
-    "stars": 135,
+    "stars": 137,
     "url": "https://github.com/withastro/astro.build",
     "description": null,
     "languages": [
@@ -111,21 +123,8 @@
     "role": "contributor"
   },
   {
-    "name": "midudev/vota.dev",
-    "stars": 97,
-    "url": "https://github.com/midudev/vota.dev",
-    "description": "vota.dev - Vote the best web development trends of the year",
-    "languages": [
-      "TypeScript",
-      "CSS",
-      "JavaScript",
-      "Shell"
-    ],
-    "role": "contributor"
-  },
-  {
     "name": "solidjs/solid-docs-next",
-    "stars": 89,
+    "stars": 91,
     "url": "https://github.com/solidjs/solid-docs-next",
     "description": "Solid Docs, rehauled. Very much in progress",
     "languages": [
