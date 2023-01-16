@@ -21,7 +21,7 @@
   },
   {
     "name": "rust-lang/rustlings",
-    "stars": 33306,
+    "stars": 33516,
     "url": "https://github.com/rust-lang/rustlings",
     "description": ":crab: Small exercises to get you used to reading and writing Rust code!",
     "languages": [
@@ -34,7 +34,7 @@
   },
   {
     "name": "withastro/astro",
-    "stars": 24282,
+    "stars": 24718,
     "url": "https://github.com/withastro/astro",
     "description": "Build faster websites with Astro's next-gen island architecture 🏝✨",
     "languages": [
@@ -47,7 +47,7 @@
   },
   {
     "name": "vuejs/vitepress",
-    "stars": 6471,
+    "stars": 6523,
     "url": "https://github.com/vuejs/vitepress",
     "description": "Vite & Vue powered static site generator.",
     "languages": [
@@ -60,7 +60,7 @@
   },
   {
     "name": "leerob/leerob.io",
-    "stars": 4633,
+    "stars": 4705,
     "url": "https://github.com/leerob/leerob.io",
     "description": "✨  My portfolio built with Next.js, Tailwind, Prisma, and Vercel.",
     "languages": [
@@ -73,7 +73,7 @@
   },
   {
     "name": "midudev/kings-league-project",
-    "stars": 1233,
+    "stars": 1398,
     "url": "https://github.com/midudev/kings-league-project",
     "description": "API y website de la Kings League Infojobs por temas didácticos",
     "languages": [
@@ -98,12 +98,12 @@
   },
   {
     "name": "withastro/docs",
-    "stars": 405,
+    "stars": 418,
     "url": "https://github.com/withastro/docs",
     "description": "Astro documentation",
     "languages": [
-      "Astro",
       "TypeScript",
+      "Astro",
       "JavaScript",
       "CSS"
     ],
@@ -111,7 +111,7 @@
   },
   {
     "name": "withastro/astro.build",
-    "stars": 137,
+    "stars": 142,
     "url": "https://github.com/withastro/astro.build",
     "description": null,
     "languages": [
@@ -124,7 +124,7 @@
   },
   {
     "name": "solidjs/solid-docs-next",
-    "stars": 91,
+    "stars": 92,
     "url": "https://github.com/solidjs/solid-docs-next",
     "description": "Solid Docs, rehauled. Very much in progress",
     "languages": [
@@ -136,7 +136,7 @@
   },
   {
     "name": "stackblitz/ilovecodeflow.com",
-    "stars": 29,
+    "stars": 30,
     "url": "https://github.com/stackblitz/ilovecodeflow.com",
     "description": null,
     "languages": [
@@ -159,7 +159,7 @@
   },
   {
     "name": "stackblitz/docs",
-    "stars": 11,
+    "stars": 12,
     "url": "https://github.com/stackblitz/docs",
     "description": "New StackBlitz docs site built with VitePress",
     "languages": [
