@@ -21,7 +21,7 @@
   },
   {
     "name": "rust-lang/rustlings",
-    "stars": 33750,
+    "stars": 33975,
     "url": "https://github.com/rust-lang/rustlings",
     "description": ":crab: Small exercises to get you used to reading and writing Rust code!",
     "languages": [
@@ -34,7 +34,7 @@
   },
   {
     "name": "withastro/astro",
-    "stars": 25045,
+    "stars": 25962,
     "url": "https://github.com/withastro/astro",
     "description": "Build faster websites with Astro's next-gen island architecture 🏝✨",
     "languages": [
@@ -47,7 +47,7 @@
   },
   {
     "name": "vuejs/vitepress",
-    "stars": 6572,
+    "stars": 6621,
     "url": "https://github.com/vuejs/vitepress",
     "description": "Vite & Vue powered static site generator.",
     "languages": [
@@ -60,9 +60,9 @@
   },
   {
     "name": "leerob/leerob.io",
-    "stars": 4732,
+    "stars": 4772,
     "url": "https://github.com/leerob/leerob.io",
-    "description": "✨  My portfolio built with Next.js, Tailwind, Prisma, and Vercel.",
+    "description": "✨  My portfolio built with Next.js, Tailwind CSS, PlanetScale, and Vercel.",
     "languages": [
       "TypeScript",
       "JavaScript",
@@ -73,7 +73,7 @@
   },
   {
     "name": "midudev/kings-league-project",
-    "stars": 1501,
+    "stars": 1514,
     "url": "https://github.com/midudev/kings-league-project",
     "description": "API y website de la Kings League Infojobs por temas didácticos",
     "languages": [
@@ -85,7 +85,7 @@
   },
   {
     "name": "withastro/docs",
-    "stars": 438,
+    "stars": 461,
     "url": "https://github.com/withastro/docs",
     "description": "Astro documentation",
     "languages": [
@@ -98,7 +98,7 @@
   },
   {
     "name": "midudev/miduconf-website",
-    "stars": 426,
+    "stars": 428,
     "url": "https://github.com/midudev/miduconf-website",
     "description": "¡La conferencia de desarrollo y programación web!",
     "languages": [
@@ -111,7 +111,7 @@
   },
   {
     "name": "withastro/astro.build",
-    "stars": 144,
+    "stars": 149,
     "url": "https://github.com/withastro/astro.build",
     "description": null,
     "languages": [
@@ -124,7 +124,7 @@
   },
   {
     "name": "solidjs/solid-docs-next",
-    "stars": 94,
+    "stars": 95,
     "url": "https://github.com/solidjs/solid-docs-next",
     "description": "Solid Docs, rehauled. Very much in progress",
     "languages": [
