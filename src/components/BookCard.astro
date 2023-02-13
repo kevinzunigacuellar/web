@@ -1,11 +1,10 @@
 ---
 import Badge from "@components/Badge.astro";
 import { Picture } from "@astrojs/image/components";
-import type { ImageMetadata } from "@astrojs/image/dist/vite-plugin-astro-image";
 
 interface Props {
   title: string;
-  img: ImageMetadata | string;
+  img: string;
   author: string;
   year: number;
   comment: string;
