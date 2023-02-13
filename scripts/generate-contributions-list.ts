@@ -42,7 +42,7 @@ const graphqlQuery = `query {
     }
   }
 }
-}`
+}`;
 
 const GITHUB_USERNAME = "kevinzunigacuellar";
 
@@ -50,10 +50,9 @@ const octokit = new Octokit({
   auth: process.env.GITHUB_TOKEN,
 });
 
-const response = await octokit.graphql(
-  graphqlQuery,
-  { login: GITHUB_USERNAME },
-) as GQLResponse;
+const response = (await octokit.graphql(graphqlQuery, {
+  login: GITHUB_USERNAME,
+})) as GQLResponse;
 
 const maintainerRepos = new Set(["withastro/docs"]);
 const projects = new Set(["remark-code-title", "astro-layouts"]);
