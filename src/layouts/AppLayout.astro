@@ -8,7 +8,7 @@ interface Props {
   description?: string;
   heroImage?: string;
   imageAlt?: string;
-  pubDate?: string;
+  pubDate?: Date;
 }
 
 const defaultMeta = {
@@ -58,7 +58,14 @@ const canonicalURL = new URL(Astro.url).href;
     <meta name="generator" content={Astro.generator} />
     <meta name="robots" content="follow, index" />
     <meta name="author" content={author} />
-    {pubDate && <meta property="article:published_time" content={pubDate} />}
+    {
+      pubDate && (
+        <meta
+          property="article:published_time"
+          content={pubDate.toISOString()}
+        />
+      )
+    }
   </head>
   <body
     class="bg-zinc-900 antialiased selection:bg-teal-600 selection:text-white py-10 2xl:text-lg"
