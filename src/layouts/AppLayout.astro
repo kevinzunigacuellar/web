@@ -6,8 +6,10 @@ import { twitter, author } from "@data/socials";
 interface Props {
   title?: string;
   description?: string;
-  heroImage?: string;
-  imageAlt?: string;
+  ogImage?: {
+    src: string;
+    alt: string;
+  };
   pubDate?: Date;
 }
 
@@ -15,19 +17,20 @@ const defaultMeta = {
   title: "Kevin Zuniga Cuellar",
   description:
     "Welcome to my personal website! I am a software engineering student. I'm passionate about building software that helps developers to be more productive",
-  image: "/static/banner.png",
-  imageAlt: "Photo of the author smiling",
+  ogImage: {
+    src: "/static/banner.png",
+    alt: "Photo of the author smiling",
+  },
 };
 
 const {
   title = defaultMeta.title,
   description = defaultMeta.description,
-  heroImage = defaultMeta.image,
-  imageAlt = defaultMeta.imageAlt,
+  ogImage = defaultMeta.ogImage,
   pubDate = "",
 } = Astro.props;
 
-const socialImageURL = new URL(heroImage, Astro.site).href;
+const ogImageURL = new URL(ogImage.src, Astro.site).href;
 const canonicalURL = new URL(Astro.url).href;
 ---
 
@@ -44,9 +47,9 @@ const canonicalURL = new URL(Astro.url).href;
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={socialImageURL} />
+    <meta property="og:image" content={ogImageURL} />
     <meta property="og:site_name" content={author} />
-    <meta property="og:image:alt" content={imageAlt} />
+    <meta property="og:image:alt" content={ogImage.alt} />
     <meta property="og:locale" content="en_US" />
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content={canonicalURL} />
@@ -54,7 +57,7 @@ const canonicalURL = new URL(Astro.url).href;
     <meta name="twitter:creator" content={twitter} />
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content={socialImageURL} />
+    <meta property="twitter:image" content={ogImageURL} />
     <meta name="generator" content={Astro.generator} />
     <meta name="robots" content="follow, index" />
     <meta name="author" content={author} />

@@ -10,13 +10,15 @@ import { getCollection } from "astro:content";
 interface Props {
   title: string;
   description: string;
-  heroImage: string;
-  imageAlt: string;
+  image: {
+    src?: string;
+    alt?: string;
+  };
   pubDate: Date;
   url: string;
 }
 
-const { title, description, heroImage, imageAlt, pubDate, url } = Astro.props;
+const { title, description, image, pubDate, url } = Astro.props;
 
 const posts = (await getCollection("blog")).sort(
   (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
@@ -28,15 +30,17 @@ const index = posts.findIndex((post) => {
 
 const nextPost = posts[index + 1];
 const prevPost = posts[index - 1];
-const og = url.replace("blog", "image").concat(".png");
+const ogImage = {
+  src: url.replace("blog", "image").concat(".png"),
+  alt: title,
+};
 ---
 
 <AppLayout
   title={title}
   description={description}
-  heroImage={og}
+  ogImage={ogImage}
   pubDate={pubDate}
-  imageAlt={imageAlt}
 >
   <header class="flex flex-col mb-8">
     <time
@@ -79,8 +83,8 @@ const og = url.replace("blog", "image").concat(".png");
       </p>
     </div>
     <BlogImage
-      src={`/static/${heroImage}`}
-      alt={imageAlt}
+      src={`/static/${image.src}`}
+      alt={image.alt}
       loading="eager"
       aspectRatio={1.91}
     />
