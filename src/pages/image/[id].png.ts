@@ -73,7 +73,7 @@ export async function get({ params }: APIContext) {
         />
         <div tw="flex flex-col ml-3">
           <span tw="text-zinc-400">Kevin Zuniga Cuellar</span>
-          <span tw="text-blue-400 font-base">@kevinzunigacuel</span>
+          <span tw="text-blue-400 text-base">@kevinzunigacuel</span>
         </div>
       </div>
     </div>
