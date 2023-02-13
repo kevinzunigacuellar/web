@@ -31,7 +31,7 @@ const index = posts.findIndex((post) => {
 const nextPost = posts[index + 1];
 const prevPost = posts[index - 1];
 const ogImage = {
-  src: url.replace("blog", "image").concat(".png"),
+  src: `/image/${image.src}.png`,
   alt: title,
 };
 ---
