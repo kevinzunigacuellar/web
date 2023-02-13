@@ -16,7 +16,7 @@ interface Props {
   url: string;
 }
 
-let { title, description, heroImage, imageAlt, pubDate, url } = Astro.props;
+const { title, description, heroImage, imageAlt, pubDate, url } = Astro.props;
 
 const posts = (await getCollection("blog")).sort(
   (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
