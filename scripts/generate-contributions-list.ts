@@ -1,7 +1,7 @@
 import fs from "node:fs/promises";
 import { Octokit } from "@octokit/core";
 
-interface DataType {
+interface GQLResponse {
   viewer: {
     repositoriesContributedTo: {
       nodes: Repo[];
@@ -23,41 +23,44 @@ interface Language {
   name: string;
 }
 
+const graphqlQuery = `query {
+  viewer {
+    repositoriesContributedTo(
+    first: 20
+    orderBy: {field: STARGAZERS, direction: DESC}
+    contributionTypes: [COMMIT, ISSUE, PULL_REQUEST, REPOSITORY]
+  ) {
+      nodes {
+      nameWithOwner
+      description
+      stargazerCount
+      url
+      languages(first: 4, orderBy: {field: SIZE, direction: DESC}) {
+        nodes {
+        name
+      }}
+    }
+  }
+}
+}`;
+
+const GITHUB_USERNAME = "kevinzunigacuellar";
+
 const octokit = new Octokit({
   auth: process.env.GITHUB_TOKEN,
 });
 
-const response = (await octokit.graphql(
-  `query {
-    viewer {
-      repositoriesContributedTo(
-      first: 20
-      orderBy: {field: STARGAZERS, direction: DESC}
-      contributionTypes: [COMMIT, ISSUE, PULL_REQUEST, REPOSITORY]
-    ) {
-        nodes {
-        nameWithOwner
-        description
-        stargazerCount
-        url
-        languages(first: 4, orderBy: {field: SIZE, direction: DESC}) {
-          nodes {
-          name
-        }}
-      }
-    }
-  }
-}`,
-  { login: "kevinzunigacuellar" }
-)) as DataType;
+const response = (await octokit.graphql(graphqlQuery, {
+  login: GITHUB_USERNAME,
+})) as GQLResponse;
 
 const maintainerRepos = new Set(["withastro/docs"]);
-const projectList = new Set(["remark-code-title", "astro-layouts"]);
+const projects = new Set(["remark-code-title", "astro-layouts"]);
 
 let authoredProjects = await Promise.all(
-  [...projectList].map(async (repo) => {
+  Array.from(projects).map(async (repo) => {
     const { data } = await octokit.request("GET /repos/{owner}/{repo}", {
-      owner: "kevinzunigacuellar",
+      owner: GITHUB_USERNAME,
       repo,
     });
     return {
@@ -72,25 +75,29 @@ let authoredProjects = await Promise.all(
 );
 
 const contributions = response.viewer.repositoriesContributedTo.nodes
+  // Filter out repos with only one language
   .filter((repo) => repo.languages.nodes.length > 1)
-  .map((repository) => {
+  .map((repo) => {
     return {
-      name: repository.nameWithOwner,
-      stars: repository.stargazerCount,
-      url: repository.url,
-      description: repository.description,
-      languages: repository.languages.nodes.map((language) => language.name),
-      role: maintainerRepos.has(repository.nameWithOwner)
+      name: repo.nameWithOwner,
+      stars: repo.stargazerCount,
+      url: repo.url,
+      description: repo.description,
+      languages: repo.languages.nodes.map((language) => language.name),
+      role: maintainerRepos.has(repo.nameWithOwner)
         ? "maintainer"
         : "contributor",
     };
   });
 
-const all = [...authoredProjects, ...contributions];
+const allProjects = authoredProjects.concat(contributions);
 
-await fs.writeFile(
-  "./src/content/contributions.json",
-  JSON.stringify(all, null, 2)
-);
-
-console.log("Contributions list generated");
+try {
+  await fs.writeFile(
+    "./src/data/contributions.json",
+    JSON.stringify(allProjects, null, 2)
+  );
+  console.log("Contributions list generated");
+} catch (error) {
+  console.error(error);
+}

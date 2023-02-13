@@ -3,6 +3,7 @@ import { html } from "satori-html";
 import { Resvg } from "@resvg/resvg-js";
 import InterRegular from "@fontsource/inter/files/inter-latin-400-normal.woff";
 import InterBold from "@fontsource/inter/files/inter-latin-700-normal.woff";
+import { getCollection, getEntryBySlug } from "astro:content";
 import { APIContext } from "astro";
 
 const dimensions = {
@@ -10,33 +11,16 @@ const dimensions = {
   height: 630,
 };
 
-interface Frontmatter {
-  frontmatter: {
-    title: string;
-    imageAlt: string;
-    heroImage: string;
-    pubDate: string;
-    description: string;
-  };
-}
-
-const pages = import.meta.glob<Frontmatter>("../blog/*.mdx", { eager: true });
-
 export async function get({ params }: APIContext) {
-  const path = `../blog/${params.id}.mdx`;
-
-  let { title, pubDate } = pages[path].frontmatter || {
-    title: "",
-    pubDate: "",
-  };
-
-  pubDate = new Date(pubDate).toLocaleDateString("en-US", {
+  const post = await getEntryBySlug("blog", params.slug);
+  const { title, pubDate } = post.data;
+  const date = pubDate.toLocaleDateString("en-US", {
     dateStyle: "full",
   });
 
   const markup = html`<div tw="bg-zinc-900 flex flex-col w-full h-full">
     <div tw="flex flex-col w-full h-4/5 p-10 justify-center">
-      <div tw="text-zinc-400 text-2xl mb-6">${pubDate}</div>
+      <div tw="text-zinc-400 text-2xl mb-6">${date}</div>
       <div
         tw="flex text-6xl w-full font-bold leading-snug tracking-tight text-transparent bg-red-400"
         style="background-clip: text; -webkit-background-clip: text; background: linear-gradient(90deg, rgb(0, 124, 240), rgb(0, 223, 216));"
@@ -71,9 +55,9 @@ export async function get({ params }: APIContext) {
           src="https://avatars.githubusercontent.com/u/46791833?s=160"
           tw="w-15 h-15 rounded-full"
         />
-        <div tw="flex flex-col ml-3">
+        <div tw="flex flex-col ml-4">
           <span tw="text-zinc-400">Kevin Zuniga Cuellar</span>
-          <span tw="text-blue-400 font-base">@kevinzunigacuel</span>
+          <span tw="text-blue-400">@kevinzunigacuel</span>
         </div>
       </div>
     </div>
@@ -110,9 +94,13 @@ export async function get({ params }: APIContext) {
 }
 
 export async function getStaticPaths() {
-  const paths = Object.keys(pages).map((path) => {
-    const [, id] = path.match(/\/blog\/(.*)\.mdx$/);
-    return { params: { id } };
+  const posts = await getCollection("blog");
+  const paths = posts.map((post) => {
+    return {
+      params: {
+        slug: post.slug,
+      },
+    };
   });
   return paths;
 }

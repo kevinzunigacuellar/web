@@ -1,9 +1,0 @@
-[
-  {
-    "title":"Astro docs",
-    "projectUrl": "https://docs.astro.build/",
-    "githubUrl": "https://github.com/withastro/docs",
-    "description": "Astro documentation",
-    "technologies": ["Astro", "Markdown", "TypeScript"]
-  }
-]
