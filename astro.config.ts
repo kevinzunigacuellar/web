@@ -6,7 +6,6 @@ import mdx from "@astrojs/mdx";
 import astroLayouts from "astro-layouts";
 import codeTitle from "remark-code-title";
 import fs from "node:fs";
-import type { Plugin } from "vite";
 
 const layoutOptions = {
   "pages/blog/**/*": "@layouts/BlogLayout.astro",
@@ -17,7 +16,6 @@ export default defineConfig({
   integrations: [tailwind(), sitemap(), image(), mdx()],
   site: "https://www.kevinzunigacuellar.com",
   markdown: {
-    extendDefaultPlugins: true,
     remarkPlugins: [[astroLayouts, layoutOptions], codeTitle],
     shikiConfig: {
       theme: "dark-plus",
@@ -31,7 +29,8 @@ export default defineConfig({
   },
 });
 
-function rawFonts(ext: string[]): Plugin {
+// vite plugin to import fonts
+function rawFonts(ext : string[]) {
   return {
     name: "vite-plugin-raw-fonts",
     transform(_, id) {
