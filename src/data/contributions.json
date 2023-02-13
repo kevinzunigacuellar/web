@@ -21,7 +21,7 @@
   },
   {
     "name": "rust-lang/rustlings",
-    "stars": 34176,
+    "stars": 34403,
     "url": "https://github.com/rust-lang/rustlings",
     "description": ":crab: Small exercises to get you used to reading and writing Rust code!",
     "languages": [
@@ -34,7 +34,7 @@
   },
   {
     "name": "withastro/astro",
-    "stars": 26546,
+    "stars": 27009,
     "url": "https://github.com/withastro/astro",
     "description": "Build faster websites with Astro's next-gen island architecture 🏝✨",
     "languages": [
@@ -47,7 +47,7 @@
   },
   {
     "name": "vuejs/vitepress",
-    "stars": 6701,
+    "stars": 6762,
     "url": "https://github.com/vuejs/vitepress",
     "description": "Vite & Vue powered static site generator.",
     "languages": [
@@ -60,7 +60,7 @@
   },
   {
     "name": "leerob/leerob.io",
-    "stars": 5095,
+    "stars": 5198,
     "url": "https://github.com/leerob/leerob.io",
     "description": "✨  My portfolio built with Next.js, Tailwind CSS, PlanetScale, and Vercel.",
     "languages": [
@@ -73,7 +73,7 @@
   },
   {
     "name": "midudev/kings-league-project",
-    "stars": 1519,
+    "stars": 1520,
     "url": "https://github.com/midudev/kings-league-project",
     "description": "API y website de la Kings League Infojobs por temas didácticos",
     "languages": [
@@ -85,7 +85,7 @@
   },
   {
     "name": "withastro/docs",
-    "stars": 481,
+    "stars": 501,
     "url": "https://github.com/withastro/docs",
     "description": "Astro documentation",
     "languages": [
@@ -98,7 +98,7 @@
   },
   {
     "name": "midudev/miduconf-website",
-    "stars": 430,
+    "stars": 432,
     "url": "https://github.com/midudev/miduconf-website",
     "description": "¡La conferencia de desarrollo y programación web!",
     "languages": [
@@ -124,7 +124,7 @@
   },
   {
     "name": "solidjs/solid-docs-next",
-    "stars": 95,
+    "stars": 100,
     "url": "https://github.com/solidjs/solid-docs-next",
     "description": "Solid Docs, rehauled. Very much in progress",
     "languages": [
@@ -148,7 +148,7 @@
   },
   {
     "name": "goncy/adopcanem",
-    "stars": 19,
+    "stars": 18,
     "url": "https://github.com/goncy/adopcanem",
     "description": "Proyecto gratis, hecho en comunidad.",
     "languages": [
