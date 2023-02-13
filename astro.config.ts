@@ -30,7 +30,7 @@ export default defineConfig({
 });
 
 // vite plugin to import fonts
-function rawFonts(ext : string[]) {
+function rawFonts(ext: string[]) {
   return {
     name: "vite-plugin-raw-fonts",
     transform(_, id) {
