@@ -55,7 +55,7 @@ export async function get({ params }: APIContext) {
           src="https://avatars.githubusercontent.com/u/46791833?s=160"
           tw="w-15 h-15 rounded-full"
         />
-        <div tw="flex flex-col ml-3">
+        <div tw="flex flex-col ml-4">
           <span tw="text-zinc-400">Kevin Zuniga Cuellar</span>
           <span tw="text-blue-400">@kevinzunigacuel</span>
         </div>
