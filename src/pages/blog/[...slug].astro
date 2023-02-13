@@ -19,9 +19,9 @@ const { Content } = await post.render();
 <BlogLayout
   title={frontmatter.title}
   pubDate={frontmatter.pubDate}
-  heroImage={frontmatter.heroImage}
+  heroImage={frontmatter.image.src}
   description={frontmatter.description}
-  imageAlt={frontmatter.imageAlt}
+  imageAlt={frontmatter.image.alt}
   url={post.slug}
 >
   <Content />
