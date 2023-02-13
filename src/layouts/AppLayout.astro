@@ -24,7 +24,7 @@ const {
   description = defaultMeta.description,
   heroImage = defaultMeta.image,
   imageAlt = defaultMeta.imageAlt,
-  pubDate,
+  pubDate = "",
 } = Astro.props;
 
 const socialImageURL = new URL(heroImage, Astro.site).href;
