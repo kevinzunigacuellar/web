@@ -2,19 +2,10 @@
 import AppLayout from "@layouts/AppLayout.astro";
 import BlogCard from "@components/BlogCard.astro";
 import Header from "@components/Header.astro";
+import { getCollection } from "astro:content";
 
-interface Frontmatter {
-  title: string;
-  imageAlt: string;
-  heroImage: string;
-  pubDate: string;
-  description: string;
-}
-let posts = await Astro.glob<Frontmatter>("./blog/*.mdx");
-posts = posts.sort(
-  (a, b) =>
-    new Date(b.frontmatter.pubDate).valueOf() -
-    new Date(a.frontmatter.pubDate).valueOf()
+const posts = (await getCollection("blog")).sort(
+  (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
 );
 
 const title = "Blog | Kevin Zuniga Cuellar";
@@ -31,10 +22,10 @@ const description =
     {
       posts.map((post) => (
         <BlogCard
-          title={post.frontmatter.title}
-          pubDate={post.frontmatter.pubDate}
-          description={post.frontmatter.description}
-          url={post.url}
+          title={post.data.title}
+          pubDate={post.data.pubDate}
+          description={post.data.description}
+          url={`/blog/${post.slug}/`}
         />
       ))
     }
