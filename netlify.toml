@@ -1,6 +1,2 @@
 [build]
   command = "pnpm run build"
-
-[[edge_functions]]
-  function = "og"
-  path = "/og"
