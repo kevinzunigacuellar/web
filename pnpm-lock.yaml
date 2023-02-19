@@ -11,7 +11,6 @@ specifiers:
   '@tailwindcss/typography': ^0.5.9
   astro: 2.0.10
   astro-icon: ^0.8.0
-  astro-layouts: ^1.0.0
   prettier-plugin-astro: ^0.8.0
   remark-code-title: ^0.2.2
   satori: ^0.3.0
@@ -33,7 +32,6 @@ devDependencies:
   '@tailwindcss/typography': 0.5.9_tailwindcss@3.2.6
   astro: 2.0.10
   astro-icon: 0.8.0
-  astro-layouts: 1.0.0_astro@2.0.10
   prettier-plugin-astro: 0.8.0
   remark-code-title: 0.2.2
   satori: 0.3.0
@@ -1240,15 +1238,6 @@ packages:
       node-fetch: 3.3.0
       resolve-pkg: 2.0.0
       svgo: 2.8.0
-    dev: true
-
-  /astro-layouts/1.0.0_astro@2.0.10:
-    resolution: {integrity: sha512-ClHkYlRQp/y6X0N91C2ORkOQA/veIBiOBGgCj0TmtHoXCgP0HyssUXfAY83H63lMLTgAX5tyvOjKii1X+py5nw==}
-    peerDependencies:
-      astro: ^2.0.1
-    dependencies:
-      astro: 2.0.10
-      picomatch: 2.3.1
     dev: true
 
   /astro/2.0.10:

@@ -20,7 +20,6 @@
     "@tailwindcss/typography": "^0.5.9",
     "astro": "2.0.10",
     "astro-icon": "^0.8.0",
-    "astro-layouts": "^1.0.0",
     "prettier-plugin-astro": "^0.8.0",
     "remark-code-title": "^0.2.2",
     "satori": "^0.3.0",
