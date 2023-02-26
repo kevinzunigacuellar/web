@@ -17,13 +17,13 @@ if (href === "/") {
 
 <a
   class:list={[
-    "font-semibold text-sm py-2.5 px-3 hover:bg-zinc-700/50 transition-colors",
+    "font-semibold text-sm py-2.5 px-3 hover:bg-zinc-700/50 focus:outline-none focus:ring-2 focus:ring-teal-400",
     { "text-teal-400": isActive },
     { "text-zinc-200": !isActive },
   ]}
   href={href}
   {...props}
-  aria-label={`Go to ${text}`}
+  aria-label={`Go to ${text} page`}
 >
   {text}
 </a>
