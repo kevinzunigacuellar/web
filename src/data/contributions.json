@@ -1,7 +1,7 @@
 [
   {
     "name": "remark-code-title",
-    "stars": 1,
+    "stars": 3,
     "url": "https://github.com/kevinzunigacuellar/remark-code-title",
     "description": "🔌 remark plugin to add titles to code blocks",
     "languages": [
@@ -11,7 +11,7 @@
   },
   {
     "name": "astro-layouts",
-    "stars": 19,
+    "stars": 20,
     "url": "https://github.com/kevinzunigacuellar/astro-layouts",
     "description": "🔌 remark plugin to add folder-based layouts in Astro",
     "languages": [
@@ -21,7 +21,7 @@
   },
   {
     "name": "rust-lang/rustlings",
-    "stars": 34632,
+    "stars": 34875,
     "url": "https://github.com/rust-lang/rustlings",
     "description": ":crab: Small exercises to get you used to reading and writing Rust code!",
     "languages": [
@@ -34,7 +34,7 @@
   },
   {
     "name": "withastro/astro",
-    "stars": 27347,
+    "stars": 27627,
     "url": "https://github.com/withastro/astro",
     "description": "Build faster websites with Astro's next-gen island architecture 🏝✨",
     "languages": [
@@ -47,7 +47,7 @@
   },
   {
     "name": "vuejs/vitepress",
-    "stars": 6807,
+    "stars": 6865,
     "url": "https://github.com/vuejs/vitepress",
     "description": "Vite & Vue powered static site generator.",
     "languages": [
@@ -60,7 +60,7 @@
   },
   {
     "name": "leerob/leerob.io",
-    "stars": 5237,
+    "stars": 5277,
     "url": "https://github.com/leerob/leerob.io",
     "description": "✨  My portfolio built with Next.js, Tailwind CSS, PlanetScale, and Vercel.",
     "languages": [
@@ -85,7 +85,7 @@
   },
   {
     "name": "withastro/docs",
-    "stars": 510,
+    "stars": 527,
     "url": "https://github.com/withastro/docs",
     "description": "Astro documentation",
     "languages": [
@@ -98,7 +98,7 @@
   },
   {
     "name": "midudev/miduconf-website",
-    "stars": 431,
+    "stars": 432,
     "url": "https://github.com/midudev/miduconf-website",
     "description": "¡La conferencia de desarrollo y programación web!",
     "languages": [
@@ -111,7 +111,7 @@
   },
   {
     "name": "withastro/astro.build",
-    "stars": 155,
+    "stars": 161,
     "url": "https://github.com/withastro/astro.build",
     "description": null,
     "languages": [
@@ -136,7 +136,7 @@
   },
   {
     "name": "stackblitz/ilovecodeflow.com",
-    "stars": 32,
+    "stars": 35,
     "url": "https://github.com/stackblitz/ilovecodeflow.com",
     "description": null,
     "languages": [
