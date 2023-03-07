@@ -1,7 +1,7 @@
 [
   {
     "name": "remark-code-title",
-    "stars": 3,
+    "stars": 4,
     "url": "https://github.com/kevinzunigacuellar/remark-code-title",
     "description": "🔌 remark plugin to add titles to code blocks",
     "languages": [
@@ -21,7 +21,7 @@
   },
   {
     "name": "rust-lang/rustlings",
-    "stars": 34875,
+    "stars": 35104,
     "url": "https://github.com/rust-lang/rustlings",
     "description": ":crab: Small exercises to get you used to reading and writing Rust code!",
     "languages": [
@@ -34,7 +34,7 @@
   },
   {
     "name": "withastro/astro",
-    "stars": 27627,
+    "stars": 27930,
     "url": "https://github.com/withastro/astro",
     "description": "Build faster websites with Astro's next-gen island architecture 🏝✨",
     "languages": [
@@ -47,7 +47,7 @@
   },
   {
     "name": "vuejs/vitepress",
-    "stars": 6865,
+    "stars": 6921,
     "url": "https://github.com/vuejs/vitepress",
     "description": "Vite & Vue powered static site generator.",
     "languages": [
@@ -59,21 +59,8 @@
     "role": "contributor"
   },
   {
-    "name": "leerob/leerob.io",
-    "stars": 5277,
-    "url": "https://github.com/leerob/leerob.io",
-    "description": "✨  My portfolio built with Next.js, Tailwind CSS, PlanetScale, and Vercel.",
-    "languages": [
-      "TypeScript",
-      "JavaScript",
-      "CSS",
-      "Shell"
-    ],
-    "role": "contributor"
-  },
-  {
     "name": "midudev/kings-league-project",
-    "stars": 1517,
+    "stars": 1511,
     "url": "https://github.com/midudev/kings-league-project",
     "description": "API y website de la Kings League Infojobs por temas didácticos",
     "languages": [
@@ -85,7 +72,7 @@
   },
   {
     "name": "withastro/docs",
-    "stars": 527,
+    "stars": 538,
     "url": "https://github.com/withastro/docs",
     "description": "Astro documentation",
     "languages": [
@@ -98,7 +85,7 @@
   },
   {
     "name": "midudev/miduconf-website",
-    "stars": 432,
+    "stars": 431,
     "url": "https://github.com/midudev/miduconf-website",
     "description": "¡La conferencia de desarrollo y programación web!",
     "languages": [
@@ -111,7 +98,7 @@
   },
   {
     "name": "withastro/astro.build",
-    "stars": 161,
+    "stars": 163,
     "url": "https://github.com/withastro/astro.build",
     "description": null,
     "languages": [
@@ -124,7 +111,7 @@
   },
   {
     "name": "solidjs/solid-docs-next",
-    "stars": 102,
+    "stars": 105,
     "url": "https://github.com/solidjs/solid-docs-next",
     "description": "Solid Docs, rehauled. Very much in progress",
     "languages": [
@@ -136,7 +123,7 @@
   },
   {
     "name": "stackblitz/ilovecodeflow.com",
-    "stars": 35,
+    "stars": 36,
     "url": "https://github.com/stackblitz/ilovecodeflow.com",
     "description": null,
     "languages": [
@@ -159,13 +146,26 @@
   },
   {
     "name": "stackblitz/docs",
-    "stars": 12,
+    "stars": 13,
     "url": "https://github.com/stackblitz/docs",
     "description": "New StackBlitz docs site built with VitePress",
     "languages": [
       "Vue",
       "SCSS",
       "TypeScript"
+    ],
+    "role": "contributor"
+  },
+  {
+    "name": "Duke-MatSci/materialsmine",
+    "stars": 6,
+    "url": "https://github.com/Duke-MatSci/materialsmine",
+    "description": "MaterialsMine App",
+    "languages": [
+      "JavaScript",
+      "Vue",
+      "HTML",
+      "Python"
     ],
     "role": "contributor"
   },
@@ -179,19 +179,6 @@
       "Haskell",
       "Python",
       "C"
-    ],
-    "role": "contributor"
-  },
-  {
-    "name": "Duke-MatSci/materialsmine",
-    "stars": 5,
-    "url": "https://github.com/Duke-MatSci/materialsmine",
-    "description": "MaterialsMine App",
-    "languages": [
-      "JavaScript",
-      "Vue",
-      "HTML",
-      "Python"
     ],
     "role": "contributor"
   }
