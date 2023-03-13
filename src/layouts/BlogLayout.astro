@@ -26,11 +26,11 @@ const ogImage = {
   alt: title,
 };
 
-const fullDate = pubDate.toLocaleDateString("en", {
+const fullPubDate = pubDate.toLocaleDateString("en", {
   dateStyle: "full",
 });
 
-const updatedDateFull = updatedDate?.toLocaleDateString("en", {
+const fullUpdatedDate = updatedDate?.toLocaleDateString("en", {
   year: "numeric",
   month: "long",
   day: "numeric",
@@ -41,14 +41,14 @@ const updatedDateFull = updatedDate?.toLocaleDateString("en", {
   title={title}
   description={description}
   ogImage={ogImage}
-  pubDate={pubDate}
+  pubDate={updatedDate || pubDate}
 >
   <header class="flex flex-col mb-8">
     <time
       datetime={pubDate.toISOString()}
       class="block text-center text-zinc-400 mb-4 text-sm sm:text-base"
     >
-      {fullDate}
+      {fullPubDate}
     </time>
     <h1
       class="text-2xl sm:text-4xl mb-8 font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-blue-500 to-purple-500"
@@ -89,7 +89,7 @@ const updatedDateFull = updatedDate?.toLocaleDateString("en", {
   {
     updatedDate && (
       <div class="block text-blue-300 py-2 px-4 mb-6 rounded-md text-sm sm:text-base border border-blue-400 transition-all bg-blue-600/20">
-        <span class="font-semibold">Last updated:</span> {updatedDateFull}
+        <span class="font-semibold">Last updated:</span> {fullUpdatedDate}
       </div>
     )
   }
