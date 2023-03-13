@@ -1,7 +1,8 @@
 ---
-title: Add a perfect dark mode in Astro with Tailwind CSS
+title: Add dark mode to Astro with Tailwind CSS
 description: In this guide, you will learn how to add perfect dark mode to your Astro project using Tailwind CSS and the prefers-color-scheme media query
 pubDate: 2022-05-04
+updatedDate: 2023-03-13
 image:
   src: "astro-dark_t.png"
   alt: "The logo of Astro and Tailwind CSS"
@@ -124,32 +125,33 @@ export default function ThemeToggle(): FunctionalComponent {
 }
 ```
 
-## 🧑‍🔧 Static Site Generation Problems
+## 🧑‍🔧 Rendering components on the server
 
-When using static site generation, the initial state will be undefined at build time because `localStorage` is not available at the server. To solve this problem we can either:
+Regardless of the UI framework you use if you are using SSG, Astro will render your UI components on the server at build time and hydrate them on the client. This is a great feature because it makes your website faster, more accessible and SEO friendly.
 
-1. Add a fallback initial state, or
-2. Add a mounted state that will wait until the component is mounted and localStorage is available.
+However, this feature also comes with some tradeoffs. Because your components are rendered on the server, web APIs like `localStorage` or `window` are not available.
 
 ### Fallback initial state
 
-Adding a fallback initial state is the most common way to solve this problem. However, it creates a new problem called _UI flick_. Essentially, the UI will flick every time the server render doesn't match your client render. 
-
-You may have seen it before with login and logout buttons. When an authenticated user revisits or refreshes the page, the page first renders in a not authenticated state but changes as soon as the page finish loading to authenticated.
-
-To implement the fallback initial state, we can use the nullish coalescing operator `??` to set the initial state.
+To get around this problem, we can add a fallback initial state that will be used at build time and then change to the correct state after hydration.
 
 ```jsx
 const [theme, setTheme] = useState(localStorage.getItem("theme") ?? "light");
 ```
 
-### Mounted state
+The above code will try to get the theme from `localStorage` and if it's not available it will use `light` as the initial state.
 
-Another way to solve the SSG problem is to add a mounted state. This state will make your button render wait until the component is mounted. This way the local storage theme will be available at the first render.
+Using a fallback initial state is the most common way to solve this problem. However, it creates a new problem called "client/server state missmatch." This problem happens when the initial state is different from the state after hydration.
 
-To implement we use `useState` and `useEffect` hooks to create a mounted state. This will render a fallback UI or null until the component is mounted.
+This is not a big problem but it can be annoying for users specially if the state change is noticeable.
 
-```jsx
+### Getting around client/server missmatch
+
+One way to get around client and server missmatch is to add a mounted state. This state will make your component render wait until it is mounted to the DOM. This way all the web APIs will be available and the initial state will be the same as the state after hydration.
+
+To implement this, we can use `useState` and `useEffect` hooks to create a mounted state. This will render a fallback UI or null until the component is mounted.
+
+```jsx title="ThemeToggle.tsx"
 const [isMounted, setIsMounted] = useState(false);
 
 useEffect(() => {
