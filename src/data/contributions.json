@@ -1,7 +1,7 @@
 [
   {
     "name": "remark-code-title",
-    "stars": 4,
+    "stars": 6,
     "url": "https://github.com/kevinzunigacuellar/remark-code-title",
     "description": "🔌 remark plugin to add titles to code blocks",
     "languages": [
@@ -21,7 +21,7 @@
   },
   {
     "name": "rust-lang/rustlings",
-    "stars": 35104,
+    "stars": 35326,
     "url": "https://github.com/rust-lang/rustlings",
     "description": ":crab: Small exercises to get you used to reading and writing Rust code!",
     "languages": [
@@ -34,9 +34,9 @@
   },
   {
     "name": "withastro/astro",
-    "stars": 27930,
+    "stars": 28254,
     "url": "https://github.com/withastro/astro",
-    "description": "Build faster websites with Astro's next-gen island architecture 🏝✨",
+    "description": "Astro is the all-in-one web framework designed for speed 🏝️✨",
     "languages": [
       "TypeScript",
       "JavaScript",
@@ -47,7 +47,7 @@
   },
   {
     "name": "vuejs/vitepress",
-    "stars": 6921,
+    "stars": 7004,
     "url": "https://github.com/vuejs/vitepress",
     "description": "Vite & Vue powered static site generator.",
     "languages": [
@@ -60,7 +60,7 @@
   },
   {
     "name": "midudev/kings-league-project",
-    "stars": 1511,
+    "stars": 1508,
     "url": "https://github.com/midudev/kings-league-project",
     "description": "API y website de la Kings League Infojobs por temas didácticos",
     "languages": [
@@ -72,7 +72,7 @@
   },
   {
     "name": "withastro/docs",
-    "stars": 538,
+    "stars": 550,
     "url": "https://github.com/withastro/docs",
     "description": "Astro documentation",
     "languages": [
@@ -98,7 +98,7 @@
   },
   {
     "name": "withastro/astro.build",
-    "stars": 163,
+    "stars": 174,
     "url": "https://github.com/withastro/astro.build",
     "description": null,
     "languages": [
@@ -111,7 +111,7 @@
   },
   {
     "name": "solidjs/solid-docs-next",
-    "stars": 105,
+    "stars": 106,
     "url": "https://github.com/solidjs/solid-docs-next",
     "description": "Solid Docs, rehauled. Very much in progress",
     "languages": [
@@ -146,7 +146,7 @@
   },
   {
     "name": "stackblitz/docs",
-    "stars": 13,
+    "stars": 14,
     "url": "https://github.com/stackblitz/docs",
     "description": "New StackBlitz docs site built with VitePress",
     "languages": [
