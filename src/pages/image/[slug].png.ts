@@ -3,7 +3,7 @@ import { html } from "satori-html";
 import { Resvg } from "@resvg/resvg-js";
 import InterRegular from "@fontsource/inter/files/inter-latin-400-normal.woff";
 import InterBold from "@fontsource/inter/files/inter-latin-700-normal.woff";
-import { getCollection, getEntryBySlug } from "astro:content";
+import { getCollection } from "astro:content";
 import { APIContext } from "astro";
 
 const dimensions = {
@@ -11,9 +11,8 @@ const dimensions = {
   height: 630,
 };
 
-export async function get({ params }: APIContext) {
-  const post = await getEntryBySlug("blog", params.slug);
-  const { title, pubDate } = post.data;
+export async function get(context: APIContext) {
+  const { title, pubDate } = context.props;
   const date = pubDate.toLocaleDateString("en-US", {
     dateStyle: "full",
   });
@@ -100,6 +99,10 @@ export async function getStaticPaths() {
       params: {
         slug: post.slug,
       },
+      props: {
+        title : post.data.title,
+        pubDate: post.data.updatedDate || post.data.pubDate
+      }
     };
   });
   return paths;
