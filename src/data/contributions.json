@@ -11,7 +11,7 @@
   },
   {
     "name": "astro-layouts",
-    "stars": 20,
+    "stars": 22,
     "url": "https://github.com/kevinzunigacuellar/astro-layouts",
     "description": "🔌 remark plugin to add folder-based layouts in Astro",
     "languages": [
@@ -21,7 +21,7 @@
   },
   {
     "name": "rust-lang/rustlings",
-    "stars": 35326,
+    "stars": 35537,
     "url": "https://github.com/rust-lang/rustlings",
     "description": ":crab: Small exercises to get you used to reading and writing Rust code!",
     "languages": [
@@ -34,7 +34,7 @@
   },
   {
     "name": "withastro/astro",
-    "stars": 28254,
+    "stars": 28496,
     "url": "https://github.com/withastro/astro",
     "description": "Astro is the all-in-one web framework designed for speed 🏝️✨",
     "languages": [
@@ -47,7 +47,7 @@
   },
   {
     "name": "vuejs/vitepress",
-    "stars": 7004,
+    "stars": 7081,
     "url": "https://github.com/vuejs/vitepress",
     "description": "Vite & Vue powered static site generator.",
     "languages": [
@@ -60,7 +60,7 @@
   },
   {
     "name": "midudev/kings-league-project",
-    "stars": 1508,
+    "stars": 1509,
     "url": "https://github.com/midudev/kings-league-project",
     "description": "API y website de la Kings League Infojobs por temas didácticos",
     "languages": [
@@ -72,7 +72,7 @@
   },
   {
     "name": "withastro/docs",
-    "stars": 550,
+    "stars": 562,
     "url": "https://github.com/withastro/docs",
     "description": "Astro documentation",
     "languages": [
@@ -98,7 +98,7 @@
   },
   {
     "name": "withastro/astro.build",
-    "stars": 174,
+    "stars": 178,
     "url": "https://github.com/withastro/astro.build",
     "description": null,
     "languages": [
@@ -111,7 +111,7 @@
   },
   {
     "name": "solidjs/solid-docs-next",
-    "stars": 106,
+    "stars": 107,
     "url": "https://github.com/solidjs/solid-docs-next",
     "description": "Solid Docs, rehauled. Very much in progress",
     "languages": [
@@ -146,7 +146,7 @@
   },
   {
     "name": "stackblitz/docs",
-    "stars": 14,
+    "stars": 16,
     "url": "https://github.com/stackblitz/docs",
     "description": "New StackBlitz docs site built with VitePress",
     "languages": [
