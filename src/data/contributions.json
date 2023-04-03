@@ -21,7 +21,7 @@
   },
   {
     "name": "rust-lang/rustlings",
-    "stars": 36203,
+    "stars": 36570,
     "url": "https://github.com/rust-lang/rustlings",
     "description": ":crab: Small exercises to get you used to reading and writing Rust code!",
     "languages": [
@@ -34,7 +34,7 @@
   },
   {
     "name": "withastro/astro",
-    "stars": 28728,
+    "stars": 29027,
     "url": "https://github.com/withastro/astro",
     "description": "The all-in-one web framework designed for speed. ⭐️ Star to support our work!",
     "languages": [
@@ -47,7 +47,7 @@
   },
   {
     "name": "vuejs/vitepress",
-    "stars": 7151,
+    "stars": 7211,
     "url": "https://github.com/vuejs/vitepress",
     "description": "Vite & Vue powered static site generator.",
     "languages": [
@@ -60,7 +60,7 @@
   },
   {
     "name": "midudev/kings-league-project",
-    "stars": 1507,
+    "stars": 1506,
     "url": "https://github.com/midudev/kings-league-project",
     "description": "API y website de la Kings League Infojobs por temas didácticos",
     "languages": [
@@ -72,7 +72,7 @@
   },
   {
     "name": "withastro/docs",
-    "stars": 581,
+    "stars": 595,
     "url": "https://github.com/withastro/docs",
     "description": "Astro documentation",
     "languages": [
@@ -98,7 +98,7 @@
   },
   {
     "name": "withastro/astro.build",
-    "stars": 181,
+    "stars": 186,
     "url": "https://github.com/withastro/astro.build",
     "description": null,
     "languages": [
@@ -111,7 +111,7 @@
   },
   {
     "name": "solidjs/solid-docs-next",
-    "stars": 111,
+    "stars": 112,
     "url": "https://github.com/solidjs/solid-docs-next",
     "description": "Solid Docs, rehauled. Very much in progress",
     "languages": [
@@ -135,7 +135,7 @@
   },
   {
     "name": "stackblitz/docs",
-    "stars": 19,
+    "stars": 20,
     "url": "https://github.com/stackblitz/docs",
     "description": "New StackBlitz docs site built with VitePress",
     "languages": [
