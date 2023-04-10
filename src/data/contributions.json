@@ -20,21 +20,8 @@
     "role": "author"
   },
   {
-    "name": "rust-lang/rustlings",
-    "stars": 36570,
-    "url": "https://github.com/rust-lang/rustlings",
-    "description": ":crab: Small exercises to get you used to reading and writing Rust code!",
-    "languages": [
-      "Rust",
-      "Shell",
-      "PowerShell",
-      "Nix"
-    ],
-    "role": "contributor"
-  },
-  {
     "name": "withastro/astro",
-    "stars": 29027,
+    "stars": 29302,
     "url": "https://github.com/withastro/astro",
     "description": "The all-in-one web framework designed for speed. ⭐️ Star to support our work!",
     "languages": [
@@ -47,7 +34,7 @@
   },
   {
     "name": "vuejs/vitepress",
-    "stars": 7211,
+    "stars": 7266,
     "url": "https://github.com/vuejs/vitepress",
     "description": "Vite & Vue powered static site generator.",
     "languages": [
@@ -60,7 +47,7 @@
   },
   {
     "name": "midudev/kings-league-project",
-    "stars": 1506,
+    "stars": 1512,
     "url": "https://github.com/midudev/kings-league-project",
     "description": "API y website de la Kings League Infojobs por temas didácticos",
     "languages": [
@@ -72,7 +59,7 @@
   },
   {
     "name": "withastro/docs",
-    "stars": 595,
+    "stars": 620,
     "url": "https://github.com/withastro/docs",
     "description": "Astro documentation",
     "languages": [
@@ -98,7 +85,7 @@
   },
   {
     "name": "withastro/astro.build",
-    "stars": 186,
+    "stars": 189,
     "url": "https://github.com/withastro/astro.build",
     "description": null,
     "languages": [
@@ -111,7 +98,7 @@
   },
   {
     "name": "solidjs/solid-docs-next",
-    "stars": 112,
+    "stars": 114,
     "url": "https://github.com/solidjs/solid-docs-next",
     "description": "Solid Docs, rehauled. Very much in progress",
     "languages": [
@@ -157,6 +144,19 @@
     "role": "contributor"
   },
   {
+    "name": "jnear/cs202-assignments",
+    "stars": 7,
+    "url": "https://github.com/jnear/cs202-assignments",
+    "description": null,
+    "languages": [
+      "Jupyter Notebook",
+      "Python",
+      "Haskell",
+      "C"
+    ],
+    "role": "contributor"
+  },
+  {
     "name": "Duke-MatSci/materialsmine",
     "stars": 6,
     "url": "https://github.com/Duke-MatSci/materialsmine",
@@ -166,19 +166,6 @@
       "Vue",
       "HTML",
       "Python"
-    ],
-    "role": "contributor"
-  },
-  {
-    "name": "jnear/cs202-assignments",
-    "stars": 6,
-    "url": "https://github.com/jnear/cs202-assignments",
-    "description": null,
-    "languages": [
-      "Jupyter Notebook",
-      "Haskell",
-      "Python",
-      "C"
     ],
     "role": "contributor"
   }
