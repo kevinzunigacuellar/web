@@ -21,7 +21,7 @@
   },
   {
     "name": "withastro/astro",
-    "stars": 29302,
+    "stars": 29543,
     "url": "https://github.com/withastro/astro",
     "description": "The all-in-one web framework designed for speed. ⭐️ Star to support our work!",
     "languages": [
@@ -34,7 +34,7 @@
   },
   {
     "name": "vuejs/vitepress",
-    "stars": 7266,
+    "stars": 7355,
     "url": "https://github.com/vuejs/vitepress",
     "description": "Vite & Vue powered static site generator.",
     "languages": [
@@ -47,7 +47,7 @@
   },
   {
     "name": "midudev/kings-league-project",
-    "stars": 1512,
+    "stars": 1514,
     "url": "https://github.com/midudev/kings-league-project",
     "description": "API y website de la Kings League Infojobs por temas didácticos",
     "languages": [
@@ -59,7 +59,7 @@
   },
   {
     "name": "withastro/docs",
-    "stars": 620,
+    "stars": 629,
     "url": "https://github.com/withastro/docs",
     "description": "Astro documentation",
     "languages": [
@@ -85,7 +85,7 @@
   },
   {
     "name": "withastro/astro.build",
-    "stars": 189,
+    "stars": 191,
     "url": "https://github.com/withastro/astro.build",
     "description": null,
     "languages": [
@@ -98,7 +98,7 @@
   },
   {
     "name": "solidjs/solid-docs-next",
-    "stars": 114,
+    "stars": 115,
     "url": "https://github.com/solidjs/solid-docs-next",
     "description": "Solid Docs, rehauled. Very much in progress",
     "languages": [
