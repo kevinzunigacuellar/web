@@ -1,7 +1,7 @@
 [
   {
     "name": "remark-code-title",
-    "stars": 6,
+    "stars": 7,
     "url": "https://github.com/kevinzunigacuellar/remark-code-title",
     "description": "🔌 remark plugin to add titles to code blocks",
     "languages": [
@@ -11,7 +11,7 @@
   },
   {
     "name": "astro-layouts",
-    "stars": 23,
+    "stars": 24,
     "url": "https://github.com/kevinzunigacuellar/astro-layouts",
     "description": "🔌 remark plugin to add folder-based layouts in Astro",
     "languages": [
@@ -21,7 +21,7 @@
   },
   {
     "name": "withastro/astro",
-    "stars": 29543,
+    "stars": 29750,
     "url": "https://github.com/withastro/astro",
     "description": "The all-in-one web framework designed for speed. ⭐️ Star to support our work!",
     "languages": [
@@ -34,7 +34,7 @@
   },
   {
     "name": "vuejs/vitepress",
-    "stars": 7355,
+    "stars": 7429,
     "url": "https://github.com/vuejs/vitepress",
     "description": "Vite & Vue powered static site generator.",
     "languages": [
@@ -47,7 +47,7 @@
   },
   {
     "name": "midudev/kings-league-project",
-    "stars": 1514,
+    "stars": 1519,
     "url": "https://github.com/midudev/kings-league-project",
     "description": "API y website de la Kings League Infojobs por temas didácticos",
     "languages": [
@@ -59,7 +59,7 @@
   },
   {
     "name": "withastro/docs",
-    "stars": 629,
+    "stars": 647,
     "url": "https://github.com/withastro/docs",
     "description": "Astro documentation",
     "languages": [
@@ -72,7 +72,7 @@
   },
   {
     "name": "midudev/miduconf-website",
-    "stars": 433,
+    "stars": 432,
     "url": "https://github.com/midudev/miduconf-website",
     "description": "¡La conferencia de desarrollo y programación web!",
     "languages": [
@@ -85,7 +85,7 @@
   },
   {
     "name": "withastro/astro.build",
-    "stars": 191,
+    "stars": 194,
     "url": "https://github.com/withastro/astro.build",
     "description": null,
     "languages": [
@@ -98,7 +98,7 @@
   },
   {
     "name": "solidjs/solid-docs-next",
-    "stars": 115,
+    "stars": 116,
     "url": "https://github.com/solidjs/solid-docs-next",
     "description": "Solid Docs, rehauled. Very much in progress",
     "languages": [
@@ -110,7 +110,7 @@
   },
   {
     "name": "stackblitz/ilovecodeflow.com",
-    "stars": 36,
+    "stars": 38,
     "url": "https://github.com/stackblitz/ilovecodeflow.com",
     "description": null,
     "languages": [
