@@ -1,6 +1,5 @@
 /** @type {import('tailwindcss').Config} */
 const defaultTheme = require("tailwindcss/defaultTheme");
-const colors = require("tailwindcss/colors");
 module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx,astro}"],
   theme: {
@@ -8,7 +7,7 @@ module.exports = {
       fontFamily: {
         sans: ["InterVariable", "Inter", ...defaultTheme.fontFamily.sans],
       },
-      typography: {
+      typography: (theme) => ({
         DEFAULT: {
           css: {
             "code::before": {
@@ -19,9 +18,9 @@ module.exports = {
             },
             "p, li": {
               code: {
-                backgroundColor: colors.neutral[800],
+                backgroundColor: theme("colors.neutral.200"),
                 border: "1px solid",
-                borderColor: colors.zinc[700],
+                borderColor: theme("colors.zinc.300"),
                 padding: "0.250rem 0.4rem",
                 borderRadius: "0.250rem",
                 fontWeight: "400",
@@ -29,7 +28,12 @@ module.exports = {
             },
           },
         },
-      },
+        dark: {
+          css: {
+            color: theme("colors.red.100"),
+          },
+        }
+      })
     },
   },
   plugins: [require("@tailwindcss/typography")],
