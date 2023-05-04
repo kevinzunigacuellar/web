@@ -46,12 +46,12 @@ const fullUpdatedDate = updatedDate?.toLocaleDateString("en", {
   <header class="flex flex-col mb-8">
     <time
       datetime={pubDate.toISOString()}
-      class="block text-center text-zinc-400 mb-4 text-sm sm:text-base"
+      class="block text-center dark:text-zinc-400 text-zinc-600 mb-4 text-sm sm:text-base"
     >
       {fullPubDate}
     </time>
     <h1
-      class="text-2xl sm:text-4xl mb-8 font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-blue-500 to-purple-500"
+      class="text-2xl sm:text-4xl mb-8 font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-teal-500 via-blue-500 to-purple-500"
     >
       {title}
     </h1>
@@ -68,10 +68,10 @@ const fullUpdatedDate = updatedDate?.toLocaleDateString("en", {
           height={40}
         />
       </div>
-      <p class="text-zinc-400 text-sm">
+      <p class="dark:text-zinc-400 text-zinc-700 text-sm">
         <span class="block font-semibold">{author}</span>
         <a
-          class="text-blue-400 focus:outline-none focus:underline hover:underline focus:font-medium hover:font-medium block"
+          class="dark:text-blue-400 text-blue-600 hover:underline block"
           href="https://twitter.com/kevinzunigacuel"
           target="_blank"
           rel="noopener noreferrer"
@@ -88,13 +88,13 @@ const fullUpdatedDate = updatedDate?.toLocaleDateString("en", {
   </header>
   {
     updatedDate && (
-      <div class="block text-blue-300 py-2 px-4 mb-6 rounded-md text-sm sm:text-base border border-blue-400 transition-all bg-blue-600/20">
+      <div class="block dark:text-blue-300 py-2 px-4 mb-6 rounded-md text-sm sm:text-base border border-blue-400 transition-all bg-blue-600/20">
         <span class="font-semibold">Last updated:</span> {fullUpdatedDate}
       </div>
     )
   }
   <article
-    class="prose prose-invert lg:prose-lg prose-code:text-zinc-300 prose-a:text-blue-400 max-w-none hover:prose-a:underline focus:prose-a:underline prose-a:no-underline prose-headings:text-teal-500 prose-img:rounded-lg"
+    class="prose dark:prose-invert lg:prose-lg dark:prose-code:text-zinc-300 dark:prose-a:text-blue-400 prose-a:text-blue-600 max-w-none hover:prose-a:underline focus:prose-a:underline prose-a:no-underline dark:prose-headings:text-teal-500 prose-img:rounded-lg"
   >
     <slot />
   </article>

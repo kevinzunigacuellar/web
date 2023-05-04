@@ -1,14 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 const defaultTheme = require("tailwindcss/defaultTheme");
-const colors = require("tailwindcss/colors");
 module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx,astro}"],
+  darkMode: "media",
   theme: {
     extend: {
       fontFamily: {
         sans: ["InterVariable", "Inter", ...defaultTheme.fontFamily.sans],
       },
-      typography: {
+      typography: (theme) => ({
         DEFAULT: {
           css: {
             "code::before": {
@@ -19,9 +19,9 @@ module.exports = {
             },
             "p, li": {
               code: {
-                backgroundColor: colors.neutral[800],
+                backgroundColor: theme("colors.neutral.200"),
                 border: "1px solid",
-                borderColor: colors.zinc[700],
+                borderColor: theme("colors.zinc.300"),
                 padding: "0.250rem 0.4rem",
                 borderRadius: "0.250rem",
                 fontWeight: "400",
@@ -29,7 +29,17 @@ module.exports = {
             },
           },
         },
-      },
+      invert: {
+        css: {
+          "p, li": {
+            code: {
+              backgroundColor: theme("colors.neutral.800"),
+              borderColor: theme("colors.zinc.700"),
+            },
+          },
+      }}
+
+      })
     },
   },
   plugins: [require("@tailwindcss/typography")],

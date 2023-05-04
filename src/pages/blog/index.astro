@@ -15,10 +15,10 @@ const description =
 
 <AppLayout title={title} description={description}>
   <Header title="Blog" />
-  <p class="max-w-prose mb-10 font-normal text-zinc-400 leading-relaxed">
+  <p class="max-w-prose mb-10 font-normal dark:text-zinc-400 text-zinc-600 leading-relaxed">
     {description}
   </p>
-  <ul class="flex flex-col gap-8 sm:border-l sm:border-zinc-800">
+  <ul class="flex flex-col gap-8 sm:border-l sm:dark:border-zinc-800 ">
     {
       posts.map((post) => (
         <BlogCard
