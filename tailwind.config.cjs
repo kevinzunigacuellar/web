@@ -28,11 +28,16 @@ module.exports = {
             },
           },
         },
-        dark: {
-          css: {
-            color: theme("colors.red.100"),
+      invert: {
+        css: {
+          "p, li": {
+            code: {
+              backgroundColor: theme("colors.neutral.800"),
+              borderColor: theme("colors.zinc.700"),
+            },
           },
-        }
+      }}
+
       })
     },
   },
