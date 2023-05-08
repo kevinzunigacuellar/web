@@ -21,7 +21,7 @@
   },
   {
     "name": "withastro/astro",
-    "stars": 29941,
+    "stars": 30126,
     "url": "https://github.com/withastro/astro",
     "description": "The all-in-one web framework designed for speed. ⭐️ Star to support our work!",
     "languages": [
@@ -34,7 +34,7 @@
   },
   {
     "name": "vuejs/vitepress",
-    "stars": 7507,
+    "stars": 7562,
     "url": "https://github.com/vuejs/vitepress",
     "description": "Vite & Vue powered static site generator.",
     "languages": [
@@ -47,7 +47,7 @@
   },
   {
     "name": "midudev/kings-league-project",
-    "stars": 1518,
+    "stars": 1524,
     "url": "https://github.com/midudev/kings-league-project",
     "description": "API y website de la Kings League Infojobs por temas didácticos",
     "languages": [
@@ -59,7 +59,7 @@
   },
   {
     "name": "withastro/docs",
-    "stars": 659,
+    "stars": 675,
     "url": "https://github.com/withastro/docs",
     "description": "Astro documentation",
     "languages": [
@@ -85,7 +85,7 @@
   },
   {
     "name": "withastro/astro.build",
-    "stars": 195,
+    "stars": 197,
     "url": "https://github.com/withastro/astro.build",
     "description": null,
     "languages": [
@@ -122,7 +122,7 @@
   },
   {
     "name": "stackblitz/docs",
-    "stars": 21,
+    "stars": 22,
     "url": "https://github.com/stackblitz/docs",
     "description": "New StackBlitz docs site built with VitePress",
     "languages": [
