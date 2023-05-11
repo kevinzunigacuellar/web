@@ -4,7 +4,7 @@ import image from "@astrojs/image";
 import sitemap from "@astrojs/sitemap";
 import mdx from "@astrojs/mdx";
 import codeTitle from "remark-code-title";
-import fs from "node:fs";
+import { readFileSync } from "node:fs";
 
 // https://astro.build/config
 export default defineConfig({
@@ -30,7 +30,7 @@ function rawFonts(ext: string[]) {
     name: "vite-plugin-raw-fonts",
     transform(_, id) {
       if (ext.some((e) => id.endsWith(e))) {
-        const buffer = fs.readFileSync(id);
+        const buffer = readFileSync(id);
         return {
           code: `export default ${JSON.stringify(buffer)}`,
           map: null,
