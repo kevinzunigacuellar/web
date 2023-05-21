@@ -19,7 +19,8 @@ const { Content } = await post.render();
 <BlogLayout
   title={frontmatter.title}
   pubDate={frontmatter.pubDate}
-  image={frontmatter.image}
+  image={frontmatter.hero}
+  imageAlt={frontmatter.heroAlt}
   description={frontmatter.description}
   url={post.slug}
   updatedDate={frontmatter.updatedDate}

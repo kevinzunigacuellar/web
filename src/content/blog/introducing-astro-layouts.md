@@ -2,9 +2,8 @@
 title: Introducing astro-layouts, my first npm package
 description: I wrote and published my first npm package "astro-layouts". Here some details about how I got the idea and how it works
 pubDate: 2022-11-20
-image:
-  src: "astro_npm.png"
-  alt: "The logo of Astro and npm"
+hero: "./astro_npm.png"
+heroAlt: "The logo of Astro and npm"
 ---
 
 Today I am excited to announce my first npm package `astro-layouts`. It injects a layout property into MD and MDX files frontmatter. This allows users to use layouts in Astro without having to define them for each page in the frontmatter.

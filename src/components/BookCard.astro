@@ -1,10 +1,10 @@
 ---
 import Badge from "@components/Badge.astro";
-import { Picture } from "@astrojs/image/components";
+import { Image } from 'astro:assets'
 
 interface Props {
   title: string;
-  img: string;
+  img: any;
   author: string;
   year: number;
   comment: string;
@@ -24,17 +24,14 @@ const {
 
 <li class="list-none w-full">
   <article class="sm:flex sm:gap-10">
-    <div class="overflow-hidden rounded-lg sm:w-48">
-      <Picture
+    <div class="overflow-hidden rounded-lg sm:w-60">
+      <Image
         src={img}
         alt={title}
-        widths={[400, 600, 800, 1200]}
-        aspectRatio={5 / 7}
-        sizes="(max-width: 640px) 90vw, 192px"
+        width={500}
+        height={750}
         loading={loading}
-        width={143}
-        height={200}
-        class="w-full sm:w-48"
+        class="w-full"
       />
     </div>
     <div class="w-full pt-6 sm:py-0">

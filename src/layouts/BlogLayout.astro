@@ -1,25 +1,22 @@
 ---
 import AppLayout from "@layouts/AppLayout.astro";
 import Pagination from "@components/Pagination.astro";
-import { Picture } from "@astrojs/image/components";
-import authorImage from "@images/me.jpeg";
+import { Image } from "astro:assets";
+import authorImage from "../assets/me.jpeg";
 import "@styles/syntaxHighlight.css";
-import BlogImage from "@components/BlogImage.astro";
 import { author, twitter } from "@data/socials";
 
 interface Props {
   title: string;
   description: string;
-  image: {
-    src?: string;
-    alt?: string;
-  };
+  image: any;
+  imageAlt: string;
   pubDate: Date;
   url: string;
   updatedDate?: Date;
 }
 
-const { title, description, image, pubDate, url, updatedDate } = Astro.props;
+const { title, description, image, imageAlt, pubDate, url, updatedDate } = Astro.props;
 
 const ogImage = {
   src: `/image/${url}.png`,
@@ -57,15 +54,13 @@ const fullUpdatedDate = updatedDate?.toLocaleDateString("en", {
     </h1>
     <div class="inline-flex gap-2 justify-center items-center mb-8">
       <div class="aspect-square rounded-full overflow-hidden">
-        <Picture
+        <Image
           src={authorImage}
           alt="Image of the author"
-          aspectRatio="1:1"
-          widths={[40, 80, 120]}
           loading="eager"
-          sizes="40px"
-          width={40}
-          height={40}
+          class="aspect-square w-10"
+          width={80}
+          height={80}
         />
       </div>
       <p class="dark:text-zinc-400 text-zinc-700 text-sm">
@@ -79,11 +74,13 @@ const fullUpdatedDate = updatedDate?.toLocaleDateString("en", {
         </a>
       </p>
     </div>
-    <BlogImage
-      src={`/static/${image.src}`}
-      alt={image.alt}
+    <Image 
+      src={image}
+      alt={imageAlt}
       loading="eager"
-      aspectRatio={1.91}
+      class="rounded-lg"
+      width={1200}
+      height={630}
     />
   </header>
   {

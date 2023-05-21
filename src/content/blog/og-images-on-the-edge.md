@@ -3,11 +3,9 @@ title: Generate OG images on the edge with Netlify
 description: In this guide, you will learn how to generate open graph images on the edge using Netlify edge functions, deno, and Astro
 pubDate: 2022-11-05
 updatedDate: 2023-03-13
-image: 
-  src: "astro_netlify_hero.png"
-  alt: "The logo of Astro and Netlify"
+hero: "./astro_netlify.png"
+heroAlt: "The logo of Astro and Netlify"
 ---
-import BlogImage from "@components/BlogImage.astro"
 
 In October 2022, Vercel open sourced their new library [Satori](https://github.com/vercel/satori) which allows users to generate SVGs on the edge using React. This released a lot of potential for generating customizable images faster than ever before.
 
@@ -118,7 +116,7 @@ This will start a local development server on [localhost:8888](http://localhost:
 
 To test the edge function, navigate to [localhost:8888/og-image?title=Hello%20World&pubDate=2022-11-05](http://localhost:8888/og-image?title=Hello%20World&pubDate=2022-11-05) in your browser. You should see the following image.
 
-<BlogImage src={import("../../images/blank-og.png")} alt="Blank example of an og image" aspectRatio={1.91} />
+![Blank example of an og image](../../assets/blank-og.png)
 
 ## Creativity is the limit
 
@@ -126,4 +124,4 @@ From this point forward, you can customize the image to your liking. Feel free a
 
 If you are in need of inspiration, here is the open graph image I generated for this post.
 
-<BlogImage src={import("../../images/example-og.png")} alt="OG image for this blog post" aspectRatio={1.91} />
+![OG image for this blog post](../../assets/example-og.png)
