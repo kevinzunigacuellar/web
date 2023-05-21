@@ -1,4 +1,4 @@
-import { defineConfig } from "astro/config";
+import { defineConfig, sharpImageService } from "astro/config";
 import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
 import mdx from "@astrojs/mdx";
@@ -10,6 +10,9 @@ export default defineConfig({
   integrations: [tailwind(), sitemap(), mdx()],
   experimental: {
     assets: true,
+  },
+  image: {
+    service: sharpImageService(),
   },
   site: "https://www.kevinzunigacuellar.com",
   markdown: {
