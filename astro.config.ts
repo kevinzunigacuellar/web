@@ -14,6 +14,7 @@ export default defineConfig({
   image: {
     service: sharpImageService(),
   },
+  compressHTML: true,
   site: "https://www.kevinzunigacuellar.com",
   markdown: {
     remarkPlugins: [codeTitle],
