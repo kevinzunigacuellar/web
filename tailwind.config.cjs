@@ -29,17 +29,17 @@ module.exports = {
             },
           },
         },
-      invert: {
-        css: {
-          "p, li": {
-            code: {
-              backgroundColor: theme("colors.neutral.800"),
-              borderColor: theme("colors.zinc.700"),
+        invert: {
+          css: {
+            "p, li": {
+              code: {
+                backgroundColor: theme("colors.neutral.800"),
+                borderColor: theme("colors.zinc.700"),
+              },
             },
           },
-      }}
-
-      })
+        },
+      }),
     },
   },
   plugins: [require("@tailwindcss/typography")],
