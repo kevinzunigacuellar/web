@@ -100,9 +100,9 @@ export async function getStaticPaths() {
         slug: post.slug,
       },
       props: {
-        title : post.data.title,
-        pubDate: post.data.updatedDate || post.data.pubDate
-      }
+        title: post.data.title,
+        pubDate: post.data.updatedDate || post.data.pubDate,
+      },
     };
   });
   return paths;

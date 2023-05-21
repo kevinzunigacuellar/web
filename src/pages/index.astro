@@ -1,6 +1,6 @@
 ---
 import AppLayout from "@layouts/AppLayout.astro";
-import { Image } from 'astro:assets'
+import { Image } from "astro:assets";
 import authorImage from "../assets/me.jpeg";
 import technologies from "@data/technologies.json";
 import Skill from "@components/Skill.astro";
@@ -18,7 +18,9 @@ import { author } from "@data/socials";
       height={320}
     />
     <div class="mt-8 max-w-lg 2xl:max-w-xl sm:my-0 sm:order-first">
-      <h1 class="mb-2 text-3xl font-bold tracking-tight dark:text-white text-zinc-900 sm:text-4xl">
+      <h1
+        class="mb-2 text-3xl font-bold tracking-tight dark:text-white text-zinc-900 sm:text-4xl"
+      >
         {author}
       </h1>
       <p class="mb-4 dark:text-zinc-300 text-zinc-700">
@@ -26,8 +28,7 @@ import { author } from "@data/socials";
           href="https://twitter.com/astrodotbuild"
           target="_blank"
           rel="noopener noreferrer"
-          class="dark:text-teal-400 text-blue-600 underline"
-          >@astrodotbuild</a
+          class="dark:text-teal-400 text-blue-600 underline">@astrodotbuild</a
         > Maintainer
       </p>
       <p
@@ -46,13 +47,15 @@ import { author } from "@data/socials";
     >
       Favorite technologies
     </h2>
-    <p class="max-w-prose mb-8 font-normal dark:text-zinc-400 text-zinc-600 leading-relaxed">
+    <p
+      class="max-w-prose mb-8 font-normal dark:text-zinc-400 text-zinc-600 leading-relaxed"
+    >
       I love exploring new libraries, programing languages and frameworks. Here
       is a list of technologies that I have worked with at school, side projects
       and open source.
     </p>
     <ul class="grid grid-cols-1 gap-4 sm:grid-cols-2">
-      {technologies.map((tech) => (<Skill text={tech.text} logo={tech.logo}/>))}
+      {technologies.map((tech) => <Skill text={tech.text} logo={tech.logo} />)}
     </ul>
   </section>
 </AppLayout>

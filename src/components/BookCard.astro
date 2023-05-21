@@ -1,6 +1,6 @@
 ---
 import Badge from "@components/Badge.astro";
-import { Image } from 'astro:assets'
+import { Image } from "astro:assets";
 
 interface Props {
   title: string;
@@ -35,7 +35,9 @@ const {
       />
     </div>
     <div class="w-full pt-6 sm:py-0">
-      <h2 class="mb-1 space-x-2 text-xl font-semibold dark:text-white text-zinc-700">
+      <h2
+        class="mb-1 space-x-2 text-xl font-semibold dark:text-white text-zinc-700"
+      >
         {title}
       </h2>
       <div class="mb-2 flex flex-col gap-2 sm:flex-row sm:items-baseline">
@@ -46,7 +48,9 @@ const {
         </p>
         {reading && <Badge text="reading" color="indigo" />}
       </div>
-      <p class="py-1 dark:text-zinc-400 text-zinc-600 leading-relaxed">{`"${comment}"`}</p>
+      <p class="py-1 dark:text-zinc-400 text-zinc-600 leading-relaxed">
+        {`"${comment}"`}
+      </p>
     </div>
   </article>
 </li>
