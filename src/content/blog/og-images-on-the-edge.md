@@ -3,7 +3,7 @@ title: Generate OG images on the edge with Netlify
 description: In this guide, you will learn how to generate open graph images on the edge using Netlify edge functions, deno, and Astro
 pubDate: 2022-11-05
 updatedDate: 2023-03-13
-hero: "./astro_netlify.png"
+hero: "./images/astro_netlify.png"
 heroAlt: "The logo of Astro and Netlify"
 ---
 

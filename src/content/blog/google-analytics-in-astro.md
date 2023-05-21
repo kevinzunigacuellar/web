@@ -3,7 +3,7 @@ title: Add google analytics to Astro with Partytown
 description: In this guide, you will learn how to add google analytics to Astro without blocking the main thread using the partytown integration
 pubDate: 2022-05-12
 updatedDate: 2023-03-13
-hero: "./astro_ga.png"
+hero: "./images/astro_ga.png"
 heroAlt: "Logo of Astro, partytown and google analytics together"
 ---
 
