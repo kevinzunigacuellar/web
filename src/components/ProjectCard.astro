@@ -4,9 +4,9 @@ import { Icon } from "astro-icon";
 
 interface Props {
   name: string;
-  role: "author" | "contributor" | "maintainer" | string;
+  role: "author" | "contributor" | "maintainer";
   url: string;
-  description?: string;
+  description: string | null;
   stars: number;
   languages: string[];
 }
@@ -15,7 +15,7 @@ const colors = {
   maintainer: "gradient-pink",
   author: "gradient-indigo",
   contributor: "green",
-};
+} as const;
 
 const { name, role, url, description, stars, languages } = Astro.props;
 ---

@@ -8,8 +8,8 @@ interface Props {
   author: string;
   year: number;
   comment: string;
-  reading?: boolean;
-  loading?: "lazy" | "eager";
+  reading: boolean | undefined;
+  loading: "eager" | undefined;
 }
 const {
   title,

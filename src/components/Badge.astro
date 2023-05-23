@@ -1,7 +1,7 @@
 ---
 interface Props {
   text: string;
-  color: keyof typeof colors | string;
+  color: keyof typeof colors;
 }
 const { text, color } = Astro.props;
 const colors = {
@@ -17,7 +17,7 @@ const colors = {
     "bg-gradient-to-r dark:from-blue-600 from-blue-500 dark:to-purple-600 to-purple-500 text-white ",
   "gradient-pink":
     "bg-gradient-to-r dark:from-fuchsia-600 from-fuchsia-500 to-pink-500 dark:to-pink-600 text-white",
-};
+} as const;
 ---
 
 <span

@@ -14,7 +14,7 @@ export const books = [
     img: understandingDisSys,
     year: 2022,
     reading: true,
-    loading: "eager",
+    loading: "eager" as const,
   },
   {
     title: "Computer Science Distilled",

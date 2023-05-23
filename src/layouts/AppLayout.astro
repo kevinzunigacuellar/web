@@ -27,7 +27,7 @@ const {
   title = defaultMeta.title,
   description = defaultMeta.description,
   ogImage = defaultMeta.ogImage,
-  pubDate = "",
+  pubDate,
 } = Astro.props;
 
 const ogImageURL = new URL(ogImage.src, Astro.site).href;

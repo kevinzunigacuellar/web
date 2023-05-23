@@ -1,8 +1,19 @@
 ---
 import AppLayout from "@layouts/AppLayout.astro";
 import Header from "@components/Header.astro";
-import openSourceContributions from "@data/contributions.json";
+import data from "@data/contributions.json";
 import ProjectCard from "@components/ProjectCard.astro";
+
+interface Project {
+  name: string;
+  description: string;
+  stars: number;
+  role: "author" | "contributor" | "maintainer";
+  url: string;
+  languages: string[];
+}
+
+const openSourceContributions = data as Project[];
 
 openSourceContributions.sort((a, b) => {
   if (a.role === "maintainer" && b.role !== "maintainer") {
