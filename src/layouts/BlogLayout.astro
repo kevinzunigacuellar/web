@@ -9,11 +9,11 @@ import { author, twitter } from "@data/socials";
 interface Props {
   title: string;
   description: string;
-  image: any;
+  image: ImageMetadata;
   imageAlt: string;
   pubDate: Date;
   url: string;
-  updatedDate?: Date;
+  updatedDate: Date | undefined;
 }
 
 const { title, description, image, imageAlt, pubDate, url, updatedDate } =

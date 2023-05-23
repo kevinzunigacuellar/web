@@ -4,7 +4,7 @@ import { Resvg } from "@resvg/resvg-js";
 import InterRegular from "@fontsource/inter/files/inter-latin-400-normal.woff";
 import InterBold from "@fontsource/inter/files/inter-latin-700-normal.woff";
 import { getCollection } from "astro:content";
-import { APIContext } from "astro";
+import type { APIContext } from "astro";
 
 const dimensions = {
   width: 1200,
