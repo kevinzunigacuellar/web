@@ -1,4 +1,4 @@
-import fs from "node:fs/promises";
+import { writeFile } from "node:fs/promises";
 import { Octokit } from "@octokit/core";
 
 interface GQLResponse {
@@ -50,14 +50,14 @@ const octokit = new Octokit({
   auth: process.env.GITHUB_TOKEN,
 });
 
-const response = (await octokit.graphql(graphqlQuery, {
+const response = await octokit.graphql(graphqlQuery, {
   login: GITHUB_USERNAME,
-})) as GQLResponse;
+});
 
 const maintainerRepos = new Set(["withastro/docs"]);
 const projects = new Set(["remark-code-title", "astro-layouts"]);
 
-let authoredProjects = await Promise.all(
+const authoredProjects = await Promise.all(
   Array.from(projects).map(async (repo) => {
     const { data } = await octokit.request("GET /repos/{owner}/{repo}", {
       owner: GITHUB_USERNAME,
@@ -74,7 +74,9 @@ let authoredProjects = await Promise.all(
   })
 );
 
-const contributions = response.viewer.repositoriesContributedTo.nodes
+const contributions = (
+  response as GQLResponse
+).viewer.repositoriesContributedTo.nodes
   // Filter out repos with only one language
   .filter((repo) => repo.languages.nodes.length > 1)
   .map((repo) => {
@@ -93,7 +95,7 @@ const contributions = response.viewer.repositoriesContributedTo.nodes
 const allProjects = authoredProjects.concat(contributions);
 
 try {
-  await fs.writeFile(
+  await writeFile(
     "./src/data/contributions.json",
     JSON.stringify(allProjects, null, 2)
   );

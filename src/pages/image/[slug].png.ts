@@ -11,8 +11,13 @@ const dimensions = {
   height: 630,
 };
 
+interface Props {
+  title: string;
+  pubDate: Date;
+}
+
 export async function get(context: APIContext) {
-  const { title, pubDate } = context.props;
+  const { title, pubDate } = context.props as Props;
   const date = pubDate.toLocaleDateString("en-US", {
     dateStyle: "full",
   });
