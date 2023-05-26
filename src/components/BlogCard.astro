@@ -23,7 +23,10 @@ const fullDate = pubDate.toLocaleDateString("en", {
     class="block text-sm tracking-wide dark:text-zinc-400 text-zinc-600"
     >{fullDate}
   </time>
-  <a class="text-lg before:absolute before:inset-0 font-semibold dark:text-zinc-100 text-zinc-700" href={url}>
+  <a
+    class="text-lg before:absolute before:inset-0 font-semibold dark:text-zinc-100 text-zinc-700"
+    href={url}
+  >
     {title}
   </a>
   <p class="leading-relaxed max-w-prose">{description}</p>
