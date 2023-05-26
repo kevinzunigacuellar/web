@@ -7,6 +7,7 @@ interface Props {
 }
 
 const { title, description, pubDate, url } = Astro.props;
+
 const fullDate = pubDate.toLocaleDateString("en", {
   year: "numeric",
   month: "long",
@@ -15,25 +16,15 @@ const fullDate = pubDate.toLocaleDateString("en", {
 ---
 
 <li
-  class="grid grid-cols-1 gap-2 sm:grid-cols-4 dark:text-zinc-400 text-zinc-600"
+  class="relative dark:text-zinc-400 text-zinc-600 flex flex-col gap-2 sm:gap-3 sm:p-5 dark:sm:hover:bg-zinc-800 sm:hover:bg-zinc-200 transition-colors"
 >
   <time
     datetime={pubDate.toISOString()}
-    class="hidden sm:block text-sm tracking-wide dark:text-zinc-400 text-zinc-600 mt-6 sm:ml-6"
+    class="block text-sm tracking-wide dark:text-zinc-400 text-zinc-600"
     >{fullDate}
   </time>
-  <a
-    class="col-span-3 flex flex-col gap-2 sm:gap-4 sm:p-5 dark:sm:hover:bg-zinc-800 sm:hover:bg-zinc-200 transition-colors rounded-lg"
-    href={url}
-  >
-    <time
-      datetime={pubDate.toISOString()}
-      class="block sm:hidden text-sm tracking-wide dark:text-zinc-400 text-zinc-600"
-      >{fullDate}
-    </time>
-    <h2 class="text-lg font-semibold dark:text-zinc-100 text-zinc-700">
-      {title}
-    </h2>
-    <p class="leading-relaxed max-w-prose">{description}</p>
+  <a class="text-lg before:absolute before:inset-0 font-semibold dark:text-zinc-100 text-zinc-700" href={url}>
+    {title}
   </a>
+  <p class="leading-relaxed max-w-prose">{description}</p>
 </li>
