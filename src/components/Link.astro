@@ -19,10 +19,11 @@ if (!href) {
 
 <a
   class:list={[
-    "font-semibold text-sm py-2.5 px-3 dark:hover:bg-zinc-700/50 hover:bg-zinc-100",
+    "font-semibold text-sm block py-2.5 px-3 dark:hover:bg-zinc-700/50 hover:bg-zinc-100",
     { "dark:text-teal-400 text-blue-600": isActive },
     { "dark:text-zinc-200 text-zinc-600": !isActive },
   ]}
+  aria-current={isActive ? "page" : undefined}
   href={href}
   {...props}
   aria-label={`Go to ${text} page`}
