@@ -16,3 +16,9 @@ const { text, logo } = Astro.props;
   </span>
   <span class="dark:text-zinc-400 text-zinc-600">{text}</span>
 </li>
+
+<style is:global>
+  [astro-icon="simple-icons:astro"] {
+    @apply dark:text-white;
+  }
+</style>
