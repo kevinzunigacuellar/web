@@ -11,7 +11,7 @@
   },
   {
     "name": "astro-layouts",
-    "stars": 24,
+    "stars": 23,
     "url": "https://github.com/kevinzunigacuellar/astro-layouts",
     "description": "🔌 remark plugin to add folder-based layouts in Astro",
     "languages": [
@@ -21,7 +21,7 @@
   },
   {
     "name": "withastro/astro",
-    "stars": 30498,
+    "stars": 30667,
     "url": "https://github.com/withastro/astro",
     "description": "The all-in-one web framework designed for speed. ⭐️ Star to support our work!",
     "languages": [
@@ -34,7 +34,7 @@
   },
   {
     "name": "vuejs/vitepress",
-    "stars": 7689,
+    "stars": 7766,
     "url": "https://github.com/vuejs/vitepress",
     "description": "Vite & Vue powered static site generator.",
     "languages": [
@@ -47,7 +47,7 @@
   },
   {
     "name": "midudev/kings-league-project",
-    "stars": 1550,
+    "stars": 1547,
     "url": "https://github.com/midudev/kings-league-project",
     "description": "API y website de la Kings League Infojobs por temas didácticos",
     "languages": [
@@ -59,7 +59,7 @@
   },
   {
     "name": "withastro/docs",
-    "stars": 701,
+    "stars": 709,
     "url": "https://github.com/withastro/docs",
     "description": "Astro documentation",
     "languages": [
@@ -72,7 +72,7 @@
   },
   {
     "name": "midudev/miduconf-website",
-    "stars": 435,
+    "stars": 434,
     "url": "https://github.com/midudev/miduconf-website",
     "description": "¡La conferencia de desarrollo y programación web!",
     "languages": [
@@ -85,7 +85,7 @@
   },
   {
     "name": "withastro/astro.build",
-    "stars": 197,
+    "stars": 199,
     "url": "https://github.com/withastro/astro.build",
     "description": null,
     "languages": [
@@ -98,7 +98,7 @@
   },
   {
     "name": "solidjs/solid-docs-next",
-    "stars": 118,
+    "stars": 121,
     "url": "https://github.com/solidjs/solid-docs-next",
     "description": "Solid Docs, rehauled. Very much in progress",
     "languages": [
@@ -110,7 +110,7 @@
   },
   {
     "name": "stackblitz/ilovecodeflow.com",
-    "stars": 37,
+    "stars": 38,
     "url": "https://github.com/stackblitz/ilovecodeflow.com",
     "description": null,
     "languages": [
@@ -122,7 +122,7 @@
   },
   {
     "name": "stackblitz/docs",
-    "stars": 24,
+    "stars": 23,
     "url": "https://github.com/stackblitz/docs",
     "description": "New StackBlitz docs site built with VitePress",
     "languages": [
@@ -134,7 +134,7 @@
   },
   {
     "name": "OpenContributionsProject/opencontributionssite",
-    "stars": 18,
+    "stars": 19,
     "url": "https://github.com/OpenContributionsProject/opencontributionssite",
     "description": "A resource to help advocate for and explain corporate contributions to open source.",
     "languages": [
@@ -142,17 +142,6 @@
       "CSS",
       "JavaScript",
       "Shell"
-    ],
-    "role": "contributor"
-  },
-  {
-    "name": "goncy/adopcanem",
-    "stars": 18,
-    "url": "https://github.com/goncy/adopcanem",
-    "description": "Proyecto gratis, hecho en comunidad.",
-    "languages": [
-      "TypeScript",
-      "JavaScript"
     ],
     "role": "contributor"
   },
