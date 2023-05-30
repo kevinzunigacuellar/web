@@ -40,7 +40,7 @@ const fullUpdatedDate = updatedDate?.toLocaleDateString("en", {
   title={title}
   description={description}
   ogImage={ogImage}
-  pubDate={updatedDate || pubDate}
+  pubDate={updatedDate ?? pubDate}
 >
   <header class="flex flex-col mb-8">
     <time

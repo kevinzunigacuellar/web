@@ -14,15 +14,19 @@ module.exports = {
         parser: "@typescript-eslint/parser",
         extraFileExtensions: [".astro"],
       },
+      extends: ["plugin:@typescript-eslint/strict"],
+    },
+    {
+      files: ["*.ts", "*.tsx"],
+      extends: [
+        "plugin:@typescript-eslint/recommended-requiring-type-checking",
+        "plugin:@typescript-eslint/strict",
+      ],
     },
   ],
   extends: [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "plugin:astro/recommended",
   ],
-  rules: {
-    "@typescript-eslint/no-unsafe-return": "off",
-  },
 };

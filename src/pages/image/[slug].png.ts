@@ -106,7 +106,7 @@ export async function getStaticPaths() {
       },
       props: {
         title: post.data.title,
-        pubDate: post.data.updatedDate || post.data.pubDate,
+        pubDate: post.data.updatedDate ?? post.data.pubDate,
       },
     };
   });
