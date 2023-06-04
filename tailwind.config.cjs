@@ -17,25 +17,21 @@ module.exports = {
             "code::after": {
               content: '""',
             },
-            "p, li": {
-              code: {
-                backgroundColor: theme("colors.neutral.200"),
-                border: "1px solid",
-                borderColor: theme("colors.zinc.300"),
-                padding: "0.250rem 0.4rem",
-                borderRadius: "0.250rem",
-                fontWeight: "400",
-              },
+            ":not(pre) > code": {
+              backgroundColor: theme("colors.neutral.200"),
+              border: "1px solid",
+              borderColor: theme("colors.zinc.300"),
+              padding: "0.250rem 0.4rem",
+              borderRadius: "0.250rem",
+              fontWeight: "400",
             },
           },
         },
         invert: {
           css: {
-            "p, li": {
-              code: {
-                backgroundColor: theme("colors.neutral.800"),
-                borderColor: theme("colors.zinc.700"),
-              },
+            ":not(pre) > code": {
+              backgroundColor: theme("colors.neutral.800"),
+              borderColor: theme("colors.zinc.700"),
             },
           },
         },
