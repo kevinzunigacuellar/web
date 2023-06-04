@@ -1,13 +1,12 @@
 import { defineConfig, sharpImageService } from "astro/config";
 import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
-import mdx from "@astrojs/mdx";
 import codeTitle from "remark-code-title";
 import { readFileSync } from "node:fs";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), sitemap(), mdx()],
+  integrations: [tailwind(), sitemap()],
   experimental: {
     assets: true,
   },
