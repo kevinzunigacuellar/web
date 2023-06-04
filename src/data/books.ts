@@ -4,8 +4,18 @@ import refactoringUI from "../assets/books/refactoring-ui.jpg";
 import aprendiendoGit from "../assets/books/aprendiendo-git.png";
 import reactExplained from "../assets/books/react-explained.jpg";
 import understandingDisSys from "../assets/books/distributed_systems.jpeg";
+import learningTypeScript from "../assets/books/learning-ts.jpg";
 
 export const books = [
+  {
+    title: "Learning TypeScript",
+    author: "Josh Goldberg",
+    comment:
+      "Loved it! I learned a lot about TypeScript and how to use it in my projects. I highly recommend it.",
+    img: learningTypeScript,
+    year: 2022,
+    loading: "eager" as const,
+  },
   {
     title: "Understanding Distributed Systems",
     author: "Roberto Vitillo",
@@ -14,7 +24,6 @@ export const books = [
     img: understandingDisSys,
     year: 2022,
     reading: true,
-    loading: "eager" as const,
   },
   {
     title: "Computer Science Distilled",
@@ -23,7 +32,6 @@ export const books = [
       "So far loving this book, It illustrates the concepts of data structures and algorithms in a fun and easy way.",
     img: csDestilled,
     year: 2017,
-    reading: true,
   },
   {
     title: "Eloquent JavaScript",
