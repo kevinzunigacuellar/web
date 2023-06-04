@@ -1,7 +1,7 @@
 User-agent: Googlebot-Image
 Disallow: /_astro/
 
-User-Agent: *
+User-agent: *
 Allow: /
 
 Sitemap: https://kevinzunigacuellar.com/sitemap-index.xml
