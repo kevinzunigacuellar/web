@@ -2,32 +2,29 @@
 title: Add dark mode to Astro with Tailwind CSS
 description: In this guide, you will learn how to add perfect dark mode to your Astro project using Tailwind CSS and the prefers-color-scheme media query
 pubDate: 2022-05-04
-updatedDate: 2023-03-13
+updatedDate: 2023-06-04
 hero: "./images/astro_dark.png"
 heroAlt: "The logo of Astro and Tailwind CSS"
 ---
 
-A great way to make your website more accessible is to add dark mode. In this guide, we will learn how to implement perfect dark mode to your Astro project using TailwindCSS.
+Adding a dark mode to your website is a great way to improve accessibility. In this guide, we will learn how to implement a perfect dark mode in your Astro project using Tailwind CSS. You can use any framework you prefer, but we will be using Preact for the UI creation.
 
-To create the UI we will use preact but feel free to use any other framework of your preference.
+## Getting Started
 
-## 🧑‍💻 Getting started
-
-Start a new Astro project:
+To begin, create a new Astro project:
 
 ```sh
 npm create astro@latest
 ```
 
-Install the tailwindcss and preact integrations:
+Next, install the TailwindCSS and Preact integrations:
 
 ```sh
 npm install -D @astrojs/tailwind @astrojs/preact
-
 npm install preact
 ```
 
-Add both integrations to your `astro.config.mjs`
+Add both integrations to your `astro.config.mjs` file:
 
 ```js title="astro.config.mjs"
 import { defineConfig } from "astro/config";
@@ -39,11 +36,7 @@ export default defineConfig({
 });
 ```
 
-Create a minimal tailwind config file in the root of your project. 
-
-- Modify the `content` property to include all the files that contain your styles.
-
-- Modify the `darkMode` property to `class` to enable dark mode.
+Create a minimal TailwindCSS config file in the root of your project. Make sure to modify the `content` property to include all the files that contain your styles. Also, set the `darkMode` property to `"class"` to enable dark mode:
 
 ```js title="tailwind.config.cjs"
 module.exports = {
@@ -54,12 +47,11 @@ module.exports = {
 };
 ```
 
-## 👩‍🚀 Hands-on time
+## Hands-on Time
 
-Astro has a feature to add inline scripts directly to your astro files. These scripts will run as soon as the html is loaded; therefore, preventing the [_flash of inaccurate color theme_](https://css-tricks.com/flash-of-inaccurate-color-theme-fart/) which is a very common problem when implementing dark mode with hydration. You can read more about inline scripts in the [Astro documentation](https://docs.astro.build/en/reference/directives-reference/#isinline).
+Astro provides a feature to add inline scripts directly to your Astro files, which run as soon as the HTML is loaded. This prevents the "flash of inaccurate color theme" issue that commonly occurs when implementing dark mode with hydration. You can find more information about inline scripts in the [Astro documentation](https://docs.astro.build/en/reference/directives-reference/#isinline).
 
-The following code retrieves the user's prefered theme and adds it to the html element. Feel free to copy/paste or modify this code snippet into your astro project. We will go over every line of code in the next paragraph.
-
+The following code retrieves the user's preferred theme and applies it to the HTML element. You can copy/paste or modify this code snippet in your Astro project. We will explain each line of code in the next paragraph.
 
 ```astro title="Layout.astro"
 <script is:inline>
@@ -82,24 +74,16 @@ The following code retrieves the user's prefered theme and adds it to the html e
 </script>
 ```
 
-`theme` is an immediately invoked function expression (IIFE) that returns the current theme based on the user's preference. 
+The `theme` variable is an immediately invoked function expression (IIFE) that returns the current theme based on the user's preference. The first `if` statement checks if the user has a previously saved theme in localStorage. If so, it returns that theme. The second `if` statement checks if the user prefers dark mode based on their system settings. If so, it returns `"dark"`. If none of the conditions are met, it returns `"light"`. Once the theme is defined, we use it to add or remove the `"dark"` class from the HTML element and save the theme to localStorage.
 
-Inside theme, the first if statement checks if the user has a previously saved theme in localStorage. If so, it returns set theme.
+## Creating the UI
 
-The second if statement checks if the user prefers dark mode. If so, it returns `dark`.
-
-Finally, if none of the above conditions are met, it returns `light`.
-
-Now that we have a theme defined, we can use it to add or remove `dark` to the html element and save the theme to localStorage.
-
-## 💅 Making the UI
-
-In Astro you can use any UI framework of your choice. For this example, I decided to use **Preact** because of its small size and performance.
-
-The following code snippet renders a button to toggle between dark and light mode.
+In Astro, you can use any UI framework of your choice. For this example, we will use **Preact** due to its small size and performance. The following code snippet renders a button that toggles between dark and light mode:
 
 ```tsx title="ThemeToggle.tsx"
-import { useEffect, useState } from "preact/hooks";
+import { useEffect, useState
+
+ } from "preact/hooks";
 import type { FunctionalComponent } from "preact";
 
 export default function ThemeToggle(): FunctionalComponent {
@@ -124,31 +108,25 @@ export default function ThemeToggle(): FunctionalComponent {
 }
 ```
 
-## 🧑‍🔧 Rendering components on the server
+## Rendering Components on the Server
 
-Regardless of the UI framework you use if you are using SSG, Astro will render your UI components on the server at build time and hydrate them on the client. This is a great feature because it makes your website faster, more accessible and SEO friendly.
+Regardless of the UI framework you use, if you are using Static Site Generation (SSG), Astro will render your UI components on the server at build time and hydrate them on the client side. This feature improves website performance, accessibility, and SEO.
 
-However, this feature also comes with some tradeoffs. Because your components are rendered on the server, web APIs like `localStorage` or `window` are not available.
+However, this feature also has some trade-offs. Since components are rendered on the server, web APIs like `localStorage` or `window` are not available.
 
-### Fallback initial state
+### Fallback Initial State
 
-To get around this problem, we can add a fallback initial state that will be used at build time and then change to the correct state after hydration.
+To overcome this limitation, you can add a fallback initial state that will be used during build time and then updated to the correct state after hydration. For example:
 
 ```jsx
 const [theme, setTheme] = useState(localStorage.getItem("theme") ?? "light");
 ```
 
-The above code will try to get the theme from `localStorage` and if it's not available it will use `light` as the initial state.
+In the above code, we attempt to get the theme from `localStorage`, and if it's not available, we use `"light"` as the initial state. Using a fallback initial state is a common approach to solve this problem. However, it can lead to a "client/server state mismatch" issue, where the initial state differs from the state after hydration.
 
-Using a fallback initial state is the most common way to solve this problem. However, it creates a new problem called "client/server state missmatch." This problem happens when the initial state is different from the state after hydration.
+### Addressing the Client/Server Mismatch
 
-This is not a big problem but it can be annoying for users specially if the state change is noticeable.
-
-### Getting around client/server missmatch
-
-One way to get around client and server missmatch is to add a mounted state. This state will make your component render wait until it is mounted to the DOM. This way all the web APIs will be available and the initial state will be the same as the state after hydration.
-
-To implement this, we can use `useState` and `useEffect` hooks to create a mounted state. This will render a fallback UI or null until the component is mounted.
+One way to address the client/server mismatch is by adding a `mounted` state. This state ensures that your component's rendering waits until it is mounted to the DOM, making all the web APIs available and ensuring that the initial state matches the state after hydration. You can achieve this using the `useState` and `useEffect` hooks to create a mounted state. Here's an example:
 
 ```jsx title="ThemeToggle.tsx"
 const [isMounted, setIsMounted] = useState(false);
@@ -163,3 +141,5 @@ if (!isMounted) {
 
 return <button>{theme === "light" ? "🌙" : "🌞"}</button>;
 ```
+
+By checking the `isMounted` state, we can render a fallback UI or `null` until the component is mounted. Once it's mounted, the actual UI will be rendered.

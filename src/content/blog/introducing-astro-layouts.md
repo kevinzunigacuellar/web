@@ -2,25 +2,24 @@
 title: Introducing astro-layouts, my first npm package
 description: I wrote and published my first npm package "astro-layouts". Here some details about how I got the idea and how it works
 pubDate: 2022-11-20
+updatedDate: 2023-06-04
 hero: "./images/astro_npm.png"
 heroAlt: "The logo of Astro and npm"
 ---
 
-Today I am excited to announce my first npm package `astro-layouts`. It injects a layout property into MD and MDX files frontmatter. This allows users to use layouts in Astro without having to define them for each page in the frontmatter.
+I'm excited to announce my first npm package, `astro-layouts`. This package injects a layout property into MD and MDX files' frontmatter, making it easier to use layouts in Astro without the need to define them for each page in the frontmatter.
 
-## Idea and motivation
+## Idea and Motivation
 
-I got the idea for this package when I was helping people in the Astro Discord server. I noticed that a lot of people were struggling with defining layouts specially when they had a lot of pages. 
+I came up with the idea for this package while helping people in the Astro Discord server. I noticed that many users were struggling to define layouts, especially when dealing with numerous pages. To simplify the process, I decided to create a package that would allow them to define layouts from the Astro config file using glob patterns. With this approach, users could define a layout once and use it across multiple pages.
 
-I wanted to make it easier for them so I decided to create a package that would allow them to define layouts from the Astro config file using glob patters. This way, they could define a layout once and use it in all the pages that they wanted.
+## How It Works
 
-## How it works
-
-The package uses glob patterns to match the page with the layout. It then injects the layout property into the frontmatter of the page. It uses `picomatch` in the background to match the glob patterns.
+The package utilizes glob patterns to match pages with their respective layouts. It then injects the layout property into the frontmatter of each page. The package leverages `picomatch` in the background to perform the glob pattern matching.
 
 ## Installation
 
-To install the package, you can run the following command:
+To install the package, run the following command:
 
 ```bash
 npm install astro-layouts
@@ -28,7 +27,7 @@ npm install astro-layouts
 
 ## Usage
 
-To use the package, you need to add it to the Astro config file in the remark plugin section. 
+To use the package, add it to the Astro config file in the remark plugin section. Here's an example of an `astro.config.mjs` file:
 
 ```js title="astro.config.mjs"
 import { defineConfig } from "astro/config";
@@ -45,19 +44,16 @@ export default defineConfig({
 });
 ```
 
-The `layoutOptions` object is where you define the glob pattern and the layout that you want to use. 
+In the `layoutOptions` object, you define the glob pattern and the layout to be used. The `key` represents the glob pattern for selecting files, while the `value` represents the absolute path to the layout component.
 
-- The `key` is the glob pattern to the files you would like to select 
-- The `value` is the absolute path to the layout component.
+You can be as specific as needed with the glob patterns. Here are some examples:
 
-You can get as specific as you want with glob patterns. For example, you can use:
+- `pages/blog/**/*.md` matches all markdown files in the blog folder.
+- `pages/blog/**/*.mdx` matches all MDX files in the blog folder.
+- `pages/projects/*` matches all top-level files in the blog folder.
+- `pages/**/* matches` all files in the pages folder.
 
-- `pages/blog/**/*.md` to match all markdown files the pages in the blog folder.
-- `pages/blog/**/*.mdx` to match all MDX files the pages in the blog folder.
-- `pages/projects/*` to match all top level files in the blog folder.
-- `pages/**/*` to match all files in the pages folder.
-
-You can target any file in the `src` folder. For example, if you have your content in the `src/content` folder, you can use:
+You can target any file within the `src` folder. For instance, if your content resides in the src/markdown folder, you can use the following configuration:
 
 ```js
 const layoutOptions = {
@@ -65,7 +61,7 @@ const layoutOptions = {
 };
 ```
 
-If you have aliases defined in your `tsconfig.json` you can use them to make layout paths shorter.
+If you have aliases defined in your `tsconfig.json` file, you can use them to create shorter layout paths. Here's an example of a `tsconfig.json` file:
 
 ```json title="tsconfig.json"
 {
@@ -90,6 +86,6 @@ const layoutOptions = {
 
 ## Final thoughts
 
-I hope you find this package useful. If you have any questions or suggestions, feel free to raise an issue on [GitHub](https://github.com/kevinzunigacuellar/astro-layouts). I would apreciate any feedback. Also, if you like the package, please consider giving it a star. 
+I hope you find this package useful. If you have any questions or suggestions, feel free to raise an issue on [GitHub](https://github.com/kevinzunigacuellar/astro-layouts). I would appreciate any feedback. If you like the package, please consider giving it a star.
 
-I had a lot of fun writing this package. I learned a lot about how npm packages work and how to publish them. I'm excited to write more packages in the future. Thank you for reading 🥰!
+Writing this package was a lot of fun, and it provided me with valuable insights into the workings of npm packages and their publication process. I'm excited to create more packages in the future. Thank you for reading!
