@@ -1,7 +1,7 @@
 [
   {
     "name": "remark-code-title",
-    "stars": 7,
+    "stars": 9,
     "url": "https://github.com/kevinzunigacuellar/remark-code-title",
     "description": "🔌 remark plugin to add titles to code blocks",
     "languages": [
@@ -21,7 +21,7 @@
   },
   {
     "name": "withastro/astro",
-    "stars": 30667,
+    "stars": 30841,
     "url": "https://github.com/withastro/astro",
     "description": "The all-in-one web framework designed for speed. ⭐️ Star to support our work!",
     "languages": [
@@ -34,7 +34,7 @@
   },
   {
     "name": "vuejs/vitepress",
-    "stars": 7766,
+    "stars": 7824,
     "url": "https://github.com/vuejs/vitepress",
     "description": "Vite & Vue powered static site generator.",
     "languages": [
@@ -47,7 +47,7 @@
   },
   {
     "name": "midudev/kings-league-project",
-    "stars": 1547,
+    "stars": 1544,
     "url": "https://github.com/midudev/kings-league-project",
     "description": "API y website de la Kings League Infojobs por temas didácticos",
     "languages": [
@@ -59,7 +59,7 @@
   },
   {
     "name": "withastro/docs",
-    "stars": 709,
+    "stars": 720,
     "url": "https://github.com/withastro/docs",
     "description": "Astro documentation",
     "languages": [
@@ -84,8 +84,20 @@
     "role": "contributor"
   },
   {
+    "name": "withastro/starlight",
+    "stars": 270,
+    "url": "https://github.com/withastro/starlight",
+    "description": "🌟 Build beautiful, high-performance documentation websites with Astro",
+    "languages": [
+      "TypeScript",
+      "Astro",
+      "CSS"
+    ],
+    "role": "contributor"
+  },
+  {
     "name": "withastro/astro.build",
-    "stars": 199,
+    "stars": 201,
     "url": "https://github.com/withastro/astro.build",
     "description": null,
     "languages": [
@@ -134,7 +146,7 @@
   },
   {
     "name": "OpenContributionsProject/opencontributionssite",
-    "stars": 19,
+    "stars": 20,
     "url": "https://github.com/OpenContributionsProject/opencontributionssite",
     "description": "A resource to help advocate for and explain corporate contributions to open source.",
     "languages": [
