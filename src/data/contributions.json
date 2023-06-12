@@ -21,7 +21,7 @@
   },
   {
     "name": "withastro/astro",
-    "stars": 30841,
+    "stars": 31094,
     "url": "https://github.com/withastro/astro",
     "description": "The all-in-one web framework designed for speed. ⭐️ Star to support our work!",
     "languages": [
@@ -34,7 +34,7 @@
   },
   {
     "name": "vuejs/vitepress",
-    "stars": 7824,
+    "stars": 7881,
     "url": "https://github.com/vuejs/vitepress",
     "description": "Vite & Vue powered static site generator.",
     "languages": [
@@ -47,7 +47,7 @@
   },
   {
     "name": "midudev/kings-league-project",
-    "stars": 1544,
+    "stars": 1541,
     "url": "https://github.com/midudev/kings-league-project",
     "description": "API y website de la Kings League Infojobs por temas didácticos",
     "languages": [
@@ -59,7 +59,7 @@
   },
   {
     "name": "withastro/docs",
-    "stars": 720,
+    "stars": 737,
     "url": "https://github.com/withastro/docs",
     "description": "Astro documentation",
     "languages": [
@@ -69,6 +69,18 @@
       "CSS"
     ],
     "role": "maintainer"
+  },
+  {
+    "name": "withastro/starlight",
+    "stars": 650,
+    "url": "https://github.com/withastro/starlight",
+    "description": "🌟 Build beautiful, high-performance documentation websites with Astro",
+    "languages": [
+      "TypeScript",
+      "Astro",
+      "CSS"
+    ],
+    "role": "contributor"
   },
   {
     "name": "midudev/miduconf-website",
@@ -84,20 +96,8 @@
     "role": "contributor"
   },
   {
-    "name": "withastro/starlight",
-    "stars": 270,
-    "url": "https://github.com/withastro/starlight",
-    "description": "🌟 Build beautiful, high-performance documentation websites with Astro",
-    "languages": [
-      "TypeScript",
-      "Astro",
-      "CSS"
-    ],
-    "role": "contributor"
-  },
-  {
     "name": "withastro/astro.build",
-    "stars": 201,
+    "stars": 207,
     "url": "https://github.com/withastro/astro.build",
     "description": null,
     "languages": [
@@ -110,7 +110,7 @@
   },
   {
     "name": "solidjs/solid-docs-next",
-    "stars": 121,
+    "stars": 122,
     "url": "https://github.com/solidjs/solid-docs-next",
     "description": "Solid Docs, rehauled. Very much in progress",
     "languages": [
@@ -134,7 +134,7 @@
   },
   {
     "name": "stackblitz/docs",
-    "stars": 23,
+    "stars": 24,
     "url": "https://github.com/stackblitz/docs",
     "description": "New StackBlitz docs site built with VitePress",
     "languages": [
