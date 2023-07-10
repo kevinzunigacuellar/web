@@ -21,7 +21,7 @@
   },
   {
     "name": "withastro/astro",
-    "stars": 31575,
+    "stars": 31750,
     "url": "https://github.com/withastro/astro",
     "description": "The all-in-one web framework designed for speed. ⭐️ Star to support our work!",
     "languages": [
@@ -34,7 +34,7 @@
   },
   {
     "name": "vuejs/vitepress",
-    "stars": 8071,
+    "stars": 8120,
     "url": "https://github.com/vuejs/vitepress",
     "description": "Vite & Vue powered static site generator.",
     "languages": [
@@ -47,7 +47,7 @@
   },
   {
     "name": "midudev/kings-league-project",
-    "stars": 1537,
+    "stars": 1536,
     "url": "https://github.com/midudev/kings-league-project",
     "description": "API y website de la Kings League Infojobs por temas didácticos",
     "languages": [
@@ -59,7 +59,7 @@
   },
   {
     "name": "withastro/starlight",
-    "stars": 860,
+    "stars": 931,
     "url": "https://github.com/withastro/starlight",
     "description": "🌟 Build beautiful, high-performance documentation websites with Astro",
     "languages": [
@@ -72,7 +72,7 @@
   },
   {
     "name": "withastro/docs",
-    "stars": 762,
+    "stars": 772,
     "url": "https://github.com/withastro/docs",
     "description": "Astro documentation",
     "languages": [
@@ -85,7 +85,7 @@
   },
   {
     "name": "midudev/miduconf-website",
-    "stars": 433,
+    "stars": 438,
     "url": "https://github.com/midudev/miduconf-website",
     "description": "¡La conferencia de desarrollo y programación web!",
     "languages": [
@@ -98,7 +98,7 @@
   },
   {
     "name": "withastro/astro.build",
-    "stars": 217,
+    "stars": 218,
     "url": "https://github.com/withastro/astro.build",
     "description": null,
     "languages": [
@@ -161,7 +161,7 @@
   },
   {
     "name": "Duke-MatSci/materialsmine",
-    "stars": 6,
+    "stars": 5,
     "url": "https://github.com/Duke-MatSci/materialsmine",
     "description": "MaterialsMine App",
     "languages": [
