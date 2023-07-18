@@ -4,9 +4,16 @@ import sitemap from "@astrojs/sitemap";
 import { readFileSync } from "node:fs";
 import expressiveCode from "astro-expressive-code";
 
+/** @type {import('astro-expressive-code').AstroExpressiveCodeOptions} */
+const astroExpressiveCodeOptions = {
+  styleOverrides: {
+    codeFontSize: '1rem',
+  }
+}
+
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), sitemap(), expressiveCode()],
+  integrations: [tailwind(), sitemap(), expressiveCode(astroExpressiveCodeOptions)],
   experimental: {
     assets: true
   },
