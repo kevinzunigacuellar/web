@@ -25,11 +25,6 @@ export default defineConfig({
     inlineStylesheets: "auto"
   },
   site: "https://www.kevinzunigacuellar.com",
-  markdown: {
-    shikiConfig: {
-      theme: "dark-plus"
-    }
-  },
   vite: {
     plugins: [rawFonts([".ttf", ".woff"])],
     optimizeDeps: {
