@@ -25,7 +25,6 @@
     "eslint": "^8.45.0",
     "eslint-plugin-astro": "^0.27.2",
     "prettier-plugin-astro": "^0.11.0",
-    "remark-code-title": "^0.2.5",
     "satori": "^0.10.1",
     "satori-html": "^0.3.2",
     "sharp": "^0.32.3",
