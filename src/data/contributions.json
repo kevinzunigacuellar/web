@@ -21,7 +21,7 @@
   },
   {
     "name": "withastro/astro",
-    "stars": 31898,
+    "stars": 32085,
     "url": "https://github.com/withastro/astro",
     "description": "The all-in-one web framework designed for speed. ⭐️ Star to support our work!",
     "languages": [
@@ -34,7 +34,7 @@
   },
   {
     "name": "vuejs/vitepress",
-    "stars": 8176,
+    "stars": 8250,
     "url": "https://github.com/vuejs/vitepress",
     "description": "Vite & Vue powered static site generator.",
     "languages": [
@@ -59,7 +59,7 @@
   },
   {
     "name": "withastro/starlight",
-    "stars": 993,
+    "stars": 1033,
     "url": "https://github.com/withastro/starlight",
     "description": "🌟 Build beautiful, high-performance documentation websites with Astro",
     "languages": [
@@ -72,7 +72,7 @@
   },
   {
     "name": "withastro/docs",
-    "stars": 782,
+    "stars": 799,
     "url": "https://github.com/withastro/docs",
     "description": "Astro documentation",
     "languages": [
@@ -110,7 +110,7 @@
   },
   {
     "name": "stackblitz/docs",
-    "stars": 26,
+    "stars": 27,
     "url": "https://github.com/stackblitz/docs",
     "description": "New StackBlitz docs site built with VitePress",
     "languages": [
@@ -122,7 +122,7 @@
   },
   {
     "name": "OpenContributionsProject/opencontributionssite",
-    "stars": 21,
+    "stars": 22,
     "url": "https://github.com/OpenContributionsProject/opencontributionssite",
     "description": "A resource to help advocate for and explain corporate contributions to open source.",
     "languages": [
