@@ -55,9 +55,6 @@ devDependencies:
   prettier-plugin-astro:
     specifier: ^0.11.0
     version: 0.11.0
-  remark-code-title:
-    specifier: ^0.2.5
-    version: 0.2.5
   satori:
     specifier: ^0.10.1
     version: 0.10.1
@@ -3849,12 +3846,6 @@ packages:
       rehype-parse: 8.0.4
       rehype-stringify: 9.0.3
       unified: 10.1.2
-
-  /remark-code-title@0.2.5:
-    resolution: {integrity: sha512-6tIhdZdECMM0EQk3eDFxUQn/97VKKmo7JkCwfg/mkJaZZBwH+cbP0UDRslOqqzLcueakPZ8q7Gtj5KtGB/jufw==}
-    dependencies:
-      unist-util-visit: 4.1.2
-    dev: true
 
   /remark-expressive-code@0.18.1:
     resolution: {integrity: sha512-pzuULCHhlBYUZOUxKNhmiC/yx6crW0FS97p9SgMTRpvAOS5qTBmiKBM1bFALyJHwcgw3woCmx+aiUeoxPhHHeQ==}
