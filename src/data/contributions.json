@@ -1,7 +1,7 @@
 [
   {
     "name": "remark-code-title",
-    "stars": 9,
+    "stars": 8,
     "url": "https://github.com/kevinzunigacuellar/remark-code-title",
     "description": "🔌 remark plugin to add titles to code blocks",
     "languages": [
@@ -21,7 +21,7 @@
   },
   {
     "name": "withastro/astro",
-    "stars": 32085,
+    "stars": 32296,
     "url": "https://github.com/withastro/astro",
     "description": "The all-in-one web framework designed for speed. ⭐️ Star to support our work!",
     "languages": [
@@ -34,7 +34,7 @@
   },
   {
     "name": "vuejs/vitepress",
-    "stars": 8250,
+    "stars": 8307,
     "url": "https://github.com/vuejs/vitepress",
     "description": "Vite & Vue powered static site generator.",
     "languages": [
@@ -47,7 +47,7 @@
   },
   {
     "name": "midudev/kings-league-project",
-    "stars": 1534,
+    "stars": 1536,
     "url": "https://github.com/midudev/kings-league-project",
     "description": "API y website de la Kings League Infojobs por temas didácticos",
     "languages": [
@@ -59,7 +59,7 @@
   },
   {
     "name": "withastro/starlight",
-    "stars": 1033,
+    "stars": 1061,
     "url": "https://github.com/withastro/starlight",
     "description": "🌟 Build beautiful, high-performance documentation websites with Astro",
     "languages": [
@@ -72,7 +72,7 @@
   },
   {
     "name": "withastro/docs",
-    "stars": 799,
+    "stars": 847,
     "url": "https://github.com/withastro/docs",
     "description": "Astro documentation",
     "languages": [
@@ -85,7 +85,7 @@
   },
   {
     "name": "withastro/astro.build",
-    "stars": 218,
+    "stars": 220,
     "url": "https://github.com/withastro/astro.build",
     "description": null,
     "languages": [
@@ -98,7 +98,7 @@
   },
   {
     "name": "stackblitz/ilovecodeflow.com",
-    "stars": 38,
+    "stars": 37,
     "url": "https://github.com/stackblitz/ilovecodeflow.com",
     "description": null,
     "languages": [
