@@ -84,19 +84,6 @@
     "role": "maintainer"
   },
   {
-    "name": "midudev/pruebas-tecnicas",
-    "stars": 362,
-    "url": "https://github.com/midudev/pruebas-tecnicas",
-    "description": "Pruebas técnicas donde la comunidad participa con sus soluciones",
-    "languages": [
-      "Astro",
-      "TypeScript",
-      "CSS",
-      "JavaScript"
-    ],
-    "role": "contributor"
-  },
-  {
     "name": "withastro/astro.build",
     "stars": 227,
     "url": "https://github.com/withastro/astro.build",
