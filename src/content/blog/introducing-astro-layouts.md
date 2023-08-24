@@ -3,7 +3,7 @@ title: Introducing astro-layouts, my first npm package
 description: I wrote and published my first npm package "astro-layouts". Here some details about how I got the idea and how it works
 pubDate: 2022-11-20
 updatedDate: 2023-06-04
-hero: "./images/astro_npm.png"
+hero: "~/assets/heros/astro_npm.png"
 heroAlt: "The logo of Astro and npm"
 ---
 
