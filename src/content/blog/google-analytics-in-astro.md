@@ -3,7 +3,7 @@ title: Add google analytics to Astro with Partytown
 description: In this guide, you will learn how to add google analytics to Astro without blocking the main thread using the partytown integration
 pubDate: 2022-05-12
 updatedDate: 2023-06-04
-hero: "./images/astro_ga.png"
+hero: "~/assets/heros/astro_ga.png"
 heroAlt: "Logo of Astro, partytown and google analytics together"
 ---
 
@@ -47,7 +47,7 @@ This configuration enables Partytown to forward all events to Google Analytics u
 
 Create a Google Analytics account and obtain the tracking ID. After creating a new property for your domain, you can find the tracking ID in the **Property Settings**.
 
-![Example of Google Analytics admin settings with a tracking ID](../../assets/tracking-setup.png)
+![Example of Google Analytics admin settings with a tracking ID](~/assets/content/tracking-setup.png)
 
 ## Hands-on Time
 
@@ -102,4 +102,4 @@ Congratulations! You have successfully added Google Analytics to your Astro proj
 ## Testing
 
 After deploying your project, visit your Google Analytics. You should see some recent activity after visiting your website.
-![Google analytics real time dashboard with one visitor in the last 30 minutes](../../assets/realtime-dashboard.png)
+![Google analytics real time dashboard with one visitor in the last 30 minutes](~/assets/content/realtime-dashboard.png)
