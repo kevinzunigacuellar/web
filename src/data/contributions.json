@@ -11,7 +11,7 @@
   },
   {
     "name": "astro-layouts",
-    "stars": 23,
+    "stars": 24,
     "url": "https://github.com/kevinzunigacuellar/astro-layouts",
     "description": "🔌 remark plugin to add folder-based layouts in Astro",
     "languages": [
@@ -21,7 +21,7 @@
   },
   {
     "name": "withastro/astro",
-    "stars": 32864,
+    "stars": 33014,
     "url": "https://github.com/withastro/astro",
     "description": "The all-in-one web framework designed for speed. ⭐️ Star to support our work!",
     "languages": [
@@ -34,7 +34,7 @@
   },
   {
     "name": "vuejs/vitepress",
-    "stars": 8549,
+    "stars": 8728,
     "url": "https://github.com/vuejs/vitepress",
     "description": "Vite & Vue powered static site generator.",
     "languages": [
@@ -59,7 +59,7 @@
   },
   {
     "name": "withastro/starlight",
-    "stars": 1317,
+    "stars": 1346,
     "url": "https://github.com/withastro/starlight",
     "description": "🌟 Build beautiful, accessible, high-performance documentation websites with Astro",
     "languages": [
@@ -72,7 +72,7 @@
   },
   {
     "name": "withastro/docs",
-    "stars": 878,
+    "stars": 887,
     "url": "https://github.com/withastro/docs",
     "description": "Astro documentation",
     "languages": [
@@ -85,7 +85,7 @@
   },
   {
     "name": "midudev/pruebas-tecnicas",
-    "stars": 374,
+    "stars": 389,
     "url": "https://github.com/midudev/pruebas-tecnicas",
     "description": "Pruebas técnicas donde la comunidad participa con sus soluciones",
     "languages": [
@@ -98,7 +98,7 @@
   },
   {
     "name": "withastro/astro.build",
-    "stars": 232,
+    "stars": 237,
     "url": "https://github.com/withastro/astro.build",
     "description": null,
     "languages": [
@@ -111,7 +111,7 @@
   },
   {
     "name": "expressive-code/expressive-code",
-    "stars": 63,
+    "stars": 64,
     "url": "https://github.com/expressive-code/expressive-code",
     "description": "A text marking & annotation engine for presenting source code on the web.",
     "languages": [
@@ -135,7 +135,7 @@
   },
   {
     "name": "stackblitz/docs",
-    "stars": 27,
+    "stars": 28,
     "url": "https://github.com/stackblitz/docs",
     "description": "New StackBlitz docs site built with VitePress",
     "languages": [
