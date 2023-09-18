@@ -21,9 +21,9 @@
   },
   {
     "name": "withastro/astro",
-    "stars": 34684,
+    "stars": 35027,
     "url": "https://github.com/withastro/astro",
-    "description": "The all-in-one web framework designed for speed. ⭐️ Star to support our work!",
+    "description": "The web framework that scales with you — Build fast content sites, powerful web applications, dynamic server APIs, and everything in-between ⭐️ Star to support our work!",
     "languages": [
       "TypeScript",
       "JavaScript",
@@ -34,7 +34,7 @@
   },
   {
     "name": "vuejs/vitepress",
-    "stars": 8878,
+    "stars": 8949,
     "url": "https://github.com/vuejs/vitepress",
     "description": "Vite & Vue powered static site generator.",
     "languages": [
@@ -47,7 +47,7 @@
   },
   {
     "name": "withastro/starlight",
-    "stars": 1886,
+    "stars": 1956,
     "url": "https://github.com/withastro/starlight",
     "description": "🌟 Build beautiful, accessible, high-performance documentation websites with Astro",
     "languages": [
@@ -60,7 +60,7 @@
   },
   {
     "name": "midudev/kings-league-project",
-    "stars": 1532,
+    "stars": 1530,
     "url": "https://github.com/midudev/kings-league-project",
     "description": "API y website de la Kings League Infojobs por temas didácticos",
     "languages": [
@@ -72,7 +72,7 @@
   },
   {
     "name": "withastro/docs",
-    "stars": 927,
+    "stars": 941,
     "url": "https://github.com/withastro/docs",
     "description": "Astro documentation",
     "languages": [
@@ -85,7 +85,7 @@
   },
   {
     "name": "midudev/pruebas-tecnicas",
-    "stars": 409,
+    "stars": 420,
     "url": "https://github.com/midudev/pruebas-tecnicas",
     "description": "Pruebas técnicas donde la comunidad participa con sus soluciones",
     "languages": [
@@ -98,7 +98,7 @@
   },
   {
     "name": "withastro/astro.build",
-    "stars": 247,
+    "stars": 254,
     "url": "https://github.com/withastro/astro.build",
     "description": null,
     "languages": [
@@ -111,7 +111,7 @@
   },
   {
     "name": "expressive-code/expressive-code",
-    "stars": 68,
+    "stars": 71,
     "url": "https://github.com/expressive-code/expressive-code",
     "description": "A text marking & annotation engine for presenting source code on the web.",
     "languages": [
