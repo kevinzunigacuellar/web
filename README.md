@@ -1,7 +1,5 @@
 # kevinzunigacuellar.com
 
-[![Built with Astro](https://astro.badg.es/v1/built-with-astro.svg)](https://astro.build)
-
 A minimal, responsive, and accessible personal website built with [Astro](https://astro.build/) and [Tailwind CSS](https://tailwindcss.com/).
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/kevinzunigacuellar/kevinzunigacuellar.com?title=Personal%20website)
@@ -30,3 +28,5 @@ pnpm install
 pnpm dev
 
 ```
+
+[![Built with Astro](https://astro.badg.es/v2/built-with-astro/medium.svg)](https://astro.build)
