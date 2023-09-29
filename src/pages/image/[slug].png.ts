@@ -16,7 +16,7 @@ interface Props {
   pubDate: Date;
 }
 
-export async function get(context: APIContext) {
+export async function GET(context: APIContext) {
   const { title, pubDate } = context.props as Props;
   const date = pubDate.toLocaleDateString("en-US", {
     dateStyle: "full",
@@ -91,10 +91,11 @@ export async function get(context: APIContext) {
     },
   }).render();
 
-  return {
-    body: image.asPng(),
-    encoding: "binary",
-  };
+  return new Response(image.asPng(), {
+    headers: {
+      "Content-Type": "image/png",
+    },
+  });
 }
 
 export async function getStaticPaths() {

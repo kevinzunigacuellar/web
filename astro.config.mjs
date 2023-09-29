@@ -14,15 +14,8 @@ const astroExpressiveCodeOptions = {
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind(), sitemap(), expressiveCode(astroExpressiveCodeOptions)],
-  experimental: {
-    assets: true
-  },
   image: {
     service: sharpImageService()
-  },
-  compressHTML: true,
-  build: {
-    inlineStylesheets: "auto"
   },
   site: "https://www.kevinzunigacuellar.com",
   vite: {
