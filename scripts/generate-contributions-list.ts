@@ -71,7 +71,7 @@ const authoredProjects = await Promise.all(
       languages: [data.language],
       role: "author",
     };
-  })
+  }),
 );
 
 const contributions = (
@@ -97,7 +97,7 @@ const allProjects = authoredProjects.concat(contributions);
 try {
   await writeFile(
     "./src/data/contributions.json",
-    JSON.stringify(allProjects, null, 2)
+    JSON.stringify(allProjects, null, 2),
   );
   console.log("Contributions list generated");
 } catch (error) {

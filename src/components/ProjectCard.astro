@@ -25,7 +25,11 @@ const { name, role, url, description, stars, languages } = Astro.props;
 >
   <div class="flex justify-between">
     <div class="flex flex-col sm:flex-row sm:items-baseline gap-2">
-      <h2 class="text-lg font-medium dark:text-white text-zinc-700 [word-break:break-word]">{name}</h2>
+      <h2
+        class="text-lg font-medium dark:text-white text-zinc-700 [word-break:break-word]"
+      >
+        {name}
+      </h2>
       <Badge text={role} color={colors[role]} />
     </div>
     <a

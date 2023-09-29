@@ -12,7 +12,7 @@ if (!href) {
   isActive = href === Astro.url.pathname;
 } else {
   isActive = Astro.url.pathname.includes(
-    typeof href === "string" ? href : href.href
+    typeof href === "string" ? href : href.href,
   );
 }
 ---
