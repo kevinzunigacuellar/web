@@ -13,7 +13,7 @@
     "name": "astro-layouts",
     "stars": 24,
     "url": "https://github.com/kevinzunigacuellar/astro-layouts",
-    "description": "🔌 remark plugin to add folder-based layouts in Astro",
+    "description": "Add folder-based layouts to astro pages",
     "languages": [
       "TypeScript"
     ],
@@ -21,7 +21,7 @@
   },
   {
     "name": "withastro/astro",
-    "stars": 35301,
+    "stars": 35635,
     "url": "https://github.com/withastro/astro",
     "description": "The web framework that scales with you — Build fast content sites, powerful web applications, dynamic server APIs, and everything in-between ⭐️ Star to support our work!",
     "languages": [
@@ -34,7 +34,7 @@
   },
   {
     "name": "vuejs/vitepress",
-    "stars": 9026,
+    "stars": 9076,
     "url": "https://github.com/vuejs/vitepress",
     "description": "Vite & Vue powered static site generator.",
     "languages": [
@@ -47,7 +47,7 @@
   },
   {
     "name": "withastro/starlight",
-    "stars": 2012,
+    "stars": 2056,
     "url": "https://github.com/withastro/starlight",
     "description": "🌟 Build beautiful, accessible, high-performance documentation websites with Astro",
     "languages": [
@@ -60,7 +60,7 @@
   },
   {
     "name": "midudev/kings-league-project",
-    "stars": 1530,
+    "stars": 1531,
     "url": "https://github.com/midudev/kings-league-project",
     "description": "API y website de la Kings League Infojobs por temas didácticos",
     "languages": [
@@ -72,7 +72,7 @@
   },
   {
     "name": "withastro/docs",
-    "stars": 958,
+    "stars": 973,
     "url": "https://github.com/withastro/docs",
     "description": "Astro documentation",
     "languages": [
@@ -85,7 +85,7 @@
   },
   {
     "name": "midudev/pruebas-tecnicas",
-    "stars": 425,
+    "stars": 429,
     "url": "https://github.com/midudev/pruebas-tecnicas",
     "description": "Pruebas técnicas donde la comunidad participa con sus soluciones",
     "languages": [
@@ -111,7 +111,7 @@
   },
   {
     "name": "withastro/blog-tutorial-demo",
-    "stars": 78,
+    "stars": 81,
     "url": "https://github.com/withastro/blog-tutorial-demo",
     "description": null,
     "languages": [
@@ -124,7 +124,7 @@
   },
   {
     "name": "expressive-code/expressive-code",
-    "stars": 75,
+    "stars": 78,
     "url": "https://github.com/expressive-code/expressive-code",
     "description": "A text marking & annotation engine for presenting source code on the web.",
     "languages": [
@@ -136,7 +136,7 @@
   },
   {
     "name": "stackblitz/ilovecodeflow.com",
-    "stars": 39,
+    "stars": 40,
     "url": "https://github.com/stackblitz/ilovecodeflow.com",
     "description": null,
     "languages": [
@@ -160,7 +160,7 @@
   },
   {
     "name": "OpenContributionsProject/opencontributionssite",
-    "stars": 22,
+    "stars": 21,
     "url": "https://github.com/OpenContributionsProject/opencontributionssite",
     "description": "A resource to help advocate for and explain corporate contributions to open source.",
     "languages": [
@@ -173,7 +173,7 @@
   },
   {
     "name": "jnear/cs202-assignments",
-    "stars": 7,
+    "stars": 6,
     "url": "https://github.com/jnear/cs202-assignments",
     "description": null,
     "languages": [
@@ -194,6 +194,17 @@
       "Vue",
       "HTML",
       "Python"
+    ],
+    "role": "contributor"
+  },
+  {
+    "name": "TheOtterlord/coauthor-generator",
+    "stars": 0,
+    "url": "https://github.com/TheOtterlord/coauthor-generator",
+    "description": null,
+    "languages": [
+      "Astro",
+      "TypeScript"
     ],
     "role": "contributor"
   }
