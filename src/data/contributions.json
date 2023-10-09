@@ -21,7 +21,7 @@
   },
   {
     "name": "withastro/astro",
-    "stars": 35635,
+    "stars": 35799,
     "url": "https://github.com/withastro/astro",
     "description": "The web framework that scales with you — Build fast content sites, powerful web applications, dynamic server APIs, and everything in-between ⭐️ Star to support our work!",
     "languages": [
@@ -34,7 +34,7 @@
   },
   {
     "name": "vuejs/vitepress",
-    "stars": 9076,
+    "stars": 9136,
     "url": "https://github.com/vuejs/vitepress",
     "description": "Vite & Vue powered static site generator.",
     "languages": [
@@ -47,7 +47,7 @@
   },
   {
     "name": "withastro/starlight",
-    "stars": 2056,
+    "stars": 2083,
     "url": "https://github.com/withastro/starlight",
     "description": "🌟 Build beautiful, accessible, high-performance documentation websites with Astro",
     "languages": [
@@ -72,7 +72,7 @@
   },
   {
     "name": "withastro/docs",
-    "stars": 973,
+    "stars": 991,
     "url": "https://github.com/withastro/docs",
     "description": "Astro documentation",
     "languages": [
@@ -85,7 +85,7 @@
   },
   {
     "name": "midudev/pruebas-tecnicas",
-    "stars": 429,
+    "stars": 435,
     "url": "https://github.com/midudev/pruebas-tecnicas",
     "description": "Pruebas técnicas donde la comunidad participa con sus soluciones",
     "languages": [
@@ -98,7 +98,7 @@
   },
   {
     "name": "withastro/astro.build",
-    "stars": 254,
+    "stars": 258,
     "url": "https://github.com/withastro/astro.build",
     "description": null,
     "languages": [
@@ -106,6 +106,18 @@
       "Astro",
       "TypeScript",
       "JavaScript"
+    ],
+    "role": "contributor"
+  },
+  {
+    "name": "expressive-code/expressive-code",
+    "stars": 83,
+    "url": "https://github.com/expressive-code/expressive-code",
+    "description": "A text marking & annotation engine for presenting source code on the web.",
+    "languages": [
+      "TypeScript",
+      "JavaScript",
+      "Dockerfile"
     ],
     "role": "contributor"
   },
@@ -119,18 +131,6 @@
       "CSS",
       "JavaScript",
       "TypeScript"
-    ],
-    "role": "contributor"
-  },
-  {
-    "name": "expressive-code/expressive-code",
-    "stars": 78,
-    "url": "https://github.com/expressive-code/expressive-code",
-    "description": "A text marking & annotation engine for presenting source code on the web.",
-    "languages": [
-      "TypeScript",
-      "JavaScript",
-      "Dockerfile"
     ],
     "role": "contributor"
   },
@@ -160,7 +160,7 @@
   },
   {
     "name": "OpenContributionsProject/opencontributionssite",
-    "stars": 21,
+    "stars": 22,
     "url": "https://github.com/OpenContributionsProject/opencontributionssite",
     "description": "A resource to help advocate for and explain corporate contributions to open source.",
     "languages": [
