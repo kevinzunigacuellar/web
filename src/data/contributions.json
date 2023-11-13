@@ -1,7 +1,7 @@
 [
   {
     "name": "remark-code-title",
-    "stars": 11,
+    "stars": 12,
     "url": "https://github.com/kevinzunigacuellar/remark-code-title",
     "description": "🔌 remark plugin to add titles to code blocks",
     "languages": [
@@ -11,7 +11,7 @@
   },
   {
     "name": "astro-layouts",
-    "stars": 25,
+    "stars": 24,
     "url": "https://github.com/kevinzunigacuellar/astro-layouts",
     "description": "Add folder-based layouts to astro pages",
     "languages": [
@@ -21,7 +21,7 @@
   },
   {
     "name": "supabase/supabase",
-    "stars": 58833,
+    "stars": 59253,
     "url": "https://github.com/supabase/supabase",
     "description": "The open source Firebase alternative.",
     "languages": [
@@ -34,7 +34,7 @@
   },
   {
     "name": "withastro/astro",
-    "stars": 36674,
+    "stars": 36946,
     "url": "https://github.com/withastro/astro",
     "description": "The web framework that scales with you — Build fast content sites, powerful web applications, dynamic server APIs, and everything in-between ⭐️ Star to support our work!",
     "languages": [
@@ -47,7 +47,7 @@
   },
   {
     "name": "withastro/starlight",
-    "stars": 2184,
+    "stars": 2207,
     "url": "https://github.com/withastro/starlight",
     "description": "🌟 Build beautiful, accessible, high-performance documentation websites with Astro",
     "languages": [
@@ -60,7 +60,7 @@
   },
   {
     "name": "midudev/kings-league-project",
-    "stars": 1534,
+    "stars": 1530,
     "url": "https://github.com/midudev/kings-league-project",
     "description": "API y website de la Kings League Infojobs por temas didácticos",
     "languages": [
@@ -72,7 +72,7 @@
   },
   {
     "name": "withastro/docs",
-    "stars": 1041,
+    "stars": 1054,
     "url": "https://github.com/withastro/docs",
     "description": "Astro documentation",
     "languages": [
@@ -85,7 +85,7 @@
   },
   {
     "name": "midudev/pruebas-tecnicas",
-    "stars": 507,
+    "stars": 517,
     "url": "https://github.com/midudev/pruebas-tecnicas",
     "description": "Pruebas técnicas donde la comunidad participa con sus soluciones",
     "languages": [
@@ -110,7 +110,7 @@
   },
   {
     "name": "withastro/blog-tutorial-demo",
-    "stars": 88,
+    "stars": 89,
     "url": "https://github.com/withastro/blog-tutorial-demo",
     "description": null,
     "languages": [
@@ -136,7 +136,7 @@
   },
   {
     "name": "withastro/adapters",
-    "stars": 6,
+    "stars": 9,
     "url": "https://github.com/withastro/adapters",
     "description": "Home for Astro's core maintained adapters",
     "languages": [
@@ -182,5 +182,5 @@
       "TypeScript"
     ],
     "role": "contributor"
-  },
+  }
 ]
