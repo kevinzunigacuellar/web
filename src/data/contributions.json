@@ -182,18 +182,5 @@
       "TypeScript"
     ],
     "role": "contributor"
-  },
-  {
-    "name": "melekabbassi/docs",
-    "stars": 0,
-    "url": "https://github.com/melekabbassi/docs",
-    "description": "Astro documentation",
-    "languages": [
-      "MDX",
-      "TypeScript",
-      "Astro",
-      "JavaScript"
-    ],
-    "role": "contributor"
   }
 ]
