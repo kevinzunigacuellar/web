@@ -84,19 +84,6 @@
     "role": "maintainer"
   },
   {
-    "name": "midudev/pruebas-tecnicas",
-    "stars": 521,
-    "url": "https://github.com/midudev/pruebas-tecnicas",
-    "description": "Pruebas técnicas donde la comunidad participa con sus soluciones",
-    "languages": [
-      "Astro",
-      "TypeScript",
-      "JavaScript",
-      "CSS"
-    ],
-    "role": "contributor"
-  },
-  {
     "name": "expressive-code/expressive-code",
     "stars": 93,
     "url": "https://github.com/expressive-code/expressive-code",
@@ -147,19 +134,6 @@
     "role": "contributor"
   },
   {
-    "name": "jnear/cs202-assignments",
-    "stars": 6,
-    "url": "https://github.com/jnear/cs202-assignments",
-    "description": null,
-    "languages": [
-      "Jupyter Notebook",
-      "Python",
-      "Haskell",
-      "C"
-    ],
-    "role": "contributor"
-  },
-  {
     "name": "Duke-MatSci/materialsmine",
     "stars": 5,
     "url": "https://github.com/Duke-MatSci/materialsmine",
@@ -169,17 +143,6 @@
       "Vue",
       "Python",
       "MATLAB"
-    ],
-    "role": "contributor"
-  },
-  {
-    "name": "TheOtterlord/coauthor-generator",
-    "stars": 1,
-    "url": "https://github.com/TheOtterlord/coauthor-generator",
-    "description": null,
-    "languages": [
-      "Astro",
-      "TypeScript"
     ],
     "role": "contributor"
   }
