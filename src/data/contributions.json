@@ -21,7 +21,7 @@
   },
   {
     "name": "supabase/supabase",
-    "stars": 59480,
+    "stars": 59716,
     "url": "https://github.com/supabase/supabase",
     "description": "The open source Firebase alternative.",
     "languages": [
@@ -34,7 +34,7 @@
   },
   {
     "name": "withastro/astro",
-    "stars": 37087,
+    "stars": 37229,
     "url": "https://github.com/withastro/astro",
     "description": "The web framework that scales with you — Build fast content sites, powerful web applications, dynamic server APIs, and everything in-between ⭐️ Star to support our work!",
     "languages": [
@@ -47,7 +47,7 @@
   },
   {
     "name": "withastro/starlight",
-    "stars": 2253,
+    "stars": 2324,
     "url": "https://github.com/withastro/starlight",
     "description": "🌟 Build beautiful, accessible, high-performance documentation websites with Astro",
     "languages": [
@@ -60,7 +60,7 @@
   },
   {
     "name": "midudev/kings-league-project",
-    "stars": 1530,
+    "stars": 1528,
     "url": "https://github.com/midudev/kings-league-project",
     "description": "API y website de la Kings League Infojobs por temas didácticos",
     "languages": [
@@ -72,7 +72,7 @@
   },
   {
     "name": "withastro/docs",
-    "stars": 1062,
+    "stars": 1072,
     "url": "https://github.com/withastro/docs",
     "description": "Astro documentation",
     "languages": [
@@ -85,7 +85,7 @@
   },
   {
     "name": "expressive-code/expressive-code",
-    "stars": 93,
+    "stars": 117,
     "url": "https://github.com/expressive-code/expressive-code",
     "description": "A text marking & annotation engine for presenting source code on the web.",
     "languages": [
@@ -97,7 +97,7 @@
   },
   {
     "name": "withastro/blog-tutorial-demo",
-    "stars": 89,
+    "stars": 91,
     "url": "https://github.com/withastro/blog-tutorial-demo",
     "description": null,
     "languages": [
@@ -123,7 +123,7 @@
   },
   {
     "name": "withastro/adapters",
-    "stars": 12,
+    "stars": 13,
     "url": "https://github.com/withastro/adapters",
     "description": "Home for Astro's core maintained adapters",
     "languages": [
