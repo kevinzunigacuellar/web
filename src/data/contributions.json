@@ -21,7 +21,7 @@
   },
   {
     "name": "supabase/supabase",
-    "stars": 59716,
+    "stars": 60171,
     "url": "https://github.com/supabase/supabase",
     "description": "The open source Firebase alternative.",
     "languages": [
@@ -34,7 +34,7 @@
   },
   {
     "name": "withastro/astro",
-    "stars": 37229,
+    "stars": 37383,
     "url": "https://github.com/withastro/astro",
     "description": "The web framework that scales with you — Build fast content sites, powerful web applications, dynamic server APIs, and everything in-between ⭐️ Star to support our work!",
     "languages": [
@@ -47,7 +47,7 @@
   },
   {
     "name": "withastro/starlight",
-    "stars": 2324,
+    "stars": 2364,
     "url": "https://github.com/withastro/starlight",
     "description": "🌟 Build beautiful, accessible, high-performance documentation websites with Astro",
     "languages": [
@@ -72,7 +72,7 @@
   },
   {
     "name": "withastro/docs",
-    "stars": 1072,
+    "stars": 1085,
     "url": "https://github.com/withastro/docs",
     "description": "Astro documentation",
     "languages": [
@@ -84,8 +84,21 @@
     "role": "maintainer"
   },
   {
+    "name": "midudev/pruebas-tecnicas",
+    "stars": 535,
+    "url": "https://github.com/midudev/pruebas-tecnicas",
+    "description": "Pruebas técnicas donde la comunidad participa con sus soluciones",
+    "languages": [
+      "Astro",
+      "TypeScript",
+      "JavaScript",
+      "CSS"
+    ],
+    "role": "contributor"
+  },
+  {
     "name": "expressive-code/expressive-code",
-    "stars": 117,
+    "stars": 129,
     "url": "https://github.com/expressive-code/expressive-code",
     "description": "A text marking & annotation engine for presenting source code on the web.",
     "languages": [
@@ -97,7 +110,7 @@
   },
   {
     "name": "withastro/blog-tutorial-demo",
-    "stars": 91,
+    "stars": 92,
     "url": "https://github.com/withastro/blog-tutorial-demo",
     "description": null,
     "languages": [
@@ -134,6 +147,19 @@
     "role": "contributor"
   },
   {
+    "name": "jnear/cs202-assignments",
+    "stars": 6,
+    "url": "https://github.com/jnear/cs202-assignments",
+    "description": null,
+    "languages": [
+      "Jupyter Notebook",
+      "Python",
+      "Haskell",
+      "C"
+    ],
+    "role": "contributor"
+  },
+  {
     "name": "Duke-MatSci/materialsmine",
     "stars": 5,
     "url": "https://github.com/Duke-MatSci/materialsmine",
@@ -143,6 +169,30 @@
       "Vue",
       "Python",
       "MATLAB"
+    ],
+    "role": "contributor"
+  },
+  {
+    "name": "TheOtterlord/coauthor-generator",
+    "stars": 1,
+    "url": "https://github.com/TheOtterlord/coauthor-generator",
+    "description": null,
+    "languages": [
+      "Astro",
+      "TypeScript"
+    ],
+    "role": "contributor"
+  },
+  {
+    "name": "melekabbassi/docs",
+    "stars": 0,
+    "url": "https://github.com/melekabbassi/docs",
+    "description": "Astro documentation",
+    "languages": [
+      "MDX",
+      "TypeScript",
+      "Astro",
+      "JavaScript"
     ],
     "role": "contributor"
   }
