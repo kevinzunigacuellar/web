@@ -14,13 +14,13 @@ In this guide, we will use [og-edge](https://github.com/ascorbic/og-edge), a for
 ## Getting started
 
 1. Create a new Astro project using the CLI:
-  
+
    ```bash
    npm create astro@latest
    ```
 
 2. Install the [Netlify CLI](https://docs.netlify.com/cli/get-started/#installation) globally on your machine to run Netlify edge functions locally during development:
-  
+
    ```bash
    npm install -g netlify-cli
    ```
@@ -80,23 +80,25 @@ export default function handler(req: Request) {
   const title = params.get("title") ?? "Created with Netlify edge functions";
   const pubDate = params.get("pubDate") ?? new Date().toISOString();
 
-  return new ImageResponse((
-    <div
-      style={{
-        height: '100%',
-        width: '100%',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        backgroundColor: '#fff',
-        fontSize: 32,
-      }}
-    >
-      <div>{title}</div>
-      <div>{pubDate}</div>
-    </div>
-  ));
+  return new ImageResponse(
+    (
+      <div
+        style={{
+          height: "100%",
+          width: "100%",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          backgroundColor: "#fff",
+          fontSize: 32,
+        }}
+      >
+        <div>{title}</div>
+        <div>{pubDate}</div>
+      </div>
+    ),
+  );
 }
 ```
 

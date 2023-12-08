@@ -81,9 +81,7 @@ The `theme` variable is an immediately invoked function expression (IIFE) that r
 In Astro, you can use any UI framework of your choice. For this example, we will use **Preact** due to its small size and performance. The following code snippet renders a button that toggles between dark and light mode:
 
 ```tsx title="ThemeToggle.tsx"
-import { useEffect, useState
-
- } from "preact/hooks";
+import { useEffect, useState } from "preact/hooks";
 import type { FunctionalComponent } from "preact";
 
 export default function ThemeToggle(): FunctionalComponent {

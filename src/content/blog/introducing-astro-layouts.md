@@ -69,11 +69,10 @@ If you have aliases defined in your `tsconfig.json` file, you can use them to cr
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@layouts/*": ["src/layouts/*"],
-    },
+      "@layouts/*": ["src/layouts/*"]
+    }
   }
 }
-
 ```
 
 Then you can use aliases in the `layoutOptions`

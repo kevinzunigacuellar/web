@@ -82,8 +82,7 @@ After applying the modifications, your updated script will look like this:
 <!-- head -->
 <script
   type="text/partytown"
-  src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"
-></script>
+  src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
 <script type="text/partytown">
   window.dataLayer = window.dataLayer || [];
   function gtag() {
