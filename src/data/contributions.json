@@ -4,7 +4,9 @@
     "stars": 13,
     "url": "https://github.com/kevinzunigacuellar/remark-code-title",
     "description": "🔌 remark plugin to add titles to code blocks",
-    "languages": ["TypeScript"],
+    "languages": [
+      "TypeScript"
+    ],
     "role": "author"
   },
   {
@@ -12,31 +14,48 @@
     "stars": 25,
     "url": "https://github.com/kevinzunigacuellar/astro-layouts",
     "description": "Add folder-based layouts to astro pages",
-    "languages": ["TypeScript"],
+    "languages": [
+      "TypeScript"
+    ],
     "role": "author"
   },
   {
     "name": "supabase/supabase",
-    "stars": 60171,
+    "stars": 60418,
     "url": "https://github.com/supabase/supabase",
     "description": "The open source Firebase alternative.",
-    "languages": ["TypeScript", "MDX", "JavaScript", "CSS"],
+    "languages": [
+      "TypeScript",
+      "MDX",
+      "JavaScript",
+      "CSS"
+    ],
     "role": "contributor"
   },
   {
     "name": "withastro/astro",
-    "stars": 37383,
+    "stars": 37699,
     "url": "https://github.com/withastro/astro",
     "description": "The web framework that scales with you — Build fast content sites, powerful web applications, dynamic server APIs, and everything in-between ⭐️ Star to support our work!",
-    "languages": ["TypeScript", "JavaScript", "Astro", "Vue"],
+    "languages": [
+      "TypeScript",
+      "JavaScript",
+      "Astro",
+      "Vue"
+    ],
     "role": "contributor"
   },
   {
     "name": "withastro/starlight",
-    "stars": 2364,
+    "stars": 2444,
     "url": "https://github.com/withastro/starlight",
     "description": "🌟 Build beautiful, accessible, high-performance documentation websites with Astro",
-    "languages": ["TypeScript", "Astro", "HTML", "CSS"],
+    "languages": [
+      "TypeScript",
+      "Astro",
+      "HTML",
+      "CSS"
+    ],
     "role": "contributor"
   },
   {
@@ -44,31 +63,62 @@
     "stars": 1528,
     "url": "https://github.com/midudev/kings-league-project",
     "description": "API y website de la Kings League Infojobs por temas didácticos",
-    "languages": ["JavaScript", "Astro", "TypeScript"],
+    "languages": [
+      "JavaScript",
+      "Astro",
+      "TypeScript"
+    ],
     "role": "contributor"
   },
   {
     "name": "withastro/docs",
-    "stars": 1085,
+    "stars": 1096,
     "url": "https://github.com/withastro/docs",
     "description": "Astro documentation",
-    "languages": ["MDX", "TypeScript", "Astro", "JavaScript"],
+    "languages": [
+      "MDX",
+      "TypeScript",
+      "Astro",
+      "JavaScript"
+    ],
     "role": "maintainer"
   },
   {
+    "name": "midudev/pruebas-tecnicas",
+    "stars": 539,
+    "url": "https://github.com/midudev/pruebas-tecnicas",
+    "description": "Pruebas técnicas donde la comunidad participa con sus soluciones",
+    "languages": [
+      "Astro",
+      "TypeScript",
+      "JavaScript",
+      "CSS"
+    ],
+    "role": "contributor"
+  },
+  {
     "name": "expressive-code/expressive-code",
-    "stars": 129,
+    "stars": 169,
     "url": "https://github.com/expressive-code/expressive-code",
     "description": "A text marking & annotation engine for presenting source code on the web.",
-    "languages": ["TypeScript", "JavaScript", "Dockerfile"],
+    "languages": [
+      "TypeScript",
+      "JavaScript",
+      "Dockerfile"
+    ],
     "role": "contributor"
   },
   {
     "name": "withastro/blog-tutorial-demo",
-    "stars": 92,
+    "stars": 94,
     "url": "https://github.com/withastro/blog-tutorial-demo",
     "description": null,
-    "languages": ["Astro", "CSS", "JavaScript", "TypeScript"],
+    "languages": [
+      "Astro",
+      "CSS",
+      "JavaScript",
+      "TypeScript"
+    ],
     "role": "contributor"
   },
   {
@@ -76,15 +126,37 @@
     "stars": 23,
     "url": "https://github.com/OpenContributionsProject/opencontributionssite",
     "description": "A resource to help advocate for and explain corporate contributions to open source.",
-    "languages": ["MDX", "TypeScript", "CSS", "JavaScript"],
+    "languages": [
+      "MDX",
+      "TypeScript",
+      "CSS",
+      "JavaScript"
+    ],
     "role": "contributor"
   },
   {
     "name": "withastro/adapters",
-    "stars": 13,
+    "stars": 14,
     "url": "https://github.com/withastro/adapters",
     "description": "Home for Astro's core maintained adapters",
-    "languages": ["TypeScript", "JavaScript", "Astro"],
+    "languages": [
+      "TypeScript",
+      "JavaScript",
+      "Astro"
+    ],
+    "role": "contributor"
+  },
+  {
+    "name": "jnear/cs202-assignments",
+    "stars": 6,
+    "url": "https://github.com/jnear/cs202-assignments",
+    "description": null,
+    "languages": [
+      "Jupyter Notebook",
+      "Python",
+      "Haskell",
+      "C"
+    ],
     "role": "contributor"
   },
   {
@@ -92,7 +164,36 @@
     "stars": 5,
     "url": "https://github.com/Duke-MatSci/materialsmine",
     "description": "MaterialsMine App",
-    "languages": ["JavaScript", "Vue", "Python", "MATLAB"],
+    "languages": [
+      "JavaScript",
+      "Vue",
+      "Python",
+      "MATLAB"
+    ],
+    "role": "contributor"
+  },
+  {
+    "name": "TheOtterlord/coauthor-generator",
+    "stars": 1,
+    "url": "https://github.com/TheOtterlord/coauthor-generator",
+    "description": null,
+    "languages": [
+      "Astro",
+      "TypeScript"
+    ],
+    "role": "contributor"
+  },
+  {
+    "name": "melekabbassi/docs",
+    "stars": 0,
+    "url": "https://github.com/melekabbassi/docs",
+    "description": "Astro documentation",
+    "languages": [
+      "MDX",
+      "TypeScript",
+      "Astro",
+      "JavaScript"
+    ],
     "role": "contributor"
   }
 ]
