@@ -1,5 +1,5 @@
 ---
-import AppLayout from "@layouts/AppLayout.astro";
+import Layout from "@layouts/Layout.astro";
 import Pagination from "@components/Pagination.astro";
 import { Image } from "astro:assets";
 import authorImage from "../assets/me.jpeg";
@@ -35,7 +35,7 @@ const fullUpdatedDate = updatedDate?.toLocaleDateString("en", {
 });
 ---
 
-<AppLayout
+<Layout
   title={title}
   description={description}
   ogImage={ogImage}
@@ -98,4 +98,4 @@ const fullUpdatedDate = updatedDate?.toLocaleDateString("en", {
     <slot />
   </article>
   <Pagination />
-</AppLayout>
+</Layout>

@@ -1,5 +1,5 @@
 ---
-import AppLayout from "@layouts/AppLayout.astro";
+import Layout from "@layouts/Layout.astro";
 import authorImage from "~/assets/me.jpeg";
 import { Picture } from "astro:assets";
 import { skills, socials } from "@data/constants";
@@ -18,7 +18,7 @@ const posts = (await getCollection("blog")).sort(
 );
 ---
 
-<AppLayout wide={true}>
+<Layout wide={true}>
   <div class="flex flex-col gap-12 md:gap-20 sm:gap-16 sm:flex-row">
     <div class="sm:w-1/4 sm:sticky sm:h-fit sm:top-10">
       <Picture
@@ -96,4 +96,4 @@ const posts = (await getCollection("blog")).sort(
       >
     </section>
   </div>
-</AppLayout>
+</Layout>

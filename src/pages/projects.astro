@@ -1,5 +1,5 @@
 ---
-import AppLayout from "@layouts/AppLayout.astro";
+import Layout from "@layouts/Layout.astro";
 import Header from "@components/Header.astro";
 import Project from "@components/Project.astro";
 import { getCollection } from "astro:content";
@@ -13,7 +13,7 @@ const personalProjects = (await getCollection("personal-projects")).sort(
 );
 ---
 
-<AppLayout title="Projects | Kevin Zuniga Cuellar">
+<Layout title="Projects | Kevin Zuniga Cuellar">
   <Header title="Projects" />
   <p class="max-w-prose font-normal leading-relaxed">
     My passion lies in creating and sharing meaningful projects. Below, you'll
@@ -32,4 +32,4 @@ const personalProjects = (await getCollection("personal-projects")).sort(
   <ul class="mt-6 grid grid-cols-1 gap-6">
     {personalProjects.map((projects) => <Project {...projects} />)}
   </ul>
-</AppLayout>
+</Layout>
