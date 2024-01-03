@@ -1,61 +1,99 @@
 ---
 import AppLayout from "@layouts/AppLayout.astro";
-import { Image } from "astro:assets";
-import authorImage from "../assets/me.jpeg";
-import technologies from "@data/technologies.json";
+import authorImage from "~/assets/me.jpeg";
+import { Picture } from "astro:assets";
+import { skills, socials } from "@data/constants";
+import { getCollection } from "astro:content";
 import Skill from "@components/Skill.astro";
-import { author } from "@data/socials";
+import Social from "@components/Social.astro";
+import Project from "@components/Project.astro";
+import Blog from "@components/Blog.astro";
+
+const oss = (await getCollection("oss"))
+  .sort((a, b) => b.data.stars - a.data.stars)
+  .slice(0, 3);
+
+const posts = (await getCollection("blog")).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
 ---
 
-<AppLayout>
-  <header class="sm:flex sm:items-center sm:justify-between">
-    <Image
-      src={authorImage}
-      class="rounded-full aspect-square w-40 overflow-hidden inline-flex"
-      alt="Image of the author"
-      loading="eager"
-      width={320}
-      height={320}
-    />
-    <div class="mt-8 max-w-lg 2xl:max-w-xl sm:my-0 sm:order-first">
+<AppLayout wide={true}>
+  <div class="flex flex-col gap-12 md:gap-20 sm:gap-16 sm:flex-row">
+    <div class="sm:w-1/4 sm:sticky sm:h-fit sm:top-10">
+      <Picture
+        class="block rounded-full aspect-square overflow-hidden"
+        height={80}
+        width={80}
+        src={authorImage}
+        densities={[1.5, 2]}
+        formats={["avif", "webp"]}
+        alt="Author smiling"
+      />
       <h1
-        class="mb-2 text-3xl font-bold tracking-tight dark:text-white text-zinc-900 sm:text-4xl"
+        class="mt-4 text-2xl font-bold tracking-tight dark:text-white text-zinc-900 sm:text-3xl"
       >
-        {author}
+        Kevin
       </h1>
-      <p class="mb-4 dark:text-zinc-300 text-zinc-700">
-        Graduate Research Assistant and <a
+      <p class="dark:text-zinc-300 text-zinc-700">
+        <a
           href="https://twitter.com/astrodotbuild"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="dark:text-teal-400 text-blue-600 underline">@astrodotbuild</a
+          class="dark:text-teal-400 text-blue-600 underline underline-offset-4"
+          >@astrodotbuild</a
         > Maintainer
       </p>
-      <p
-        class="max-w-prose font-normal dark:text-zinc-400 text-zinc-600 sm:max-w-sm md:max-w-xl leading-relaxed"
-      >
-        Welcome to my slice of the internet! I am a graduate student in
-        mechanical engineering at the University of Vermont. In my free time, I
-        build frontend tools and experiment with new web app technologies.
-      </p>
+      <ul class="mt-6 grid grid-cols-1 gap-1">
+        {socials.map((s) => <Social {...s} />)}
+      </ul>
     </div>
-  </header>
-  <section class="mt-10 sm:mt-14" aria-labelledby="section-title">
-    <h2
-      class="dark:text-zinc-300 text-zinc-700 mb-4 text-2xl font-bold tracking-tight"
-      id="section-title"
-    >
-      Favorite technologies
-    </h2>
-    <p
-      class="max-w-prose mb-8 font-normal dark:text-zinc-400 text-zinc-600 leading-relaxed"
-    >
-      I love exploring new libraries, programing languages and frameworks. Here
-      is a list of technologies that I have worked with at school, side projects
-      and open source.
-    </p>
-    <ul class="grid grid-cols-1 gap-4 sm:grid-cols-2">
-      {technologies.map((tech) => <Skill text={tech.text} logo={tech.logo} />)}
-    </ul>
-  </section>
+    <section class="flex-1">
+      <h2 class="text-lg font-semibold dark:text-zinc-100 text-zinc-900">
+        About me
+      </h2>
+      <p class="mt-3 max-w-prose leading-relaxed">
+        Hello! I'm Kevin, a software engineer based in Burlington, VT. I build
+        tools for developers that help them build faster and better software.
+      </p>
+      <h2 class="mt-12 text-lg font-semibold dark:text-zinc-100 text-zinc-900">
+        Favorite Technologies
+      </h2>
+      <p class="mt-3 max-w-prose leading-relaxed">
+        I love exploring new libraries, programing languages and frameworks.
+        Here is a list of technologies that I have worked with at school, side
+        projects and open source.
+      </p>
+      <ul class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
+        {skills.map((s) => <Skill {...s} />)}
+      </ul>
+      <h2 class="mt-12 text-lg font-semibold dark:text-zinc-100 text-zinc-900">
+        Open Source
+      </h2>
+      <p class="mt-3 max-w-prose leading-relaxed">
+        I love open source and I have been contributing to different projects
+        for the some time. Here are some of the most popular projects that I
+        have contributed to.
+      </p>
+      <ul class="mt-6 grid grid-cols-1 gap-5">
+        {oss.map((oss) => <Project minimal {...oss} />)}
+      </ul>
+      <a
+        class="inline-block mt-3 dark:hover:text-zinc-200 hover:text-zinc-800"
+        href="/projects/">View all projects &rarr;</a
+      >
+      <h2 class="mt-12 text-lg font-semibold dark:text-zinc-100 text-zinc-900">
+        Recent Posts
+      </h2>
+      <p class="mt-3 max-w-prose leading-relaxed">
+        My personal collection of code snippets, starter guides, tutorials and
+        interesting things I found online.
+      </p>
+      <ul class="mt-6 grid grid-cols-1 gap-6">
+        {posts.map((post) => <Blog minimal {...post} />)}
+      </ul>
+      <a
+        class="inline-block mt-3 dark:hover:text-zinc-200 hover:text-zinc-800"
+        href="/projects/">View all posts &rarr;</a
+      >
+    </section>
+  </div>
 </AppLayout>

@@ -1,0 +1,38 @@
+---
+import { type CollectionEntry } from "astro:content";
+type Props = CollectionEntry<"blog"> & {
+  minimal?: true;
+};
+
+const { data, slug, minimal = false } = Astro.props;
+
+const fullDate = data.pubDate.toLocaleDateString("en", {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+});
+---
+
+<li
+  class="relative group flex flex-col gap-1"
+  class:list={{
+    "sm:p-6 sm:gap-2": !minimal,
+    "lg:flex-row lg:items-baseline lg:justify-between": minimal,
+  }}
+>
+  <time
+    datetime={data.pubDate.toISOString()}
+    class="text-sm"
+    class:list={{
+      "lg:order-2": minimal,
+    }}
+    >{fullDate}
+  </time>
+  <a
+    class="before:absolute before:inset-0 font-semibold dark:text-zinc-300 group-hover:text-blue-600 dark:group-hover:text-teal-400"
+    href={`/blog/${slug}/`}
+  >
+    {data.title}
+  </a>
+  {!minimal && <p class="leading-relaxed max-w-prose">{data.description}</p>}
+</li>

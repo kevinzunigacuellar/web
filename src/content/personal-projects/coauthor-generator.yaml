@@ -1,0 +1,10 @@
+owner: kevinzunigacuellar
+repo: coauthor-generator
+url: https://github.com/kevinzunigacuellar/coauthor-generator
+stars: 2
+forks: 1
+description: Generate co-author messages to give credit to your contributors
+languages:
+  - TypeScript
+  - JavaScript
+  - Astro

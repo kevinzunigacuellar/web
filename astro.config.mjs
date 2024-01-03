@@ -2,21 +2,20 @@ import { defineConfig, sharpImageService } from "astro/config";
 import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
 import { readFileSync } from "node:fs";
+import icon from "astro-icon";
 import expressiveCode from "astro-expressive-code";
 
 /** @type {import('astro-expressive-code').AstroExpressiveCodeOptions} */
 const astroExpressiveCodeOptions = {
-  styleOverrides: {
-    codeFontSize: "1rem",
-  },
+  themes: ["one-dark-pro", "slack-ochin"],
 };
 
-// https://astro.build/config
 export default defineConfig({
   integrations: [
     tailwind(),
     sitemap(),
     expressiveCode(astroExpressiveCodeOptions),
+    icon(),
   ],
   image: {
     service: sharpImageService(),

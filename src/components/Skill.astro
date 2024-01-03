@@ -1,24 +1,19 @@
 ---
-import { Icon } from "astro-icon";
+import { Icon } from "astro-icon/components";
 
 interface Props {
-  text: string;
-  logo: string;
+  icon: string;
+  label: string;
+  size?: number;
 }
 
-const { text, logo } = Astro.props;
+const { icon, label, size = 20 } = Astro.props;
 ---
 
 <li class="flex items-center gap-4">
   <span
-    class="w-11 h-11 flex items-center justify-center border-t dark:border-zinc-700 border-transparent shadow dark:shadow-none bg-white dark:bg-zinc-800 rounded-full"
-    ><Icon name={logo} class="w-6" />
+    class="w-11 h-11 grid place-content-center border-t dark:border-zinc-700 border-transparent shadow dark:shadow-none bg-white dark:bg-zinc-800 rounded-full"
+    ><Icon name={icon} size={size} class="dark:text-white" />
   </span>
-  <span class="dark:text-zinc-400 text-zinc-600">{text}</span>
+  <span>{label}</span>
 </li>
-
-<style is:global>
-  [astro-icon="simple-icons:astro"] {
-    @apply dark:text-white;
-  }
-</style>

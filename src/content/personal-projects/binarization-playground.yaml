@@ -1,0 +1,11 @@
+owner: kevinzunigacuellar
+repo: binarization-playground
+url: https://github.com/kevinzunigacuellar/binarization-playground
+stars: 5
+forks: 0
+description: Image binarization playground running on WASM
+website: https://binarization.kevinzunigacuellar.com/
+languages:
+  - TypeScript
+  - JavaScript
+  - Astro

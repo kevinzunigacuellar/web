@@ -1,0 +1,10 @@
+owner: midudev
+repo: kings-league-project
+url: https://github.com/midudev/kings-league-project
+stars: 1527
+forks: 230
+description: API y website de la Kings League Infojobs por temas didácticos
+languages:
+  - JavaScript
+  - TypeScript
+  - Astro

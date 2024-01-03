@@ -4,7 +4,7 @@ import Pagination from "@components/Pagination.astro";
 import { Image } from "astro:assets";
 import authorImage from "../assets/me.jpeg";
 import type { ImageMetadata } from "astro";
-import { author, twitter } from "@data/socials";
+import { author, twitter } from "@data/constants";
 
 interface Props {
   title: string;
@@ -44,7 +44,7 @@ const fullUpdatedDate = updatedDate?.toLocaleDateString("en", {
   <header class="flex flex-col mb-8">
     <time
       datetime={pubDate.toISOString()}
-      class="block text-center dark:text-zinc-400 text-zinc-600 mb-4 text-sm sm:text-base"
+      class="block text-center mb-4 text-sm sm:text-base"
     >
       {fullPubDate}
     </time>
@@ -86,14 +86,14 @@ const fullUpdatedDate = updatedDate?.toLocaleDateString("en", {
   </header>
   {
     updatedDate && (
-      <article class="dark:text-blue-300 py-2 px-4 mb-6 rounded-md text-sm sm:text-base border border-blue-400 transition-all bg-blue-600/20">
+      <article class="dark:text-blue-200 text-blue-800 py-2 px-4 mb-6 rounded-md text-sm sm:text-base border border-blue-500 bg-blue-600/20">
         <span class="font-semibold">Last updated: </span>
         {fullUpdatedDate}
       </article>
     )
   }
   <article
-    class="prose dark:prose-invert lg:prose-lg dark:prose-code:text-zinc-300 dark:prose-a:text-blue-400 prose-a:text-blue-600 max-w-none hover:prose-a:underline focus:prose-a:underline prose-a:no-underline dark:prose-headings:text-teal-500 prose-img:rounded-lg"
+    class="prose max-w-none dark:prose-invert dark:prose-code:text-zinc-300 dark:prose-a:text-blue-400 prose-a:text-blue-600 hover:prose-a:underline focus:prose-a:underline prose-a:no-underline dark:prose-headings:text-teal-500 prose-img:rounded-lg"
   >
     <slot />
   </article>

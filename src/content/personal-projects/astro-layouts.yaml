@@ -1,0 +1,8 @@
+owner: kevinzunigacuellar
+repo: astro-layouts
+url: https://github.com/kevinzunigacuellar/astro-layouts
+stars: 25
+forks: 1
+description: Remark plugin to add folder-based layouts to astro pages
+languages:
+  - TypeScript

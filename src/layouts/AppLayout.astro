@@ -1,7 +1,6 @@
 ---
 import Link from "@components/Link.astro";
-import { twitter, author, defaultMeta } from "@data/socials";
-import navigation from "@data/navigation.json";
+import { twitter, author, defaultMeta, navigation } from "@data/constants";
 import "@fontsource-variable/inter";
 
 interface Props {
@@ -12,6 +11,7 @@ interface Props {
     alt: string;
   };
   pubDate?: Date;
+  wide?: boolean;
 }
 
 const {
@@ -19,6 +19,7 @@ const {
   description = defaultMeta.description,
   ogImage = defaultMeta.ogImage,
   pubDate,
+  wide = false,
 } = Astro.props;
 
 const ogImageURL = new URL(ogImage.src, Astro.site).href;
@@ -63,7 +64,7 @@ const canonicalURL = new URL(Astro.url).href;
     }
   </head>
   <body
-    class="dark:bg-zinc-900 bg-zinc-100 antialiased selection:bg-teal-300 selection:text-zinc-900 dark:selection:bg-teal-600 dark:selection:text-white py-10 2xl:text-lg"
+    class="dark:bg-zinc-900 bg-zinc-100 antialiased selection:bg-teal-300 selection:text-zinc-900 dark:selection:bg-teal-600 dark:selection:text-white pt-10 pb-20 2xl:text-lg"
   >
     <a
       href="#main-content"
@@ -83,17 +84,15 @@ const canonicalURL = new URL(Astro.url).href;
         }
       </ul>
     </nav>
-    <main class="px-6 lg:px-0 mx-auto max-w-3xl" id="main-content">
+    <main
+      class="px-6 lg:px-0 mx-auto dark:text-zinc-400 text-zinc-600"
+      id="main-content"
+      class:list={{
+        "max-w-4xl": wide,
+        "max-w-3xl": !wide,
+      }}
+    >
       <slot />
     </main>
   </body>
 </html>
-<style>
-  nav {
-    -ms-overflow-style: none; /* Internet Explorer 10+ */
-    scrollbar-width: none; /* Firefox */
-  }
-  nav::-webkit-scrollbar {
-    display: none; /* Safari and Chrome */
-  }
-</style>
