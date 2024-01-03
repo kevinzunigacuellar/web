@@ -22,10 +22,10 @@ function getRepositoryName(owner: string, repo: string) {
     "p-4": minimal,
   }}
 >
-  <h2
-    class="group font-medium dark:text-zinc-200 hover:text-blue-600 dark:hover:text-teal-400"
-  >
-    <a class="inline-flex gap-1" href={data.url}
+  <h2>
+    <a
+      class="group font-medium dark:text-zinc-200 hover:text-blue-600 dark:hover:text-teal-400 inline-flex gap-1"
+      href={data.url}
       >{getRepositoryName(data.owner, data.repo)}<Icon
         name="external-link"
         class="opacity-0 group-hover:opacity-100"
