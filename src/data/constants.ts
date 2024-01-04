@@ -4,10 +4,10 @@ export const author = "Kevin Zuniga Cuellar";
 export const defaultMeta = {
   title: "Kevin Zuniga Cuellar",
   description:
-    "Welcome to my personal website! I am a software engineering student. I'm passionate about building software that helps developers to be more productive",
+    "Welcome to my personal website! I am a a software engineer based in Burlington, VT. I build tools for developers that help them build faster and better software",
   ogImage: {
     src: "/static/banner.png",
-    alt: "Photo of the author smiling",
+    alt: "Kevin smiling",
   },
 };
 

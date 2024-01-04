@@ -1,16 +1,18 @@
 ---
 import { getCollection } from "astro:content";
+import { basename } from "node:path"
 
 const posts = (await getCollection("blog")).sort(
   (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf(),
 );
 
-const index = posts.findIndex((post) => {
-  return Astro.request.url.includes(post.slug);
+const currentIndex = posts.findIndex((post) => {
+  return basename(Astro.url.pathname) === post.slug;
 });
 
-const nextPost = posts.at(index + 1);
-const prevPost = posts.at(index - 1);
+const nextPost = posts[currentIndex + 1]
+const prevPost = posts[currentIndex - 1]
+
 ---
 
 <aside class="flex flex-col sm:flex-row mt-10 gap-4 w-full">
