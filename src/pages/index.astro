@@ -42,7 +42,7 @@ const posts = (await getCollection("blog")).sort(
           >@astrodotbuild</a
         > Maintainer
       </p>
-      <ul class="mt-6 grid grid-cols-1 gap-1">
+      <ul class="mt-4 sm:mt-6 grid grid-cols-1 gap-2">
         {socials.map((s) => <Social {...s} />)}
       </ul>
     </div>

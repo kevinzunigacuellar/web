@@ -10,9 +10,9 @@ interface Props {
 const { icon, href, username } = Astro.props;
 ---
 
-<li class="dark:hover:text-zinc-200 hover:text-zinc-700">
-  <a class="inline-flex gap-2 items-baseline group" href={href}
-    ><Icon name={icon} />{username}<Icon
+<li>
+  <a class="inline-flex gap-2 items-center group dark:hover:text-zinc-200 hover:text-zinc-700" href={href}
+    ><Icon name={icon} size={16} />{username}<Icon
       name="external-link"
       class="-ml-1 opacity-0 group-hover:opacity-100"
     /></a
