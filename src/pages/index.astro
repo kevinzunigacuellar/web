@@ -26,6 +26,7 @@ const posts = (await getCollection("blog")).sort(
         height={80}
         width={80}
         src={authorImage}
+        loading="eager"
         densities={[1.5, 2]}
         formats={["avif", "webp"]}
         alt="Author smiling"
