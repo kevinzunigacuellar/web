@@ -5,4 +5,11 @@
   for = "/_astro/*"
   [headers.values]
     Cache-Control = "public, max-age=604800, immutable"
+    
+
+[[headers]]
+  for = "/*"
+  [headers.values]
     Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
+    
+    
