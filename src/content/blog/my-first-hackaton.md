@@ -10,6 +10,10 @@ As the title suggests, I recently took part in my very first hackathon. It was a
 
 At the time of this writing, I'm still polishing some details and maybe adding a few extras, but the first version of the project is already [live](https://shieldz.vercel.app).
 
+Watch a quick demo of the project in [Loom](https://www.loom.com/share/cb1b632896f34782abf15c39bf21421c?sid=73033ec4-dec2-4b4c-9216-14f58d8e33aa)
+
+Code is available on [GitHub](https://github.com/kevinzunigacuellar/shield)
+
 ## The Project
 
 I named this project **Shield**, inspired by the anime [*The Rising of the Shield Hero*](https://en.wikipedia.org/wiki/The_Rising_of_the_Shield_Hero), which I was watching during the hackathon. If you haven't seen it, I highly recommend it.
