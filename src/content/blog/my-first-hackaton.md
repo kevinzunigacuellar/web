@@ -1,7 +1,7 @@
 ---
 title: My first hackathon
 description: I participated in my first hackathon ever. Here are some details about the project I worked on and the experience I had.
-pubDate: 2024-07-16
+pubDate: 2024-07-15
 hero: "~/assets/heros/shield-og.png"
 heroAlt: "The Shield logo"
 ---
