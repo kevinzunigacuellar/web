@@ -1,8 +1,8 @@
 owner: kevinzunigacuellar
 repo: astro-firebase
 url: https://github.com/kevinzunigacuellar/astro-supabase
-stars: 42
-forks: 12
+stars: 55
+forks: 14
 description: Astro and Firebase auth and database demo
 website: https://astrossr-firebase.vercel.app/
 languages:

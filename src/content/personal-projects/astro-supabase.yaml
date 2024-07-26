@@ -1,8 +1,8 @@
 owner: kevinzunigacuellar
 repo: astro-supabase
 url: https://github.com/kevinzunigacuellar/astro-supabase
-stars: 64
-forks: 14
+stars: 164
+forks: 44
 description: Astro and Supabase auth and database demo
 website: https://astro-supabase-auth.vercel.app/
 languages:
