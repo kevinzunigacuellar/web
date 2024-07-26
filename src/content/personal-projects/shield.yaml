@@ -1,0 +1,11 @@
+owner: kevinzunigacuellar
+repo: shield
+url: https://github.com/kevinzunigacuellar/shield
+stars: 0
+forks: 0
+description: Job platform powered by AI to help you find the best candidates
+website: https://shield.kevinzunigacuellar.com/
+languages:
+  - Next.js
+  - TypeScript
+  - Python
