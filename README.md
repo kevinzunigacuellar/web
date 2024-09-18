@@ -4,7 +4,7 @@ A minimal, responsive, and accessible personal website built with [Astro](https:
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/kevinzunigacuellar/kevinzunigacuellar.com?title=Personal%20website)
 
-![screenshot](https://user-images.githubusercontent.com/46791833/207947058-9d7c08bf-0ad1-4eb8-a9f8-8105ca0a4814.png)
+![screenshot](https://github.com/user-attachments/assets/b9225fbc-d314-4580-bda6-4de3a58088c4)
 
 ## Tech stack
 
