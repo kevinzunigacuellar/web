@@ -16,9 +16,9 @@ Code is available on [GitHub](https://github.com/kevinzunigacuellar/shield)
 
 ## The Project
 
-I named this project **Shield**, inspired by the anime [*The Rising of the Shield Hero*](https://en.wikipedia.org/wiki/The_Rising_of_the_Shield_Hero), which I was watching during the hackathon. If you haven't seen it, I highly recommend it.
+I named this project **Shield**, inspired by the anime [_The Rising of the Shield Hero_](https://en.wikipedia.org/wiki/The_Rising_of_the_Shield_Hero), which I was watching during the hackathon. If you haven't seen it, I highly recommend it.
 
-Shield is a job post platform designed to streamline the hiring process by using AI to match job descriptions with resumes. 
+Shield is a job post platform designed to streamline the hiring process by using AI to match job descriptions with resumes.
 
 Employers can create an account and post jobs. The platform provides a URL they can share with potential candidates. Candidates can use this URL to apply for the job. The platform analyzes the job description and the resume, providing a match score to help employers make more efficient hiring decisions.
 
