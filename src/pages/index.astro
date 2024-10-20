@@ -89,9 +89,10 @@ const posts = (await getCollection("blog"))
       </p>
       <ul class="mt-6 grid grid-cols-1 gap-5">
         {posts.map((post) => <Blog minimal {...post} />)}
-        <a class="dark:hover:text-zinc-200 hover:text-zinc-800" href="/blog/"
-          >View all posts &rarr;</a
-        >
+        <li>
+          <a class="dark:hover:text-zinc-200 hover:text-zinc-800" href="/blog/"
+            >View all posts &rarr;</a>
+        </li>
       </ul>
     </section>
   </div>
