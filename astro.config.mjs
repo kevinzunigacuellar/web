@@ -23,9 +23,6 @@ export default defineConfig({
   image: {
     service: sharpImageService(),
   },
-  experimental: {
-    contentLayer: true,
-  },
   site: "https://www.kevinzunigacuellar.com",
   vite: {
     plugins: [rawFonts([".ttf", ".woff"])],
