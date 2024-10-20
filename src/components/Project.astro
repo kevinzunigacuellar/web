@@ -2,18 +2,11 @@
 import { type CollectionEntry } from "astro:content";
 import { Icon } from "astro-icon/components";
 
-type Props = CollectionEntry<"oss" | "personal-projects"> & {
+type Props = CollectionEntry<"projects"> & {
   minimal?: boolean;
 };
 
 const { data, minimal = false } = Astro.props;
-
-function getRepositoryName(owner: string, repo: string) {
-  if (owner == "kevinzunigacuellar") {
-    return repo;
-  }
-  return `${owner}/${repo}`;
-}
 
 function formatNumbers(stars: number) {
   if (stars > 1000) {
@@ -34,7 +27,7 @@ function formatNumbers(stars: number) {
     <a
       class="group font-medium dark:text-zinc-200 hover:text-blue-600 dark:hover:text-teal-400 inline-flex gap-1"
       href={data.url}
-      >{getRepositoryName(data.owner, data.repo)}<Icon
+      >{data.name}<Icon
         name="external-link"
         class="opacity-0 group-hover:opacity-100"
       /></a
@@ -42,39 +35,16 @@ function formatNumbers(stars: number) {
   </h2>
   <ul class="flex gap-3 mt-1 items-center text-zinc-500 dark:text-zinc-400">
     <li class="inline-flex gap-0.5 items-baseline">
-      <Icon name="star" />{formatNumbers(data.stars)}
+      <Icon name="star" />{formatNumbers(data.stargazers_count)}
     </li>
     {
-      data.forks > 0 && (
+      data.forks_count > 0 && (
         <li class="inline-flex gap-0.5 items-center">
           <Icon name="fork" />
-          {formatNumbers(data.forks)}
-        </li>
-      )
-    }
-    {
-      data.website && (
-        <li>
-          <a
-            href={data.website}
-            class="px-2 py-0.5 rounded-md border dark:border-teal-400 border-blue-600 dark:text-teal-400 text-blue-600 dark:hover:bg-teal-400 hover:bg-blue-600 text-sm font-medium dark:hover:text-teal-950 hover:text-white transition-all"
-          >
-            Website
-          </a>
+          {formatNumbers(data.forks_count)}
         </li>
       )
     }
   </ul>
-  {!minimal && <p class="mt-1 leading-relaxed">{data.description}</p>}
-  {
-    !minimal && (
-      <ul class="mt-2 flex flex-wrap gap-2">
-        {data.languages.map((item) => (
-          <li class="dark:bg-zinc-700 bg-zinc-100 text-zinc-600 dark:text-zinc-300 rounded-md px-2 py-1 text-sm">
-            {item}
-          </li>
-        ))}
-      </ul>
-    )
-  }
+  <p class="leading-relaxed truncate">{data.description}</p>
 </li>

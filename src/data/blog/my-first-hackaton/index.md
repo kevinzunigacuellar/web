@@ -2,7 +2,7 @@
 title: My first hackathon
 description: I participated in my first hackathon ever. Here are some details about the project I worked on and the experience I had.
 pubDate: 2024-07-15
-hero: "~/assets/heros/shield-og.png"
+hero: "shield-og.png"
 heroAlt: "The Shield logo"
 ---
 
@@ -46,7 +46,7 @@ Whenever an applicant applies for a job, the following steps are executed:
 3. Once the upload is completed, the server creates a new entry in the database with the URL of the resume.
 4. Finally, an event is sent to Inngest to process the resume, provide a match score, and send a confirmation email to the applicant.
 
-![application flow](~/assets/content/application-flow.png)
+![application flow](./application-flow.png)
 
 ### Score Calculation Flow
 
@@ -58,7 +58,7 @@ The score calculation flow is run as a background job using Inngest. The followi
 4. The text is sent to Cohere to generate a match score.
 5. The match score is saved in the database.
 
-![score flow](~/assets/content/score-flow.png)
+![score flow](./score-flow.png)
 
 ### Email Confirmation Flow
 
@@ -68,7 +68,7 @@ The email confirmation flow is also run as a background job using Inngest. The f
 2. Inngest requests the application data from the database.
 3. The email is sent using Resend.
 
-![email flow](~/assets/content/email-flow.png)
+![email flow](./email-flow.png)
 
 ## Final Thoughts
 

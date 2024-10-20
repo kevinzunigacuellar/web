@@ -4,32 +4,19 @@ import Header from "@components/Header.astro";
 import Project from "@components/Project.astro";
 import { getCollection } from "astro:content";
 
-const oss = (await getCollection("oss")).sort(
-  (a, b) => b.data.stars - a.data.stars,
-);
-
-const personalProjects = (await getCollection("personal-projects")).sort(
-  (a, b) => b.data.stars - a.data.stars,
-);
+const personalProjects = (await getCollection("projects"))
+  .toSorted((a, b) => b.data.stargazers_count - a.data.stargazers_count)
+  .filter((project) => project.data.stargazers_count > 1)
+  .slice(0, 12);
 ---
 
 <Layout title="Projects | Kevin Zuniga Cuellar">
   <Header title="Projects" />
-  <p class="max-w-prose font-normal leading-relaxed">
-    My passion lies in creating and sharing meaningful projects. Below, you'll
-    find a selection of my favorite creations, either authored or contributed to
-    by me.
+  <p class="max-w-prose leading-relaxed">
+    Here are some of the projects I've worked on. Some of them are open source
+    and others are personal projects.
   </p>
-  <h2 class="mt-12 text-xl font-semibold dark:text-zinc-100 text-zinc-900">
-    Open Source
-  </h2>
-  <ul class="mt-6 grid grid-cols-1 gap-6">
-    {oss.map((oss) => <Project {...oss} />)}
-  </ul>
-  <h2 class="mt-12 text-xl font-semibold dark:text-zinc-100 text-zinc-900">
-    Authored Projects
-  </h2>
-  <ul class="mt-6 grid grid-cols-1 gap-6">
+  <ul class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
     {personalProjects.map((projects) => <Project {...projects} />)}
   </ul>
 </Layout>

@@ -7,7 +7,10 @@ import expressiveCode from "astro-expressive-code";
 
 /** @type {import('astro-expressive-code').AstroExpressiveCodeOptions} */
 const astroExpressiveCodeOptions = {
-  themes: ["one-dark-pro", "slack-ochin"],
+  themes: ["houston", "catppuccin-latte"],
+  styleOverrides: {
+    codeFontSize: "0.9rem",
+  },
 };
 
 export default defineConfig({
@@ -19,6 +22,9 @@ export default defineConfig({
   ],
   image: {
     service: sharpImageService(),
+  },
+  experimental: {
+    contentLayer: true,
   },
   site: "https://www.kevinzunigacuellar.com",
   vite: {

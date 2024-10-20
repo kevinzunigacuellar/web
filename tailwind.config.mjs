@@ -18,11 +18,9 @@ export default {
               content: '""',
             },
             ":not(pre) > code": {
-              backgroundColor: theme("colors.neutral.200"),
-              border: "1px solid",
-              borderColor: theme("colors.zinc.300"),
-              padding: "0.250rem 0.4rem",
-              borderRadius: "0.250rem",
+              backgroundColor: "#e8ebf1",
+              padding: "0.15rem 0.375rem",
+              borderRadius: "0.3rem",
               fontWeight: "400",
             },
           },
@@ -30,8 +28,7 @@ export default {
         invert: {
           css: {
             ":not(pre) > code": {
-              backgroundColor: theme("colors.neutral.800"),
-              borderColor: theme("colors.zinc.700"),
+              backgroundColor: "#353a45",
             },
           },
         },

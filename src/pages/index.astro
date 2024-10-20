@@ -9,13 +9,13 @@ import Social from "@components/Social.astro";
 import Project from "@components/Project.astro";
 import Blog from "@components/Blog.astro";
 
-const oss = (await getCollection("oss"))
-  .sort((a, b) => b.data.stars - a.data.stars)
+const projects = (await getCollection("projects"))
+  .sort((a, b) => b.data.stargazers_count - a.data.stargazers_count)
   .slice(0, 3);
 
-const posts = (await getCollection("blog")).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
-);
+const posts = (await getCollection("blog"))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 4);
 ---
 
 <Layout wide={true}>
@@ -67,15 +67,14 @@ const posts = (await getCollection("blog")).sort(
         {skills.map((s) => <Skill {...s} />)}
       </ul>
       <h2 class="mt-12 text-lg font-semibold dark:text-zinc-100 text-zinc-900">
-        Open Source
+        Popular Projects
       </h2>
       <p class="mt-3 max-w-prose leading-relaxed">
-        I love open source and I have been contributing to different projects
-        for the some time. Here are some of the most popular projects that I
-        have contributed to.
+        Here are some of my most popular projects on GitHub. You can find more
+        on my GitHub profile.
       </p>
       <ul class="mt-6 grid grid-cols-1 gap-5">
-        {oss.map((oss) => <Project minimal {...oss} />)}
+        {projects.map((project) => <Project minimal {...project} />)}
       </ul>
       <a
         class="inline-block mt-3 dark:hover:text-zinc-200 hover:text-zinc-800"
@@ -88,13 +87,12 @@ const posts = (await getCollection("blog")).sort(
         My personal collection of code snippets, starter guides, tutorials and
         interesting things I found online.
       </p>
-      <ul class="mt-6 grid grid-cols-1 gap-6">
+      <ul class="mt-6 grid grid-cols-1 gap-5">
         {posts.map((post) => <Blog minimal {...post} />)}
+        <a class="dark:hover:text-zinc-200 hover:text-zinc-800" href="/blog/"
+          >View all posts &rarr;</a
+        >
       </ul>
-      <a
-        class="inline-block mt-3 dark:hover:text-zinc-200 hover:text-zinc-800"
-        href="/blog/">View all posts &rarr;</a
-      >
     </section>
   </div>
 </Layout>
