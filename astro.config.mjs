@@ -1,4 +1,9 @@
-import { defineConfig, sharpImageService } from "astro/config";
+import {
+  defineConfig,
+  sharpImageService,
+  defineConfig,
+  envField,
+} from "astro/config";
 import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
 import { readFileSync } from "node:fs";
@@ -7,7 +12,10 @@ import expressiveCode from "astro-expressive-code";
 
 /** @type {import('astro-expressive-code').AstroExpressiveCodeOptions} */
 const astroExpressiveCodeOptions = {
-  themes: ["one-dark-pro", "slack-ochin"],
+  themes: ["houston", "catppuccin-latte"],
+  styleOverrides: {
+    codeFontSize: "0.9rem",
+  },
 };
 
 export default defineConfig({
@@ -17,14 +25,16 @@ export default defineConfig({
     expressiveCode(astroExpressiveCodeOptions),
     icon(),
   ],
-  image: {
-    service: sharpImageService(),
-  },
   site: "https://www.kevinzunigacuellar.com",
   vite: {
     plugins: [rawFonts([".ttf", ".woff"])],
     optimizeDeps: {
       exclude: ["@resvg/resvg-js"],
+    },
+  },
+  env: {
+    schema: {
+      GH_TOKEN: envField.string({ context: "server", access: "secret" }),
     },
   },
 });

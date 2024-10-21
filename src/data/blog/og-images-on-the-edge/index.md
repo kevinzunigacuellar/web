@@ -3,7 +3,7 @@ title: Generate OG images on the edge with Netlify
 description: In this guide, you will learn how to generate open graph images on the edge using Netlify edge functions, deno, and Astro
 pubDate: 2022-11-05
 updatedDate: 2023-06-04
-hero: "~/assets/heros/astro_netlify.png"
+hero: "astro_netlify.png"
 heroAlt: "The logo of Astro and Netlify"
 ---
 
@@ -15,13 +15,13 @@ In this guide, we will use [og-edge](https://github.com/ascorbic/og-edge), a for
 
 1. Create a new Astro project using the CLI:
 
-   ```bash
+   ```sh frame="none"
    npm create astro@latest
    ```
 
 2. Install the [Netlify CLI](https://docs.netlify.com/cli/get-started/#installation) globally on your machine to run Netlify edge functions locally during development:
 
-   ```bash
+   ```sh frame="none"
    npm install -g netlify-cli
    ```
 
@@ -106,7 +106,7 @@ export default function handler(req: Request) {
 
 To test your edge function locally, run the following command in the root of your project:
 
-```bash
+```sh frame="none"
 netlify dev
 ```
 
@@ -114,7 +114,7 @@ This will start a local development server on [localhost:8888](http://localhost:
 
 To test the edge function, navigate to [localhost:8888/og-image?title=Hello%20World&pubDate=2022-11-05](http://localhost:8888/og-image?title=Hello%20World&pubDate=2022-11-05) in your browser. You should see a blank example of an og image.
 
-![Blank example of an og image](~/assets/content/blank-og.png)
+![Blank example of an og image](./blank-og.png)
 
 ## Customization possibilities
 
@@ -122,4 +122,4 @@ You have the freedom to customize the image as desired. Feel free to add more qu
 
 For inspiration, here is the open graph image generated for this post.
 
-![OG image for this blog post](~/assets/content/example-og.png)
+![OG image for this blog post](./example-og.png)

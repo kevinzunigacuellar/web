@@ -15,7 +15,7 @@ A minimal, responsive, and accessible personal website built with [Astro](https:
 
 To get started, run the following commands:
 
-```bash
+```sh frame="none"
 # Install dependencies
 pnpm install
 

@@ -3,7 +3,7 @@ title: Introducing astro-layouts, my first npm package
 description: I wrote and published my first npm package "astro-layouts". Here some details about how I got the idea and how it works
 pubDate: 2022-11-20
 updatedDate: 2023-06-04
-hero: "~/assets/heros/astro_npm.png"
+hero: "astro_npm.png"
 heroAlt: "The logo of Astro and npm"
 ---
 
@@ -21,7 +21,7 @@ The package utilizes glob patterns to match pages with their respective layouts.
 
 To install the package, run the following command:
 
-```bash
+```sh frame="none"
 npm install astro-layouts
 ```
 

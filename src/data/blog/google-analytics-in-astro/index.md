@@ -3,8 +3,8 @@ title: Add google analytics to Astro with Partytown
 description: In this guide, you will learn how to add google analytics to Astro without blocking the main thread using the partytown integration
 pubDate: 2022-05-12
 updatedDate: 2023-06-04
-hero: "~/assets/heros/astro_ga.png"
-heroAlt: "Logo of Astro, partytown and google analytics together"
+hero: astro_ga.png
+heroAlt: Logo of Astro, partytown and google analytics together
 ---
 
 As your website attracts more visitors, you may need to incorporate various third-party scripts into your project to extend its functionality beyond the core features. Two common third-party scripts are Google Analytics and Facebook Pixel, which are web analytics services that help you assess and improve your website's effectiveness.
@@ -15,13 +15,13 @@ In this guide, we will focus on adding Google Analytics to your Astro project us
 
 To begin, create a new Astro project using the CLI:
 
-```bash
+```sh frame="none"
 npm create astro@latest
 ```
 
 Next, install the Astro integration for Partytown:
 
-```bash
+```sh frame="none"
 npm install -D @astrojs/partytown
 ```
 
@@ -47,7 +47,7 @@ This configuration enables Partytown to forward all events to Google Analytics u
 
 Create a Google Analytics account and obtain the tracking ID. After creating a new property for your domain, you can find the tracking ID in the **Property Settings**.
 
-![Example of Google Analytics admin settings with a tracking ID](~/assets/content/tracking-setup.png)
+![Example of Google Analytics admin settings with a tracking ID](./tracking-setup.png)
 
 ## Hands-on Time
 
@@ -101,4 +101,4 @@ Congratulations! You have successfully added Google Analytics to your Astro proj
 ## Testing
 
 After deploying your project, visit your Google Analytics. You should see some recent activity after visiting your website.
-![Google analytics real time dashboard with one visitor in the last 30 minutes](~/assets/content/realtime-dashboard.png)
+![Google analytics real time dashboard with one visitor in the last 30 minutes](./realtime-dashboard.png)

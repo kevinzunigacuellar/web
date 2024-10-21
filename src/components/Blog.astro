@@ -4,7 +4,7 @@ type Props = CollectionEntry<"blog"> & {
   minimal?: true;
 };
 
-const { data, slug, minimal = false } = Astro.props;
+const { data, id, minimal = false } = Astro.props;
 
 const fullDate = data.pubDate.toLocaleDateString("en", {
   year: "numeric",
@@ -29,8 +29,12 @@ const fullDate = data.pubDate.toLocaleDateString("en", {
     >{fullDate}
   </time>
   <a
-    class="before:absolute before:inset-0 font-semibold dark:text-zinc-300 group-hover:text-blue-600 dark:group-hover:text-teal-400"
-    href={`/blog/${slug}/`}
+    class="before:absolute before:inset-0 dark:text-zinc-300 group-hover:text-blue-600 dark:group-hover:text-teal-400"
+    class:list={{
+      "font-medium": minimal,
+      "font-semibold": !minimal,
+    }}
+    href={`/blog/${id}/`}
   >
     {data.title}
   </a>

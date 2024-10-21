@@ -9,13 +9,13 @@ import Social from "@components/Social.astro";
 import Project from "@components/Project.astro";
 import Blog from "@components/Blog.astro";
 
-const oss = (await getCollection("oss"))
-  .sort((a, b) => b.data.stars - a.data.stars)
+const contributions = (await getCollection("contributions"))
+  .sort((a, b) => b.data.stargazerCount - a.data.stargazerCount)
   .slice(0, 3);
 
-const posts = (await getCollection("blog")).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
-);
+const posts = (await getCollection("blog"))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 4);
 ---
 
 <Layout wide={true}>
@@ -75,7 +75,17 @@ const posts = (await getCollection("blog")).sort(
         have contributed to.
       </p>
       <ul class="mt-6 grid grid-cols-1 gap-5">
-        {oss.map((oss) => <Project minimal {...oss} />)}
+        {
+          contributions.map((contribution) => (
+            <Project
+              name={contribution.data.nameWithOwner}
+              description={contribution.data.description}
+              stargazersCount={contribution.data.stargazerCount}
+              forksCount={contribution.data.forkCount}
+              url={contribution.data.url}
+            />
+          ))
+        }
       </ul>
       <a
         class="inline-block mt-3 dark:hover:text-zinc-200 hover:text-zinc-800"
@@ -88,13 +98,14 @@ const posts = (await getCollection("blog")).sort(
         My personal collection of code snippets, starter guides, tutorials and
         interesting things I found online.
       </p>
-      <ul class="mt-6 grid grid-cols-1 gap-6">
+      <ul class="mt-6 grid grid-cols-1 gap-5">
         {posts.map((post) => <Blog minimal {...post} />)}
+        <li>
+          <a class="dark:hover:text-zinc-200 hover:text-zinc-800" href="/blog/"
+            >View all posts &rarr;</a
+          >
+        </li>
       </ul>
-      <a
-        class="inline-block mt-3 dark:hover:text-zinc-200 hover:text-zinc-800"
-        href="/blog/">View all posts &rarr;</a
-      >
     </section>
   </div>
 </Layout>

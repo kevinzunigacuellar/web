@@ -2,7 +2,7 @@
 title: 10 tips to get started with open source
 description: Ten tips to get started contributing to open source projects and landing your first pull request from a beginner maintainer.
 pubDate: 2023-01-06
-hero: "~/assets/heros/oss_love.png"
+hero: "oss_love.png"
 heroAlt: A black canvas with a heart at the center
 ---
 
