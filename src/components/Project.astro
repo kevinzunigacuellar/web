@@ -1,12 +1,23 @@
 ---
-import { type CollectionEntry } from "astro:content";
 import { Icon } from "astro-icon/components";
 
-type Props = CollectionEntry<"projects"> & {
+interface Props {
+  url: string;
+  name: string;
   minimal?: boolean;
-};
+  description: string | null;
+  stargazersCount: number;
+  forksCount: number;
+}
 
-const { data, minimal = false } = Astro.props;
+const {
+  url,
+  name,
+  description,
+  stargazersCount,
+  forksCount,
+  minimal = false,
+} = Astro.props;
 
 function formatNumbers(stars: number) {
   if (stars > 1000) {
@@ -26,8 +37,8 @@ function formatNumbers(stars: number) {
   <h2>
     <a
       class="group font-medium dark:text-zinc-200 hover:text-blue-600 dark:hover:text-teal-400 inline-flex gap-1"
-      href={data.url}
-      >{data.name}<Icon
+      href={url}
+      >{name}<Icon
         name="external-link"
         class="opacity-0 group-hover:opacity-100"
       /></a
@@ -35,16 +46,16 @@ function formatNumbers(stars: number) {
   </h2>
   <ul class="flex gap-3 mt-1 items-center text-zinc-500 dark:text-zinc-400">
     <li class="inline-flex gap-0.5 items-baseline">
-      <Icon name="star" />{formatNumbers(data.stargazers_count)}
+      <Icon name="star" />{formatNumbers(stargazersCount)}
     </li>
     {
-      data.forks_count > 0 && (
+      forksCount > 0 && (
         <li class="inline-flex gap-0.5 items-center">
           <Icon name="fork" />
-          {formatNumbers(data.forks_count)}
+          {formatNumbers(forksCount)}
         </li>
       )
     }
   </ul>
-  <p class="leading-relaxed truncate">{data.description}</p>
+  {description && <p class="leading-relaxed truncate">{description}</p>}
 </li>

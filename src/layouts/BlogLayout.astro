@@ -32,6 +32,9 @@ const fullUpdatedDate = data.updatedDate?.toLocaleDateString("en", {
   ogImage={ogImage}
   pubDate={data.updatedDate ?? data.pubDate}
 >
+  <a href="/blog/" class="inline-block mb-8 hover:text-zinc-900"
+    >&larr; Back to blog</a
+  >
   <header class="flex flex-col mb-8">
     <time
       datetime={data.pubDate.toISOString()}

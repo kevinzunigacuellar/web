@@ -1,4 +1,9 @@
-import { defineConfig, sharpImageService } from "astro/config";
+import {
+  defineConfig,
+  sharpImageService,
+  defineConfig,
+  envField,
+} from "astro/config";
 import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
 import { readFileSync } from "node:fs";
@@ -20,14 +25,16 @@ export default defineConfig({
     expressiveCode(astroExpressiveCodeOptions),
     icon(),
   ],
-  image: {
-    service: sharpImageService(),
-  },
   site: "https://www.kevinzunigacuellar.com",
   vite: {
     plugins: [rawFonts([".ttf", ".woff"])],
     optimizeDeps: {
       exclude: ["@resvg/resvg-js"],
+    },
+  },
+  env: {
+    schema: {
+      GH_TOKEN: envField.string({ context: "server", access: "secret" }),
     },
   },
 });

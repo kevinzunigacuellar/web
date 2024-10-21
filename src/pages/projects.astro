@@ -8,6 +8,11 @@ const personalProjects = (await getCollection("projects"))
   .toSorted((a, b) => b.data.stargazers_count - a.data.stargazers_count)
   .filter((project) => project.data.stargazers_count > 1)
   .slice(0, 12);
+
+const contributions = (await getCollection("contributions"))
+  .toSorted((a, b) => b.data.stargazerCount - a.data.stargazerCount)
+  .filter((project) => project.data.stargazerCount > 1)
+  .slice(0, 12);
 ---
 
 <Layout title="Projects | Kevin Zuniga Cuellar">
@@ -16,7 +21,36 @@ const personalProjects = (await getCollection("projects"))
     Here are some of the projects I've worked on. Some of them are open source
     and others are personal projects.
   </p>
+  <h2 class="mt-12 text-xl font-semibold dark:text-zinc-100 text-zinc-900">
+    Open Source
+  </h2>
   <ul class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
-    {personalProjects.map((projects) => <Project {...projects} />)}
+    {
+      contributions.map((projects) => (
+        <Project
+          name={projects.data.nameWithOwner}
+          description={projects.data.description}
+          stargazersCount={projects.data.stargazerCount}
+          forksCount={projects.data.forkCount}
+          url={projects.data.url}
+        />
+      ))
+    }
+  </ul>
+  <h2 class="mt-12 text-xl font-semibold dark:text-zinc-100 text-zinc-900">
+    Personal Projects
+  </h2>
+  <ul class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+    {
+      personalProjects.map((project) => (
+        <Project
+          name={project.data.name}
+          description={project.data.description}
+          stargazersCount={project.data.stargazers_count}
+          forksCount={project.data.forks_count}
+          url={project.data.url}
+        />
+      ))
+    }
   </ul>
 </Layout>

@@ -9,8 +9,8 @@ import Social from "@components/Social.astro";
 import Project from "@components/Project.astro";
 import Blog from "@components/Blog.astro";
 
-const projects = (await getCollection("projects"))
-  .sort((a, b) => b.data.stargazers_count - a.data.stargazers_count)
+const contributions = (await getCollection("contributions"))
+  .sort((a, b) => b.data.stargazerCount - a.data.stargazerCount)
   .slice(0, 3);
 
 const posts = (await getCollection("blog"))
@@ -67,14 +67,25 @@ const posts = (await getCollection("blog"))
         {skills.map((s) => <Skill {...s} />)}
       </ul>
       <h2 class="mt-12 text-lg font-semibold dark:text-zinc-100 text-zinc-900">
-        Popular Projects
+        Open Source
       </h2>
       <p class="mt-3 max-w-prose leading-relaxed">
-        Here are some of my most popular projects on GitHub. You can find more
-        on my GitHub profile.
+        I love open source and I have been contributing to different projects
+        for the some time. Here are some of the most popular projects that I
+        have contributed to.
       </p>
       <ul class="mt-6 grid grid-cols-1 gap-5">
-        {projects.map((project) => <Project minimal {...project} />)}
+        {
+          contributions.map((contribution) => (
+            <Project
+              name={contribution.data.nameWithOwner}
+              description={contribution.data.description}
+              stargazersCount={contribution.data.stargazerCount}
+              forksCount={contribution.data.forkCount}
+              url={contribution.data.url}
+            />
+          ))
+        }
       </ul>
       <a
         class="inline-block mt-3 dark:hover:text-zinc-200 hover:text-zinc-800"
@@ -91,7 +102,8 @@ const posts = (await getCollection("blog"))
         {posts.map((post) => <Blog minimal {...post} />)}
         <li>
           <a class="dark:hover:text-zinc-200 hover:text-zinc-800" href="/blog/"
-            >View all posts &rarr;</a>
+            >View all posts &rarr;</a
+          >
         </li>
       </ul>
     </section>
