@@ -1,4 +1,5 @@
 import defaultTheme from "tailwindcss/defaultTheme";
+import typographyPlugin from "@tailwindcss/typography";
 
 export default {
   content: ["./src/**/*.{js,ts,jsx,tsx,astro}"],
@@ -8,7 +9,7 @@ export default {
       fontFamily: {
         sans: ["InterVariable", "Inter", ...defaultTheme.fontFamily.sans],
       },
-      typography: (theme) => ({
+      typography: {
         DEFAULT: {
           css: {
             "code::before": {
@@ -32,8 +33,8 @@ export default {
             },
           },
         },
-      }),
+      },
     },
   },
-  plugins: [require("@tailwindcss/typography")],
+  plugins: [typographyPlugin],
 };

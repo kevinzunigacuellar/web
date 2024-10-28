@@ -1,9 +1,4 @@
-import {
-  defineConfig,
-  sharpImageService,
-  defineConfig,
-  envField,
-} from "astro/config";
+import { defineConfig, envField } from "astro/config";
 import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
 import { readFileSync } from "node:fs";
