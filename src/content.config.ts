@@ -1,6 +1,6 @@
 import { defineCollection, z } from "astro:content";
-import { gitHubReposLoader } from "../loaders/repos";
-import { gitHubContributionsLoader } from "../loaders/contributions";
+import { gitHubReposLoader } from "./loaders/repos";
+import { gitHubContributionsLoader } from "./loaders/contributions";
 import { glob } from "astro/loaders";
 import { GH_TOKEN } from "astro:env/server";
 
