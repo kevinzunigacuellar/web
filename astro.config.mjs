@@ -20,7 +20,7 @@ export default defineConfig({
     expressiveCode(astroExpressiveCodeOptions),
     icon(),
   ],
-  site: "https://www.kevinzunigacuellar.com",
+  site: "https://www.kevinzc.com",
   vite: {
     plugins: [rawFonts([".ttf", ".woff"])],
     optimizeDeps: {
