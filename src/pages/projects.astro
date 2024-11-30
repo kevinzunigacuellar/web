@@ -5,12 +5,12 @@ import Project from "@components/Project.astro";
 import { getCollection } from "astro:content";
 
 const personalProjects = (await getCollection("projects"))
-  .toSorted((a, b) => b.data.stargazers_count - a.data.stargazers_count)
+  .sort((a, b) => b.data.stargazers_count - a.data.stargazers_count)
   .filter((project) => project.data.stargazers_count > 1)
   .slice(0, 12);
 
 const contributions = (await getCollection("contributions"))
-  .toSorted((a, b) => b.data.stargazerCount - a.data.stargazerCount)
+  .sort((a, b) => b.data.stargazerCount - a.data.stargazerCount)
   .filter((project) => project.data.stargazerCount > 1)
   .slice(0, 12);
 ---
