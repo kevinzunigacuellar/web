@@ -21,7 +21,7 @@ The package utilizes glob patterns to match pages with their respective layouts.
 
 To install the package, run the following command:
 
-```sh frame="none"
+```sh
 npm install astro-layouts
 ```
 

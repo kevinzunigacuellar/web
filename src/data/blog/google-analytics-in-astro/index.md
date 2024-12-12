@@ -2,26 +2,26 @@
 title: Add google analytics to Astro with Partytown
 description: In this guide, you will learn how to add google analytics to Astro without blocking the main thread using the partytown integration
 pubDate: 2022-05-12
-updatedDate: 2023-06-04
+updatedDate: 2024-12-11
 hero: astro_ga.png
 heroAlt: Logo of Astro, partytown and google analytics together
 ---
 
 As your website attracts more visitors, you may need to incorporate various third-party scripts into your project to extend its functionality beyond the core features. Two common third-party scripts are Google Analytics and Facebook Pixel, which are web analytics services that help you assess and improve your website's effectiveness.
 
-In this guide, we will focus on adding Google Analytics to your Astro project using Partytown, a web worker integration.
+In this guide, you will learn how to add Google Analytics to your Astro project using Partytown.
 
-## 🧑‍💻 Getting Started
+## Getting Started
 
 To begin, create a new Astro project using the CLI:
 
-```sh frame="none"
+```sh
 npm create astro@latest
 ```
 
 Next, install the Astro integration for Partytown:
 
-```sh frame="none"
+```sh
 npm install -D @astrojs/partytown
 ```
 
@@ -49,7 +49,7 @@ Create a Google Analytics account and obtain the tracking ID. After creating a n
 
 ![Example of Google Analytics admin settings with a tracking ID](./tracking-setup.png)
 
-## Hands-on Time
+## Adding Google Analytics
 
 Now that we have the Partytown integration installed and the Google Analytics tracking ID, we can proceed with setting up our Google Analytics script.
 
@@ -78,7 +78,7 @@ To enable Partytown to run Google Analytics in a web worker, make the following 
 
 After applying the modifications, your updated script will look like this:
 
-```astro title="Layout.astro"
+```astro title="src/layouts/Layout.astro" 'type="text/partytown"' "GA_MEASUREMENT_ID"
 <!-- head -->
 <script
   type="text/partytown"
@@ -94,9 +94,7 @@ After applying the modifications, your updated script will look like this:
 <!-- more head -->
 ```
 
-Finally, place this code snippet in the head section of your HTML. If you copy the code above, remember to update `GA_MEASUREMENT_ID` with your tracking ID.
-
-Congratulations! You have successfully added Google Analytics to your Astro project. 🎉
+Finally, place this code snippet in the head section of your HTML.
 
 ## Testing
 

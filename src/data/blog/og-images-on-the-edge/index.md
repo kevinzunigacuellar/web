@@ -13,72 +13,42 @@ In this guide, we will use [og-edge](https://github.com/ascorbic/og-edge), a for
 
 ## Getting started
 
-1. Create a new Astro project using the CLI:
+Create a new Astro project using the CLI:
 
-   ```sh frame="none"
-   npm create astro@latest
-   ```
+```sh
+npm create astro@latest
+```
 
-2. Install the [Netlify CLI](https://docs.netlify.com/cli/get-started/#installation) globally on your machine to run Netlify edge functions locally during development:
+Install the [Netlify CLI](https://docs.netlify.com/cli/get-started/#installation) globally on your machine to run Netlify edge functions locally during development:
 
-   ```sh frame="none"
-   npm install -g netlify-cli
-   ```
+```sh
+npm install -g netlify-cli
+```
 
-3. In the root of your project, create a new directory called `netlify/edge_functions`.
+Create a new file called `og.tsx` inside the `netlify/edge_functions` folder in the root of your project.
 
-4. Inside the `edge_functions` folder, create a new file called `og.tsx`.
+Finally, create a new file called `netlify.toml` in the root of your project and add the following configuration:
 
-5. Finally, create a new file called `netlify.toml` in the root of your project and add the following configuration:
+```toml title="netlify.toml"
+[[edge_functions]]
+    function = "og"
+    path = "/og-image"
+```
 
-   ```toml title="netlify.toml"
-   [[edge_functions]]
-     function = "og"
-     path = "/og-image"
-   ```
-
-   This configuration file declares a new edge function named `og` and replaces the default Netlify edge function path from `/.netlify/edge_functions/og-image` to `/og-image`.
+This configuration file declares a new edge function named `og` and replaces the default Netlify edge function path from `/.netlify/edge_functions/og-image` to `/og-image`.
 
 ## Creating an og image generator
 
-To generate open graph images, we will utilize the `query` parameters on the `request` object to populate the image with dynamic content.
+In the `og.tsx` file, you will create a new edge function that generates an open graph image based on the query parameters provided in the URL.
 
-In the following example, we retrieve the `title` and `pubDate` query parameters from the request.
-
-```tsx title="netlify/edge_functions/og.tsx" ins={2-5}
-export default async function handler(req: Request) {
-  const url = new URL(req.url);
-  const params = new URLSearchParams(url.search);
-  const title = params.get("title") ?? "Created with Netlify edge functions";
-  const pubDate = params.get("pubDate") ?? new Date().toISOString();
-}
-```
-
-Next, import the `ImageResponse` function from `og-edge` and `React` from `react`.
-
-```tsx title="netlify/edge_functions/og.tsx" ins={1,2}
-import React from "https://esm.sh/react@18.2.0";
-import { ImageResponse } from "https://deno.land/x/og_edge@0.0.2/mod.ts";
-
-export default async function handler(req: Request) {
-  const url = new URL(req.url);
-  const params = new URLSearchParams(url.search);
-  const title = params.get("title") ?? "Created with Netlify edge functions";
-  const pubDate = params.get("pubDate") ?? new Date().toISOString();
-}
-```
-
-Finally, use the `ImageResponse` function to generate the open graph image and return it as a response.
-
-```tsx title="netlify/edge_functions/og.tsx" ins={10-26}
+```tsx title="netlify/edge_functions/og.tsx"
 import React from "https://esm.sh/react@18.2.0";
 import { ImageResponse } from "https://deno.land/x/og_edge@0.0.2/mod.ts";
 
 export default function handler(req: Request) {
-  const url = new URL(req.url);
-  const params = new URLSearchParams(url.search);
-  const title = params.get("title") ?? "Created with Netlify edge functions";
-  const pubDate = params.get("pubDate") ?? new Date().toISOString();
+  const params = new URL(req.url).searchParams;
+  const title = params.get("title") || "Created with Netlify edge functions";
+  const pubDate = params.get("pubDate") || new Date().toISOString();
 
   return new ImageResponse(
     (
@@ -106,7 +76,7 @@ export default function handler(req: Request) {
 
 To test your edge function locally, run the following command in the root of your project:
 
-```sh frame="none"
+```sh
 netlify dev
 ```
 
@@ -116,7 +86,7 @@ To test the edge function, navigate to [localhost:8888/og-image?title=Hello%20Wo
 
 ![Blank example of an og image](./blank-og.png)
 
-## Customization possibilities
+## Get creative
 
 You have the freedom to customize the image as desired. Feel free to add more query parameters, modify the styling, or add additional elements.
 

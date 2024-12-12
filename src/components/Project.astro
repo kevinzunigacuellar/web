@@ -28,7 +28,7 @@ function formatNumbers(stars: number) {
 ---
 
 <li
-  class="border dark:border-zinc-700 bg-white dark:bg-zinc-800 rounded-md"
+  class="border dark:border-zinc-700 bg-white dark:bg-zinc-800"
   class:list={{
     "p-5": !minimal,
     "p-4": minimal,
@@ -57,5 +57,5 @@ function formatNumbers(stars: number) {
       )
     }
   </ul>
-  {description && <p class="leading-relaxed truncate">{description}</p>}
+  {description && <p class="leading-relaxed sm:truncate">{description}</p>}
 </li>

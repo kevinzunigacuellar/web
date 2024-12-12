@@ -8,7 +8,7 @@ heroAlt: "The Shield logo"
 
 As the title suggests, I recently took part in my very first hackathon. It was an amazing experience where I got to work with a lot of new technologies. While I was familiar with some, many were completely new to me. I learned a ton and had a great time.
 
-At the time of this writing, I'm still polishing some details and maybe adding a few extras, but the first version of the project is already [live](https://shieldz.vercel.app).
+At the time of this writing, I'm still polishing some details and maybe adding a few extras, but the first version of the project is already [live](https://shield.kevinzunigacuellar.com).
 
 Watch a quick demo of the project in [Loom](https://www.loom.com/share/cb1b632896f34782abf15c39bf21421c?sid=73033ec4-dec2-4b4c-9216-14f58d8e33aa)
 
@@ -29,7 +29,7 @@ The project was built using the following technologies:
 - **Frontend Framework**: Next.js
 - **Authentication**: Clerk
 - **Database**: Xata & Prisma
-- **AI**: Cohere
+- **AI**: Google Gemini
 - **Deployment**: Vercel
 - **Background Jobs**: Inngest
 

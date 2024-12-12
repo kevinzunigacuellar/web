@@ -4,12 +4,32 @@ import sitemap from "@astrojs/sitemap";
 import { readFileSync } from "node:fs";
 import icon from "astro-icon";
 import expressiveCode from "astro-expressive-code";
+import colors from "tailwindcss/colors";
 
 /** @type {import('astro-expressive-code').AstroExpressiveCodeOptions} */
 const astroExpressiveCodeOptions = {
   themes: ["houston", "catppuccin-latte"],
   styleOverrides: {
-    codeFontSize: "0.9rem",
+    frames: {
+      editorActiveTabBackground: ({ theme }) =>
+        theme.type === "dark" ? colors.zinc[800] : colors.white,
+      editorTabBarBackground: ({ theme }) =>
+        theme.type === "dark" ? colors.zinc[900] : colors.zinc[100],
+      frameBoxShadowCssValue: "none",
+      editorTabBarBorderBottomColor: ({ theme }) =>
+        theme.type === "dark" ? colors.zinc[700] : colors.zinc[200],
+      terminalBackground: ({ theme }) =>
+        theme.type === "dark" ? colors.zinc[800] : colors.white,
+      terminalTitlebarBackground: ({ theme }) =>
+        theme.type === "dark" ? colors.zinc[900] : colors.zinc[100],
+      terminalTitlebarBorderBottomColor: ({ theme }) =>
+        theme.type === "dark" ? colors.zinc[700] : colors.zinc[200],
+    },
+    codeBackground: ({ theme }) =>
+      theme.type === "dark" ? colors.zinc[800] : colors.white,
+    borderColor: ({ theme }) =>
+      theme.type === "dark" ? colors.zinc[700] : colors.zinc[200],
+    borderRadius: "0",
   },
 };
 

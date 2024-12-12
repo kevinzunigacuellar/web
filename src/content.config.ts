@@ -14,7 +14,7 @@ const blog = defineCollection({
       title: z.string().max(60).min(10),
       hero: z.preprocess((val) => `~/assets/heros/${val}`, image()),
       heroAlt: z.string(),
-      description: z.string().max(160).min(110),
+      description: z.string().max(160).min(100),
       pubDate: z.coerce.date(),
       updatedDate: z.coerce.date().optional(),
     }),

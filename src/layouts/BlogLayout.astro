@@ -75,36 +75,22 @@ const fullUpdatedDate = data.updatedDate?.toLocaleDateString("en", {
       src={data.hero}
       alt={data.heroAlt}
       loading="eager"
-      class="rounded-lg"
       width={1200}
       height={630}
     />
   </header>
   {
     data.updatedDate && (
-      <article class="dark:text-blue-200 text-blue-800 py-2 px-4 mb-6 rounded-md text-sm sm:text-base border border-blue-500 bg-blue-600/20">
+      <article class="dark:text-blue-200 text-blue-800 py-2 px-4 mb-6 text-sm sm:text-base border border-blue-500 bg-blue-600/20">
         <span class="font-semibold">Last updated: </span>
         {fullUpdatedDate}
       </article>
     )
   }
   <article
-    class="prose max-w-none dark:prose-invert dark:prose-code:text-zinc-300 dark:prose-a:text-blue-400 prose-a:text-blue-600 prose-img:rounded-lg"
+    class="prose max-w-none dark:prose-invert dark:prose-a:text-blue-400 prose-a:text-blue-600"
   >
     <slot />
   </article>
   <Pagination />
 </Layout>
-<style>
-  article {
-    --ec-brdCol: #d7dce6;
-    --ec-frm-edTabBarBrdCol: #d7dce6;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    article {
-      --ec-brdCol: #353a45;
-      --ec-frm-edTabBarBrdCol: #353a45;
-    }
-  }
-</style>

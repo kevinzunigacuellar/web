@@ -1,44 +1,42 @@
 ---
 title: Add dark mode to Astro with Tailwind CSS
-description: In this guide, you will learn how to add perfect dark mode to your Astro project using Tailwind CSS and the prefers-color-scheme media query
+description: Learn how to implement dark mode to your Astro website using Tailwind CSS, TypeScript and Web Components.
 pubDate: 2022-05-04
-updatedDate: 2023-06-04
+updatedDate: 2024-12-11
 hero: "astro_dark.png"
 heroAlt: "The logo of Astro and Tailwind CSS"
 ---
 
-Adding a dark mode to your website is a great way to improve accessibility. In this guide, we will learn how to implement a perfect dark mode in your Astro project using Tailwind CSS. You can use any framework you prefer, but we will be using Preact for the UI creation.
+Adding a dark mode to your website is a great way to improve accessibility. In this guide, you will learn how to implement dark mode in Astro using Tailwind CSS. You will also learn how to create a theme toggle button using TypeScript and Web Components.
 
 ## Getting Started
 
 To begin, create a new Astro project:
 
-```sh frame="none"
+```sh
 npm create astro@latest
 ```
 
-Next, install the TailwindCSS and Preact integrations:
+Next, install the Tailwind CSS integration:
 
-```sh frame="none"
-npm install -D @astrojs/tailwind @astrojs/preact
-npm install preact
+```sh
+npm install -D @astrojs/tailwind
 ```
 
-Add both integrations to your `astro.config.mjs` file:
+Add the integration to your `astro.config.mjs` file:
 
 ```js title="astro.config.mjs"
 import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
-import preact from "@astrojs/preact";
 
 export default defineConfig({
-  integrations: [preact(), tailwind()],
+  integrations: [tailwind()],
 });
 ```
 
-Create a minimal TailwindCSS config file in the root of your project. Make sure to modify the `content` property to include all the files that contain your styles. Also, set the `darkMode` property to `"class"` to enable dark mode:
+Create a minimal TailwindCSS config file in the root of your project. Make sure to modify the `content` property to include all the files that contain your styles. Also, set the `darkMode` property to `"class"` since we will be using the `dark` class to apply dark mode styles.
 
-```js title="tailwind.config.cjs"
+```js title="tailwind.config.cjs" {3}
 module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx,astro}"],
   darkMode: "class",
@@ -47,11 +45,11 @@ module.exports = {
 };
 ```
 
-## Hands-on Time
+## Detecting the User's theme
 
-Astro provides a feature to add inline scripts directly to your Astro files, which run as soon as the HTML is loaded. This prevents the "flash of inaccurate color theme" issue that commonly occurs when implementing dark mode with hydration. You can find more information about inline scripts in the [Astro documentation](https://docs.astro.build/en/reference/directives-reference/#isinline).
+Astro provides a feature to add inline scripts directly to your Astro files, which run as soon as the HTML is loaded. This prevents the "flash of inaccurate color theme" issue that commonly occurs when implementing dark mode. You can find more information about inline scripts in the [Astro documentation](https://docs.astro.build/en/reference/directives-reference/#isinline).
 
-The following code retrieves the user's preferred theme and applies it to the HTML element. You can copy/paste or modify this code snippet in your Astro project. We will explain each line of code in the next paragraph.
+The following code retrieves the user's preferred theme and applies it to the HTML element. You can copy/paste or modify this code snippet in your Astro project.
 
 ```astro title="Layout.astro"
 <script is:inline>
@@ -74,70 +72,101 @@ The following code retrieves the user's preferred theme and applies it to the HT
 </script>
 ```
 
-The `theme` variable is an immediately invoked function expression (IIFE) that returns the current theme based on the user's preference. The first `if` statement checks if the user has a previously saved theme in localStorage. If so, it returns that theme. The second `if` statement checks if the user prefers dark mode based on their system settings. If so, it returns `"dark"`. If none of the conditions are met, it returns `"light"`. Once the theme is defined, we use it to add or remove the `"dark"` class from the HTML element and save the theme to localStorage.
+## Creating a Theme Toggle Button
 
-## Creating the UI
+Astro is flexible and works with many UI frameworks. However, for this guide, you will use TypeScript to create a theme toggle button. You can use any framework you prefer, such as React, Preact, or Svelte.
 
-In Astro, you can use any UI framework of your choice. For this example, we will use **Preact** due to its small size and performance. The following code snippet renders a button that toggles between dark and light mode:
+The following code snippet creates a custom element called `theme-toggle` that toggles between light and dark themes when clicked.
 
-```tsx title="ThemeToggle.tsx"
-import { useEffect, useState } from "preact/hooks";
-import type { FunctionalComponent } from "preact";
+```astro title="src/components/ThemeToggle.astro"
+<theme-toggle>
+  <button></button>
+</theme-toggle>
+<script>
+  class ThemeToggle extends HTMLElement {
+    private readonly STORAGE_KEY = "theme-preference";
+    private _darkTheme = false;
+    private button: HTMLButtonElement | null;
 
-export default function ThemeToggle(): FunctionalComponent {
-  const [theme, setTheme] = useState(localStorage.getItem("theme") ?? "light");
+    constructor() {
+      super();
+      this.button = this.querySelector("button");
 
-  const handleClick = () => {
-    setTheme(theme === "light" ? "dark" : "light");
-  };
+      if (!this.button) {
+        console.error("Theme toggle button not found");
+        return;
+      }
 
-  useEffect(() => {
-    if (theme === "dark") {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
+      // Load theme preference
+      const savedTheme = localStorage.getItem(this.STORAGE_KEY);
+      if (!savedTheme) {
+        this.darkTheme = window.matchMedia(
+          "(prefers-color-scheme: dark)",
+        ).matches;
+      } else {
+        this.darkTheme = savedTheme === "dark";
+      }
+
+      // Setup event listeners
+      this.button.addEventListener("click", () => {
+        this.darkTheme = !this.darkTheme;
+        localStorage.setItem(
+          this.STORAGE_KEY,
+          this.darkTheme ? "dark" : "light",
+        );
+      });
+
+      // Listen for system theme changes
+      window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .addEventListener("change", (e) => {
+          if (!localStorage.getItem(this.STORAGE_KEY)) {
+            this.darkTheme = e.matches;
+          }
+        });
     }
-    localStorage.setItem("theme", theme);
-  }, [theme]);
 
-  return (
-    <button onClick={handleClick}>{theme === "light" ? "🌙" : "🌞"}</button>
-  );
-}
+    get darkTheme(): boolean {
+      return this._darkTheme;
+    }
+
+    set darkTheme(value: boolean) {
+      this._darkTheme = value;
+      if (value) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+
+      const iconSun = "☀️";
+      const iconMoon = "🌙";
+
+      if (!this.button) {
+        return;
+      }
+
+      this.button.innerHTML = value ? iconSun : iconMoon;
+      this.button.setAttribute(
+        "aria-label",
+        value ? "Switch to light theme" : "Switch to dark theme",
+      );
+    }
+  }
+  customElements.define("theme-toggle", ThemeToggle);
+</script>
 ```
 
-## Rendering Components on the Server
+You can now use the `ThemeToggle` component in your Astro project by importing it.
 
-Regardless of the UI framework you use, if you are using Static Site Generation (SSG), Astro will render your UI components on the server at build time and hydrate them on the client side. This feature improves website performance, accessibility, and SEO.
+```astro title="Layout.astro" {2,7}
+---
+import ThemeToggle from "../components/ThemeToggle.astro";
+import Layout from "./layouts/Layout.astro";
+---
 
-However, this feature also has some trade-offs. Since components are rendered on the server, web APIs like `localStorage` or `window` are not available.
-
-### Fallback Initial State
-
-To overcome this limitation, you can add a fallback initial state that will be used during build time and then updated to the correct state after hydration. For example:
-
-```jsx
-const [theme, setTheme] = useState(localStorage.getItem("theme") ?? "light");
+<Layout>
+  <ThemeToggle />
+</Layout>
 ```
 
-In the above code, we attempt to get the theme from `localStorage`, and if it's not available, we use `"light"` as the initial state. Using a fallback initial state is a common approach to solve this problem. However, it can lead to a "client/server state mismatch" issue, where the initial state differs from the state after hydration.
-
-### Addressing the Client/Server Mismatch
-
-One way to address the client/server mismatch is by adding a `mounted` state. This state ensures that your component's rendering waits until it is mounted to the DOM, making all the web APIs available and ensuring that the initial state matches the state after hydration. You can achieve this using the `useState` and `useEffect` hooks to create a mounted state. Here's an example:
-
-```jsx title="ThemeToggle.tsx"
-const [isMounted, setIsMounted] = useState(false);
-
-useEffect(() => {
-  setIsMounted(true);
-}, []);
-
-if (!isMounted) {
-  return <FallbackUI />; // or null;
-}
-
-return <button>{theme === "light" ? "🌙" : "🌞"}</button>;
-```
-
-By checking the `isMounted` state, we can render a fallback UI or `null` until the component is mounted. Once it's mounted, the actual UI will be rendered.
+That's it! You have successfully added dark mode to your Astro website using Tailwind CSS. Feel free to customize the dark mode styles and theme toggle button to match your website's design.
