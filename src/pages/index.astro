@@ -15,7 +15,7 @@ const contributions = (await getCollection("contributions"))
 
 const posts = (await getCollection("blog"))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
-  .slice(0, 4);
+  .slice(0, 3);
 ---
 
 <Layout wide={true}>
@@ -83,12 +83,13 @@ const posts = (await getCollection("blog"))
               stargazersCount={contribution.data.stargazerCount}
               forksCount={contribution.data.forkCount}
               url={contribution.data.url}
+              minimal
             />
           ))
         }
       </ul>
       <a
-        class="inline-flex group items-center mt-3 dark:hover:text-zinc-200 hover:text-zinc-800"
+        class="inline-flex group items-center mt-4 dark:hover:text-zinc-200 hover:text-zinc-800"
         href="/projects/"
         ><span>View all projects</span>
         <svg

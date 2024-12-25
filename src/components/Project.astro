@@ -27,13 +27,7 @@ function formatNumbers(stars: number) {
 }
 ---
 
-<li
-  class="border dark:border-zinc-700 bg-white dark:bg-zinc-800"
-  class:list={{
-    "p-5": !minimal,
-    "p-4": minimal,
-  }}
->
+<li class="p-5 border dark:border-zinc-700 bg-white dark:bg-zinc-800">
   <h2>
     <a
       class="group font-medium dark:text-zinc-200 hover:text-blue-600 dark:hover:text-teal-400 inline-flex gap-1"
@@ -57,5 +51,16 @@ function formatNumbers(stars: number) {
       )
     }
   </ul>
-  {description && <p class="leading-relaxed sm:truncate">{description}</p>}
+  {
+    description && (
+      <p
+        class="leading-relaxed"
+        class:list={{
+          "sm:truncate": !minimal,
+        }}
+      >
+        {description}
+      </p>
+    )
+  }
 </li>
