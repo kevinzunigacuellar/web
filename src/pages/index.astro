@@ -122,7 +122,7 @@ const posts = (await getCollection("blog"))
         interesting things I found online.
       </p>
       <ul class="mt-6 grid grid-cols-1 gap-5">
-        {posts.map((post) => <Blog minimal {...post} />)}
+        {posts.map((post) => <Blog {...post} />)}
       </ul>
       <a
         class="inline-flex group items-center mt-4 dark:hover:text-zinc-200 hover:text-zinc-800"
