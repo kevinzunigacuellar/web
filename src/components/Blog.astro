@@ -1,10 +1,8 @@
 ---
 import { type CollectionEntry } from "astro:content";
-type Props = CollectionEntry<"blog"> & {
-  minimal?: true;
-};
+type Props = CollectionEntry<"blog">;
 
-const { data, id, minimal = false } = Astro.props;
+const { data, id } = Astro.props;
 
 const fullDate = data.pubDate.toLocaleDateString("en", {
   year: "numeric",
