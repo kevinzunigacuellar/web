@@ -4,6 +4,8 @@ A minimal, responsive, and accessible personal website built with [Astro](https:
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/kevinzunigacuellar/kevinzunigacuellar.com?title=Personal%20website)
 
+[![Open in Codeanywhere](https://codeanywhere.com/img/open-in-codeanywhere-btn.svg)](https://app.codeanywhere.com/#https://github.com/kevinzunigacuellar/web)
+
 ## Tech stack
 
 - **Frontend Framework**: [Astro](https://github.com/withastro/astro)
