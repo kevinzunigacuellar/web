@@ -34,8 +34,28 @@ const fullUpdatedDate = data.updatedDate?.toLocaleDateString("en", {
 >
   <a
     href="/blog/"
-    class="inline-block mb-8 hover:text-zinc-900 dark:hover:text-zinc-100 text-sm sm:text-base"
-    >&larr; Back to blog</a
+    class="inline-flex gap-2 mb-8 hover:text-zinc-900 dark:hover:text-zinc-100 text-sm sm:text-base group"
+    ><svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+      class="size-6"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M12 12h9"
+        class="opacity-0 group-hover:opacity-100 transition-opacity"></path>
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M20.75 15.75 17 12m0 0 3.75-3.75"
+        class="group-hover:-translate-x-1.5 transition-transform"></path>
+    </svg>
+
+    <span>Back to blog</span></a
   >
   <header class="flex flex-col mb-8">
     <time
