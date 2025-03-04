@@ -4,4 +4,4 @@ Disallow: /_astro/
 User-agent: *
 Allow: /
 
-Sitemap: https://kevinzc.com/sitemap-index.xml
+Sitemap: https://www.kevinzc.com/sitemap-index.xml
