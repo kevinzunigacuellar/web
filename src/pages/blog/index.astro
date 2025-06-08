@@ -1,8 +1,8 @@
 ---
-import Layout from "@layouts/Layout.astro";
-import Header from "@components/Header.astro";
+import Layout from "~/layouts/Layout.astro";
+import Header from "~/components/Header.astro";
 import { getCollection } from "astro:content";
-import Blog from "@components/Blog.astro";
+import Blog from "~/components/Blog.astro";
 
 const posts = (await getCollection("blog")).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
@@ -15,7 +15,7 @@ const description =
 
 <Layout title={title} description={description}>
   <Header title="Blog" />
-  <p class="max-w-prose mb-10 font-normal leading-relaxed">
+  <p class="mb-10 max-w-prose leading-relaxed font-normal">
     {description}
   </p>
   <ul class="grid grid-cols-1 gap-8">

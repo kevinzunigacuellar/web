@@ -1,8 +1,8 @@
 import { defineCollection, z } from "astro:content";
-import { gitHubReposLoader } from "./loaders/repos";
-import { gitHubContributionsLoader } from "./loaders/contributions";
+// import { gitHubReposLoader } from "./loaders/repos";
+// import { gitHubContributionsLoader } from "./loaders/contributions";
 import { glob } from "astro/loaders";
-import { GH_TOKEN } from "astro:env/server";
+// import { GH_TOKEN } from "astro:env/server";
 
 const blog = defineCollection({
   loader: glob({
@@ -20,20 +20,20 @@ const blog = defineCollection({
     }),
 });
 
-const projects = defineCollection({
-  loader: gitHubReposLoader({
-    username: "kevinzunigacuellar",
-  }),
-});
+// const projects = defineCollection({
+//   loader: gitHubReposLoader({
+//     username: "kevinzunigacuellar",
+//   }),
+// });
 
-const contributions = defineCollection({
-  loader: gitHubContributionsLoader({
-    token: GH_TOKEN,
-  }),
-});
+// const contributions = defineCollection({
+//   loader: gitHubContributionsLoader({
+//     token: GH_TOKEN,
+//   }),
+// });
 
 export const collections = {
   blog,
-  projects,
-  contributions,
+  // projects,
+  // contributions,
 };

@@ -1,18 +1,24 @@
 ---
-import Layout from "@layouts/Layout.astro";
+import Layout from "~/layouts/Layout.astro";
+
 const title = "Not found";
 const description = "Sorry, the page you are looking for does not exist.";
 ---
 
 <Layout title={title} description={description}>
-  <div class="flex flex-col items-center gap-4 mt-24">
-    <p class="dark:text-white font-medium text-zinc-900 text-center">
-      We couldn't find the page you were looking for ...
+  <section class="flex flex-col items-center justify-center px-6 py-28 lg:px-8">
+    <h1
+      class="mt-4 text-5xl font-semibold tracking-tight text-balance text-zinc-800 sm:text-7xl dark:text-zinc-300"
+    >
+      Page not found
+    </h1>
+    <p class="text-primary-400 mt-6 max-w-prose sm:text-lg">
+      Sorry, the page you are looking for could not be found
     </p>
     <a
       href="/"
-      class="px-6 py-2 text-zinc-900 hover:bg-zinc-900 hover:text-white dark:border-white border rounded-xl dark:text-zinc-200 dark:hover:bg-white border-zinc-900 dark:hover:text-zinc-900 transition-colors"
-      >Take me home
-    </a>
-  </div>
+      class="mt-6 cursor-pointer rounded-full border border-transparent bg-blue-100 px-6 py-2 font-semibold text-blue-600 hover:border-blue-600 dark:bg-teal-900 dark:text-teal-400 dark:hover:border-teal-400"
+      >Back to homepage</a
+    >
+  </section>
 </Layout>

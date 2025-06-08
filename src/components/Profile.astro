@@ -1,0 +1,74 @@
+---
+import { Picture } from "astro:assets";
+import authorImage from "~/assets/me.jpeg";
+import LinkedInSVG from "~/icons/linkedin.svg";
+import ExternalLinkSVG from "~/icons/external-link.svg";
+import GitHubSVG from "~/icons/github.svg";
+import XSVG from "~/icons/x.svg";
+---
+
+<div class="sm:sticky sm:top-10 sm:h-fit sm:max-w-fit">
+  <Picture
+    class="block aspect-square size-20 overflow-hidden rounded-full"
+    height={160}
+    width={160}
+    src={authorImage}
+    loading="eager"
+    formats={["avif", "webp"]}
+    alt="Author profile picture"
+  />
+  <h1 class="mt-4 mb-2 text-2xl font-bold text-zinc-900 dark:text-white">
+    Kevin
+  </h1>
+  <p class="">
+    <a
+      href="https://twitter.com/astrodotbuild"
+      class="text-zinc-900 underline underline-offset-4 dark:text-white"
+      >@astrodotbuild</a
+    > maintainer
+  </p>
+  <ul class="mt-4 grid grid-cols-1 gap-2 sm:mt-6 sm:gap-1">
+    <li>
+      <a
+        class="group inline-flex items-center gap-2 hover:text-zinc-900 dark:hover:text-zinc-100"
+        href="https://www.linkedin.com/in/kevinzunigacuellar"
+      >
+        <LinkedInSVG
+          size={16}
+          class="fill-current"
+        />kevinzunigacuellar<ExternalLinkSVG
+          size={16}
+          mode="sprite"
+          class="-ml-1 stroke-current opacity-0 duration-200 group-hover:-translate-y-0.5 group-hover:opacity-100"
+        />
+      </a>
+    </li>
+    <li>
+      <a
+        class="group inline-flex items-center gap-2 hover:text-zinc-900 dark:hover:text-zinc-100"
+        href="https://github.com/kevinzunigacuellar"
+      >
+        <GitHubSVG
+          size={16}
+          class="fill-current"
+        />kevinzunigacuellar<ExternalLinkSVG
+          size={16}
+          mode="sprite"
+          class="-ml-1 stroke-current opacity-0 duration-200 group-hover:-translate-y-0.5 group-hover:opacity-100"
+        />
+      </a>
+    </li>
+    <li>
+      <a
+        class="group inline-flex items-center gap-2 hover:text-zinc-900 dark:hover:text-zinc-100"
+        href="https://x.com/kevinzunigacuel"
+      >
+        <XSVG size={16} class="fill-current" />kevinzunigacuel<ExternalLinkSVG
+          size={16}
+          mode="sprite"
+          class="-ml-1 stroke-current opacity-0 duration-200 group-hover:-translate-y-0.5 group-hover:opacity-100"
+        />
+      </a>
+    </li>
+  </ul>
+</div>
