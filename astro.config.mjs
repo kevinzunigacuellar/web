@@ -25,6 +25,7 @@ const astroExpressiveCodeOptions = {
       terminalTitlebarBorderBottomColor: ({ theme }) =>
         theme.type === "dark" ? colors.zinc[700] : colors.zinc[300],
     },
+    borderWidth: "1px",
     codeBackground: ({ theme }) =>
       theme.type === "dark" ? colors.zinc[800] : colors.white,
     borderColor: ({ theme }) =>
@@ -43,17 +44,12 @@ export default defineConfig({
       exclude: ["@resvg/resvg-js"],
     },
   },
-  env: {
-    schema: {
-      GH_TOKEN: envField.string({ context: "server", access: "secret" }),
-    },
-  },
   experimental: {
     svg: true,
   },
 });
 
-// vite plugin to import fonts
+// vite plugin to import fonts for og image generation
 function rawFonts(ext) {
   return {
     name: "vite-plugin-raw-fonts",
