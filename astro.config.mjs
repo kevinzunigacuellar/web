@@ -1,7 +1,6 @@
 import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
 import { readFileSync } from "node:fs";
-import icon from "astro-icon";
 import expressiveCode from "astro-expressive-code";
 import tailwindcss from "@tailwindcss/vite";
 import colors from "tailwindcss/colors";
@@ -36,7 +35,7 @@ const astroExpressiveCodeOptions = {
 };
 
 export default defineConfig({
-  integrations: [sitemap(), expressiveCode(astroExpressiveCodeOptions), icon()],
+  integrations: [sitemap(), expressiveCode(astroExpressiveCodeOptions)],
   site: "https://www.kevinzc.com",
   vite: {
     plugins: [rawFonts([".ttf", ".woff"]), tailwindcss()],

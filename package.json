@@ -14,7 +14,6 @@
     "@resvg/resvg-js": "^2.6.2",
     "@tailwindcss/typography": "^0.5.16",
     "astro-expressive-code": "^0.41.2",
-    "astro-icon": "^1.1.5",
     "prettier-plugin-astro": "^0.14.1",
     "satori": "^0.15.2",
     "satori-html": "^0.3.2",
