@@ -1,8 +1,8 @@
 import satori from "satori";
 import { html } from "satori-html";
 import { Resvg } from "@resvg/resvg-js";
-import InterRegular from "@fontsource/inter/files/inter-latin-400-normal.woff";
-import InterBold from "@fontsource/inter/files/inter-latin-700-normal.woff";
+import InterBold from "~/assets/fonts/GeistMono-Bold.ttf";
+import InterRegular from "~/assets/fonts/GeistMono-Regular.ttf";
 import { getCollection } from "astro:content";
 import type { APIContext } from "astro";
 
@@ -25,12 +25,7 @@ export async function GET(context: APIContext) {
   const markup = html`<div tw="bg-zinc-900 flex flex-col w-full h-full">
     <div tw="flex flex-col w-full h-4/5 p-10 justify-center">
       <div tw="text-zinc-400 text-2xl mb-6">${date}</div>
-      <div
-        tw="flex text-6xl w-full font-bold leading-snug tracking-tight text-transparent bg-red-400"
-        style="background-clip: text; -webkit-background-clip: text; background: linear-gradient(90deg, rgb(0, 124, 240), rgb(0, 223, 216));"
-      >
-        ${title}
-      </div>
+      <div tw="flex text-6xl w-full font-bold text-white">${title}</div>
     </div>
     <div
       tw="w-full h-1/5 border-t border-zinc-700/50 flex p-10 items-center justify-between text-2xl"

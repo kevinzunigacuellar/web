@@ -27,24 +27,24 @@ function formatNumbers(stars: number) {
 }
 ---
 
-<li class="p-5 border dark:border-zinc-700 bg-white dark:bg-zinc-800">
+<li class="border p-2 dark:border-zinc-700 dark:bg-zinc-800">
   <h2>
     <a
-      class="group font-medium dark:text-zinc-200 hover:text-blue-600 dark:hover:text-teal-400 inline-flex gap-1"
+      class="group inline-flex gap-1 font-medium hover:text-blue-600 dark:text-zinc-200 dark:hover:text-teal-400"
       href={url}
       >{name}<Icon
         name="external-link"
-        class="opacity-0 group-hover:opacity-100 group-hover:-translate-y-0.5 duration-200"
+        class="opacity-0 duration-200 group-hover:-translate-y-0.5 group-hover:opacity-100"
       /></a
     >
   </h2>
-  <ul class="flex gap-3 mt-1 items-center text-zinc-500 dark:text-zinc-400">
-    <li class="inline-flex gap-0.5 items-baseline">
+  <ul class="mt-1 flex items-center gap-3 text-zinc-500 dark:text-zinc-400">
+    <li class="inline-flex items-baseline gap-0.5">
       <Icon name="star" />{formatNumbers(stargazersCount)}
     </li>
     {
       forksCount > 0 && (
-        <li class="inline-flex gap-0.5 items-center">
+        <li class="inline-flex items-center gap-0.5">
           <Icon name="fork" />
           {formatNumbers(forksCount)}
         </li>

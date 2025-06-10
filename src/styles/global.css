@@ -1,0 +1,16 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@font-face {
+  font-family: "Geist";
+  src: url("/GeistMono.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-mono:
+    "Geist", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+}

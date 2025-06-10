@@ -14,17 +14,17 @@ const nextPost = posts[currentIndex + 1];
 const prevPost = posts[currentIndex - 1];
 ---
 
-<aside class="flex flex-col sm:flex-row mt-10 gap-4 w-full">
+<aside class="mt-10 flex w-full flex-col gap-4 sm:flex-row">
   {
     nextPost && (
       <a
         href={`/blog/${nextPost.id}/`}
-        class="group flex-1 text-sm flex flex-col grow p-4 rounded-lg border border-zinc-300 dark:border-zinc-700 dark:hover:border-teal-400 hover:border-blue-300 transition-all dark:hover:bg-teal-600/20 hover:bg-blue-100"
+        class="group flex flex-1 grow flex-col border border-zinc-300 p-4 text-sm transition-all hover:border-zinc-900 dark:border-zinc-700 dark:hover:border-zinc-100"
       >
-        <p class="mb-1 group-hover:dark:text-zinc-300 group-hover:text-zinc-700">
+        <p class="mb-1 uppercase group-hover:text-zinc-700 group-hover:dark:text-zinc-300">
           &larr; Previous post
         </p>
-        <p class="font-semibold dark:text-zinc-300 text-zinc-700 group-hover:dark:text-teal-400 group-hover:text-blue-800">
+        <p class="font-semibold text-zinc-700 dark:text-zinc-100">
           {nextPost.data.title}
         </p>
       </a>
@@ -34,12 +34,12 @@ const prevPost = posts[currentIndex - 1];
     prevPost && (
       <a
         href={`/blog/${prevPost.id}/`}
-        class="group flex-1 text-sm flex flex-col text-right grow p-4 rounded-lg border border-zinc-300 dark:border-zinc-700 dark:hover:border-teal-400 hover:border-blue-300 transition-all dark:hover:bg-teal-600/20 hover:bg-blue-100"
+        class="group flex flex-1 grow flex-col border border-zinc-300 p-4 text-right text-sm transition-all hover:border-zinc-900 dark:border-zinc-700 dark:hover:border-zinc-100"
       >
-        <p class="mb-1 group-hover:dark:text-zinc-300 group-hover:text-zinc-700">
+        <p class="mb-1 uppercase group-hover:text-zinc-700 group-hover:dark:text-zinc-300">
           Next post &rarr;
         </p>
-        <p class="font-semibold dark:text-zinc-300 text-zinc-700 group-hover:dark:text-teal-400 group-hover:text-blue-800">
+        <p class="font-semibold text-zinc-700 dark:text-zinc-100">
           {prevPost.data.title}
         </p>
       </a>

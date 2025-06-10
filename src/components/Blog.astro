@@ -12,14 +12,18 @@ const fullDate = data.pubDate.toLocaleDateString("en", {
 ---
 
 <li
-  class="relative group flex flex-col gap-1 p-5 border dark:bg-zinc-800 bg-white dark:border-zinc-700 dark:hover:border-teal-400 hover:border-blue-600"
+  class="group relative flex flex-col border border-zinc-300 bg-white p-4 hover:border-zinc-900 dark:border-zinc-700 dark:bg-zinc-900 dark:hover:border-zinc-100"
 >
-  <time datetime={data.pubDate.toISOString()} class="text-sm">{fullDate} </time>
+  <time
+    datetime={data.pubDate.toISOString()}
+    class="mb-1.5 w-fit bg-indigo-100 px-2 py-1 text-sm leading-none tracking-wide text-indigo-800 uppercase dark:bg-indigo-300 dark:text-indigo-900"
+    >{fullDate}
+  </time>
   <a
-    class="before:absolute before:inset-0 dark:text-zinc-300 group-hover:text-blue-600 dark:group-hover:text-teal-400 font-medium"
+    class="font-semibold text-zinc-900 before:absolute before:inset-0 dark:text-zinc-100"
     href={`/blog/${id}/`}
   >
     {data.title}
   </a>
-  <p class="leading-relaxed max-w-prose mt-1">{data.description}</p>
+  <p class="mt-2 leading-relaxed">{data.description}</p>
 </li>

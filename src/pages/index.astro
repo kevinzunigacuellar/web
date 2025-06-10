@@ -1,17 +1,9 @@
 ---
-import Layout from "@layouts/Layout.astro";
-import authorImage from "~/assets/me.jpeg";
-import { Picture } from "astro:assets";
-import { skills, socials } from "@data/constants";
+import Layout from "~/layouts/Layout.astro";
 import { getCollection } from "astro:content";
-import Skill from "@components/Skill.astro";
-import Social from "@components/Social.astro";
-import Project from "@components/Project.astro";
-import Blog from "@components/Blog.astro";
-
-const contributions = (await getCollection("contributions"))
-  .sort((a, b) => b.data.stargazerCount - a.data.stargazerCount)
-  .slice(0, 3);
+import Profile from "~/components/Profile.astro";
+import Blog from "~/components/Blog.astro";
+import RightArrowSVG from "~/icons/right-arrow-animated.svg";
 
 const posts = (await getCollection("blog"))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
@@ -19,103 +11,18 @@ const posts = (await getCollection("blog"))
 ---
 
 <Layout wide={true}>
-  <div class="flex flex-col gap-12 md:gap-20 sm:gap-16 sm:flex-row">
-    <div class="sm:w-1/4 sm:sticky sm:h-fit sm:top-10">
-      <Picture
-        class="block rounded-full aspect-square overflow-hidden"
-        height={80}
-        width={80}
-        src={authorImage}
-        loading="eager"
-        densities={[1.5, 2]}
-        formats={["avif", "webp"]}
-        alt="Author smiling"
-      />
-      <h1
-        class="mt-4 text-2xl font-bold tracking-tight dark:text-white text-zinc-900 sm:text-3xl"
-      >
-        Kevin
-      </h1>
-      <p class="dark:text-zinc-300 text-zinc-700">
-        <a
-          href="https://twitter.com/astrodotbuild"
-          class="dark:text-teal-400 text-blue-600 underline underline-offset-4"
-          >@astrodotbuild</a
-        > maintainer
-      </p>
-      <ul class="mt-4 sm:mt-6 grid grid-cols-1 gap-2 sm:gap-1">
-        {socials.map((s) => <Social {...s} />)}
-      </ul>
-    </div>
+  <div class="flex flex-col gap-12 md:flex-row md:gap-24">
+    <Profile />
     <section class="flex-1">
-      <h2 class="text-lg font-semibold dark:text-zinc-100 text-zinc-900">
+      <h2 class="text-lg font-semibold text-zinc-900 dark:text-zinc-100">
         About me
       </h2>
       <p class="mt-3 max-w-prose leading-relaxed">
         Hello! I'm Kevin, a software engineer based in Williston, VT. I build
         tools for developers that help them build faster and better software.
       </p>
-      <h2 class="mt-12 text-lg font-semibold dark:text-zinc-100 text-zinc-900">
-        Favorite Technologies
-      </h2>
-      <p class="mt-3 max-w-prose leading-relaxed">
-        I love exploring new libraries, programing languages and frameworks.
-        Here is a list of technologies that I have worked with at school, side
-        projects and open source.
-      </p>
-      <ul class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
-        {skills.map((s) => <Skill {...s} />)}
-      </ul>
-      <h2 class="mt-12 text-lg font-semibold dark:text-zinc-100 text-zinc-900">
-        Open Source
-      </h2>
-      <p class="mt-3 max-w-prose leading-relaxed">
-        I love open source and I have been contributing to different projects
-        for the some time. Here are some of the most popular projects that I
-        have contributed to.
-      </p>
-      <ul class="mt-6 grid grid-cols-1 gap-5">
-        {
-          contributions.map((contribution) => (
-            <Project
-              name={contribution.data.nameWithOwner}
-              description={contribution.data.description}
-              stargazersCount={contribution.data.stargazerCount}
-              forksCount={contribution.data.forkCount}
-              url={contribution.data.url}
-              minimal
-            />
-          ))
-        }
-      </ul>
-      <a
-        class="inline-flex group items-center mt-4 dark:hover:text-zinc-200 hover:text-zinc-800"
-        href="/projects/"
-        ><span>View all projects</span>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          class="size-6 translate-y-[1.5px]"
-        >
-          <!-- Diagonal paths -->
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="-translate-x-2 group-hover:-translate-x-1 transition-transform"
-            d="M17.25 8.25 L21 12 L17.25 15.75"></path>
-          <!-- Horizontal line -->
-          <path
-            class="opacity-0 group-hover:opacity-100 transition-opacity"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M8.75 12 H16"></path>
-        </svg>
-      </a>
-      <h2 class="mt-12 text-lg font-semibold dark:text-zinc-100 text-zinc-900">
-        Recent Posts
+      <h2 class="mt-6 text-lg font-semibold text-zinc-900 dark:text-zinc-100">
+        Recent posts
       </h2>
       <p class="mt-3 max-w-prose leading-relaxed">
         My personal collection of code snippets, starter guides, tutorials and
@@ -125,30 +32,10 @@ const posts = (await getCollection("blog"))
         {posts.map((post) => <Blog {...post} />)}
       </ul>
       <a
-        class="inline-flex group items-center mt-4 dark:hover:text-zinc-200 hover:text-zinc-800"
+        class="group mt-4 inline-flex items-center uppercase hover:text-zinc-900 dark:hover:text-zinc-200"
         href="/blog/"
         ><span>View all posts</span>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          class="size-6 translate-y-[1.5px]"
-        >
-          <!-- Diagonal paths -->
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="-translate-x-2 group-hover:-translate-x-1 transition-transform"
-            d="M17.25 8.25 L21 12 L17.25 15.75"></path>
-          <!-- Horizontal line -->
-          <path
-            class="opacity-0 group-hover:opacity-100 transition-opacity"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M8.75 12 H16"></path>
-        </svg>
+        <RightArrowSVG class="size-6 fill-none stroke-current" />
       </a>
     </section>
   </div>
