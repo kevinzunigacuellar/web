@@ -13,7 +13,7 @@
     "@astrojs/sitemap": "^3.4.1",
     "@resvg/resvg-js": "^2.6.2",
     "@tailwindcss/typography": "^0.5.16",
-    "astro-expressive-code": "^0.41.2",
+    "astro-expressive-code": "^0.41.3",
     "prettier-plugin-astro": "^0.14.1",
     "satori": "^0.15.2",
     "satori-html": "^0.3.2",
@@ -21,11 +21,10 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
-    "@tailwindcss/vite": "^4.1.8",
-    "astro": "5.9.2",
-    "github-slugger": "^2.0.0",
-    "prettier-plugin-tailwindcss": "^0.6.12",
-    "sharp": "^0.34.2",
-    "tailwindcss": "^4.1.8"
+    "@tailwindcss/vite": "^4.1.11",
+    "astro": "^5.11.0",
+    "prettier-plugin-tailwindcss": "^0.6.14",
+    "sharp": "^0.34.3",
+    "tailwindcss": "^4.1.11"
   }
 }
