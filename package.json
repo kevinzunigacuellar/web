@@ -7,6 +7,7 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "fmt": "oxfmt",
+    "lint": "oxlint",
     "preview": "astro preview"
   },
   "dependencies": {
@@ -21,6 +22,7 @@
     "@astrojs/sitemap": "3.7.1",
     "astro-expressive-code": "^0.41.7",
     "oxfmt": "^0.41.0",
+    "oxlint": "^1.56.0",
     "satori": "^0.25.0",
     "satori-html": "^0.3.2",
     "typescript": "^5.9.3"

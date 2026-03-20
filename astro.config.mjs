@@ -2,7 +2,6 @@ import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
 import expressiveCode from "astro-expressive-code";
 import { defineConfig, fontProviders } from "astro/config";
-import { readFileSync } from "node:fs";
 import colors from "tailwindcss/colors";
 
 /** @type {import('astro-expressive-code').AstroExpressiveCodeOptions} */

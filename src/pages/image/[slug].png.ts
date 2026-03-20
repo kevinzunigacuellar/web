@@ -18,11 +18,6 @@ interface Props {
   pubDate: Date;
 }
 
-async function readAstroFont(fontUrl: string) {
-  const file = basename(fontUrl);
-  return readFile(join(process.cwd(), "node_modules", ".astro", "fonts", file));
-}
-
 export async function GET(context: APIContext) {
   const data = fontData["--og-font-jetbrains-mono"];
   const { title, pubDate } = context.props as Props;
@@ -70,8 +65,14 @@ export async function GET(context: APIContext) {
     </div>
   </div>`;
 
-  const jetBrainsMono400 = await readAstroFont(data[0]?.src[0]?.url!);
-  const jetBrainsMono700 = await readAstroFont(data[1]?.src[0]?.url!);
+  const jetBrainsMono400URL = basename(data[0]?.src[0]?.url ?? "");
+  const jetBrainsMono700URL = basename(data[1]?.src[0]?.url ?? "");
+  const jetBrainsMono400 = await readFile(
+    join(process.cwd(), "node_modules", ".astro", "fonts", jetBrainsMono400URL),
+  );
+  const jetBrainsMono700 = await readFile(
+    join(process.cwd(), "node_modules", ".astro", "fonts", jetBrainsMono700URL),
+  );
 
   const svg = await satori(markup, {
     fonts: [
