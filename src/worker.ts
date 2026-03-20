@@ -43,7 +43,13 @@ function withVaryAccept(headers: Headers): Headers {
     return headers;
   }
 
-  if (!vary.toLowerCase().split(",").map((part) => part.trim()).includes("accept")) {
+  if (
+    !vary
+      .toLowerCase()
+      .split(",")
+      .map((part) => part.trim())
+      .includes("accept")
+  ) {
     headers.set("vary", `${vary}, Accept`);
   }
 

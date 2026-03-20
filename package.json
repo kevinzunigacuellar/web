@@ -29,7 +29,7 @@
     "remark-stringify": "^11.0.0",
     "satori": "^0.25.0",
     "satori-html": "^0.3.2",
-    "unified": "^11.0.5",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "unified": "^11.0.5"
   }
 }

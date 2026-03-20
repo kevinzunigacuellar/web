@@ -1,6 +1,7 @@
+import type { AstroIntegration } from "astro";
+
 import fs from "node:fs/promises";
 import { fileURLToPath } from "node:url";
-import type { AstroIntegration } from "astro";
 import rehypeParse from "rehype-parse";
 import rehypeRemark from "rehype-remark";
 import remarkGfm from "remark-gfm";
@@ -32,7 +33,6 @@ export default function htmlToMarkdown(): AstroIntegration {
             }
           }
         }
-
 
         for (const htmlFilePath of htmlFiles) {
           const html = await fs.readFile(htmlFilePath, "utf-8");
