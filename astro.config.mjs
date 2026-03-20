@@ -3,6 +3,7 @@ import tailwindcss from "@tailwindcss/vite";
 import expressiveCode from "astro-expressive-code";
 import { defineConfig, fontProviders } from "astro/config";
 import colors from "tailwindcss/colors";
+import htmlToMarkdown from "./integrations/html-to-markdown.ts";
 
 /** @type {import('astro-expressive-code').AstroExpressiveCodeOptions} */
 const astroExpressiveCodeOptions = {
@@ -31,7 +32,7 @@ const astroExpressiveCodeOptions = {
 };
 
 export default defineConfig({
-  integrations: [sitemap(), expressiveCode(astroExpressiveCodeOptions)],
+  integrations: [sitemap(), expressiveCode(astroExpressiveCodeOptions), htmlToMarkdown()],
   site: "https://www.kevinzc.com",
   vite: {
     plugins: [tailwindcss()],

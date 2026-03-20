@@ -4,6 +4,7 @@ dist/
 .astro/
 # dependencies
 node_modules/
+.wrangler/
 
 # logs
 npm-debug.log*

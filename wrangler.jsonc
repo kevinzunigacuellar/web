@@ -2,8 +2,11 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "kevinzc",
   "compatibility_date": "2025-07-25",
+  "main": "./src/worker.ts",
   "assets": {
     "directory": "./dist",
     "not_found_handling": "404-page",
+    "binding": "ASSETS",
+    "run_worker_first": true,
   },
 }
