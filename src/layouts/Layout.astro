@@ -1,6 +1,7 @@
 ---
 import Link from "~/components/Link.astro";
 import { twitter, author, defaultMeta, navigation } from "~/data/constants";
+import { Font } from "astro:assets";
 import "../styles/global.css";
 
 interface Props {
@@ -33,6 +34,7 @@ const canonicalURL = new URL(Astro.url).href;
     <meta name="viewport" content="width=device-width" />
     <title>{title}</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <Font cssVariable="--font-jetbrains-mono" preload />
     <link rel="canonical" href={canonicalURL} />
     <meta name="title" content={title} />
     <meta name="description" content={description} />

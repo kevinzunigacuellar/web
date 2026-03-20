@@ -1,4 +1,4 @@
-import { defineConfig } from "astro/config";
+import { defineConfig, fontProviders } from "astro/config";
 import sitemap from "@astrojs/sitemap";
 import { readFileSync } from "node:fs";
 import expressiveCode from "astro-expressive-code";
@@ -38,25 +38,25 @@ export default defineConfig({
   integrations: [sitemap(), expressiveCode(astroExpressiveCodeOptions)],
   site: "https://www.kevinzc.com",
   vite: {
-    plugins: [rawFonts([".ttf", ".woff"]), tailwindcss()],
-    optimizeDeps: {
-      exclude: ["@resvg/resvg-js"],
-    },
+    plugins: [tailwindcss()],
   },
-});
-
-// vite plugin to import fonts for og image generation
-function rawFonts(ext) {
-  return {
-    name: "vite-plugin-raw-fonts",
-    transform(_, id) {
-      if (ext.some((e) => id.endsWith(e))) {
-        const buffer = readFileSync(id);
-        return {
-          code: `export default ${JSON.stringify(buffer)}`,
-          map: null,
-        };
-      }
+  fonts: [
+    {
+      provider: fontProviders.fontsource(),
+      name: "JetBrains Mono",
+      cssVariable: "--font-jetbrains-mono",
+      weights: ["100 800"],
+      fallbacks: ["monospace"],
+      styles: ["normal"],
     },
-  };
-}
+    {
+      provider: fontProviders.fontsource(),
+      name: "JetBrains Mono",
+      cssVariable: "--og-font-jetbrains-mono",
+      weights: [400, 700],
+      fallbacks: ["monospace"],
+      styles: ["normal"],
+      formats: ["woff"],
+    },
+  ],
+});

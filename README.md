@@ -13,5 +13,3 @@ pnpm install
 # Start the dev server
 pnpm dev
 ```
-
-[![Built with Astro](https://astro.badg.es/v2/built-with-astro/medium.svg)](https://astro.build)

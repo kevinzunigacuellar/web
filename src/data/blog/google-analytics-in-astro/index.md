@@ -99,4 +99,5 @@ Finally, place this code snippet in the head section of your HTML.
 ## Testing
 
 After deploying your project, visit your Google Analytics. You should see some recent activity after visiting your website.
+
 ![Google analytics real time dashboard with one visitor in the last 30 minutes](./realtime-dashboard.png)

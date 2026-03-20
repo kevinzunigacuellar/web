@@ -51,23 +51,21 @@ export default function handler(req: Request) {
   const pubDate = params.get("pubDate") || new Date().toISOString();
 
   return new ImageResponse(
-    (
-      <div
-        style={{
-          height: "100%",
-          width: "100%",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          backgroundColor: "#fff",
-          fontSize: 32,
-        }}
-      >
-        <div>{title}</div>
-        <div>{pubDate}</div>
-      </div>
-    ),
+    <div
+      style={{
+        height: "100%",
+        width: "100%",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: "#fff",
+        fontSize: 32,
+      }}
+    >
+      <div>{title}</div>
+      <div>{pubDate}</div>
+    </div>,
   );
 }
 ```

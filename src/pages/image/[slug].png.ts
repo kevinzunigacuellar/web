@@ -1,10 +1,11 @@
 import satori from "satori";
 import { html } from "satori-html";
-import { Resvg } from "@resvg/resvg-js";
-import InterBold from "~/assets/fonts/GeistMono-Bold.ttf";
-import InterRegular from "~/assets/fonts/GeistMono-Regular.ttf";
+import sharp from "sharp";
+import { fontData } from "astro:assets";
 import { getCollection } from "astro:content";
 import type { APIContext } from "astro";
+import { readFile } from "node:fs/promises";
+import { basename, join } from "node:path";
 
 const dimensions = {
   width: 1200,
@@ -16,7 +17,13 @@ interface Props {
   pubDate: Date;
 }
 
+async function readAstroFont(fontUrl: string) {
+  const file = basename(fontUrl);
+  return readFile(join(process.cwd(), "node_modules", ".astro", "fonts", file));
+}
+
 export async function GET(context: APIContext) {
+  const data = fontData["--og-font-jetbrains-mono"];
   const { title, pubDate } = context.props as Props;
   const date = pubDate.toLocaleDateString("en-US", {
     dateStyle: "full",
@@ -47,7 +54,7 @@ export async function GET(context: APIContext) {
             d="M142.333 316.667C139.86 316.645 137.415 316.136 135.139 315.169C132.862 314.203 130.798 312.797 129.065 311.033C127.331 309.269 125.962 307.18 125.036 304.887C124.11 302.593 123.645 300.14 123.667 297.667V85.6667C123.645 83.1934 124.11 80.7401 125.036 78.4467C125.962 76.1533 127.331 74.0648 129.065 72.3005C130.798 70.5361 132.862 69.1305 135.139 68.1639C137.415 67.1972 139.86 66.6885 142.333 66.6667H158.667C163.783 66.6667 168.117 68.55 171.667 72.3333C175.45 76.1167 177.333 80.55 177.333 85.6667V208.667C177.333 208.883 177.45 209 177.667 209L178.333 208.667L220 158C228 148.217 238.217 143.333 250.667 143.333H274.667C278.217 143.333 280.783 145 282.333 148.333C284.117 151.667 283.783 154.783 281.333 157.667L224.333 224.667C223.217 226 223.217 227.45 224.333 229L282 302C284.217 305.117 284.45 308.333 282.667 311.667C282.014 313.225 280.895 314.543 279.462 315.439C278.029 316.334 276.354 316.763 274.667 316.667H250.667C238.217 316.667 228.117 311.667 220.333 301.667L178.333 247C178.117 246.783 177.883 246.667 177.667 246.667C177.45 246.667 177.333 246.783 177.333 247V297.667C177.333 302.783 175.45 307.217 171.667 311C170.029 312.816 168.021 314.261 165.779 315.238C163.537 316.216 161.112 316.703 158.667 316.667H142.333Z"
           />
         </svg>
-        <span tw="ml-3 text-zinc-400">kevinzunigacuellar.com</span>
+        <span tw="ml-3 text-zinc-400">www.kevinzc.com</span>
       </div>
       <div tw="flex items-center">
         <img
@@ -62,16 +69,19 @@ export async function GET(context: APIContext) {
     </div>
   </div>`;
 
+  const jetBrainsMono400 = await readAstroFont(data[0]?.src[0]?.url!);
+  const jetBrainsMono700 = await readAstroFont(data[1]?.src[0]?.url!);
+
   const svg = await satori(markup, {
     fonts: [
       {
-        name: "Inter",
-        data: Buffer.from(InterRegular),
+        name: "JetBrains Mono",
+        data: jetBrainsMono400,
         weight: 400,
       },
       {
-        name: "Inter",
-        data: Buffer.from(InterBold),
+        name: "JetBrains Mono",
+        data: jetBrainsMono700,
         weight: 700,
       },
     ],
@@ -79,14 +89,8 @@ export async function GET(context: APIContext) {
     width: dimensions.width,
   });
 
-  const image = new Resvg(svg, {
-    fitTo: {
-      mode: "width",
-      value: dimensions.width,
-    },
-  }).render();
-
-  return new Response(image.asPng(), {
+  const png = await sharp(Buffer.from(svg)).png().toBuffer();
+  return new Response(new Uint8Array(png), {
     headers: {
       "Content-Type": "image/png",
     },

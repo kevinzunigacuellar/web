@@ -62,7 +62,7 @@ const fullUpdatedDate = data.updatedDate?.toLocaleDateString("en", {
       {fullPubDate}
     </time>
     <h1
-      class="bg-gradient-to-r from-teal-500 via-blue-500 to-purple-500 bg-clip-text pb-8 text-center text-2xl font-semibold text-transparent sm:text-4xl"
+      class="bg-linear-to-r from-teal-500 via-blue-500 to-purple-500 bg-clip-text pb-8 text-center text-2xl font-semibold text-transparent sm:text-4xl"
     >
       {data.title}
     </h1>
@@ -85,7 +85,7 @@ const fullUpdatedDate = data.updatedDate?.toLocaleDateString("en", {
     )
   }
   <article
-    class="prose dark:prose-invert max-w-none text-zinc-500 dark:text-zinc-400"
+    class="prose max-w-none"
   >
     <slot />
   </article>
