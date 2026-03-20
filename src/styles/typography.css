@@ -16,8 +16,7 @@
   font-size: var(--text-base);
   line-height: 2;
 
-  *:where(:not(.not-prose, .not-prose *))
-    + *:where(:not(.not-prose, .not-prose *)) {
+  *:where(:not(.not-prose, .not-prose *)) + *:where(:not(.not-prose, .not-prose *)) {
     margin-top: calc(var(--spacing) * 6);
   }
 
@@ -33,11 +32,7 @@
     --prose-link-underline-color: var(--color-blue-400);
     --prose-th-borders: var(--color-zinc-300);
     --prose-td-borders: var(--color-zinc-200);
-    --prose-hr-color: color-mix(
-      in oklab,
-      var(--color-zinc-950) 5%,
-      transparent
-    );
+    --prose-hr-color: color-mix(in oklab, var(--color-zinc-950) 5%, transparent);
     --prose-blockquote-border-color: var(--color-zinc-300);
   }
 

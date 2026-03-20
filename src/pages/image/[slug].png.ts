@@ -1,11 +1,12 @@
+import type { APIContext } from "astro";
+
+import { fontData } from "astro:assets";
+import { getCollection } from "astro:content";
+import { readFile } from "node:fs/promises";
+import { basename, join } from "node:path";
 import satori from "satori";
 import { html } from "satori-html";
 import sharp from "sharp";
-import { fontData } from "astro:assets";
-import { getCollection } from "astro:content";
-import type { APIContext } from "astro";
-import { readFile } from "node:fs/promises";
-import { basename, join } from "node:path";
 
 const dimensions = {
   width: 1200,

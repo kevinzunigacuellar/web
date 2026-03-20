@@ -9,14 +9,6 @@
     "fmt": "oxfmt",
     "preview": "astro preview"
   },
-  "devDependencies": {
-    "@astrojs/sitemap": "3.7.1",
-    "astro-expressive-code": "^0.41.7",
-    "oxfmt": "^0.41.0",
-    "satori": "^0.25.0",
-    "satori-html": "^0.3.2",
-    "typescript": "^5.9.3"
-  },
   "dependencies": {
     "@astrojs/check": "0.9.8",
     "@tailwindcss/vite": "^4.2.2",
@@ -24,5 +16,13 @@
     "sharp": "^0.34.5",
     "tailwindcss": "^4.2.2",
     "wrangler": "^4.75.0"
+  },
+  "devDependencies": {
+    "@astrojs/sitemap": "3.7.1",
+    "astro-expressive-code": "^0.41.7",
+    "oxfmt": "^0.41.0",
+    "satori": "^0.25.0",
+    "satori-html": "^0.3.2",
+    "typescript": "^5.9.3"
   }
 }

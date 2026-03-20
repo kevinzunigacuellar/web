@@ -1,8 +1,8 @@
-import { defineConfig, fontProviders } from "astro/config";
 import sitemap from "@astrojs/sitemap";
-import { readFileSync } from "node:fs";
-import expressiveCode from "astro-expressive-code";
 import tailwindcss from "@tailwindcss/vite";
+import expressiveCode from "astro-expressive-code";
+import { defineConfig, fontProviders } from "astro/config";
+import { readFileSync } from "node:fs";
 import colors from "tailwindcss/colors";
 
 /** @type {import('astro-expressive-code').AstroExpressiveCodeOptions} */
@@ -17,18 +17,15 @@ const astroExpressiveCodeOptions = {
       frameBoxShadowCssValue: "none",
       editorTabBarBorderBottomColor: ({ theme }) =>
         theme.type === "dark" ? colors.zinc[700] : colors.zinc[300],
-      terminalBackground: ({ theme }) =>
-        theme.type === "dark" ? colors.zinc[800] : colors.white,
+      terminalBackground: ({ theme }) => (theme.type === "dark" ? colors.zinc[800] : colors.white),
       terminalTitlebarBackground: ({ theme }) =>
         theme.type === "dark" ? colors.zinc[900] : colors.zinc[100],
       terminalTitlebarBorderBottomColor: ({ theme }) =>
         theme.type === "dark" ? colors.zinc[700] : colors.zinc[300],
     },
     borderWidth: "1px",
-    codeBackground: ({ theme }) =>
-      theme.type === "dark" ? colors.zinc[800] : colors.white,
-    borderColor: ({ theme }) =>
-      theme.type === "dark" ? colors.zinc[700] : colors.zinc[300],
+    codeBackground: ({ theme }) => (theme.type === "dark" ? colors.zinc[800] : colors.white),
+    borderColor: ({ theme }) => (theme.type === "dark" ? colors.zinc[700] : colors.zinc[300]),
     borderRadius: "0",
     codeFontFamily: "var(--font-mono)",
   },
